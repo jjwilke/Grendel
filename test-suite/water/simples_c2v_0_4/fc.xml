@@ -1,9 +1,0 @@
-<?xml version="1.0" ?>
-<document>
-	<hessian bond_units="angstrom" energy_units="aj" ncol="3" ncoord="3" nrow="3">
-		       10.1834662882     -0.4770837120      0.3105955588
-       -0.4770837120     10.1834662882      0.3105955588
-        0.3105955588      0.3105955588      1.2943459507
-
-	</hessian>
-</document>
