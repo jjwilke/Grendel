@@ -20,8 +20,9 @@
 #include <src/deftypes.h>
 #include <src/gigmatrix.h>
 #include <src/runtime.h>
-#include <src/set.h>
 #include <src/timer.h>
+
+#include <src/smartptr/src/set.h>
 
 using namespace std;
 using namespace gigide;

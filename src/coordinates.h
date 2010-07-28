@@ -5,11 +5,11 @@
 #include <math.h>
 #include <vector>
 #include <src/defines.h>
-#include <src/printstream.h>
 #include <src/gigmatrix.h>
-#include <src/set.h>
 #include <iostream>
 
+#include <src/smartptr/src/set.h>
+#include <src/smartptr/src/printstream.h>
 
 namespace gigide {
 

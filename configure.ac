@@ -28,7 +28,7 @@ AC_C_CONST
 
 AC_CONFIG_FILES([Makefile
                  src/Makefile
-                 src/smartptr/Makefile
+                 src/smartptr/src/Makefile
                  lib/Makefile
                  test.py])
 

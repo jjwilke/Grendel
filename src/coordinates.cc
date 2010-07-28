@@ -6,7 +6,7 @@
 #include <src/exception.h>
 #include <math.h>
 
-#include <src/smartptr/ref.h>
+#include <src/smartptr/src/ref.h>
 
 #define X 0
 #define Y 1

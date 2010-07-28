@@ -19,7 +19,8 @@
 #include <src/derivative.h>
 #include <src/deftypes.h>
 #include <src/gigmatrix.h>
-#include <src/set.h>
+
+#include <src/smartptr/src/set.h>
 
 namespace gigide {
 
