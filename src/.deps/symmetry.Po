@@ -185,9 +185,10 @@ symmetry.o symmetry.o: symmetry.cc ../src/symmetry.h \
   /usr/include/c++/4.0.0/functional \
   //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/smart_ptr/detail/operator_bool.hpp \
   ../src/coordinates.h ../src/gigmatrix.h ../src/serialize.h \
-  ../src/serialabstract.h ../src/pyxml.h ../src/set.h ../src/serialimpl.h \
-  ../src/archive.h ../src/utilities.h ../src/molecule.h ../src/geometry.h \
-  ../src/exception.h /usr/include/c++/4.0.0/stdexcept
+  ../src/serialabstract.h ../src/set.h ../src/serialimpl.h \
+  ../src/archive.h ../src/pyxml/pyxml.h ../src/utilities.h \
+  ../src/molecule.h ../src/geometry.h ../src/exception.h \
+  /usr/include/c++/4.0.0/stdexcept
 
 ../src/symmetry.h:
 
@@ -679,13 +680,13 @@ symmetry.o symmetry.o: symmetry.cc ../src/symmetry.h \
 
 ../src/serialabstract.h:
 
-../src/pyxml.h:
-
 ../src/set.h:
 
 ../src/serialimpl.h:
 
 ../src/archive.h:
+
+../src/pyxml/pyxml.h:
 
 ../src/utilities.h:
 

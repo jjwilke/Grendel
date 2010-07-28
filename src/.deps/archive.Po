@@ -1,4 +1,4 @@
-archive.o archive.o: archive.cc ../src/archive.h ../src/pyxml.h \
+archive.o archive.o: archive.cc ../src/archive.h ../src/pyxml/pyxml.h \
   /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/Python.h \
   /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/patchlevel.h \
   /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pyconfig.h \
@@ -187,7 +187,7 @@ archive.o archive.o: archive.cc ../src/archive.h ../src/pyxml.h \
 
 ../src/archive.h:
 
-../src/pyxml.h:
+../src/pyxml/pyxml.h:
 
 /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/Python.h:
 

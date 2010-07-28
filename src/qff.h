@@ -7,7 +7,7 @@
 #include <string>
 #include <src/molecule.h>
 #include <src/coordinates.h>
-#include <src/pyxml.h>
+#include <src/pyxml/pyxml.h>
 #include <src/keyword.h>
 #include <src/taylor.h>
 #include <src/fileio.h>

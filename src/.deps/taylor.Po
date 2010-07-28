@@ -112,7 +112,11 @@ taylor.o taylor.o: taylor.cc ../src/taylor.h \
   /usr/include/c++/4.0.0/functional \
   //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/smart_ptr/detail/operator_bool.hpp \
   ../src/deftypes.h ../src/utilities.h ../src/gigmatrix.h \
-  ../src/serialize.h ../src/serialabstract.h ../src/pyxml.h \
+  ../src/serialize.h ../src/serialabstract.h ../src/set.h \
+  /usr/include/c++/4.0.0/map /usr/include/c++/4.0.0/bits/stl_tree.h \
+  /usr/include/c++/4.0.0/bits/stl_map.h \
+  /usr/include/c++/4.0.0/bits/stl_multimap.h ../src/serialimpl.h \
+  ../src/archive.h ../src/pyxml/pyxml.h \
   /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/Python.h \
   /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/patchlevel.h \
   /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pyconfig.h \
@@ -180,11 +184,7 @@ taylor.o taylor.o: taylor.cc ../src/taylor.h \
   /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pystrtod.h \
   /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pystrcmp.h \
   /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pyfpe.h \
-  /usr/include/c++/4.0.0/map /usr/include/c++/4.0.0/bits/stl_tree.h \
-  /usr/include/c++/4.0.0/bits/stl_map.h \
-  /usr/include/c++/4.0.0/bits/stl_multimap.h ../src/set.h \
-  ../src/serialimpl.h ../src/archive.h ../src/qff.h ../src/molecule.h \
-  ../src/defines.h ../src/keyword.h \
+  ../src/qff.h ../src/molecule.h ../src/defines.h ../src/keyword.h \
   /usr/include/c++/4.0.0/backward/iostream.h \
   /usr/include/c++/4.0.0/backward/backward_warning.h \
   /usr/include/c++/4.0.0/sstream /usr/include/c++/4.0.0/bits/sstream.tcc \
@@ -514,7 +514,21 @@ taylor.o taylor.o: taylor.cc ../src/taylor.h \
 
 ../src/serialabstract.h:
 
-../src/pyxml.h:
+../src/set.h:
+
+/usr/include/c++/4.0.0/map:
+
+/usr/include/c++/4.0.0/bits/stl_tree.h:
+
+/usr/include/c++/4.0.0/bits/stl_map.h:
+
+/usr/include/c++/4.0.0/bits/stl_multimap.h:
+
+../src/serialimpl.h:
+
+../src/archive.h:
+
+../src/pyxml/pyxml.h:
 
 /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/Python.h:
 
@@ -661,20 +675,6 @@ taylor.o taylor.o: taylor.cc ../src/taylor.h \
 /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pystrcmp.h:
 
 /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pyfpe.h:
-
-/usr/include/c++/4.0.0/map:
-
-/usr/include/c++/4.0.0/bits/stl_tree.h:
-
-/usr/include/c++/4.0.0/bits/stl_map.h:
-
-/usr/include/c++/4.0.0/bits/stl_multimap.h:
-
-../src/set.h:
-
-../src/serialimpl.h:
-
-../src/archive.h:
 
 ../src/qff.h:
 

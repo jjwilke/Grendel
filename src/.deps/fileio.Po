@@ -191,10 +191,11 @@ fileio.o fileio.o: fileio.cc ../config.h /usr/include/c++/4.0.0/iostream \
   /usr/include/c++/4.0.0/bits/stl_tree.h \
   /usr/include/c++/4.0.0/bits/stl_map.h \
   /usr/include/c++/4.0.0/bits/stl_multimap.h ../src/gigmatrix.h \
-  ../src/serialize.h ../src/serialabstract.h ../src/pyxml.h ../src/set.h \
-  ../src/serialimpl.h ../src/archive.h ../src/molecule.h ../src/keyword.h \
-  ../src/utilities.h ../src/qff.h ../src/taylor.h ../src/fit.h \
-  ../src/derivative.h ../src/iter.h ../src/displacement.h
+  ../src/serialize.h ../src/serialabstract.h ../src/set.h \
+  ../src/serialimpl.h ../src/archive.h ../src/pyxml/pyxml.h \
+  ../src/molecule.h ../src/keyword.h ../src/utilities.h ../src/qff.h \
+  ../src/taylor.h ../src/fit.h ../src/derivative.h ../src/iter.h \
+  ../src/displacement.h
 
 ../config.h:
 
@@ -696,13 +697,13 @@ fileio.o fileio.o: fileio.cc ../config.h /usr/include/c++/4.0.0/iostream \
 
 ../src/serialabstract.h:
 
-../src/pyxml.h:
-
 ../src/set.h:
 
 ../src/serialimpl.h:
 
 ../src/archive.h:
+
+../src/pyxml/pyxml.h:
 
 ../src/molecule.h:
 

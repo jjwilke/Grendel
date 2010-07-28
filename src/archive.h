@@ -1,6 +1,12 @@
 #ifndef gigide_archive_h_
 #define gigide_archive_h_
 
+#include <src/pyxml/pyxml.h>
+#include <src/ref.h>
+#include <src/set.h>
+#include <vector>
+#include <src/serialabstract.h>
+
 #define ArchivePtr boost::intrusive_ptr<smartptr::Archive>  
 #define ConstArchivePtr boost::intrusive_ptr<const smartptr::Archive>  
 
@@ -13,12 +19,7 @@
 #define map_key_tagname "key"
 #define map_value_tagname "value"
 
-#include <src/pyxml.h>
-#include <src/ref.h>
-#include <src/set.h>
-#include <vector>
-#include <src/serialabstract.h>
-
+#define blankstr std::string("")
 
 namespace smartptr {
 
@@ -381,6 +382,8 @@ class Archive : public Countable {
         }
 
 };
+
+#undef blankstr
 
 }
 

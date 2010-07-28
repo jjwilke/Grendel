@@ -185,8 +185,8 @@ hessian.o hessian.o: hessian.cc ../src/hessian.h ../src/molecule.h \
   /usr/include/c++/4.0.0/functional \
   //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/smart_ptr/detail/operator_bool.hpp \
   ../src/coordinates.h ../src/gigmatrix.h ../src/serialize.h \
-  ../src/serialabstract.h ../src/pyxml.h ../src/set.h ../src/serialimpl.h \
-  ../src/archive.h
+  ../src/serialabstract.h ../src/set.h ../src/serialimpl.h \
+  ../src/archive.h ../src/pyxml/pyxml.h
 
 ../src/hessian.h:
 
@@ -680,10 +680,10 @@ hessian.o hessian.o: hessian.cc ../src/hessian.h ../src/molecule.h \
 
 ../src/serialabstract.h:
 
-../src/pyxml.h:
-
 ../src/set.h:
 
 ../src/serialimpl.h:
 
 ../src/archive.h:
+
+../src/pyxml/pyxml.h:

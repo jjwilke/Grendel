@@ -6,7 +6,6 @@
 #include <fcntl.h>
 #include <errno.h>
 #include <config.h>
-#include <src/pyxml.h>
 #include <src/fileio.h>
 #include <src/fit.h>
 #include <src/defines.h>

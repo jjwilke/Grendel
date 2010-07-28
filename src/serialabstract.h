@@ -2,7 +2,6 @@
 #define _gigide_serialabstract_h_
 
 #include <string>
-#include <src/pyxml.h>
 #include <src/ref.h>
 #include <src/set.h>
 #include <iostream>

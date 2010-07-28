@@ -95,7 +95,38 @@ qff.o qff.o: qff.cc /usr/include/c++/4.0.0/backward/iostream.h \
   /usr/include/c++/4.0.0/bits/fstream.tcc /usr/include/c++/4.0.0/sstream \
   /usr/include/c++/4.0.0/bits/sstream.tcc /usr/include/fcntl.h \
   /usr/include/sys/fcntl.h /usr/include/errno.h /usr/include/sys/errno.h \
-  ../config.h ../src/pyxml.h \
+  ../config.h ../src/fileio.h ../src/coordinates.h ../src/deftypes.h \
+  ../src/ref.h \
+  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/intrusive_ptr.hpp \
+  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/smart_ptr/intrusive_ptr.hpp \
+  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config.hpp \
+  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/user.hpp \
+  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/select_compiler_config.hpp \
+  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/compiler/gcc.hpp \
+  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/select_stdlib_config.hpp \
+  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/no_tr1/utility.hpp \
+  /usr/include/c++/4.0.0/utility /usr/include/c++/4.0.0/bits/stl_relops.h \
+  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/stdlib/libstdcpp3.hpp \
+  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/select_platform_config.hpp \
+  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/platform/macos.hpp \
+  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/posix_features.hpp \
+  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/suffix.hpp \
+  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/assert.hpp \
+  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/detail/workaround.hpp \
+  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/smart_ptr/detail/sp_convertible.hpp \
+  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/no_tr1/functional.hpp \
+  /usr/include/c++/4.0.0/functional \
+  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/smart_ptr/detail/operator_bool.hpp \
+  /usr/include/math.h /usr/include/architecture/i386/math.h \
+  /usr/include/c++/4.0.0/vector /usr/include/c++/4.0.0/bits/stl_vector.h \
+  /usr/include/c++/4.0.0/bits/stl_bvector.h \
+  /usr/include/c++/4.0.0/bits/vector.tcc ../src/defines.h \
+  ../src/printstream.h /usr/include/c++/4.0.0/map \
+  /usr/include/c++/4.0.0/bits/stl_tree.h \
+  /usr/include/c++/4.0.0/bits/stl_map.h \
+  /usr/include/c++/4.0.0/bits/stl_multimap.h ../src/gigmatrix.h \
+  ../src/serialize.h ../src/serialabstract.h ../src/set.h \
+  ../src/serialimpl.h ../src/archive.h ../src/pyxml/pyxml.h \
   /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/Python.h \
   /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/patchlevel.h \
   /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pyconfig.h \
@@ -103,7 +134,6 @@ qff.o qff.o: qff.cc /usr/include/c++/4.0.0/backward/iostream.h \
   /usr/lib/gcc/i686-apple-darwin9/4.0.1/include/syslimits.h \
   /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pyport.h \
   /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pyconfig.h \
-  /usr/include/math.h /usr/include/architecture/i386/math.h \
   /usr/include/sys/time.h /usr/include/sys/stat.h /usr/include/termios.h \
   /usr/include/sys/termios.h /usr/include/sys/ttycom.h \
   /usr/include/sys/ioccom.h /usr/include/sys/ttydefaults.h \
@@ -162,41 +192,10 @@ qff.o qff.o: qff.cc /usr/include/c++/4.0.0/backward/iostream.h \
   /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pystrtod.h \
   /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pystrcmp.h \
   /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pyfpe.h \
-  /usr/include/c++/4.0.0/vector /usr/include/c++/4.0.0/bits/stl_vector.h \
-  /usr/include/c++/4.0.0/bits/stl_bvector.h \
-  /usr/include/c++/4.0.0/bits/vector.tcc /usr/include/c++/4.0.0/map \
-  /usr/include/c++/4.0.0/bits/stl_tree.h \
-  /usr/include/c++/4.0.0/bits/stl_map.h \
-  /usr/include/c++/4.0.0/bits/stl_multimap.h ../src/deftypes.h \
-  ../src/ref.h \
-  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/intrusive_ptr.hpp \
-  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/smart_ptr/intrusive_ptr.hpp \
-  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config.hpp \
-  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/user.hpp \
-  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/select_compiler_config.hpp \
-  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/compiler/gcc.hpp \
-  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/select_stdlib_config.hpp \
-  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/no_tr1/utility.hpp \
-  /usr/include/c++/4.0.0/utility /usr/include/c++/4.0.0/bits/stl_relops.h \
-  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/stdlib/libstdcpp3.hpp \
-  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/select_platform_config.hpp \
-  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/platform/macos.hpp \
-  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/posix_features.hpp \
-  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/suffix.hpp \
-  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/assert.hpp \
-  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/detail/workaround.hpp \
-  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/smart_ptr/detail/sp_convertible.hpp \
-  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/no_tr1/functional.hpp \
-  /usr/include/c++/4.0.0/functional \
-  //Users/jjwilke/Programs/Boost/boost_1_41_0/boost/smart_ptr/detail/operator_bool.hpp \
-  ../src/fileio.h ../src/coordinates.h ../src/defines.h \
-  ../src/printstream.h ../src/gigmatrix.h ../src/serialize.h \
-  ../src/serialabstract.h ../src/set.h ../src/serialimpl.h \
-  ../src/archive.h ../src/molecule.h ../src/keyword.h ../src/pyregexp.h \
-  ../src/fit.h ../src/exception.h /usr/include/c++/4.0.0/stdexcept \
-  ../src/symmetry.h ../src/utilities.h ../src/qff.h ../src/taylor.h \
-  ../src/derivative.h ../src/iter.h ../src/displacement.h \
-  ../src/permutation.h
+  ../src/molecule.h ../src/keyword.h ../src/pyregexp.h ../src/fit.h \
+  ../src/exception.h /usr/include/c++/4.0.0/stdexcept ../src/symmetry.h \
+  ../src/utilities.h ../src/qff.h ../src/taylor.h ../src/derivative.h \
+  ../src/iter.h ../src/displacement.h ../src/permutation.h
 
 /usr/include/c++/4.0.0/backward/iostream.h:
 
@@ -478,7 +477,93 @@ qff.o qff.o: qff.cc /usr/include/c++/4.0.0/backward/iostream.h \
 
 ../config.h:
 
-../src/pyxml.h:
+../src/fileio.h:
+
+../src/coordinates.h:
+
+../src/deftypes.h:
+
+../src/ref.h:
+
+//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/intrusive_ptr.hpp:
+
+//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/smart_ptr/intrusive_ptr.hpp:
+
+//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config.hpp:
+
+//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/user.hpp:
+
+//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/select_compiler_config.hpp:
+
+//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/compiler/gcc.hpp:
+
+//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/select_stdlib_config.hpp:
+
+//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/no_tr1/utility.hpp:
+
+/usr/include/c++/4.0.0/utility:
+
+/usr/include/c++/4.0.0/bits/stl_relops.h:
+
+//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/stdlib/libstdcpp3.hpp:
+
+//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/select_platform_config.hpp:
+
+//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/platform/macos.hpp:
+
+//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/posix_features.hpp:
+
+//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/suffix.hpp:
+
+//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/assert.hpp:
+
+//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/detail/workaround.hpp:
+
+//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/smart_ptr/detail/sp_convertible.hpp:
+
+//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/no_tr1/functional.hpp:
+
+/usr/include/c++/4.0.0/functional:
+
+//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/smart_ptr/detail/operator_bool.hpp:
+
+/usr/include/math.h:
+
+/usr/include/architecture/i386/math.h:
+
+/usr/include/c++/4.0.0/vector:
+
+/usr/include/c++/4.0.0/bits/stl_vector.h:
+
+/usr/include/c++/4.0.0/bits/stl_bvector.h:
+
+/usr/include/c++/4.0.0/bits/vector.tcc:
+
+../src/defines.h:
+
+../src/printstream.h:
+
+/usr/include/c++/4.0.0/map:
+
+/usr/include/c++/4.0.0/bits/stl_tree.h:
+
+/usr/include/c++/4.0.0/bits/stl_map.h:
+
+/usr/include/c++/4.0.0/bits/stl_multimap.h:
+
+../src/gigmatrix.h:
+
+../src/serialize.h:
+
+../src/serialabstract.h:
+
+../src/set.h:
+
+../src/serialimpl.h:
+
+../src/archive.h:
+
+../src/pyxml/pyxml.h:
 
 /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/Python.h:
 
@@ -493,10 +578,6 @@ qff.o qff.o: qff.cc /usr/include/c++/4.0.0/backward/iostream.h \
 /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pyport.h:
 
 /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pyconfig.h:
-
-/usr/include/math.h:
-
-/usr/include/architecture/i386/math.h:
 
 /usr/include/sys/time.h:
 
@@ -621,88 +702,6 @@ qff.o qff.o: qff.cc /usr/include/c++/4.0.0/backward/iostream.h \
 /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pystrcmp.h:
 
 /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pyfpe.h:
-
-/usr/include/c++/4.0.0/vector:
-
-/usr/include/c++/4.0.0/bits/stl_vector.h:
-
-/usr/include/c++/4.0.0/bits/stl_bvector.h:
-
-/usr/include/c++/4.0.0/bits/vector.tcc:
-
-/usr/include/c++/4.0.0/map:
-
-/usr/include/c++/4.0.0/bits/stl_tree.h:
-
-/usr/include/c++/4.0.0/bits/stl_map.h:
-
-/usr/include/c++/4.0.0/bits/stl_multimap.h:
-
-../src/deftypes.h:
-
-../src/ref.h:
-
-//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/intrusive_ptr.hpp:
-
-//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/smart_ptr/intrusive_ptr.hpp:
-
-//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config.hpp:
-
-//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/user.hpp:
-
-//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/select_compiler_config.hpp:
-
-//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/compiler/gcc.hpp:
-
-//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/select_stdlib_config.hpp:
-
-//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/no_tr1/utility.hpp:
-
-/usr/include/c++/4.0.0/utility:
-
-/usr/include/c++/4.0.0/bits/stl_relops.h:
-
-//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/stdlib/libstdcpp3.hpp:
-
-//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/select_platform_config.hpp:
-
-//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/platform/macos.hpp:
-
-//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/posix_features.hpp:
-
-//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/suffix.hpp:
-
-//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/assert.hpp:
-
-//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/detail/workaround.hpp:
-
-//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/smart_ptr/detail/sp_convertible.hpp:
-
-//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/config/no_tr1/functional.hpp:
-
-/usr/include/c++/4.0.0/functional:
-
-//Users/jjwilke/Programs/Boost/boost_1_41_0/boost/smart_ptr/detail/operator_bool.hpp:
-
-../src/fileio.h:
-
-../src/coordinates.h:
-
-../src/defines.h:
-
-../src/printstream.h:
-
-../src/gigmatrix.h:
-
-../src/serialize.h:
-
-../src/serialabstract.h:
-
-../src/set.h:
-
-../src/serialimpl.h:
-
-../src/archive.h:
 
 ../src/molecule.h:
 

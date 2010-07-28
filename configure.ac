@@ -8,10 +8,13 @@ AC_CONFIG_SRCDIR([src/main.cc])
 AM_INIT_AUTOMAKE
 AM_CONFIG_HEADER([config.h])
 
+LT_INIT()
+
 # Checks for programs.
 AC_PROG_CXX
 AC_PROG_CC
 AC_PROG_RANLIB
+AC_PROG_LIBTOOL
 
 AC_LANG([C++])
 
@@ -25,6 +28,7 @@ AC_C_CONST
 
 AC_CONFIG_FILES([Makefile
                  src/Makefile
+                 src/pyxml/Makefile
                  lib/Makefile
                  test.py])
 

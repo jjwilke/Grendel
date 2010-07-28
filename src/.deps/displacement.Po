@@ -121,7 +121,7 @@ displacement.o displacement.o: displacement.cc ../config.h \
   /usr/include/c++/4.0.0/bits/ostream.tcc \
   /usr/include/c++/4.0.0/bits/sstream.tcc /usr/include/c++/4.0.0/iostream \
   ../src/gigmatrix.h ../src/serialize.h ../src/serialabstract.h \
-  ../src/pyxml.h \
+  ../src/set.h ../src/serialimpl.h ../src/archive.h ../src/pyxml/pyxml.h \
   /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/Python.h \
   /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/patchlevel.h \
   /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pyconfig.h \
@@ -188,8 +188,8 @@ displacement.o displacement.o: displacement.cc ../config.h \
   /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pystrtod.h \
   /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pystrcmp.h \
   /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pyfpe.h \
-  ../src/set.h ../src/serialimpl.h ../src/archive.h ../src/iter.h \
-  ../src/keyword.h /usr/include/c++/4.0.0/backward/iostream.h \
+  ../src/iter.h ../src/keyword.h \
+  /usr/include/c++/4.0.0/backward/iostream.h \
   /usr/include/c++/4.0.0/backward/backward_warning.h ../src/pyregexp.h \
   ../src/exception.h /usr/include/c++/4.0.0/stdexcept ../src/fileio.h \
   /usr/include/c++/4.0.0/fstream \
@@ -540,7 +540,13 @@ displacement.o displacement.o: displacement.cc ../config.h \
 
 ../src/serialabstract.h:
 
-../src/pyxml.h:
+../src/set.h:
+
+../src/serialimpl.h:
+
+../src/archive.h:
+
+../src/pyxml/pyxml.h:
 
 /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/Python.h:
 
@@ -683,12 +689,6 @@ displacement.o displacement.o: displacement.cc ../config.h \
 /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pystrcmp.h:
 
 /opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6/pyfpe.h:
-
-../src/set.h:
-
-../src/serialimpl.h:
-
-../src/archive.h:
 
 ../src/iter.h:
 
