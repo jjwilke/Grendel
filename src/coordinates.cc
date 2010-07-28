@@ -4,8 +4,9 @@
 #include <src/symmetry.h>
 #include <src/utilities.h>
 #include <src/exception.h>
-#include <src/ref.h>
 #include <math.h>
+
+#include <src/smartptr/ref.h>
 
 #define X 0
 #define Y 1

@@ -7,7 +7,6 @@
 #include <src/keyword.h>
 #include <src/defines.h>
 #include <src/geometry.h>
-#include <src/ref.h>
 #include <src/gigmatrix.h>
 
 namespace gigide {

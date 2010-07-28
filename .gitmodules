@@ -1,3 +1,3 @@
-[submodule "src/pyxml"]
-	path = src/pyxml
-	url = /Users/jjwilke/Programs/pyxml
+[submodule "src/smartptr"]
+	path = src/smartptr
+	url = /Users/jjwilke/Programs/smartptr

@@ -7,14 +7,12 @@
 #include <string>
 #include <src/molecule.h>
 #include <src/coordinates.h>
-#include <src/pyxml/pyxml.h>
 #include <src/keyword.h>
 #include <src/taylor.h>
 #include <src/fileio.h>
 #include <src/fit.h>
 #include <src/gigmatrix.h>
 #include <src/deftypes.h>
-#include <src/archive.h>
 
 namespace gigide {
 

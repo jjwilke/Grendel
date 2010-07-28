@@ -4,7 +4,6 @@
 
 #include <vector>
 #include <src/printstream.h>
-#include <src/serialize.h>
 #include <src/deftypes.h>
 
 namespace gigide {

@@ -9,7 +9,6 @@
 #include <src/keyword.h>
 #include <src/coordinates.h>
 #include <src/gigmatrix.h>
-#include <src/archive.h>
 
 namespace gigide {
 

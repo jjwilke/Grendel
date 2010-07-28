@@ -7,7 +7,6 @@
 #include <src/defines.h>
 #include <src/printstream.h>
 #include <src/gigmatrix.h>
-#include <src/serialize.h>
 #include <src/set.h>
 #include <iostream>
 

@@ -91,6 +91,7 @@ gigide::inverse_sine(double value)
     else return asin(value);
 }
 
+#if 0
 void
 assignValues(string text, Matrix* matrix)
 {
@@ -108,7 +109,6 @@ assignValues(string text, Matrix* matrix)
     }
 }
 
-#if 0
 ArchivePtr
 saveXMLMatrix(const Matrix* matrix, const ArchivePtr& arch, string tagname)
 {

@@ -17,7 +17,6 @@
 #include <src/derivative.h>
 #include <src/displacement.h>
 #include <src/permutation.h>
-#include <src/serialize.h>
 
 #define USE_SVD 0
 

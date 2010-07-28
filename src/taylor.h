@@ -3,7 +3,6 @@
 
 #include <vector>
 #include <iostream>
-#include <src/ref.h>
 #include <src/deftypes.h>
 
 namespace gigide {

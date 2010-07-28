@@ -1,4 +1,4 @@
-SUBDIRS=src lib src/pyxml
+SUBDIRS=src lib src/smartptr 
 
 validate:
 	python test.py

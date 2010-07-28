@@ -1,5 +1,4 @@
 #include <src/gigmatrix.h>
-#include <src/serialize.h>
 #include <cstdarg>
 #include <math.h>
 #include <src/printstream.h>

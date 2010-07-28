@@ -9,7 +9,6 @@
 #include <src/coordinates.h>
 #include <src/printstream.h>
 #include <src/deftypes.h>
-#include <src/serialize.h>
 #include <iostream>
 
 namespace gigide {

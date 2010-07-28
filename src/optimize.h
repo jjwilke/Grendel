@@ -2,9 +2,7 @@
 #define _gigide_optimize_h_
 
 #include <src/displacement.h>
-#include <src/serialize.h>
 #include <src/qff.h>
-#include <src/ref.h>
 
 namespace gigide {
 

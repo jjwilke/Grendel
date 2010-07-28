@@ -2,8 +2,7 @@
 #define gigide_matrix_h
 
 #include <iostream>
-#include <src/serialize.h>
-#include <src/serialimpl.h>
+#include <src/smartptr/serialize.h>
 
 namespace gigide {
 

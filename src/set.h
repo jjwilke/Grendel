@@ -2,7 +2,7 @@
 #define gigide_set_h
 
 #include <vector>
-#include <src/ref.h>
+#include <src/smartptr/ref.h>
 
 namespace gigide {
 

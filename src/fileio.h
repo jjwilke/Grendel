@@ -8,7 +8,6 @@
 #include <sstream>
 #include <src/coordinates.h>
 #include <src/molecule.h>
-#include <src/ref.h>
 
 namespace gigide {
 

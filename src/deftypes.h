@@ -1,7 +1,7 @@
 #ifndef gigide_deftypes_h
 #define gigide_deftypes_h
 
-#include <src/ref.h>
+#include <src/smartptr/ref.h>
 
 #define gigstr const std::string&
 

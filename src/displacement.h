@@ -7,7 +7,6 @@
 #include <src/coordinates.h>
 #include <src/deftypes.h>
 #include <src/iter.h>
-#include <src/serialize.h>
 
 namespace gigide {
 

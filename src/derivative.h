@@ -5,7 +5,6 @@
 #include <map>
 #include <vector>
 #include <src/coordinates.h>
-#include <src/serialize.h>
 #include <src/deftypes.h>
 #include <src/iter.h>
 #include <src/fit.h>
