@@ -1,0 +1,195 @@
+Registering STRE
+Registering BEND
+Registering OOP
+Registering TORS
+Registering LINX
+Registering LINY
+Registering LIN1
+Registering SYMM
+Registering CoordinateSubspace
+Registering Molecule
+Registering FitPoint
+Registering Fit
+Registering PointGroup
+Registering PointGroupClass
+Registering Rotation
+Registering Reflection
+Registering Inversion
+Registering ImproperRotation
+Registering IdentityElement
+Registering Displacement
+Registering DisplacementIterator
+Registering Derivative
+Registering DerivativeIterator
+Input options: 
+bond units = angstrom
+bvecdisp = 0.00001
+coordinate debug = 0
+debug = 0
+dispfile = default
+dispsizes = 0.01 0.01 0.02
+energy units = aj
+fit debug = 0
+fittype = formula
+geometry debug = 0
+geometry maxit = 1000
+geometry print frequency = 10
+geometry tolerance = 15
+mol details = none
+nderiv = 4
+nvalue = 0
+printfit = false
+robustdebug = 2
+robustness = 2
+statpt = true
+subgroup = none
+symmetry debug = 0
+symmetry tolerance = 12
+usedispfile = false
+useequivalence = true
+usezero = true
+3 x 3 Matrix Coordinates (angstrom)
+        0.0000000000     -0.0711557328      0.0000000000
+        0.7580807277      0.5646465554      0.0000000000
+       -0.7580807277      0.5646465554      0.0000000000
+Abelian point group: C2V
+Point Group C2V of order 4
+E
+C2Y [ 0.000000000000  1.000000000000  0.000000000000]
+SIGMAXY [ 0.000000000000  0.000000000000  1.000000000000]
+SIGMAYZ [ 1.000000000000  0.000000000000  0.000000000000]
+
+    STRE       1 2      0.989409389176 Characters = [    1.00   -0.09    1.00   -0.09 ]
+    STRE       1 3      0.989409389176 Characters = [    1.00   -0.09    1.00   -0.09 ]
+    BEND     2 1 3    100.026880130163 Characters = [    1.00    1.00    1.00    1.00 ]
+There are a total of 3 nonredundant internal coordinates in your set, which is correct. Good job!
+Vector BB^T eigenvalues of size 3
+      2.0174431926
+      4.3482203558
+      6.0761414665
+                                                            E     C2Y SIGMAXY SIGMAYZ
+    SYMM                1.399236176913 Characters = [    1.00    1.00    1.00    1.00 ]
+  0.7071    STRE       1 2      0.989409389176
+  0.7071    STRE       1 3      0.989409389176
+    SYMM                0.000000000000 Characters = [    1.00   -1.00    1.00   -1.00 ]
+  0.7071    STRE       1 2      0.989409389176
+ -0.7071    STRE       1 3      0.989409389176
+    SYMM                1.745798398769 Characters = [    1.00    1.00    1.00    1.00 ]
+  1.0000    BEND     2 1 3    100.026880130163
+Finding equivalent displacements for 1 out of 37
+Finding equivalent displacements for 2 out of 37
+Finding equivalent displacements for 3 out of 37
+Finding equivalent displacements for 4 out of 37
+Finding equivalent displacements for 5 out of 37
+Finding equivalent displacements for 6 out of 37
+Finding equivalent displacements for 7 out of 37
+Finding equivalent displacements for 8 out of 37
+Finding equivalent displacements for 9 out of 37
+Finding equivalent displacements for 10 out of 37
+Finding equivalent displacements for 11 out of 37
+Finding equivalent displacements for 12 out of 37
+Finding equivalent displacements for 13 out of 37
+Finding equivalent displacements for 14 out of 37
+Finding equivalent displacements for 15 out of 37
+Finding equivalent displacements for 16 out of 37
+Finding equivalent displacements for 17 out of 37
+Finding equivalent displacements for 18 out of 37
+Finding equivalent displacements for 19 out of 37
+Finding equivalent displacements for 20 out of 37
+Finding equivalent displacements for 21 out of 37
+Finding equivalent displacements for 22 out of 37
+Finding equivalent displacements for 23 out of 37
+Finding equivalent displacements for 24 out of 37
+Finding equivalent displacements for 25 out of 37
+Finding equivalent displacements for 26 out of 37
+Finding equivalent displacements for 27 out of 37
+Finding equivalent displacements for 28 out of 37
+Finding equivalent displacements for 29 out of 37
+Finding equivalent displacements for 30 out of 37
+Finding equivalent displacements for 31 out of 37
+Finding equivalent displacements for 32 out of 37
+Finding equivalent displacements for 33 out of 37
+Finding equivalent displacements for 34 out of 37
+Finding equivalent displacements for 35 out of 37
+Finding equivalent displacements for 36 out of 37
+Finding equivalent displacements for 37 out of 37
+Reading in data for 27 unique displacements, 37 total displacements
+
+Assigning values for displacement 1 <  0.00000004,  0.00000000, -1.00000025,>
+	Assigned energy to <0.000,0.000,-1.000>
+Assigning values for displacement 2 <  0.00000049,  0.00000000,  0.99999990,>
+	Assigned energy to <0.000,0.000,1.000>
+Assigning values for displacement 3 <  0.00000029,  0.00000000, -1.99999995,>
+	Assigned energy to <0.000,0.000,-2.000>
+Assigning values for displacement 4 < -0.00000002,  0.00000000,  1.99999997,>
+	Assigned energy to <0.000,0.000,2.000>
+Assigning values for displacement 5 < -0.99999983,  0.00000000, -0.00000008,>
+	Assigned energy to <-1.000,0.000,0.000>
+Assigning values for displacement 6 <  0.99999967,  0.00000000, -0.00000011,>
+	Assigned energy to <1.000,0.000,0.000>
+Assigning values for displacement 7 < -2.00000006,  0.00000000,  0.00000034,>
+	Assigned energy to <-2.000,0.000,0.000>
+Assigning values for displacement 8 <  1.99999999,  0.00000000,  0.00000022,>
+	Assigned energy to <2.000,0.000,0.000>
+Assigning values for displacement 9 < -0.00000008,  0.00000000, -0.00000009,>
+	Assigned energy to <0.000,0.000,0.000>
+Assigning values for displacement 10 <  0.00000049, -0.99999980, -0.00000019,>
+	Assigned energy to <0.000,-1.000,0.000>
+	Assigned energy to <0.000,1.000,0.000>
+Assigning values for displacement 11 < -0.00000005, -1.99999990,  0.00000006,>
+	Assigned energy to <0.000,-2.000,0.000>
+	Assigned energy to <0.000,2.000,0.000>
+Assigning values for displacement 12 < -1.00000005,  0.00000000, -0.99999980,>
+	Assigned energy to <-1.000,0.000,-1.000>
+Assigning values for displacement 13 < -0.99999956,  0.00000000,  0.99999970,>
+	Assigned energy to <-1.000,0.000,1.000>
+Assigning values for displacement 14 <  1.00000022,  0.00000000, -0.99999994,>
+	Assigned energy to <1.000,0.000,-1.000>
+Assigning values for displacement 15 <  0.99999997,  0.00000000,  0.99999976,>
+	Assigned energy to <1.000,0.000,1.000>
+Assigning values for displacement 16 <  0.99999982,  0.00000000,  2.00000018,>
+	Assigned energy to <1.000,0.000,2.000>
+Assigning values for displacement 17 <  2.00000002,  0.00000000,  0.99999996,>
+	Assigned energy to <2.000,0.000,1.000>
+Assigning values for displacement 18 < -2.00000022,  0.00000000, -1.00000011,>
+	Assigned energy to <-2.000,0.000,-1.000>
+Assigning values for displacement 19 < -0.99999990,  0.00000000, -1.99999970,>
+	Assigned energy to <-1.000,0.000,-2.000>
+Assigning values for displacement 20 <  0.00000020, -0.99999987, -1.00000004,>
+	Assigned energy to <0.000,-1.000,-1.000>
+	Assigned energy to <0.000,1.000,-1.000>
+Assigning values for displacement 21 < -0.00000045, -1.00000006,  1.00000012,>
+	Assigned energy to <0.000,-1.000,1.000>
+	Assigned energy to <0.000,1.000,1.000>
+Assigning values for displacement 22 < -0.99999995, -0.99999976,  0.00000011,>
+	Assigned energy to <-1.000,-1.000,0.000>
+	Assigned energy to <-1.000,1.000,0.000>
+Assigning values for displacement 23 <  1.00000049, -1.00000013, -0.00000016,>
+	Assigned energy to <1.000,-1.000,0.000>
+	Assigned energy to <1.000,1.000,0.000>
+Assigning values for displacement 24 < -0.99999995, -0.99999993, -0.99999986,>
+	Assigned energy to <-1.000,-1.000,-1.000>
+	Assigned energy to <-1.000,1.000,-1.000>
+Assigning values for displacement 25 <  0.99999991,  0.99999982,  0.99999986,>
+	Assigned energy to <1.000,1.000,1.000>
+	Assigned energy to <1.000,-1.000,1.000>
+Assigning values for displacement 26 < -1.00000000, -1.00000018,  0.99999984,>
+	Assigned energy to <-1.000,-1.000,1.000>
+	Assigned energy to <-1.000,1.000,1.000>
+Assigning values for displacement 27 <  1.00000035, -0.99999978, -0.99999990,>
+	Assigned energy to <1.000,-1.000,-1.000>
+	Assigned energy to <1.000,1.000,-1.000>
+Minimum energy displacement is                    0 0 0  E =  -326.832273507446
+Energy =  -74.965901167400
+
+Force field appears valid.  No points appear to have erroneous energies.
+All energy differences are smaller than   0.01499318
+All energy differences are larger than   0.00000075
+Vector Gradients of size 3
+      0.0000014968
+      0.0000000000
+      0.0000000454
+Vector Frequencies of size 3
+   2170.0478242920
+   4140.0038673762
+   4391.0666350956

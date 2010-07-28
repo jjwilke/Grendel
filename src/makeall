@@ -1,0 +1,16 @@
+#! /usr/bin/env tcsh
+
+./makefit i 1
+./makefit i_d3 1
+./makefit ii 1
+./makefit ii_d3 1
+./makefit iii 1
+./makefit iiii 1
+./makefit ij 2
+./makefit ij_d3 2
+./makefit iij 2
+./makefit iiij 2
+./makefit iijj 2
+./makefit ijk 3
+./makefit iijk 3
+./makefit ijkl 4

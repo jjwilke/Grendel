@@ -1,0 +1,1898 @@
+==17095== Memcheck, a memory error detector
+==17095== Copyright (C) 2002-2009, and GNU GPL'd, by Julian Seward et al.
+==17095== Using Valgrind-3.5.0 and LibVEX; rerun with -h for copyright info
+==17095== Command: ../../../src/gigide --calc
+==17095== 
+--17095-- ../../../src/gigide:
+--17095-- dSYM directory is missing; consider using --dsymutil=yes
+Registering STRE
+Registering BEND
+Registering OOP
+Registering TORS
+Registering LINX
+Registering LINY
+Registering LIN1
+Registering SYMM
+Registering CoordinateSubspace
+Registering Molecule
+Registering FitPoint
+Registering Fit
+Registering PointGroup
+Registering PointGroupClass
+Registering Rotation
+Registering Reflection
+Registering Inversion
+Registering ImproperRotation
+Registering IdentityElement
+Registering Displacement
+Registering DisplacementIterator
+Registering Derivative
+Registering DerivativeIterator
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2D7C: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239855: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22282C: PyEval_CallObjectWithKeywords (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x226938: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0xf18010 is 1,200 bytes inside a block of size 4,096 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0xCD94DF: fclose (in /usr/lib/libSystem.B.dylib)
+==17095==    by 0x239551: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22282C: PyEval_CallObjectWithKeywords (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x226938: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2E6B: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239855: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22282C: PyEval_CallObjectWithKeywords (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x226938: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0xf19010 is 48 bytes inside a block of size 184 free'd
+==17095==    at 0x1A1299: realloc (vg_replace_malloc.c:476)
+==17095==    by 0x1D5D10: PyCallIter_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1D6272: PyList_Insert (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D02D: PyMarshal_WriteObjectToFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D133: PyMarshal_WriteObjectToFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D424: PyMarshal_WriteObjectToFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D83A: PyMarshal_ReadObjectFromString (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D982: PyMarshal_ReadLastObjectFromFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x237842: PyImport_GetMagicNumber (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239543: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1F4EC9: PyTuple_Pack (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2D98: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239855: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22282C: PyEval_CallObjectWithKeywords (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x226938: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0xf14010 is 1,616 bytes inside a block of size 4,096 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0xCD94DF: fclose (in /usr/lib/libSystem.B.dylib)
+==17095==    by 0x239551: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22282C: PyEval_CallObjectWithKeywords (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x226938: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2D7C: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1F4E6E: PyTuple_Pack (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2D98: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239855: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22282C: PyEval_CallObjectWithKeywords (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0xf1e010 is not stack'd, malloc'd or (recently) free'd
+==17095== 
+==17095== Conditional jump or move depends on uninitialised value(s)
+==17095==    at 0x1E708E: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2E6B: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1F4E6E: PyTuple_Pack (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2D98: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239855: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22282C: PyEval_CallObjectWithKeywords (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Use of uninitialised value of size 4
+==17095==    at 0x1E709D: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2E6B: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1F4E6E: PyTuple_Pack (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2D98: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239855: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22282C: PyEval_CallObjectWithKeywords (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Conditional jump or move depends on uninitialised value(s)
+==17095==    at 0x1E708E: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2E6B: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239855: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22282C: PyEval_CallObjectWithKeywords (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x226938: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Use of uninitialised value of size 4
+==17095==    at 0x1E709D: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2E6B: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239855: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22282C: PyEval_CallObjectWithKeywords (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x226938: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Conditional jump or move depends on uninitialised value(s)
+==17095==    at 0x1E708E: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B23B9: PyGrammar_AddAccelerators (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B2DD7: PyParser_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B2EB8: PyParser_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x240EE6: PyParser_ASTFromString (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24107A: PyRun_StringFlags (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21EA7A: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22751D: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22925F: PyEval_EvalCode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239314: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Use of uninitialised value of size 4
+==17095==    at 0x1E709D: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B23B9: PyGrammar_AddAccelerators (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B2DD7: PyParser_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B2EB8: PyParser_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x240EE6: PyParser_ASTFromString (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24107A: PyRun_StringFlags (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21EA7A: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22751D: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22925F: PyEval_EvalCode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239314: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B23B9: PyGrammar_AddAccelerators (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B2DD7: PyParser_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B2EB8: PyParser_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x240EE6: PyParser_ASTFromString (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24107A: PyRun_StringFlags (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21EA7A: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22751D: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22925F: PyEval_EvalCode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239314: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0xf63010 is 240 bytes inside a block of size 672 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0x1B23B9: PyGrammar_AddAccelerators (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B2DD7: PyParser_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B2EB8: PyParser_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x240EE6: PyParser_ASTFromString (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24107A: PyRun_StringFlags (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21EA7A: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22751D: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22925F: PyEval_EvalCode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239314: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2E6B: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x240850: PyErr_Display (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24109A: PyRun_StringFlags (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21EA7A: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22751D: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22925F: PyEval_EvalCode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239314: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23983B: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0xfb6010 is 3,184 bytes inside a block of size 6,016 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0x1B327C: PyParser_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x240EE6: PyParser_ASTFromString (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24107A: PyRun_StringFlags (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21EA7A: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22751D: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22925F: PyEval_EvalCode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239314: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23983B: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2E6B: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1D1B2A: PyFloat_FromString (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x247B37: PySys_WriteStdout (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x247B1B: PySys_WriteStdout (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1E0DCD: PyDict_DelItem (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1E30A0: PyDict_DelItemString (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x228A1D: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22925F: PyEval_EvalCode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239314: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0xfba010 is 3,312 bytes inside a block of size 6,016 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0x1B327C: PyParser_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x240EE6: PyParser_ASTFromString (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24107A: PyRun_StringFlags (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21EA7A: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22751D: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22925F: PyEval_EvalCode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239314: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23983B: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1F4EC9: PyTuple_Pack (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2DB4: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239855: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22282C: PyEval_CallObjectWithKeywords (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x226938: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0xfdc010 is 0 bytes after a block of size 16 free'd
+==17095==    at 0x1A1299: realloc (vg_replace_malloc.c:476)
+==17095==    by 0x1D5D10: PyCallIter_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1D6272: PyList_Insert (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D02D: PyMarshal_WriteObjectToFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D133: PyMarshal_WriteObjectToFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D407: PyMarshal_WriteObjectToFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D83A: PyMarshal_ReadObjectFromString (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D982: PyMarshal_ReadLastObjectFromFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x237842: PyImport_GetMagicNumber (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239543: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2E5C: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239855: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22282C: PyEval_CallObjectWithKeywords (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x226938: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0xf07010 is 192 bytes inside a block of size 804 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0x1D6391: PyList_Append (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D854: PyMarshal_ReadObjectFromString (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D982: PyMarshal_ReadLastObjectFromFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x237842: PyImport_GetMagicNumber (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239543: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B26A1: PyNode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B268C: PyNode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B268C: PyNode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B26CF: PyNode_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x240F10: PyParser_ASTFromString (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24107A: PyRun_StringFlags (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x225843: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0xffa010 is 3,168 bytes inside a block of size 6,016 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0x1B327C: PyParser_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x240EE6: PyParser_ASTFromString (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24107A: PyRun_StringFlags (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x225843: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E743B: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229D1B: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229E75: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22DD3F: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22F098: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24081B: PyErr_Display (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24109A: PyRun_StringFlags (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x225843: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0xffa010 is 3,168 bytes inside a block of size 6,016 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0x1B327C: PyParser_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x240EE6: PyParser_ASTFromString (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24107A: PyRun_StringFlags (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x225843: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2296FF: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229859: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFFA: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24081B: PyErr_Display (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24109A: PyRun_StringFlags (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x225843: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0xffb010 is 240 bytes inside a block of size 512 free'd
+==17095==    at 0x1A1299: realloc (vg_replace_malloc.c:476)
+==17095==    by 0x229D1B: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229E75: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22DD3F: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22F098: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24081B: PyErr_Display (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24109A: PyRun_StringFlags (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x225843: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2D7C: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239855: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A22D: PyImport_ExecCodeModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22751D: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22925F: PyEval_EvalCode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239314: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23983B: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0xfe5010 is 0 bytes after a block of size 4,096 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0xCD94DF: fclose (in /usr/lib/libSystem.B.dylib)
+==17095==    by 0x239551: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A22D: PyImport_ExecCodeModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22751D: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22925F: PyEval_EvalCode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239314: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23983B: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2E6B: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1F4E6E: PyTuple_Pack (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2D98: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239855: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A22D: PyImport_ExecCodeModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22751D: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22925F: PyEval_EvalCode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239314: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23983B: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0xfe8010 is not stack'd, malloc'd or (recently) free'd
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2E6B: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239855: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A22D: PyImport_ExecCodeModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22751D: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22925F: PyEval_EvalCode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239314: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23983B: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0xfe7010 is 128 bytes inside a block of size 692 free'd
+==17095==    at 0x1A1299: realloc (vg_replace_malloc.c:476)
+==17095==    by 0x1D5D10: PyCallIter_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1D6272: PyList_Insert (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D02D: PyMarshal_WriteObjectToFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D133: PyMarshal_WriteObjectToFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D407: PyMarshal_WriteObjectToFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D133: PyMarshal_WriteObjectToFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D407: PyMarshal_WriteObjectToFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D83A: PyMarshal_ReadObjectFromString (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D982: PyMarshal_ReadLastObjectFromFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x237842: PyImport_GetMagicNumber (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239543: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E743B: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1ED072: _PyString_Resize (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22CFDF: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFF0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24081B: PyErr_Display (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24109A: PyRun_StringFlags (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x225843: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x1024010 is 0 bytes inside a block of size 512 free'd
+==17095==    at 0x1A1299: realloc (vg_replace_malloc.c:476)
+==17095==    by 0x229D1B: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229E75: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22DBC1: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22DBC1: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22F05D: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24081B: PyErr_Display (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24109A: PyRun_StringFlags (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x225843: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22D016: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFF0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24081B: PyErr_Display (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24109A: PyRun_StringFlags (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x225843: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x1024010 is 0 bytes inside a block of size 512 free'd
+==17095==    at 0x1A1299: realloc (vg_replace_malloc.c:476)
+==17095==    by 0x229D1B: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229E75: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22DBC1: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22DBC1: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22F05D: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24081B: PyErr_Display (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24109A: PyRun_StringFlags (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x225843: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1E1136: _PyDict_Next (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1D1A5C: PyFloat_FromString (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2291F5: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22925F: PyEval_EvalCode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239314: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23983B: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x101f010 is 3,136 bytes inside a block of size 4,096 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0xCD94DF: fclose (in /usr/lib/libSystem.B.dylib)
+==17095==    by 0x1CB8D4: PyFile_SetEncoding (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22729A: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22925F: PyEval_EvalCode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239314: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E743B: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B2791: PyNode_AddChild (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B2B88: PyParser_AddToken (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B3230: PyParser_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x240D8F: PyParser_ASTFromFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2395F9: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x1095010 is not stack'd, malloc'd or (recently) free'd
+==17095== 
+==17095== Conditional jump or move depends on uninitialised value(s)
+==17095==    at 0x1E7444: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B2791: PyNode_AddChild (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B2C36: PyParser_AddToken (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B3230: PyParser_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x240D8F: PyParser_ASTFromFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2395F9: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Use of uninitialised value of size 4
+==17095==    at 0x1E744F: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B2791: PyNode_AddChild (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B2C36: PyParser_AddToken (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B3230: PyParser_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x240D8F: PyParser_ASTFromFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2395F9: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Conditional jump or move depends on uninitialised value(s)
+==17095==    at 0x1E708E: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B26A1: PyNode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B268C: PyNode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B268C: PyNode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B268C: PyNode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B268C: PyNode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B268C: PyNode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B26CF: PyNode_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x240DB9: PyParser_ASTFromFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2395F9: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Use of uninitialised value of size 4
+==17095==    at 0x1E709D: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B26A1: PyNode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B268C: PyNode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B268C: PyNode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B268C: PyNode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B268C: PyNode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B268C: PyNode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B26CF: PyNode_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x240DB9: PyParser_ASTFromFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2395F9: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B26A1: PyNode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B26CF: PyNode_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x240DB9: PyParser_ASTFromFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2395F9: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B97FD: PyObject_CallFunctionObjArgs (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x10d5010 is 260,960 bytes inside a block of size 262,144 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0x1E71F6: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B26A1: PyNode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B268C: PyNode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B268C: PyNode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B268C: PyNode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B268C: PyNode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B268C: PyNode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B268C: PyNode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B268C: PyNode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B268C: PyNode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B268C: PyNode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2296FF: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229859: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2304BE: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x10e6010 is 800 bytes inside a block of size 1,048 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0x22C4EA: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22CFF4: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2304B4: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E743B: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1ED072: _PyString_Resize (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22CFDF: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2304B4: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x10e7010 is 432 bytes inside a block of size 504 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0x22C4D7: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22CFF4: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2304B4: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22D016: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2304B4: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x10e7010 is 432 bytes inside a block of size 504 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0x22C4D7: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22CFF4: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2304B4: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E743B: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229D1B: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229E75: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22DD26: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2303DD: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x10e6010 is 800 bytes inside a block of size 1,048 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0x22C4EA: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22CFF4: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2304B4: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E743B: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1ED072: _PyString_Resize (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22CED8: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2304B4: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x10ea010 is 0 bytes inside a block of size 292 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0x22C4EA: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22CFF4: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2304B4: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22D016: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFF0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B97FD: PyObject_CallFunctionObjArgs (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B217: PyImport_Import (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x10ee010 is 352 bytes inside a block of size 512 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0x2296FF: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229859: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2304BE: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1F4E6E: PyTuple_Pack (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2D98: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239855: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22282C: PyEval_CallObjectWithKeywords (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x226938: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x10fd010 is 144 bytes inside a block of size 352 free'd
+==17095==    at 0x1A1299: realloc (vg_replace_malloc.c:476)
+==17095==    by 0x1D5D10: PyCallIter_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1D6272: PyList_Insert (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D02D: PyMarshal_WriteObjectToFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D133: PyMarshal_WriteObjectToFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D407: PyMarshal_WriteObjectToFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D83A: PyMarshal_ReadObjectFromString (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D982: PyMarshal_ReadLastObjectFromFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x237842: PyImport_GetMagicNumber (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239543: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E743B: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24E3BB: _PyObject_GC_Resize (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1D2067: PyFrame_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x227690: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x1117010 is 16 bytes before a block of size 344 alloc'd
+==17095==    at 0x19F416: malloc (vg_replace_malloc.c:195)
+==17095==    by 0x24EF38: _PyObject_GC_Malloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24EFF6: _PyObject_GC_NewVar (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1D201D: PyFrame_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x228BD1: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1D3487: PyFunction_SetClosure (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C1E39: PyMethod_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22282C: PyEval_CallObjectWithKeywords (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C08F0: _PyInstance_Lookup (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1E4B8B: PyObject_IsTrue (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Conditional jump or move depends on uninitialised value(s)
+==17095==    at 0x1E7444: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24E3BB: _PyObject_GC_Resize (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1D2067: PyFrame_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x227690: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Use of uninitialised value of size 4
+==17095==    at 0x1E744F: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24E3BB: _PyObject_GC_Resize (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1D2067: PyFrame_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x227690: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+Input options: 
+bond units = angstrom
+bvecdisp = 0.00001
+coordinate debug = 0
+debug = 0
+dispfile = default
+dispsizes = 0.01 0.01 0.02
+energy units = aj
+fit debug = 0
+fittype = formula
+geometry debug = 0
+geometry maxit = 1000
+geometry print frequency = 10
+geometry tolerance = 15
+mol details = none
+nderiv = 4
+nvalue = 0
+printfit = false
+robustdebug = 2
+robustness = 2
+statpt = true
+subgroup = none
+symmetry debug = 0
+symmetry tolerance = 12
+usedispfile = false
+useequivalence = true
+usezero = true
+3 x 3 Matrix Coordinates (angstrom)
+        0.0000000000     -0.0711557328      0.0000000000
+        0.7580807277      0.5646465554      0.0000000000
+       -0.7580807277      0.5646465554      0.0000000000
+Abelian point group: C2V
+Point Group C2V of order 4
+E
+C2Y [ 0.000000000000  1.000000000000  0.000000000000]
+SIGMAXY [ 0.000000000000  0.000000000000  1.000000000000]
+SIGMAYZ [ 1.000000000000  0.000000000000  0.000000000000]
+
+    STRE       1 2      0.989409389176 Characters = [    1.00   -0.09    1.00   -0.09 ]
+    STRE       1 3      0.989409389176 Characters = [    1.00   -0.09    1.00   -0.09 ]
+    BEND     2 1 3    100.026880130163 Characters = [    1.00    1.00    1.00    1.00 ]
+There are a total of 3 nonredundant internal coordinates in your set, which is correct. Good job!
+Vector BB^T eigenvalues of size 3
+      2.0174431926
+      4.3482203558
+      6.0761414665
+                                                            E     C2Y SIGMAXY SIGMAYZ
+    SYMM                1.399236176913 Characters = [    1.00    1.00    1.00    1.00 ]
+  0.7071    STRE       1 2      0.989409389176
+  0.7071    STRE       1 3      0.989409389176
+    SYMM                0.000000000000 Characters = [    1.00   -1.00    1.00   -1.00 ]
+  0.7071    STRE       1 2      0.989409389176
+ -0.7071    STRE       1 3      0.989409389176
+    SYMM                1.745798398769 Characters = [    1.00    1.00    1.00    1.00 ]
+  1.0000    BEND     2 1 3    100.026880130163
+Finding equivalent displacements for 1 out of 37
+Finding equivalent displacements for 2 out of 37
+Finding equivalent displacements for 3 out of 37
+Finding equivalent displacements for 4 out of 37
+Finding equivalent displacements for 5 out of 37
+Finding equivalent displacements for 6 out of 37
+Finding equivalent displacements for 7 out of 37
+Finding equivalent displacements for 8 out of 37
+Finding equivalent displacements for 9 out of 37
+Finding equivalent displacements for 10 out of 37
+Finding equivalent displacements for 11 out of 37
+Finding equivalent displacements for 12 out of 37
+Finding equivalent displacements for 13 out of 37
+Finding equivalent displacements for 14 out of 37
+Finding equivalent displacements for 15 out of 37
+Finding equivalent displacements for 16 out of 37
+Finding equivalent displacements for 17 out of 37
+Finding equivalent displacements for 18 out of 37
+Finding equivalent displacements for 19 out of 37
+Finding equivalent displacements for 20 out of 37
+Finding equivalent displacements for 21 out of 37
+Finding equivalent displacements for 22 out of 37
+Finding equivalent displacements for 23 out of 37
+Finding equivalent displacements for 24 out of 37
+Finding equivalent displacements for 25 out of 37
+Finding equivalent displacements for 26 out of 37
+Finding equivalent displacements for 27 out of 37
+Finding equivalent displacements for 28 out of 37
+Finding equivalent displacements for 29 out of 37
+Finding equivalent displacements for 30 out of 37
+Finding equivalent displacements for 31 out of 37
+Finding equivalent displacements for 32 out of 37
+Finding equivalent displacements for 33 out of 37
+Finding equivalent displacements for 34 out of 37
+Finding equivalent displacements for 35 out of 37
+Finding equivalent displacements for 36 out of 37
+Finding equivalent displacements for 37 out of 37
+Reading in data for 27 unique displacements, 37 total displacements
+
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2296FF: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229859: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2302BE: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x16df010 is 160 bytes inside a block of size 175 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0x22D016: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2304B4: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x230277: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2E6B: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239855: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A06B: PyImport_ExecCodeModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22282C: PyEval_CallObjectWithKeywords (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x226938: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x16ec010 is 4,032 bytes inside a block of size 4,096 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0xCD94DF: fclose (in /usr/lib/libSystem.B.dylib)
+==17095==    by 0x239551: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A06B: PyImport_ExecCodeModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE69: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22282C: PyEval_CallObjectWithKeywords (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x226938: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2D7C: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239855: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A06B: PyImport_ExecCodeModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE9F: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22282C: PyEval_CallObjectWithKeywords (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x226938: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x16f0010 is 688 bytes inside a block of size 4,096 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0xCD94DF: fclose (in /usr/lib/libSystem.B.dylib)
+==17095==    by 0x239551: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A06B: PyImport_ExecCodeModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE9F: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22282C: PyEval_CallObjectWithKeywords (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x226938: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1F4EC9: PyTuple_Pack (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2D98: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1F4E6E: PyTuple_Pack (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2D98: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239855: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE9F: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x1722010 is 384 bytes inside a block of size 557 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0x1C2D7C: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1F4E6E: PyTuple_Pack (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2D98: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239855: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE9F: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22282C: PyEval_CallObjectWithKeywords (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1F4EC9: PyTuple_Pack (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2DB4: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1F4E6E: PyTuple_Pack (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2D98: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239855: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE9F: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x1719010 is 16 bytes before a block of size 1,620 free'd
+==17095==    at 0x1A1299: realloc (vg_replace_malloc.c:476)
+==17095==    by 0x1D5D10: PyCallIter_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1D6272: PyList_Insert (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D02D: PyMarshal_WriteObjectToFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D133: PyMarshal_WriteObjectToFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D424: PyMarshal_WriteObjectToFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D83A: PyMarshal_ReadObjectFromString (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23D982: PyMarshal_ReadLastObjectFromFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x237842: PyImport_GetMagicNumber (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239543: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Conditional jump or move depends on uninitialised value(s)
+==17095==    at 0x1E7444: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B2791: PyNode_AddChild (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B2B88: PyParser_AddToken (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B3230: PyParser_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x240D8F: PyParser_ASTFromFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2395F9: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AB73: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AF83: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Use of uninitialised value of size 4
+==17095==    at 0x1E744F: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B2791: PyNode_AddChild (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B2B88: PyParser_AddToken (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B3230: PyParser_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x240D8F: PyParser_ASTFromFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2395F9: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AB73: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AF83: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E743B: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229D1B: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229E75: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FB93: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AB73: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AF83: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x1899010 is 96 bytes inside a block of size 192 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0x1E1154: _PyDict_Next (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2440DC: PyST_GetScope (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x243ABD: PyST_GetScope (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x243ABD: PyST_GetScope (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x245FC6: PySymtable_Build (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FEE3: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AB73: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AF83: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E743B: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229D1B: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229E75: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22DDF6: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22DD3F: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22F05D: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AB73: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AF83: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x189a010 is 384 bytes inside a block of size 512 free'd
+==17095==    at 0x1A1299: realloc (vg_replace_malloc.c:476)
+==17095==    by 0x229D1B: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229E75: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FB93: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AB73: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AF83: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E743B: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229D1B: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229E75: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22A04E: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2304DA: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x230277: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AB73: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x189d010 is 32 bytes inside a block of size 88 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0x22C4EA: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22CFF4: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2304B4: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x230277: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AB73: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AF83: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E743B: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229D1B: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229E75: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22A784: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22DB8A: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22F05D: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x230955: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23049A: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x189f010 is 160 bytes inside a block of size 236 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0x22C4D7: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22CFF4: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2304B4: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x230277: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AB73: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AF83: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E743B: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229D1B: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229E75: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22E01E: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22D84B: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22D1F6: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2308FA: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23049A: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x230277: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x18a7010 is 192 bytes inside a block of size 280 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0x22C4EA: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22CFF4: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2304B4: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x230277: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AB73: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AF83: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E743B: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229D1B: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229E75: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x230277: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AB73: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AF83: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x18a9010 is 5 bytes after a block of size 283 alloc'd
+==17095==    at 0x19F416: malloc (vg_replace_malloc.c:195)
+==17095==    by 0x1ED533: PyString_FromStringAndSize (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22C4C3: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22CFF4: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2304B4: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x230277: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AB73: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E743B: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1ED072: _PyString_Resize (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22CED8: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2302B4: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AB73: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AF83: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x18b7010 is 16 bytes before a block of size 416 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0x22C4EA: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22CFF4: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2304B4: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x230277: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AB73: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AF83: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E743B: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1ED072: _PyString_Resize (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22CFDF: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2302B4: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AB73: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AF83: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x18b7010 is 16 bytes before a block of size 416 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0x22C4EA: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22CFF4: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2304B4: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x230277: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AB73: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AF83: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22D016: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2302B4: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AB73: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AF83: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x18b7010 is 16 bytes before a block of size 416 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0x22C4EA: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22CFF4: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2304B4: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x230277: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AB73: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AF83: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E743B: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229D1B: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229E75: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22DAD8: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22D1F6: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22F65B: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x230955: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23049A: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2308D2: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x230277: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x18cb010 is 2,048 bytes inside a block of size 2,620 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0x22C4EA: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22CFF4: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2304B4: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x230277: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AB73: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AF83: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E743B: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229D1B: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229E75: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x230180: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AB73: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AF83: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x189b010 is 768 bytes inside a block of size 2,048 free'd
+==17095==    at 0x1A1299: realloc (vg_replace_malloc.c:476)
+==17095==    by 0x229D1B: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229E75: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22DD26: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22D61F: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22F05D: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AB73: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AF83: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E743B: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1ED072: _PyString_Resize (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22CED8: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFF0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AB73: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AF83: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22282C: PyEval_CallObjectWithKeywords (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x18d4010 is 240 bytes inside a block of size 384 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0x1E1154: _PyDict_Next (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229799: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229859: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2304BE: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AB73: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AF83: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1F4EC9: PyTuple_Pack (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22AEA9: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22CFF4: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFF0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AB73: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AF83: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x18d5010 is 160 bytes inside a block of size 536 free'd
+==17095==    at 0x1A1299: realloc (vg_replace_malloc.c:476)
+==17095==    by 0x1ED072: _PyString_Resize (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22CED8: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFF0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AB73: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AF83: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22282C: PyEval_CallObjectWithKeywords (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Conditional jump or move depends on uninitialised value(s)
+==17095==    at 0x1E7444: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1ED072: _PyString_Resize (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1CDC8E: PyFile_GetLine (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22751D: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1D3487: PyFunction_SetClosure (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Use of uninitialised value of size 4
+==17095==    at 0x1E744F: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1ED072: _PyString_Resize (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1CDC8E: PyFile_GetLine (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22751D: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1D3487: PyFunction_SetClosure (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E7085: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1D19BD: PyFloat_FromString (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x227720: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1D3487: PyFunction_SetClosure (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C1E39: PyMethod_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x198f010 is 15,248 bytes inside a block of size 16,408 free'd
+==17095==    at 0x1A1299: realloc (vg_replace_malloc.c:476)
+==17095==    by 0x1ED072: _PyString_Resize (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1CDC8E: PyFile_GetLine (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22751D: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2276FF: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22779C: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1D3487: PyFunction_SetClosure (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+Assigning values for displacement 1 <  0.00000004,  0.00000000, -1.00000025,>
+	Assigned energy to <0.000,0.000,-1.000>
+Assigning values for displacement 2 <  0.00000049,  0.00000000,  0.99999990,>
+	Assigned energy to <0.000,0.000,1.000>
+Assigning values for displacement 3 <  0.00000029,  0.00000000, -1.99999995,>
+	Assigned energy to <0.000,0.000,-2.000>
+Assigning values for displacement 4 < -0.00000002,  0.00000000,  1.99999997,>
+	Assigned energy to <0.000,0.000,2.000>
+Assigning values for displacement 5 < -0.99999983,  0.00000000, -0.00000008,>
+	Assigned energy to <-1.000,0.000,0.000>
+==17095== Conditional jump or move depends on uninitialised value(s)
+==17095==    at 0x1E708E: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2E6B: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x240850: PyErr_Display (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24109A: PyRun_StringFlags (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21EA7A: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22751D: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1D3487: PyFunction_SetClosure (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22282C: PyEval_CallObjectWithKeywords (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x52D85: pyregexp::get_regexp_value(std::string, std::string, std::string, int) (in ../../../src/gigide)
+==17095==    by 0x530EB: pyregexp::get_regexp_double_array(std::string, std::string, int&, int) (in ../../../src/gigide)
+==17095== 
+==17095== Use of uninitialised value of size 4
+==17095==    at 0x1E709D: PyObject_Free (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C2E6B: PyCode_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x240850: PyErr_Display (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24109A: PyRun_StringFlags (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21EA7A: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22751D: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1D3487: PyFunction_SetClosure (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22282C: PyEval_CallObjectWithKeywords (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x52D85: pyregexp::get_regexp_value(std::string, std::string, std::string, int) (in ../../../src/gigide)
+==17095==    by 0x530EB: pyregexp::get_regexp_double_array(std::string, std::string, int&, int) (in ../../../src/gigide)
+==17095== 
+Assigning values for displacement 6 <  0.99999967,  0.00000000, -0.00000011,>
+	Assigned energy to <1.000,0.000,0.000>
+Assigning values for displacement 7 < -2.00000006,  0.00000000,  0.00000034,>
+	Assigned energy to <-2.000,0.000,0.000>
+Assigning values for displacement 8 <  1.99999999,  0.00000000,  0.00000022,>
+	Assigned energy to <2.000,0.000,0.000>
+Assigning values for displacement 9 < -0.00000008,  0.00000000, -0.00000009,>
+	Assigned energy to <0.000,0.000,0.000>
+Assigning values for displacement 10 <  0.00000049, -0.99999980, -0.00000019,>
+	Assigned energy to <0.000,-1.000,0.000>
+	Assigned energy to <0.000,1.000,0.000>
+Assigning values for displacement 11 < -0.00000005, -1.99999990,  0.00000006,>
+	Assigned energy to <0.000,-2.000,0.000>
+	Assigned energy to <0.000,2.000,0.000>
+Assigning values for displacement 12 < -1.00000005,  0.00000000, -0.99999980,>
+	Assigned energy to <-1.000,0.000,-1.000>
+Assigning values for displacement 13 < -0.99999956,  0.00000000,  0.99999970,>
+	Assigned energy to <-1.000,0.000,1.000>
+Assigning values for displacement 14 <  1.00000022,  0.00000000, -0.99999994,>
+	Assigned energy to <1.000,0.000,-1.000>
+Assigning values for displacement 15 <  0.99999997,  0.00000000,  0.99999976,>
+	Assigned energy to <1.000,0.000,1.000>
+Assigning values for displacement 16 <  0.99999982,  0.00000000,  2.00000018,>
+	Assigned energy to <1.000,0.000,2.000>
+Assigning values for displacement 17 <  2.00000002,  0.00000000,  0.99999996,>
+	Assigned energy to <2.000,0.000,1.000>
+Assigning values for displacement 18 < -2.00000022,  0.00000000, -1.00000011,>
+	Assigned energy to <-2.000,0.000,-1.000>
+Assigning values for displacement 19 < -0.99999990,  0.00000000, -1.99999970,>
+	Assigned energy to <-1.000,0.000,-2.000>
+Assigning values for displacement 20 <  0.00000020, -0.99999987, -1.00000004,>
+	Assigned energy to <0.000,-1.000,-1.000>
+	Assigned energy to <0.000,1.000,-1.000>
+Assigning values for displacement 21 < -0.00000045, -1.00000006,  1.00000012,>
+	Assigned energy to <0.000,-1.000,1.000>
+	Assigned energy to <0.000,1.000,1.000>
+Assigning values for displacement 22 < -0.99999995, -0.99999976,  0.00000011,>
+	Assigned energy to <-1.000,-1.000,0.000>
+	Assigned energy to <-1.000,1.000,0.000>
+Assigning values for displacement 23 <  1.00000049, -1.00000013, -0.00000016,>
+	Assigned energy to <1.000,-1.000,0.000>
+	Assigned energy to <1.000,1.000,0.000>
+Assigning values for displacement 24 < -0.99999995, -0.99999993, -0.99999986,>
+	Assigned energy to <-1.000,-1.000,-1.000>
+	Assigned energy to <-1.000,1.000,-1.000>
+Assigning values for displacement 25 <  0.99999991,  0.99999982,  0.99999986,>
+	Assigned energy to <1.000,1.000,1.000>
+	Assigned energy to <1.000,-1.000,1.000>
+Assigning values for displacement 26 < -1.00000000, -1.00000018,  0.99999984,>
+	Assigned energy to <-1.000,-1.000,1.000>
+	Assigned energy to <-1.000,1.000,1.000>
+Assigning values for displacement 27 <  1.00000035, -0.99999978, -0.99999990,>
+	Assigned energy to <1.000,-1.000,-1.000>
+	Assigned energy to <1.000,1.000,-1.000>
+Minimum energy displacement is                    0 0 0  E =  -326.832273507446
+Energy =  -74.965901167400
+
+Force field appears valid.  No points appear to have erroneous energies.
+All energy differences are smaller than   0.01499318
+All energy differences are larger than   0.00000075
+Vector Gradients of size 3
+      0.0000014968
+      0.0000000000
+      0.0000000454
+Vector Frequencies of size 3
+   2170.0478242920
+   4140.0038673762
+   4391.0666350956
+==17095== Invalid read of size 4
+==17095==    at 0x1E743B: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24E3BB: _PyObject_GC_Resize (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1D2067: PyFrame_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x228BD1: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1D3487: PyFunction_SetClosure (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1C1E39: PyMethod_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1FC398: _PyObject_SlotCompare (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1F658D: PyType_IsSubtype (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x227831: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x1e50010 is 5,200 bytes inside a block of size 6,016 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0x1B327C: PyParser_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x240EE6: PyParser_ASTFromString (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x24107A: PyRun_StringFlags (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21EA7A: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22751D: PyEval_EvalFrameEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229172: PyEval_EvalCodeEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1D3487: PyFunction_SetClosure (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22282C: PyEval_CallObjectWithKeywords (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x52D85: pyregexp::get_regexp_value(std::string, std::string, std::string, int) (in ../../../src/gigide)
+==17095==    by 0x530EB: pyregexp::get_regexp_double_array(std::string, std::string, int&, int) (in ../../../src/gigide)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E743B: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B2791: PyNode_AddChild (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B2C36: PyParser_AddToken (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B3230: PyParser_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x240D8F: PyParser_ASTFromFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2395F9: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE9F: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x1e7d010 is 48 bytes inside a block of size 1,083 free'd
+==17095==    at 0x1A1299: realloc (vg_replace_malloc.c:476)
+==17095==    by 0x1B6F63: PyTokenizer_FromString (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B79A1: PyTokenizer_Get (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B2FA6: PyParser_New (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x240D8F: PyParser_ASTFromFile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2395F9: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE9F: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23B019: PyImport_ImportModuleLevel (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x21DFF4: PyAST_FromNode (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x1B9504: PyObject_Call (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+==17095== Invalid read of size 4
+==17095==    at 0x1E743B: PyObject_Realloc (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229D1B: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x229E75: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22A06C: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2304DA: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x230277: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==  Address 0x1edb010 is 416 bytes inside a block of size 432 free'd
+==17095==    at 0x1A07BF: free (vg_replace_malloc.c:325)
+==17095==    by 0x22C4D7: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22CFF4: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x2304B4: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x230277: PyNode_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FE03: _Py_Mangle (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x22FFA0: PyAST_Compile (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x239625: PyImport_ExecCodeModuleEx (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A6C0: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23A8AF: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095==    by 0x23AE9F: PyImport_ReloadModule (in /System/Library/Frameworks/Python.framework/Versions/2.5/Python)
+==17095== 
+Heisenbug: serialize.cc 81
+Heisenbug: serialize.cc 83
+Heisenbug: serialize.cc 85
+this: 0x1218120
+node: 0xefe860
+writer: 0xefe600
+Heisenbug: serialize.cc 81
+Heisenbug: serialize.cc 83
+Heisenbug: serialize.cc 85
+this: 0x1216830
+node: 0xeffe40
+writer: 0xeffbe0
+Heisenbug: serialize.cc 81
+Heisenbug: serialize.cc 83
+Heisenbug: serialize.cc 85
+this: 0x1217310
+node: 0xf01420
+writer: 0xf011c0
+Heisenbug: serialize.cc 81
+Heisenbug: serialize.cc 83
+Heisenbug: serialize.cc 85
+this: 0x1217c70
+node: 0x1f02a20
+writer: 0xf027a0
+Heisenbug: coordinates.cc 52
+Heisenbug: serialize.cc 81
+Heisenbug: serialize.cc 83
+Heisenbug: serialize.cc 85
+this: 0x120ec20
+node: 0x1f048c0
+writer: 0x1f04600
+==17095== Conditional jump or move depends on uninitialised value(s)
+==17095==    at 0x1A909: gigide::InternalCoordinate::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0x1C004: gigide::SymmetryInternalCoordinate::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0xAB3A3: smartptr::Serializable::writeNode(std::string, boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0x2E04A: boost::intrusive_ptr<pyxml::PyXMLWriter> smartptr::writeObjects<gigide::SymmetryInternalCoordinate>(std::vector<boost::intrusive_ptr<gigide::SymmetryInternalCoordinate>, std::allocator<boost::intrusive_ptr<gigide::SymmetryInternalCoordinate> > > const&, boost::intrusive_ptr<pyxml::PyXMLWriter>, std::string, std::string) (in ../../../src/gigide)
+==17095==    by 0x134EF: gigide::CoordinateSubspace::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0xAB3A3: smartptr::Serializable::writeNode(std::string, boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0x931AA: boost::intrusive_ptr<pyxml::PyXMLWriter> smartptr::writeObjects<gigide::CoordinateSubspace>(std::vector<boost::intrusive_ptr<gigide::CoordinateSubspace>, std::allocator<boost::intrusive_ptr<gigide::CoordinateSubspace> > > const&, boost::intrusive_ptr<pyxml::PyXMLWriter>, std::string, std::string) (in ../../../src/gigide)
+==17095==    by 0x891A9: gigide::PointGroup::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0x43C6F: gigide::Molecule::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0xBF992: gigide::GigideRuntime::xml_commit() (in ../../../src/gigide)
+==17095==    by 0x4162: main (in ../../../src/gigide)
+==17095== 
+==17095== Conditional jump or move depends on uninitialised value(s)
+==17095==    at 0xA1BBC: smartptr::intrusive_ptr_release(smartptr::Countable*) (in ../../../src/gigide)
+==17095==    by 0x1A912: gigide::InternalCoordinate::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0x1C004: gigide::SymmetryInternalCoordinate::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0xAB3A3: smartptr::Serializable::writeNode(std::string, boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0x2E04A: boost::intrusive_ptr<pyxml::PyXMLWriter> smartptr::writeObjects<gigide::SymmetryInternalCoordinate>(std::vector<boost::intrusive_ptr<gigide::SymmetryInternalCoordinate>, std::allocator<boost::intrusive_ptr<gigide::SymmetryInternalCoordinate> > > const&, boost::intrusive_ptr<pyxml::PyXMLWriter>, std::string, std::string) (in ../../../src/gigide)
+==17095==    by 0x134EF: gigide::CoordinateSubspace::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0xAB3A3: smartptr::Serializable::writeNode(std::string, boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0x931AA: boost::intrusive_ptr<pyxml::PyXMLWriter> smartptr::writeObjects<gigide::CoordinateSubspace>(std::vector<boost::intrusive_ptr<gigide::CoordinateSubspace>, std::allocator<boost::intrusive_ptr<gigide::CoordinateSubspace> > > const&, boost::intrusive_ptr<pyxml::PyXMLWriter>, std::string, std::string) (in ../../../src/gigide)
+==17095==    by 0x891A9: gigide::PointGroup::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0x43C6F: gigide::Molecule::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0xBF992: gigide::GigideRuntime::xml_commit() (in ../../../src/gigide)
+==17095==    by 0x4162: main (in ../../../src/gigide)
+==17095== 
+==17095== Use of uninitialised value of size 4
+==17095==    at 0xA1BA6: smartptr::Countable::decref() (in ../../../src/gigide)
+==17095==    by 0xA1BC5: smartptr::intrusive_ptr_release(smartptr::Countable*) (in ../../../src/gigide)
+==17095==    by 0x1A912: gigide::InternalCoordinate::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0x1C004: gigide::SymmetryInternalCoordinate::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0xAB3A3: smartptr::Serializable::writeNode(std::string, boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0x2E04A: boost::intrusive_ptr<pyxml::PyXMLWriter> smartptr::writeObjects<gigide::SymmetryInternalCoordinate>(std::vector<boost::intrusive_ptr<gigide::SymmetryInternalCoordinate>, std::allocator<boost::intrusive_ptr<gigide::SymmetryInternalCoordinate> > > const&, boost::intrusive_ptr<pyxml::PyXMLWriter>, std::string, std::string) (in ../../../src/gigide)
+==17095==    by 0x134EF: gigide::CoordinateSubspace::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0xAB3A3: smartptr::Serializable::writeNode(std::string, boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0x931AA: boost::intrusive_ptr<pyxml::PyXMLWriter> smartptr::writeObjects<gigide::CoordinateSubspace>(std::vector<boost::intrusive_ptr<gigide::CoordinateSubspace>, std::allocator<boost::intrusive_ptr<gigide::CoordinateSubspace> > > const&, boost::intrusive_ptr<pyxml::PyXMLWriter>, std::string, std::string) (in ../../../src/gigide)
+==17095==    by 0x891A9: gigide::PointGroup::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0x43C6F: gigide::Molecule::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0xBF992: gigide::GigideRuntime::xml_commit() (in ../../../src/gigide)
+==17095== 
+==17095== Conditional jump or move depends on uninitialised value(s)
+==17095==    at 0xA1BC9: smartptr::intrusive_ptr_release(smartptr::Countable*) (in ../../../src/gigide)
+==17095==    by 0x1A912: gigide::InternalCoordinate::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0x1C004: gigide::SymmetryInternalCoordinate::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0xAB3A3: smartptr::Serializable::writeNode(std::string, boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0x2E04A: boost::intrusive_ptr<pyxml::PyXMLWriter> smartptr::writeObjects<gigide::SymmetryInternalCoordinate>(std::vector<boost::intrusive_ptr<gigide::SymmetryInternalCoordinate>, std::allocator<boost::intrusive_ptr<gigide::SymmetryInternalCoordinate> > > const&, boost::intrusive_ptr<pyxml::PyXMLWriter>, std::string, std::string) (in ../../../src/gigide)
+==17095==    by 0x134EF: gigide::CoordinateSubspace::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0xAB3A3: smartptr::Serializable::writeNode(std::string, boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0x931AA: boost::intrusive_ptr<pyxml::PyXMLWriter> smartptr::writeObjects<gigide::CoordinateSubspace>(std::vector<boost::intrusive_ptr<gigide::CoordinateSubspace>, std::allocator<boost::intrusive_ptr<gigide::CoordinateSubspace> > > const&, boost::intrusive_ptr<pyxml::PyXMLWriter>, std::string, std::string) (in ../../../src/gigide)
+==17095==    by 0x891A9: gigide::PointGroup::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0x43C6F: gigide::Molecule::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0xBF992: gigide::GigideRuntime::xml_commit() (in ../../../src/gigide)
+==17095==    by 0x4162: main (in ../../../src/gigide)
+==17095== 
+==17095== Conditional jump or move depends on uninitialised value(s)
+==17095==    at 0xA1BCB: smartptr::intrusive_ptr_release(smartptr::Countable*) (in ../../../src/gigide)
+==17095==    by 0x1A912: gigide::InternalCoordinate::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0x1C004: gigide::SymmetryInternalCoordinate::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0xAB3A3: smartptr::Serializable::writeNode(std::string, boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0x2E04A: boost::intrusive_ptr<pyxml::PyXMLWriter> smartptr::writeObjects<gigide::SymmetryInternalCoordinate>(std::vector<boost::intrusive_ptr<gigide::SymmetryInternalCoordinate>, std::allocator<boost::intrusive_ptr<gigide::SymmetryInternalCoordinate> > > const&, boost::intrusive_ptr<pyxml::PyXMLWriter>, std::string, std::string) (in ../../../src/gigide)
+==17095==    by 0x134EF: gigide::CoordinateSubspace::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0xAB3A3: smartptr::Serializable::writeNode(std::string, boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0x931AA: boost::intrusive_ptr<pyxml::PyXMLWriter> smartptr::writeObjects<gigide::CoordinateSubspace>(std::vector<boost::intrusive_ptr<gigide::CoordinateSubspace>, std::allocator<boost::intrusive_ptr<gigide::CoordinateSubspace> > > const&, boost::intrusive_ptr<pyxml::PyXMLWriter>, std::string, std::string) (in ../../../src/gigide)
+==17095==    by 0x891A9: gigide::PointGroup::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0x43C6F: gigide::Molecule::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0xBF992: gigide::GigideRuntime::xml_commit() (in ../../../src/gigide)
+==17095==    by 0x4162: main (in ../../../src/gigide)
+==17095== 
+==17095== 
+==17095== Process terminating with default action of signal 6 (SIGABRT)
+==17095==    at 0xD0EE42: __kill (in /usr/lib/libSystem.B.dylib)
+==17095==    by 0xD81239: raise (in /usr/lib/libSystem.B.dylib)
+==17095==    by 0xD8D678: abort (in /usr/lib/libSystem.B.dylib)
+==17095==    by 0xA1BF3: smartptr::intrusive_ptr_release(smartptr::Countable*) (in ../../../src/gigide)
+==17095==    by 0x1A912: gigide::InternalCoordinate::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0x1C004: gigide::SymmetryInternalCoordinate::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0xAB3A3: smartptr::Serializable::writeNode(std::string, boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0x2E04A: boost::intrusive_ptr<pyxml::PyXMLWriter> smartptr::writeObjects<gigide::SymmetryInternalCoordinate>(std::vector<boost::intrusive_ptr<gigide::SymmetryInternalCoordinate>, std::allocator<boost::intrusive_ptr<gigide::SymmetryInternalCoordinate> > > const&, boost::intrusive_ptr<pyxml::PyXMLWriter>, std::string, std::string) (in ../../../src/gigide)
+==17095==    by 0x134EF: gigide::CoordinateSubspace::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0xAB3A3: smartptr::Serializable::writeNode(std::string, boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095==    by 0x931AA: boost::intrusive_ptr<pyxml::PyXMLWriter> smartptr::writeObjects<gigide::CoordinateSubspace>(std::vector<boost::intrusive_ptr<gigide::CoordinateSubspace>, std::allocator<boost::intrusive_ptr<gigide::CoordinateSubspace> > > const&, boost::intrusive_ptr<pyxml::PyXMLWriter>, std::string, std::string) (in ../../../src/gigide)
+==17095==    by 0x891A9: gigide::PointGroup::addXML(boost::intrusive_ptr<pyxml::PyXMLWriter>) const (in ../../../src/gigide)
+==17095== 
+==17095== HEAP SUMMARY:
+==17095==     in use at exit: 2,553,096 bytes in 5,234 blocks
+==17095==   total heap usage: 68,004 allocs, 62,770 frees, 12,592,683 bytes allocated
+==17095== 
+==17095== LEAK SUMMARY:
+==17095==    definitely lost: 2,443 bytes in 28 blocks
+==17095==    indirectly lost: 12,312 bytes in 459 blocks
+==17095==      possibly lost: 84,466 bytes in 664 blocks
+==17095==    still reachable: 2,453,351 bytes in 4,071 blocks
+==17095==         suppressed: 524 bytes in 12 blocks
+==17095== Rerun with --leak-check=full to see details of leaked memory
+==17095== 
+==17095== For counts of detected and suppressed errors, rerun with: -v
+==17095== Use --track-origins=yes to see where uninitialised values come from
+==17095== ERROR SUMMARY: 954 errors from 73 contexts (suppressed: 0 from 0)

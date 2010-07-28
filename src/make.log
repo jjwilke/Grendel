@@ -1,0 +1,57 @@
+g++ -DHAVE_CONFIG_H -I. -I..   -I/opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6  -O2 -g -I//Users/jjwilke/Programs/Boost/boost_1_41_0 -MT archive.o -MD -MP -MF .deps/archive.Tpo -c -o archive.o archive.cc
+archive.cc:6:1: warning: "heisenbug" redefined
+In file included from ../src/archive.h:20,
+                 from archive.cc:1:
+../src/serialabstract.h:13:1: warning: this is the location of the previous definition
+mv -f .deps/archive.Tpo .deps/archive.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -I/opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6  -O2 -g -I//Users/jjwilke/Programs/Boost/boost_1_41_0 -MT serialize.o -MD -MP -MF .deps/serialize.Tpo -c -o serialize.o serialize.cc
+serialize.cc:12:1: warning: "heisenbug" redefined
+In file included from serialize.cc:1:
+../src/serialabstract.h:13:1: warning: this is the location of the previous definition
+mv -f .deps/serialize.Tpo .deps/serialize.Po
+g++ -DHAVE_CONFIG_H -I. -I..   -I/opt/local/Library/Frameworks/Python.framework/Versions/2.6/include/python2.6  -O2 -g -I//Users/jjwilke/Programs/Boost/boost_1_41_0 -MT molecule.o -MD -MP -MF .deps/molecule.Tpo -c -o molecule.o molecule.cc
+In file included from ../src/molecule.h:7,
+                 from ../src/hessian.h:2,
+                 from molecule.cc:2:
+../src/defines.h:5:1: warning: "heisenbug" redefined
+In file included from ../src/archive.h:20,
+                 from ../src/gigmatrix.h:5,
+                 from ../src/utilities.h:6,
+                 from molecule.cc:1:
+../src/serialabstract.h:13:1: warning: this is the location of the previous definition
+In file included from /usr/include/c++/4.0.0/backward/iostream.h:31,
+                 from ../src/keyword.h:5,
+                 from ../src/molecule.h:8,
+                 from ../src/hessian.h:2,
+                 from molecule.cc:2:
+/usr/include/c++/4.0.0/backward/backward_warning.h:32:2: warning: #warning This file includes at least one deprecated or antiquated header. Please consider using one of the 32 headers found in section 17.4.1.2 of the C++ standard. Examples include substituting the <X> header for the <X.h> header for C++ includes, or <iostream> instead of the deprecated header <iostream.h>. To disable this warning use -Wno-deprecated.
+molecule.cc: In constructor ‘gigide::Molecule::Molecule(const boost::intrusive_ptr<smartptr::Archive>&)’:
+molecule.cc:83: error: ‘xyz’ was not declared in this scope
+molecule.cc:83: error: ‘serial_load’ was not declared in this scope
+molecule.cc:84: error: ‘pg’ was not declared in this scope
+molecule.cc:84: error: ‘topgroup’ was not declared in this scope
+molecule.cc:84: error: ‘serial_load_ns’ was not declared in this scope
+molecule.cc:85: error: ‘atoms’ was not declared in this scope
+molecule.cc: In member function ‘virtual void gigide::Molecule::serialize(const boost::intrusive_ptr<smartptr::Archive>&) const’:
+molecule.cc:97: error: request for member ‘get’ in ‘((const gigide::Molecule*)this)->gigide::Molecule::<anonymous>.smartptr::Serializable::rtinfo_’, which is of non-class type ‘smartptr::SerialRuntime* const’
+molecule.cc:97: error: assignment of data-member ‘smartptr::Serializable::rtinfo_’ in read-only structure
+molecule.cc:97: error: cannot convert ‘smartptr::SerialClass<gigide::Molecule>’ to ‘smartptr::SerialRuntime* const’ in assignment
+molecule.cc: In constructor ‘gigide::Atom::Atom(const boost::intrusive_ptr<smartptr::Archive>&)’:
+molecule.cc:657: error: ‘getObject’ is not a member of ‘smartptr’
+molecule.cc: In member function ‘virtual void gigide::Atom::serialize(const boost::intrusive_ptr<smartptr::Archive>&) const’:
+molecule.cc:665: error: no matching function for call to ‘gigide::Atom::serialize(const boost::intrusive_ptr<smartptr::Archive>&, const char [5]) const’
+../src/serialabstract.h:40: note: candidates are: virtual void smartptr::Serializable::serialize(const boost::intrusive_ptr<smartptr::Archive>&) const
+molecule.cc:666: error: ‘setObject’ is not a member of ‘smartptr’
+../src/serialimpl.h: In constructor ‘smartptr::SerialClass<T>::SerialClass() [with T = gigide::Molecule]’:
+../src/serialimpl.h:54:   instantiated from ‘smartptr::SerialClass<T>::SerialClass(const smartstr&) [with T = gigide::Molecule]’
+molecule.cc:20:   instantiated from here
+../src/serialimpl.h:42: error: no matching function for call to ‘smartptr::SerialRuntime::SerialRuntime()’
+../src/serialabstract.h:61: note: candidates are: smartptr::SerialRuntime::SerialRuntime(const smartstr&, smartptr::Serializable* (*)(const boost::intrusive_ptr<smartptr::Archive>&))
+../src/serialabstract.h:56: note:                 smartptr::SerialRuntime::SerialRuntime(const smartptr::SerialRuntime&)
+../src/serialimpl.h: In constructor ‘smartptr::SerialClass<T>::SerialClass() [with T = gigide::Atom]’:
+../src/serialimpl.h:54:   instantiated from ‘smartptr::SerialClass<T>::SerialClass(const smartstr&) [with T = gigide::Atom]’
+molecule.cc:21:   instantiated from here
+../src/serialimpl.h:42: error: no matching function for call to ‘smartptr::SerialRuntime::SerialRuntime()’
+../src/serialabstract.h:61: note: candidates are: smartptr::SerialRuntime::SerialRuntime(const smartstr&, smartptr::Serializable* (*)(const boost::intrusive_ptr<smartptr::Archive>&))
+../src/serialabstract.h:56: note:                 smartptr::SerialRuntime::SerialRuntime(const smartptr::SerialRuntime&)
+make: *** [molecule.o] Error 1

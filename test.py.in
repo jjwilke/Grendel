@@ -1,0 +1,82 @@
+has_intder = @HAS_INTDER@
+has_anharm = @HAS_ANHARM@
+gigide="@prefix@" + "/bin/gigide"
+
+import os.path, sys, re
+import time
+import commands
+
+if not has_intder:
+    sys.exit("Cannot run test suite without valid intder")
+if not has_anharm:
+    sys.exit("Cannot run test suite without valid anharm")
+
+def get_freqs(text):
+    text = re.compile("THEORE(.*?)ANHARM", re.DOTALL).search(text).groups()[0]
+    modes = re.compile("\d+\s+(\d+[.]\d+)\s+([-]?\d+[.]\d+)").findall(text)
+    harmonics = []
+    shifts = []
+    for harm, shift in modes:
+        harmonics.append(eval(harm))
+        shifts.append(eval(shift))
+
+    return harmonics, shifts
+
+def clean():
+    os.system("rm output.dat")
+
+def validate(msg_arr, args):
+    if os.path.isfile("output.dat"):
+        os.remove("output.dat")
+
+    cmd = "%s --%s >& gigide.out" % (gigide, args)
+    print "\t%s" % cmd
+    os.system(cmd)
+
+    correct = open("output.dat_correct").read()
+    test = open("output.dat").read()
+    harms_corr, shifts_corr = get_freqs(correct)
+    harms_test, shifts_test = get_freqs(test)
+    for i in range(len(harms_corr)):
+        diff_harm = abs(harms_corr[i] - harms_test[i])
+        if (diff_harm > 0.01):
+            clean()
+            msg_arr.append("%s failed on harmonic frequencies" % dirname)
+
+        diff_shift = abs(shifts_corr[i] - shifts_test[i])
+        if (diff_shift > 0.01):
+            clean()
+            msg_arr.append("%s failed on anharmonic shifts" % dirname)
+
+def run_test(msg_arr, dirname, files):    
+    try:
+        if not "intdif.inp" in files or not "data.xml" in files:
+            return
+        
+        topdir = os.getcwd()
+        os.chdir(dirname)
+
+        print "Running %s" % dirname
+
+        if os.path.isfile("gigide.out"):
+            os.remove("gigide.out")
+
+        validate(msg_arr, "calc")
+        validate(msg_arr, "xmlprint")
+
+        time.sleep(2)
+        os.chdir(topdir)
+    except Exception, error:
+        msg_arr.append("%s encountered unknown error %s" % (dirname, error))
+
+msg_arr = []
+os.path.walk("test-suite", run_test, msg_arr) #no args
+
+print "\n"
+if len(msg_arr) == 0:
+    print "All test cases passed"
+else:
+    print "\n".join(msg_arr)
+
+
+

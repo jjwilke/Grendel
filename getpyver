@@ -1,0 +1,7 @@
+#! /usr/bin/env python
+
+import commands
+pyver = commands.getoutput("python -V")
+vernum = ".".join(pyver.split()[-1].split(".")[:2])
+print vernum
+

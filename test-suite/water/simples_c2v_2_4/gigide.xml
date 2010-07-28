@@ -1,0 +1,6879 @@
+<?xml version="1.0" ?>
+<document>
+	<molecule natoms="3" serial_id="3216160" xmlns="main_molecule">
+		<xyz ncol="3" nrow="3" units="angstrom">
+			        0.0000000000     -0.0711557328      0.0000000000
+        0.7580807277      0.5646465554      0.0000000000
+       -0.7580807277      0.5646465554      0.0000000000
+
+		</xyz>
+		<atoms>
+			O
+H
+H
+
+		</atoms>
+		<point_group classtype="PointGroup" name="C2V" serial_id="3248832" xmlns="pg">
+			<molecule>
+				3216160
+			</molecule>
+			<classes>
+				<class classtype="PointGroupClass" order="1" serial_id="3254032" type="4">
+					<symmetry_operations>
+						<symmop>
+							3250816
+						</symmop>
+					</symmetry_operations>
+				</class>
+				<class classtype="PointGroupClass" order="1" serial_id="3249232" type="0">
+					<symmetry_operations>
+						<symmop>
+							3249568
+						</symmop>
+					</symmetry_operations>
+				</class>
+				<class classtype="PointGroupClass" order="1" serial_id="3249280" type="2">
+					<symmetry_operations>
+						<symmop>
+							3250144
+						</symmop>
+					</symmetry_operations>
+				</class>
+				<class classtype="PointGroupClass" order="1" serial_id="3249328" type="2">
+					<symmetry_operations>
+						<symmop>
+							3250592
+						</symmop>
+					</symmetry_operations>
+				</class>
+			</classes>
+			<subgroups/>
+			<subspaces>
+				<subspace classtype="CoordinateSubspace" madeabelian="false" order="1" serial_id="3257984">
+					<coordinates>
+						<coordinate classtype="SYMM" coordtype="SYMM" serial_id="3255760">
+							<molecule>
+								3216160
+							</molecule>
+							<characters n="4">
+								      0.0000000000
+      0.0000000000
+      0.0000000000
+      0.0000000000
+
+							</characters>
+							<subgroups/>
+							<simples>
+								<simple>
+									3252224
+								</simple>
+								<simple>
+									3247648
+								</simple>
+								<simple>
+									3255280
+								</simple>
+							</simples>
+							<coeffs n="3">
+								      0.5886955149
+      0.5886955149
+      0.3628615999
+
+							</coeffs>
+						</coordinate>
+					</coordinates>
+					<molecule>
+						3216160
+					</molecule>
+				</subspace>
+				<subspace classtype="CoordinateSubspace" madeabelian="false" order="1" serial_id="3256352">
+					<coordinates>
+						<coordinate classtype="SYMM" coordtype="SYMM" serial_id="3255872">
+							<molecule>
+								3216160
+							</molecule>
+							<characters n="4">
+								      0.0000000000
+      0.0000000000
+      0.0000000000
+      0.0000000000
+
+							</characters>
+							<subgroups/>
+							<simples>
+								<simple>
+									3252224
+								</simple>
+								<simple>
+									3247648
+								</simple>
+								<simple>
+									3255280
+								</simple>
+							</simples>
+							<coeffs n="3">
+								      0.4795614091
+     -0.4795614091
+      0.0000000000
+
+							</coeffs>
+						</coordinate>
+					</coordinates>
+					<molecule>
+						3216160
+					</molecule>
+				</subspace>
+				<subspace classtype="CoordinateSubspace" madeabelian="false" order="1" serial_id="3256432">
+					<coordinates>
+						<coordinate classtype="SYMM" coordtype="SYMM" serial_id="3257216">
+							<molecule>
+								3216160
+							</molecule>
+							<characters n="4">
+								      0.0000000000
+      0.0000000000
+      0.0000000000
+      0.0000000000
+
+							</characters>
+							<subgroups/>
+							<simples>
+								<simple>
+									3252224
+								</simple>
+								<simple>
+									3247648
+								</simple>
+								<simple>
+									3255280
+								</simple>
+							</simples>
+							<coeffs n="3">
+								     -0.1256554297
+     -0.1256554297
+      0.4077190198
+
+							</coeffs>
+						</coordinate>
+					</coordinates>
+					<molecule>
+						3216160
+					</molecule>
+				</subspace>
+			</subspaces>
+			<symmops>
+				<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+				<symmop classtype="Rotation" exponent="1" order="2" serial_id="3249568" type="0">
+					<axis n="3">
+						      0.0000000000
+      1.0000000000
+      0.0000000000
+
+					</axis>
+				</symmop>
+				<symmop classtype="Reflection" serial_id="3250144" type="2">
+					<axis n="3">
+						      0.0000000000
+      0.0000000000
+      1.0000000000
+
+					</axis>
+				</symmop>
+				<symmop classtype="Reflection" serial_id="3250592" type="2">
+					<axis n="3">
+						      1.0000000000
+      0.0000000000
+      0.0000000000
+
+					</axis>
+				</symmop>
+			</symmops>
+		</point_group>
+	</molecule>
+	<simples xmlns="main_simples">
+		<simple classtype="STRE" coordtype="STRE" serial_id="3252224">
+			<molecule>
+				3216160
+			</molecule>
+			<characters n="4">
+				      1.0000000000
+     -0.0870550890
+      1.0000000000
+     -0.0870550890
+
+			</characters>
+			<subgroups/>
+			<connectivity n="2">
+				1 2
+			</connectivity>
+		</simple>
+		<simple classtype="STRE" coordtype="STRE" serial_id="3247648">
+			<molecule>
+				3216160
+			</molecule>
+			<characters n="4">
+				      1.0000000000
+     -0.0870550890
+      1.0000000000
+     -0.0870550890
+
+			</characters>
+			<subgroups/>
+			<connectivity n="2">
+				1 3
+			</connectivity>
+		</simple>
+		<simple classtype="BEND" coordtype="BEND" serial_id="3255280">
+			<molecule>
+				3216160
+			</molecule>
+			<characters n="4">
+				      1.0000000000
+      1.0000000000
+      1.0000000000
+      1.0000000000
+
+			</characters>
+			<subgroups/>
+			<connectivity n="3">
+				2 1 3
+			</connectivity>
+		</simple>
+	</simples>
+	<coordinates xmlns="main_coords">
+		<coordinate classtype="SYMM" coordtype="SYMM" serial_id="3255680">
+			<molecule>
+				3216160
+			</molecule>
+			<characters n="4">
+				      1.0000000000
+     -0.0870550890
+      1.0000000000
+     -0.0870550890
+
+			</characters>
+			<subgroups/>
+			<simples>
+				<simple>
+					3252224
+				</simple>
+			</simples>
+			<coeffs n="1">
+				      1.0000000000
+
+			</coeffs>
+		</coordinate>
+		<coordinate classtype="SYMM" coordtype="SYMM" serial_id="3256032">
+			<molecule>
+				3216160
+			</molecule>
+			<characters n="4">
+				      1.0000000000
+     -0.0870550890
+      1.0000000000
+     -0.0870550890
+
+			</characters>
+			<subgroups/>
+			<simples>
+				<simple>
+					3247648
+				</simple>
+			</simples>
+			<coeffs n="1">
+				      1.0000000000
+
+			</coeffs>
+		</coordinate>
+		<coordinate classtype="SYMM" coordtype="SYMM" serial_id="3257632">
+			<molecule>
+				3216160
+			</molecule>
+			<characters n="4">
+				      1.0000000000
+      1.0000000000
+      1.0000000000
+      1.0000000000
+
+			</characters>
+			<subgroups/>
+			<simples>
+				<simple>
+					3255280
+				</simple>
+			</simples>
+			<coeffs n="1">
+				      1.0000000000
+
+			</coeffs>
+		</coordinate>
+	</coordinates>
+	<qff classtype="ForceField" include_zeros="true" serial_id="3258560">
+		<displacement_iterator classtype="DisplacementIterator" deriv_level="2" n="37" nunique="22" serial_id="3258752">
+			<displacements>
+				<displacement classtype="Displacement" number="1" serial_id="3291504">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						     -0.0062893288
+     -0.0062893288
+     -0.0261164807
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       10.1952945943     -0.4602177662      0.3185569318
+       -0.4602177662     10.1952945943      0.3185569318
+        0.3185569318      0.3185569318      1.3172964717
+
+					</fc>
+					<disps n="3">
+						0     0.00000000000000    -1.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3371472">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							        0.0000000000     -0.0761883269      0.0000000000
+        0.7516849071      0.5671628524      0.0000000000
+       -0.7516849071      0.5671628524      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3689008" xmlns="pg">
+							<molecule>
+								3371472
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="2" serial_id="3292080">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						      0.0061400744
+      0.0061400744
+      0.0256569734
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       10.1707233061     -0.4934828955      0.3034503112
+       -0.4934828955     10.1707233061      0.3034503112
+        0.3034503112      0.3034503112      1.2713378342
+
+					</fc>
+					<disps n="3">
+						0     0.00000000000000     1.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3689088">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							        0.0000000000     -0.0660807523      0.0000000000
+        0.7644007409      0.5621090651      0.0000000000
+       -0.7644007409      0.5621090651      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3689648" xmlns="pg">
+							<molecule>
+								3689088
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="3" serial_id="3292528">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						     -0.0127468715
+     -0.0127468715
+     -0.0526915033
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       10.2061906476     -0.4428692559      0.3273361093
+       -0.4428692559     10.2061906476      0.3273361093
+        0.3273361093      0.3273361093      1.3401982223
+
+					</fc>
+					<disps n="3">
+						0     0.00000000000000    -2.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3689728">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							        0.0000000000     -0.0811780312      0.0000000000
+        0.7452139186      0.5696577046      0.0000000000
+       -0.7452139186      0.5696577046      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3690288" xmlns="pg">
+							<molecule>
+								3689728
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="4" serial_id="3292992">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						      0.0121441754
+      0.0121441754
+      0.0508530845
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       10.1570576948     -0.5094704952      0.2970904375
+       -0.5094704952     10.1570576948      0.2970904375
+        0.2970904375      0.2970904375      1.2482606934
+
+					</fc>
+					<disps n="3">
+						0     0.00000000000000     2.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3364288">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							        0.0000000000     -0.0609638928      0.0000000000
+        0.7706443147      0.5595506354      0.0000000000
+       -0.7706443147      0.5595506354      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3690928" xmlns="pg">
+							<molecule>
+								3364288
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="5" serial_id="3293440">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						      0.0048095663
+     -0.1047133466
+     -0.0031366088
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       10.1759048814     -0.4846668121      0.3189656082
+       -0.4846668121     10.7644484974      0.3167179498
+        0.3189656082      0.3167179498      1.2980049785
+
+					</fc>
+					<disps n="3">
+						0    -1.00000000000000     0.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3689440">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							       -0.0035265172     -0.0690066954      0.0000000000
+        0.7560184143      0.5650456972      0.0000000000
+       -0.7524918971      0.5620983762      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3691568" xmlns="pg">
+							<molecule>
+								3689440
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="6" serial_id="3293904">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						     -0.0047322345
+      0.0990543027
+      0.0030752475
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       10.1910141844     -0.4695579037      0.3023406514
+       -0.4695579037      9.6319579403      0.3044355391
+        0.3023406514      0.3044355391      1.2904560757
+
+					</fc>
+					<disps n="3">
+						0     1.00000000000000     0.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3690080">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							        0.0035218087     -0.0732908575      0.0000000000
+        0.7601561327      0.5642320356      0.0000000000
+       -0.7636779414      0.5671961998      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3692208" xmlns="pg">
+							<molecule>
+								3690080
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="7" serial_id="3294352">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						      0.0096944771
+     -0.2153931221
+     -0.0063341275
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       10.1683190964     -0.4923242547      0.3274297660
+       -0.4923242547     11.3769352950      0.3227744867
+        0.3274297660      0.3227744867      1.3014281818
+
+					</fc>
+					<disps n="3">
+						0    -2.00000000000000     0.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3690720">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							       -0.0070576473     -0.0668434142      0.0000000000
+        0.7539693583      0.5654293403      0.0000000000
+       -0.7469117109      0.5595514519      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3692848" xmlns="pg">
+							<molecule>
+								3690720
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="8" serial_id="3294816">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						     -0.0093905356
+      0.1927320947
+      0.0060886202
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       10.1985337964     -0.4621128298      0.2941899299
+       -0.4621128298      9.1080522834      0.2982339444
+        0.2941899299      0.2982339444      1.2863406637
+
+					</fc>
+					<disps n="3">
+						0     2.00000000000000     0.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3691360">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							        0.0070388197     -0.0754123952      0.0000000000
+        0.7622444634      0.5638022598      0.0000000000
+       -0.7692832831      0.5697475134      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3693488" xmlns="pg">
+							<molecule>
+								3691360
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="9" serial_id="3295264">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						     -0.1047133466
+      0.0048095663
+     -0.0031366088
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       10.7644484974     -0.4846668121      0.3167179498
+       -0.4846668121     10.1759048814      0.3189656082
+        0.3167179498      0.3189656082      1.2980049785
+
+					</fc>
+					<disps n="3">
+						-1     0.00000000000000     0.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3692000">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							        0.0035265172     -0.0690066954      0.0000000000
+        0.7524918971      0.5620983762      0.0000000000
+       -0.7560184143      0.5650456972      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3694128" xmlns="pg">
+							<molecule>
+								3692000
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="10" serial_id="3295648">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						      0.0990543027
+     -0.0047322345
+      0.0030752475
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						        9.6319579403     -0.4695579037      0.3044355391
+       -0.4695579037     10.1910141844      0.3023406514
+        0.3044355391      0.3023406514      1.2904560757
+
+					</fc>
+					<disps n="3">
+						1     0.00000000000000     0.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3692640">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							       -0.0035218087     -0.0732908575      0.0000000000
+        0.7636779414      0.5671961998      0.0000000000
+       -0.7601561327      0.5642320356      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3694768" xmlns="pg">
+							<molecule>
+								3692640
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="11" serial_id="3296128">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						     -0.2153931221
+      0.0096944771
+     -0.0063341275
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       11.3769352950     -0.4923242547      0.3227744867
+       -0.4923242547     10.1683190964      0.3274297660
+        0.3227744867      0.3274297660      1.3014281818
+
+					</fc>
+					<disps n="3">
+						-2     0.00000000000000     0.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3693280">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							        0.0070576473     -0.0668434142      0.0000000000
+        0.7469117109      0.5595514519      0.0000000000
+       -0.7539693583      0.5654293403      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3695408" xmlns="pg">
+							<molecule>
+								3693280
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="12" serial_id="3296576">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						      0.1927320947
+     -0.0093905356
+      0.0060886202
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						        9.1080522834     -0.4621128298      0.2982339444
+       -0.4621128298     10.1985337964      0.2941899299
+        0.2982339444      0.2941899299      1.2863406637
+
+					</fc>
+					<disps n="3">
+						2     0.00000000000000     0.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3693920">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							       -0.0070388197     -0.0754123952      0.0000000000
+        0.7692832831      0.5697475134      0.0000000000
+       -0.7622444634      0.5638022598      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3696048" xmlns="pg">
+							<molecule>
+								3693920
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="13" serial_id="3297008">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						      0.0000008928
+      0.0000008928
+      0.0000000313
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       10.1834705604     -0.4770769155      0.3106008164
+       -0.4770769155     10.1834705604      0.3106008164
+        0.3106008164      0.3106008164      1.2943459226
+
+					</fc>
+					<disps n="3">
+						0     0.00000000000000     0.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3694560">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							        0.0000000000     -0.0711557328      0.0000000000
+        0.7580807277      0.5646465554      0.0000000000
+       -0.7580807277      0.5646465554      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3696688" xmlns="pg">
+							<molecule>
+								3694560
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="14" serial_id="3298448">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						     -0.0016503020
+     -0.1111212346
+     -0.0293303503
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       10.1879460370     -0.4675982757      0.3271598866
+       -0.4675982757     10.7761537072      0.3242060529
+        0.3271598866      0.3242060529      1.3213618440
+
+					</fc>
+					<disps n="3">
+						0    -1.00000000000000    -1.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3695200">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							       -0.0035441176     -0.0740136651      0.0000000000
+        0.7496639173      0.5675536310      0.0000000000
+       -0.7461197997      0.5645974121      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3697328" xmlns="pg">
+							<molecule>
+								3695200
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="15" serial_id="3298960">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						      0.0111138120
+     -0.0984471638
+      0.0225895199
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       10.1629514066     -0.5012717917      0.3115947756
+       -0.5012717917     10.7517998276      0.3100328200
+        0.3115947756      0.3100328200      1.2745986701
+
+					</fc>
+					<disps n="3">
+						0    -1.00000000000000     1.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3695840">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							       -0.0035093923     -0.0639575520      0.0000000000
+        0.7622977284      0.5625170230      0.0000000000
+       -0.7587883361      0.5595779070      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3697968" xmlns="pg">
+							<molecule>
+								3695840
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="16" serial_id="3299456">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						     -0.0108549539
+      0.0928828162
+     -0.0229594064
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       10.2026261392     -0.4529182562      0.3100639121
+       -0.4529182562      9.6438768396      0.3128491436
+        0.3100639121      0.3128491436      1.3129991177
+
+					</fc>
+					<disps n="3">
+						0     1.00000000000000    -1.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3696480">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							        0.0035393890     -0.0783486937      0.0000000000
+        0.7537194006      0.5667566385      0.0000000000
+       -0.7572587896      0.5697294332      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3698608" xmlns="pg">
+							<molecule>
+								3696480
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="17" serial_id="3299952">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						      0.0012439251
+      0.1050656217
+      0.0286583997
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       10.1784690520     -0.4857548430      0.2954053500
+       -0.4857548430      9.6191367259      0.2968297099
+        0.2954053500      0.2968297099      1.2678474196
+
+					</fc>
+					<disps n="3">
+						0     1.00000000000000     1.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3697120">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							        0.0035047051     -0.0681904193      0.0000000000
+        0.7665164396      0.5616857847      0.0000000000
+       -0.7700211447      0.5646420126      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3699248" xmlns="pg">
+							<molecule>
+								3697120
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="18" serial_id="3300560">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						      0.0070891375
+      0.1109327763
+      0.0537886390
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       10.1649959106     -0.5015435280      0.2892437089
+       -0.5015435280      9.6054170986      0.2900167326
+        0.2892437089      0.2900167326      1.2451628141
+
+					</fc>
+					<disps n="3">
+						0     1.00000000000000     2.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3697760">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							        0.0034880761     -0.0630478893      0.0000000000
+        0.7727996872      0.5591181532      0.0000000000
+       -0.7762877633      0.5620671141      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3699888" xmlns="pg">
+							<molecule>
+								3697760
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="19" serial_id="3300976">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						     -0.0035752617
+      0.1986149293
+      0.0315934801
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       10.1861867142     -0.4780915519      0.2874646792
+       -0.4780915519      9.0951804063      0.2901831601
+        0.2874646792      0.2901831601      1.2641324138
+
+					</fc>
+					<disps n="3">
+						0     2.00000000000000     1.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3698400">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							        0.0070046396     -0.0702868735      0.0000000000
+        0.7686446615      0.5612473033      0.0000000000
+       -0.7756493012      0.5671769482      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3700528" xmlns="pg">
+							<molecule>
+								3698400
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="20" serial_id="3301456">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						      0.0030629223
+     -0.2219173644
+     -0.0326003680
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       10.1805824598     -0.4750573544      0.3358674713
+       -0.4750573544     11.3884965461      0.3297844005
+        0.3358674713      0.3297844005      1.3251899423
+
+					</fc>
+					<disps n="3">
+						0    -2.00000000000000    -1.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3699040">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							       -0.0070928619     -0.0718243721      0.0000000000
+        0.7476565999      0.5679288532      0.0000000000
+       -0.7405637380      0.5620328970      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3701168" xmlns="pg">
+							<molecule>
+								3699040
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="21" serial_id="3301952">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						     -0.0082824397
+     -0.1176870585
+     -0.0559908206
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       10.1990705428     -0.4500295889      0.3361957863
+       -0.4500295889     10.7869097657      0.3325146210
+        0.3361957863      0.3325146210      1.3446793090
+
+					</fc>
+					<disps n="3">
+						0    -1.00000000000000    -2.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3699680">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							       -0.0035621956     -0.0789779606      0.0000000000
+        0.7432348750      0.5700405867      0.0000000000
+       -0.7396726794      0.5670747519      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3701808" xmlns="pg">
+							<molecule>
+								3699680
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="22" serial_id="3302896">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						     -0.1111212346
+     -0.0016503020
+     -0.0293303503
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       10.7761537072     -0.4675982757      0.3242060529
+       -0.4675982757     10.1879460370      0.3271598866
+        0.3242060529      0.3271598866      1.3213618440
+
+					</fc>
+					<disps n="3">
+						-1     0.00000000000000    -1.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3700320">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							        0.0035441176     -0.0740136651      0.0000000000
+        0.7461197997      0.5645974121      0.0000000000
+       -0.7496639173      0.5675536310      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3702448" xmlns="pg">
+							<molecule>
+								3700320
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="23" serial_id="3303392">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						     -0.0984471638
+      0.0111138120
+      0.0225895199
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       10.7517998276     -0.5012717917      0.3100328200
+       -0.5012717917     10.1629514066      0.3115947756
+        0.3100328200      0.3115947756      1.2745986701
+
+					</fc>
+					<disps n="3">
+						-1     0.00000000000000     1.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3700960">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							        0.0035093923     -0.0639575520      0.0000000000
+        0.7587883361      0.5595779070      0.0000000000
+       -0.7622977284      0.5625170230      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3703088" xmlns="pg">
+							<molecule>
+								3700960
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="24" serial_id="3303888">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						      0.0928828162
+     -0.0108549539
+     -0.0229594064
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						        9.6438768396     -0.4529182562      0.3128491436
+       -0.4529182562     10.2026261392      0.3100639121
+        0.3128491436      0.3100639121      1.3129991177
+
+					</fc>
+					<disps n="3">
+						1     0.00000000000000    -1.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3701600">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							       -0.0035393890     -0.0783486937      0.0000000000
+        0.7572587896      0.5697294332      0.0000000000
+       -0.7537194006      0.5667566385      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3703728" xmlns="pg">
+							<molecule>
+								3701600
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="25" serial_id="3304384">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						      0.1050656217
+      0.0012439251
+      0.0286583997
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						        9.6191367259     -0.4857548430      0.2968297099
+       -0.4857548430     10.1784690520      0.2954053500
+        0.2968297099      0.2954053500      1.2678474196
+
+					</fc>
+					<disps n="3">
+						1     0.00000000000000     1.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3702240">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							       -0.0035047051     -0.0681904193      0.0000000000
+        0.7700211447      0.5646420126      0.0000000000
+       -0.7665164396      0.5616857847      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3704368" xmlns="pg">
+							<molecule>
+								3702240
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="26" serial_id="3304864">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						      0.1109327763
+      0.0070891375
+      0.0537886390
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						        9.6054170986     -0.5015435280      0.2900167326
+       -0.5015435280     10.1649959106      0.2892437089
+        0.2900167326      0.2892437089      1.2451628141
+
+					</fc>
+					<disps n="3">
+						1     0.00000000000000     2.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3702880">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							       -0.0034880761     -0.0630478893      0.0000000000
+        0.7762877633      0.5620671141      0.0000000000
+       -0.7727996872      0.5591181532      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3705008" xmlns="pg">
+							<molecule>
+								3702880
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="27" serial_id="3305344">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						      0.1986149293
+     -0.0035752617
+      0.0315934801
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						        9.0951804063     -0.4780915519      0.2901831601
+       -0.4780915519     10.1861867142      0.2874646792
+        0.2901831601      0.2874646792      1.2641324138
+
+					</fc>
+					<disps n="3">
+						2     0.00000000000000     1.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3703520">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							       -0.0070046396     -0.0702868735      0.0000000000
+        0.7756493012      0.5671769482      0.0000000000
+       -0.7686446615      0.5612473033      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3705648" xmlns="pg">
+							<molecule>
+								3703520
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="28" serial_id="3305824">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						     -0.2219173644
+      0.0030629223
+     -0.0326003680
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       11.3884965461     -0.4750573544      0.3297844005
+       -0.4750573544     10.1805824598      0.3358674713
+        0.3297844005      0.3358674713      1.3251899423
+
+					</fc>
+					<disps n="3">
+						-2     0.00000000000000    -1.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3704160">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							        0.0070928619     -0.0718243721      0.0000000000
+        0.7405637380      0.5620328970      0.0000000000
+       -0.7476565999      0.5679288532      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3706288" xmlns="pg">
+							<molecule>
+								3704160
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="29" serial_id="3306320">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						     -0.1176870585
+     -0.0082824397
+     -0.0559908206
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       10.7869097657     -0.4500295889      0.3325146210
+       -0.4500295889     10.1990705428      0.3361957863
+        0.3325146210      0.3361957863      1.3446793090
+
+					</fc>
+					<disps n="3">
+						-1     0.00000000000000    -2.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3704800">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							        0.0035621956     -0.0789779606      0.0000000000
+        0.7396726794      0.5670747519      0.0000000000
+       -0.7432348750      0.5700405867      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3706928" xmlns="pg">
+							<molecule>
+								3704800
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="30" serial_id="3307264">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						     -0.0998286721
+     -0.0998286721
+     -0.0063574156
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       10.7568145599     -0.4922767686      0.3251859531
+       -0.4922767686     10.7568145599      0.3251859531
+        0.3251859531      0.3251859531      1.3017799538
+
+					</fc>
+					<disps n="3">
+						-1    -1.00000000000000     0.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3705440">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							        0.0000000000     -0.0668716801      0.0000000000
+        0.7504187757      0.5625045291      0.0000000000
+       -0.7504187757      0.5625045291      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3707568" xmlns="pg">
+							<molecule>
+								3705440
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="31" serial_id="3307760">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						     -0.1095222611
+      0.1037876725
+      0.0000217184
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       10.7720623356     -0.4771257027      0.3083568626
+       -0.4771257027      9.6244637122      0.3126920928
+        0.3083568626      0.3126920928      1.2940019341
+
+					</fc>
+					<disps n="3">
+						-1     1.00000000000000     0.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3706080">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							        0.0070481955     -0.0711279099      0.0000000000
+        0.7545781032      0.5616767904      0.0000000000
+       -0.7616262987      0.5675884975      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3708208" xmlns="pg">
+							<molecule>
+								3706080
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="32" serial_id="3308256">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						      0.1037876725
+     -0.1095222611
+      0.0000217184
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						        9.6244637122     -0.4771257027      0.3126920928
+       -0.4771257027     10.7720623356      0.3083568626
+        0.3126920928      0.3083568626      1.2940019341
+
+					</fc>
+					<disps n="3">
+						1    -1.00000000000000     0.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3706720">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							       -0.0070481955     -0.0711279099      0.0000000000
+        0.7616262987      0.5675884975      0.0000000000
+       -0.7545781032      0.5616767904      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3708848" xmlns="pg">
+							<molecule>
+								3706720
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="33" serial_id="3308752">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						      0.0943962472
+      0.0943962472
+      0.0060683893
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						        9.6394281468     -0.4620628675      0.2962813396
+       -0.4620628675      9.6394281468      0.2962813396
+        0.2962813396      0.2962813396      1.2866769384
+
+					</fc>
+					<disps n="3">
+						1     1.00000000000000     0.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3707360">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							        0.0000000000     -0.0754397855      0.0000000000
+        0.7657426797      0.5667885817      0.0000000000
+       -0.7657426797      0.5667885817      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3709488" xmlns="pg">
+							<molecule>
+								3707360
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="34" serial_id="3309488">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						      0.0898127651
+      0.1881483650
+      0.0090007695
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						        9.6468725335     -0.4546436573      0.2882343255
+       -0.4546436573      9.1154461737      0.2901903174
+        0.2882343255      0.2901903174      1.2826697289
+
+					</fc>
+					<disps n="3">
+						1     2.00000000000000     0.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3708000">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							        0.0035171383     -0.0775750170      0.0000000000
+        0.7678203507      0.5663657618      0.0000000000
+       -0.7713374890      0.5693466333      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3710128" xmlns="pg">
+							<molecule>
+								3708000
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="35" serial_id="3309856">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						      0.1881483650
+      0.0898127651
+      0.0090007695
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						        9.1154461737     -0.4546436573      0.2901903174
+       -0.4546436573      9.6468725335      0.2882343255
+        0.2901903174      0.2882343255      1.2826697289
+
+					</fc>
+					<disps n="3">
+						2     1.00000000000000     0.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3708640">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							       -0.0035171383     -0.0775750170      0.0000000000
+        0.7713374890      0.5693466333      0.0000000000
+       -0.7678203507      0.5663657618      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3710768" xmlns="pg">
+							<molecule>
+								3708640
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="36" serial_id="3310304">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						     -0.2104317839
+     -0.0948675680
+     -0.0096401079
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       11.3692365701     -0.4999522349      0.3313402230
+       -0.4999522349     10.7491626474      0.3337556347
+        0.3313402230      0.3337556347      1.3053217851
+
+					</fc>
+					<disps n="3">
+						-2    -1.00000000000000     0.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3709280">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							        0.0035312637     -0.0647225306      0.0000000000
+        0.7448276440      0.5599647835      0.0000000000
+       -0.7483589077      0.5628951251      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3711408" xmlns="pg">
+							<molecule>
+								3709280
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+				<displacement classtype="Displacement" number="37" serial_id="3310816">
+					<energy units="aj">
+						-326
+					</energy>
+					<gradients bond_units="angstrom" energy_units="aj" n="3">
+						     -0.0948675680
+     -0.2104317839
+     -0.0096401079
+
+					</gradients>
+					<fc bond_units="angstrom" energy_units="aj" ncol="3" nrow="3">
+						       10.7491626474     -0.4999522349      0.3337556347
+       -0.4999522349     11.3692365701      0.3313402230
+        0.3337556347      0.3313402230      1.3053217851
+
+					</fc>
+					<disps n="3">
+						-1    -2.00000000000000     0.00000000000000
+					</disps>
+					<dispsizes n="3">
+						0.01     0.01000000000000     0.02000000000000
+					</dispsizes>
+					<dispmol natoms="3" serial_id="3709920">
+						<xyz ncol="3" nrow="3" units="angstrom">
+							       -0.0035312637     -0.0647225306      0.0000000000
+        0.7483589077      0.5628951251      0.0000000000
+       -0.7448276440      0.5599647835      0.0000000000
+
+						</xyz>
+						<atoms>
+							O
+H
+H
+
+						</atoms>
+						<point_group classtype="PointGroup" name="" serial_id="3712048" xmlns="pg">
+							<molecule>
+								3709920
+							</molecule>
+							<classes/>
+							<subgroups/>
+							<subspaces/>
+							<symmops>
+								<symmop classtype="IdentityElement" name="identity" serial_id="3250816" type="4"/>
+							</symmops>
+						</point_group>
+					</dispmol>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<simples>
+						<simple>
+							3252224
+						</simple>
+						<simple>
+							3247648
+						</simple>
+						<simple>
+							3255280
+						</simple>
+					</simples>
+				</displacement>
+			</displacements>
+			<molecule xmlns="dispiter_molecule">
+				3216160
+			</molecule>
+			<coordinates>
+				<coordinate>
+					3255680
+				</coordinate>
+				<coordinate>
+					3256032
+				</coordinate>
+				<coordinate>
+					3257632
+				</coordinate>
+			</coordinates>
+			<simples>
+				<simple>
+					3252224
+				</simple>
+				<simple>
+					3247648
+				</simple>
+				<simple>
+					3255280
+				</simple>
+			</simples>
+		</displacement_iterator>
+		<fit_iterator classtype="DerivativeIterator" deriv_level="4" nonzero_level="3259248" serial_id="3266416">
+			<coordinates>
+				<coordinates>
+					3255680
+				</coordinates>
+				<coordinates>
+					3256032
+				</coordinates>
+				<coordinates>
+					3257632
+				</coordinates>
+			</coordinates>
+			<derivatives>
+				<derivative assigned="false" classtype="Derivative" coeff="    1.00000000000000" dertype="0" level="0" nonzero="true" serial_id="3268288" typelabel="" unique="true">
+					<levels n="3">
+						0 0 0
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels/>
+					<indices/>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    1.00000000000000" dertype="1" level="1" nonzero="true" serial_id="3279856" typelabel="i" unique="true">
+					<levels n="3">
+						0 0 1
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="2">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    1.00000000000000" dertype="1" level="1" nonzero="true" serial_id="3280080" typelabel="i" unique="true">
+					<levels n="3">
+						0 1 0
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="1">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							1
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    1.00000000000000" dertype="1" level="1" nonzero="true" serial_id="3280336" typelabel="i" unique="true">
+					<levels n="3">
+						1 0 0
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.50000000000000" dertype="1" level="2" nonzero="true" serial_id="3280640" typelabel="ii" unique="true">
+					<levels n="3">
+						0 0 2
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="2">
+							2
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.50000000000000" dertype="1" level="2" nonzero="true" serial_id="3280880" typelabel="ii" unique="true">
+					<levels n="3">
+						0 2 0
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="1">
+							2
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							1
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.50000000000000" dertype="1" level="2" nonzero="true" serial_id="3281120" typelabel="ii" unique="true">
+					<levels n="3">
+						2 0 0
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							2
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    1.00000000000000" dertype="4" level="2" nonzero="true" serial_id="3281424" typelabel="ij" unique="true">
+					<levels n="3">
+						0 1 1
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="1">
+							1
+						</map_entry>
+						<map_entry key="2">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							1
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    1.00000000000000" dertype="4" level="2" nonzero="true" serial_id="3281696" typelabel="ij" unique="true">
+					<levels n="3">
+						1 0 1
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							1
+						</map_entry>
+						<map_entry key="2">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    1.00000000000000" dertype="4" level="2" nonzero="true" serial_id="3282080" typelabel="ij" unique="true">
+					<levels n="3">
+						1 1 0
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							1
+						</map_entry>
+						<map_entry key="1">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							1
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.16666666666667" dertype="2" level="3" nonzero="true" serial_id="3282416" typelabel="iii" unique="true">
+					<levels n="3">
+						0 0 3
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="2">
+							3
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.16666666666667" dertype="2" level="3" nonzero="true" serial_id="3282624" typelabel="iii" unique="true">
+					<levels n="3">
+						0 3 0
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="1">
+							3
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							1
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.16666666666667" dertype="2" level="3" nonzero="true" serial_id="3282880" typelabel="iii" unique="true">
+					<levels n="3">
+						3 0 0
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							3
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.50000000000000" dertype="5" level="3" nonzero="true" serial_id="3283296" typelabel="ijj" unique="true">
+					<levels n="3">
+						0 1 2
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="1">
+							1
+						</map_entry>
+						<map_entry key="2">
+							2
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							1
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.50000000000000" dertype="5" level="3" nonzero="true" serial_id="3283568" typelabel="iij" unique="true">
+					<levels n="3">
+						0 2 1
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="1">
+							2
+						</map_entry>
+						<map_entry key="2">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							1
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.50000000000000" dertype="5" level="3" nonzero="true" serial_id="3283872" typelabel="ijj" unique="true">
+					<levels n="3">
+						1 0 2
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							1
+						</map_entry>
+						<map_entry key="2">
+							2
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.50000000000000" dertype="5" level="3" nonzero="true" serial_id="3284192" typelabel="ijj" unique="true">
+					<levels n="3">
+						1 2 0
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							1
+						</map_entry>
+						<map_entry key="1">
+							2
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							1
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.50000000000000" dertype="5" level="3" nonzero="true" serial_id="3284640" typelabel="iij" unique="true">
+					<levels n="3">
+						2 0 1
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							2
+						</map_entry>
+						<map_entry key="2">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.50000000000000" dertype="5" level="3" nonzero="true" serial_id="3284896" typelabel="iij" unique="true">
+					<levels n="3">
+						2 1 0
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							2
+						</map_entry>
+						<map_entry key="1">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							1
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    1.00000000000000" dertype="8" level="3" nonzero="true" serial_id="3285216" typelabel="ijk" unique="true">
+					<levels n="3">
+						1 1 1
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							1
+						</map_entry>
+						<map_entry key="1">
+							1
+						</map_entry>
+						<map_entry key="2">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							1
+						</map_entry>
+						<map_entry key="k">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.04166666666667" dertype="3" level="4" nonzero="true" serial_id="3285536" typelabel="iiii" unique="true">
+					<levels n="3">
+						0 0 4
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="2">
+							4
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.04166666666667" dertype="3" level="4" nonzero="true" serial_id="3285776" typelabel="iiii" unique="true">
+					<levels n="3">
+						0 4 0
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="1">
+							4
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							1
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.04166666666667" dertype="3" level="4" nonzero="true" serial_id="3286048" typelabel="iiii" unique="true">
+					<levels n="3">
+						4 0 0
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							4
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.25000000000000" dertype="7" level="4" nonzero="true" serial_id="3286368" typelabel="iijj" unique="true">
+					<levels n="3">
+						0 2 2
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="1">
+							2
+						</map_entry>
+						<map_entry key="2">
+							2
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							1
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.25000000000000" dertype="7" level="4" nonzero="true" serial_id="3286672" typelabel="iijj" unique="true">
+					<levels n="3">
+						2 0 2
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							2
+						</map_entry>
+						<map_entry key="2">
+							2
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.25000000000000" dertype="7" level="4" nonzero="true" serial_id="3287008" typelabel="iijj" unique="true">
+					<levels n="3">
+						2 2 0
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							2
+						</map_entry>
+						<map_entry key="1">
+							2
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							1
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.16666666666667" dertype="6" level="4" nonzero="true" serial_id="3287488" typelabel="ijjj" unique="true">
+					<levels n="3">
+						0 1 3
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="1">
+							1
+						</map_entry>
+						<map_entry key="2">
+							3
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							1
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.16666666666667" dertype="6" level="4" nonzero="true" serial_id="3287792" typelabel="iiij" unique="true">
+					<levels n="3">
+						0 3 1
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="1">
+							3
+						</map_entry>
+						<map_entry key="2">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							1
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.16666666666667" dertype="6" level="4" nonzero="true" serial_id="3288096" typelabel="ijjj" unique="true">
+					<levels n="3">
+						1 0 3
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							1
+						</map_entry>
+						<map_entry key="2">
+							3
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.16666666666667" dertype="6" level="4" nonzero="true" serial_id="3288432" typelabel="ijjj" unique="true">
+					<levels n="3">
+						1 3 0
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							1
+						</map_entry>
+						<map_entry key="1">
+							3
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							1
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.16666666666667" dertype="6" level="4" nonzero="true" serial_id="3288768" typelabel="iiij" unique="true">
+					<levels n="3">
+						3 0 1
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							3
+						</map_entry>
+						<map_entry key="2">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.16666666666667" dertype="6" level="4" nonzero="true" serial_id="3289104" typelabel="iiij" unique="true">
+					<levels n="3">
+						3 1 0
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							3
+						</map_entry>
+						<map_entry key="1">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							1
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.50000000000000" dertype="9" level="4" nonzero="true" serial_id="3289440" typelabel="ijkk" unique="true">
+					<levels n="3">
+						1 1 2
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							1
+						</map_entry>
+						<map_entry key="1">
+							1
+						</map_entry>
+						<map_entry key="2">
+							2
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							1
+						</map_entry>
+						<map_entry key="k">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.50000000000000" dertype="9" level="4" nonzero="true" serial_id="3290000" typelabel="ijjk" unique="true">
+					<levels n="3">
+						1 2 1
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							1
+						</map_entry>
+						<map_entry key="1">
+							2
+						</map_entry>
+						<map_entry key="2">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							1
+						</map_entry>
+						<map_entry key="k">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.50000000000000" dertype="9" level="4" nonzero="true" serial_id="3290272" typelabel="iijk" unique="true">
+					<levels n="3">
+						2 1 1
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							2
+						</map_entry>
+						<map_entry key="1">
+							1
+						</map_entry>
+						<map_entry key="2">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							1
+						</map_entry>
+						<map_entry key="k">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+			</derivatives>
+			<molecule>
+				3216160
+			</molecule>
+		</fit_iterator>
+		<value_iterator classtype="DerivativeIterator" deriv_level="2" nonzero_level="2" serial_id="3259296">
+			<coordinates>
+				<coordinates>
+					3255680
+				</coordinates>
+				<coordinates>
+					3256032
+				</coordinates>
+				<coordinates>
+					3257632
+				</coordinates>
+			</coordinates>
+			<derivatives>
+				<derivative assigned="false" classtype="Derivative" coeff="    1.00000000000000" dertype="0" level="0" nonzero="true" serial_id="3261264" typelabel="" unique="true">
+					<levels n="3">
+						0 0 0
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels/>
+					<indices/>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    1.00000000000000" dertype="1" level="1" nonzero="true" serial_id="3262880" typelabel="i" unique="true">
+					<levels n="3">
+						0 0 1
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="2">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    1.00000000000000" dertype="1" level="1" nonzero="true" serial_id="3263104" typelabel="i" unique="true">
+					<levels n="3">
+						0 1 0
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="1">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							1
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    1.00000000000000" dertype="1" level="1" nonzero="true" serial_id="3263360" typelabel="i" unique="true">
+					<levels n="3">
+						1 0 0
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.50000000000000" dertype="1" level="2" nonzero="true" serial_id="3263664" typelabel="ii" unique="true">
+					<levels n="3">
+						0 0 2
+					</levels>
+					<value>
+						    1.29434592260000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="2">
+							2
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.50000000000000" dertype="1" level="2" nonzero="true" serial_id="3263904" typelabel="ii" unique="true">
+					<levels n="3">
+						0 2 0
+					</levels>
+					<value>
+						   10.18347056040000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="1">
+							2
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							1
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.50000000000000" dertype="1" level="2" nonzero="true" serial_id="3264144" typelabel="ii" unique="true">
+					<levels n="3">
+						2 0 0
+					</levels>
+					<value>
+						   10.18347056040000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							2
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    1.00000000000000" dertype="4" level="2" nonzero="true" serial_id="3264448" typelabel="ij" unique="true">
+					<levels n="3">
+						0 1 1
+					</levels>
+					<value>
+						    0.31060081640000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="1">
+							1
+						</map_entry>
+						<map_entry key="2">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							1
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    1.00000000000000" dertype="4" level="2" nonzero="true" serial_id="3264720" typelabel="ij" unique="true">
+					<levels n="3">
+						1 0 1
+					</levels>
+					<value>
+						    0.31060081640000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							1
+						</map_entry>
+						<map_entry key="2">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    1.00000000000000" dertype="4" level="2" nonzero="true" serial_id="3265104" typelabel="ij" unique="true">
+					<levels n="3">
+						1 1 0
+					</levels>
+					<value>
+						   -0.47707691550000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							1
+						</map_entry>
+						<map_entry key="1">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							1
+						</map_entry>
+					</indices>
+				</derivative>
+			</derivatives>
+			<molecule>
+				3216160
+			</molecule>
+		</value_iterator>
+		<compute_iterator classtype="DerivativeIterator" deriv_level="2" nonzero_level="3260960" serial_id="3260000">
+			<coordinates>
+				<coordinates>
+					3255680
+				</coordinates>
+				<coordinates>
+					3256032
+				</coordinates>
+				<coordinates>
+					3257632
+				</coordinates>
+			</coordinates>
+			<derivatives>
+				<derivative assigned="false" classtype="Derivative" coeff="    1.00000000000000" dertype="0" level="0" nonzero="true" serial_id="3265392" typelabel="" unique="true">
+					<levels n="3">
+						0 0 0
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<fit classtype="Fit" serial_id="3274368">
+						<points/>
+					</fit>
+					<nonzero_levels/>
+					<indices/>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    1.00000000000000" dertype="1" level="1" nonzero="true" serial_id="3265680" typelabel="i" unique="true">
+					<levels n="3">
+						0 0 1
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<fit classtype="Fit" serial_id="3291424">
+						<points>
+							<point classtype="FitPoint" coef="   -0.66666666666700" serial_id="3292016">
+								<displacement>
+									3291504
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    0.66666666666700" serial_id="3292480">
+								<displacement>
+									3292080
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    0.08333333333300" serial_id="3292928">
+								<displacement>
+									3292528
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3293360">
+								<displacement>
+									3292992
+								</displacement>
+							</point>
+						</points>
+					</fit>
+					<nonzero_levels>
+						<map_entry key="2">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    1.00000000000000" dertype="1" level="1" nonzero="true" serial_id="3265904" typelabel="i" unique="true">
+					<levels n="3">
+						0 1 0
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<fit classtype="Fit" serial_id="3291472">
+						<points>
+							<point classtype="FitPoint" coef="   -0.66666666666700" serial_id="3293872">
+								<displacement>
+									3293440
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    0.66666666666700" serial_id="3294304">
+								<displacement>
+									3293904
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    0.08333333333300" serial_id="3294752">
+								<displacement>
+									3294352
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3295184">
+								<displacement>
+									3294816
+								</displacement>
+							</point>
+						</points>
+					</fit>
+					<nonzero_levels>
+						<map_entry key="1">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							1
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    1.00000000000000" dertype="1" level="1" nonzero="true" serial_id="3266160" typelabel="i" unique="true">
+					<levels n="3">
+						1 0 0
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<fit classtype="Fit" serial_id="3293392">
+						<points>
+							<point classtype="FitPoint" coef="   -0.66666666666700" serial_id="3293840">
+								<displacement>
+									3295264
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    0.66666666666700" serial_id="3295920">
+								<displacement>
+									3295648
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    0.08333333333300" serial_id="3296400">
+								<displacement>
+									3296128
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3296800">
+								<displacement>
+									3296576
+								</displacement>
+							</point>
+						</points>
+					</fit>
+					<nonzero_levels>
+						<map_entry key="0">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.50000000000000" dertype="1" level="2" nonzero="true" serial_id="3266464" typelabel="ii" unique="true">
+					<levels n="3">
+						0 0 2
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<fit classtype="Fit" serial_id="3295216">
+						<points>
+							<point classtype="FitPoint" coef="   -2.50000000000000" serial_id="3297440">
+								<displacement>
+									3297008
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    1.33333333333300" serial_id="3297472">
+								<displacement>
+									3291504
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    1.33333333333300" serial_id="3297248">
+								<displacement>
+									3292080
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3297280">
+								<displacement>
+									3292528
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3297520">
+								<displacement>
+									3292992
+								</displacement>
+							</point>
+						</points>
+					</fit>
+					<nonzero_levels>
+						<map_entry key="2">
+							2
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.50000000000000" dertype="1" level="2" nonzero="true" serial_id="3266704" typelabel="ii" unique="true">
+					<levels n="3">
+						0 2 0
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<fit classtype="Fit" serial_id="3296832">
+						<points>
+							<point classtype="FitPoint" coef="   -2.50000000000000" serial_id="3297616">
+								<displacement>
+									3297008
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    1.33333333333300" serial_id="3297648">
+								<displacement>
+									3293440
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    1.33333333333300" serial_id="3297680">
+								<displacement>
+									3293904
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3297712">
+								<displacement>
+									3294352
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3297744">
+								<displacement>
+									3294816
+								</displacement>
+							</point>
+						</points>
+					</fit>
+					<nonzero_levels>
+						<map_entry key="1">
+							2
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							1
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    0.50000000000000" dertype="1" level="2" nonzero="true" serial_id="3266944" typelabel="ii" unique="true">
+					<levels n="3">
+						2 0 0
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<fit classtype="Fit" serial_id="3297584">
+						<points>
+							<point classtype="FitPoint" coef="   -2.50000000000000" serial_id="3297840">
+								<displacement>
+									3297008
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    1.33333333333300" serial_id="3297872">
+								<displacement>
+									3295264
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    1.33333333333300" serial_id="3297904">
+								<displacement>
+									3295648
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3297936">
+								<displacement>
+									3296128
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3297968">
+								<displacement>
+									3296576
+								</displacement>
+							</point>
+						</points>
+					</fit>
+					<nonzero_levels>
+						<map_entry key="0">
+							2
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    1.00000000000000" dertype="4" level="2" nonzero="true" serial_id="3267248" typelabel="ij" unique="true">
+					<levels n="3">
+						0 1 1
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<fit classtype="Fit" serial_id="3297808">
+						<points>
+							<point classtype="FitPoint" coef="    1.00000000000000" serial_id="3298064">
+								<displacement>
+									3297008
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.58333333333300" serial_id="3298096">
+								<displacement>
+									3293440
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.58333333333300" serial_id="3298128">
+								<displacement>
+									3291504
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.58333333333300" serial_id="3298160">
+								<displacement>
+									3292080
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.58333333333300" serial_id="3298192">
+								<displacement>
+									3293904
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    0.08333333333300" serial_id="3298256">
+								<displacement>
+									3294352
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    0.08333333333300" serial_id="3298288">
+								<displacement>
+									3292528
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    0.08333333333300" serial_id="3298320">
+								<displacement>
+									3292992
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    0.08333333333300" serial_id="3298352">
+								<displacement>
+									3294816
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    0.75000000000000" serial_id="3298736">
+								<displacement>
+									3298448
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3299232">
+								<displacement>
+									3298960
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3299728">
+								<displacement>
+									3299456
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    0.75000000000000" serial_id="3300176">
+								<displacement>
+									3299952
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3300752">
+								<displacement>
+									3300560
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3301200">
+								<displacement>
+									3300976
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3301728">
+								<displacement>
+									3301456
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3302224">
+								<displacement>
+									3301952
+								</displacement>
+							</point>
+						</points>
+					</fit>
+					<nonzero_levels>
+						<map_entry key="1">
+							1
+						</map_entry>
+						<map_entry key="2">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							1
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    1.00000000000000" dertype="4" level="2" nonzero="true" serial_id="3267520" typelabel="ij" unique="true">
+					<levels n="3">
+						1 0 1
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<fit classtype="Fit" serial_id="3298032">
+						<points>
+							<point classtype="FitPoint" coef="    1.00000000000000" serial_id="3298384">
+								<displacement>
+									3297008
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.58333333333300" serial_id="3298416">
+								<displacement>
+									3295264
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.58333333333300" serial_id="3302576">
+								<displacement>
+									3291504
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.58333333333300" serial_id="3302608">
+								<displacement>
+									3292080
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.58333333333300" serial_id="3302640">
+								<displacement>
+									3295648
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    0.08333333333300" serial_id="3302704">
+								<displacement>
+									3296128
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    0.08333333333300" serial_id="3302736">
+								<displacement>
+									3292528
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    0.08333333333300" serial_id="3302768">
+								<displacement>
+									3292992
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    0.08333333333300" serial_id="3302800">
+								<displacement>
+									3296576
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    0.75000000000000" serial_id="3303328">
+								<displacement>
+									3302896
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3303824">
+								<displacement>
+									3303392
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3304320">
+								<displacement>
+									3303888
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    0.75000000000000" serial_id="3304800">
+								<displacement>
+									3304384
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3305280">
+								<displacement>
+									3304864
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3305760">
+								<displacement>
+									3305344
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3306256">
+								<displacement>
+									3305824
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3306752">
+								<displacement>
+									3306320
+								</displacement>
+							</point>
+						</points>
+					</fit>
+					<nonzero_levels>
+						<map_entry key="0">
+							1
+						</map_entry>
+						<map_entry key="2">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="false" classtype="Derivative" coeff="    1.00000000000000" dertype="4" level="2" nonzero="true" serial_id="3267904" typelabel="ij" unique="true">
+					<levels n="3">
+						1 1 0
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<fit classtype="Fit" serial_id="3302400">
+						<points>
+							<point classtype="FitPoint" coef="    1.00000000000000" serial_id="3302832">
+								<displacement>
+									3297008
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.58333333333300" serial_id="3302864">
+								<displacement>
+									3295264
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.58333333333300" serial_id="3306944">
+								<displacement>
+									3293440
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.58333333333300" serial_id="3306976">
+								<displacement>
+									3293904
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.58333333333300" serial_id="3307008">
+								<displacement>
+									3295648
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    0.08333333333300" serial_id="3307072">
+								<displacement>
+									3296128
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    0.08333333333300" serial_id="3307104">
+								<displacement>
+									3294352
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    0.08333333333300" serial_id="3307136">
+								<displacement>
+									3294816
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    0.08333333333300" serial_id="3307168">
+								<displacement>
+									3296576
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    0.75000000000000" serial_id="3307696">
+								<displacement>
+									3307264
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3308192">
+								<displacement>
+									3307760
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3308688">
+								<displacement>
+									3308256
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="    0.75000000000000" serial_id="3309152">
+								<displacement>
+									3308752
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3309792">
+								<displacement>
+									3309488
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3310256">
+								<displacement>
+									3309856
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3310752">
+								<displacement>
+									3310304
+								</displacement>
+							</point>
+							<point classtype="FitPoint" coef="   -0.08333333333300" serial_id="3311248">
+								<displacement>
+									3310816
+								</displacement>
+							</point>
+						</points>
+					</fit>
+					<nonzero_levels>
+						<map_entry key="0">
+							1
+						</map_entry>
+						<map_entry key="1">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							1
+						</map_entry>
+					</indices>
+				</derivative>
+			</derivatives>
+			<molecule>
+				3216160
+			</molecule>
+		</compute_iterator>
+		<deriv_iterator classtype="DerivativeIterator" deriv_level="4" nonzero_level="3263264" serial_id="3264400">
+			<coordinates>
+				<coordinates>
+					3255680
+				</coordinates>
+				<coordinates>
+					3256032
+				</coordinates>
+				<coordinates>
+					3257632
+				</coordinates>
+			</coordinates>
+			<derivatives>
+				<derivative assigned="false" classtype="Derivative" coeff="    1.00000000000000" dertype="0" level="0" nonzero="true" serial_id="3268480" typelabel="" unique="true">
+					<levels n="3">
+						0 0 0
+					</levels>
+					<value>
+						    0.00000000000000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels/>
+					<indices/>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    1.00000000000000" dertype="1" level="1" nonzero="true" serial_id="3268752" typelabel="i" unique="true">
+					<levels n="3">
+						0 0 1
+					</levels>
+					<value>
+						    0.00000003130000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="2">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    1.00000000000000" dertype="1" level="1" nonzero="true" serial_id="3268976" typelabel="i" unique="true">
+					<levels n="3">
+						0 1 0
+					</levels>
+					<value>
+						    0.00000089280000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="1">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							1
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    1.00000000000000" dertype="1" level="1" nonzero="true" serial_id="3269232" typelabel="i" unique="true">
+					<levels n="3">
+						1 0 0
+					</levels>
+					<value>
+						    0.00000089280000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.50000000000000" dertype="1" level="2" nonzero="true" serial_id="3269536" typelabel="ii" unique="true">
+					<levels n="3">
+						0 0 2
+					</levels>
+					<value>
+						    1.29434592260000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="2">
+							2
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.50000000000000" dertype="1" level="2" nonzero="true" serial_id="3269776" typelabel="ii" unique="true">
+					<levels n="3">
+						0 2 0
+					</levels>
+					<value>
+						   10.18347056040000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="1">
+							2
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							1
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.50000000000000" dertype="1" level="2" nonzero="true" serial_id="3270016" typelabel="ii" unique="true">
+					<levels n="3">
+						2 0 0
+					</levels>
+					<value>
+						   10.18347056040000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							2
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    1.00000000000000" dertype="4" level="2" nonzero="true" serial_id="3270320" typelabel="ij" unique="true">
+					<levels n="3">
+						0 1 1
+					</levels>
+					<value>
+						    0.31060081640000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="1">
+							1
+						</map_entry>
+						<map_entry key="2">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							1
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    1.00000000000000" dertype="4" level="2" nonzero="true" serial_id="3270592" typelabel="ij" unique="true">
+					<levels n="3">
+						1 0 1
+					</levels>
+					<value>
+						    0.31060081640000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							1
+						</map_entry>
+						<map_entry key="2">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    1.00000000000000" dertype="4" level="2" nonzero="true" serial_id="3270976" typelabel="ij" unique="true">
+					<levels n="3">
+						1 1 0
+					</levels>
+					<value>
+						   -0.47707691550000
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							1
+						</map_entry>
+						<map_entry key="1">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							1
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.16666666666667" dertype="2" level="3" nonzero="true" serial_id="3271312" typelabel="iii" unique="true">
+					<levels n="3">
+						0 0 3
+					</levels>
+					<value>
+						   -1.14888154625230
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="2">
+							3
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.16666666666667" dertype="2" level="3" nonzero="true" serial_id="3271520" typelabel="iii" unique="true">
+					<levels n="3">
+						0 3 0
+					</levels>
+					<value>
+						  -56.59201204344675
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="1">
+							3
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							1
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.16666666666667" dertype="2" level="3" nonzero="true" serial_id="3271776" typelabel="iii" unique="true">
+					<levels n="3">
+						3 0 0
+					</levels>
+					<value>
+						  -56.59201204344675
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							3
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.50000000000000" dertype="5" level="3" nonzero="true" serial_id="3272192" typelabel="ijj" unique="true">
+					<levels n="3">
+						0 1 2
+					</levels>
+					<value>
+						   -0.37753086916743
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="1">
+							1
+						</map_entry>
+						<map_entry key="2">
+							2
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							1
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.50000000000000" dertype="5" level="3" nonzero="true" serial_id="3272464" typelabel="iij" unique="true">
+					<levels n="3">
+						0 2 1
+					</levels>
+					<value>
+						   -0.61432230333459
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="1">
+							2
+						</map_entry>
+						<map_entry key="2">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							1
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.50000000000000" dertype="5" level="3" nonzero="true" serial_id="3272768" typelabel="ijj" unique="true">
+					<levels n="3">
+						1 0 2
+					</levels>
+					<value>
+						   -0.37753086916743
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							1
+						</map_entry>
+						<map_entry key="2">
+							2
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.50000000000000" dertype="5" level="3" nonzero="true" serial_id="3273088" typelabel="ijj" unique="true">
+					<levels n="3">
+						1 2 0
+					</levels>
+					<value>
+						    0.75549770000163
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							1
+						</map_entry>
+						<map_entry key="1">
+							2
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							1
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.50000000000000" dertype="5" level="3" nonzero="true" serial_id="3273536" typelabel="iij" unique="true">
+					<levels n="3">
+						2 0 1
+					</levels>
+					<value>
+						   -0.61432230333459
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							2
+						</map_entry>
+						<map_entry key="2">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.50000000000000" dertype="5" level="3" nonzero="true" serial_id="3273792" typelabel="iij" unique="true">
+					<levels n="3">
+						2 1 0
+					</levels>
+					<value>
+						    0.75549770000163
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							2
+						</map_entry>
+						<map_entry key="1">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							1
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    1.00000000000000" dertype="8" level="3" nonzero="true" serial_id="3274112" typelabel="ijk" unique="true">
+					<levels n="3">
+						1 1 1
+					</levels>
+					<value>
+						   -0.83133181916833
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							1
+						</map_entry>
+						<map_entry key="1">
+							1
+						</map_entry>
+						<map_entry key="2">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							1
+						</map_entry>
+						<map_entry key="k">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.04166666666667" dertype="3" level="4" nonzero="true" serial_id="3274432" typelabel="iiii" unique="true">
+					<levels n="3">
+						0 0 4
+					</levels>
+					<value>
+						   -0.14327068750080
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="2">
+							4
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.04166666666667" dertype="3" level="4" nonzero="true" serial_id="3274672" typelabel="iiii" unique="true">
+					<levels n="3">
+						0 4 0
+					</levels>
+					<value>
+						  294.49884400029936
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="1">
+							4
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							1
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.04166666666667" dertype="3" level="4" nonzero="true" serial_id="3274944" typelabel="iiii" unique="true">
+					<levels n="3">
+						4 0 0
+					</levels>
+					<value>
+						  294.49884400029936
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							4
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.25000000000000" dertype="7" level="4" nonzero="true" serial_id="3275264" typelabel="iijj" unique="true">
+					<levels n="3">
+						0 2 2
+					</levels>
+					<value>
+						   -2.30804691666614
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="1">
+							2
+						</map_entry>
+						<map_entry key="2">
+							2
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							1
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.25000000000000" dertype="7" level="4" nonzero="true" serial_id="3275568" typelabel="iijj" unique="true">
+					<levels n="3">
+						2 0 2
+					</levels>
+					<value>
+						   -2.30804691666614
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							2
+						</map_entry>
+						<map_entry key="2">
+							2
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.25000000000000" dertype="7" level="4" nonzero="true" serial_id="3275904" typelabel="iijj" unique="true">
+					<levels n="3">
+						2 2 0
+					</levels>
+					<value>
+						   -0.22054333333577
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							2
+						</map_entry>
+						<map_entry key="1">
+							2
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							1
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.16666666666667" dertype="6" level="4" nonzero="true" serial_id="3276384" typelabel="ijjj" unique="true">
+					<levels n="3">
+						0 1 3
+					</levels>
+					<value>
+						    2.01350713794776
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="1">
+							1
+						</map_entry>
+						<map_entry key="2">
+							3
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							1
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.16666666666667" dertype="6" level="4" nonzero="true" serial_id="3276688" typelabel="iiij" unique="true">
+					<levels n="3">
+						0 3 1
+					</levels>
+					<value>
+						   -0.48096118968166
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="1">
+							3
+						</map_entry>
+						<map_entry key="2">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							1
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.16666666666667" dertype="6" level="4" nonzero="true" serial_id="3276992" typelabel="ijjj" unique="true">
+					<levels n="3">
+						1 0 3
+					</levels>
+					<value>
+						    2.01350713794776
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							1
+						</map_entry>
+						<map_entry key="2">
+							3
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.16666666666667" dertype="6" level="4" nonzero="true" serial_id="3277328" typelabel="ijjj" unique="true">
+					<levels n="3">
+						1 3 0
+					</levels>
+					<value>
+						   -0.70911704600274
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							1
+						</map_entry>
+						<map_entry key="1">
+							3
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							1
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.16666666666667" dertype="6" level="4" nonzero="true" serial_id="3277664" typelabel="iiij" unique="true">
+					<levels n="3">
+						3 0 1
+					</levels>
+					<value>
+						   -0.48096118968166
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							3
+						</map_entry>
+						<map_entry key="2">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.16666666666667" dertype="6" level="4" nonzero="true" serial_id="3278000" typelabel="iiij" unique="true">
+					<levels n="3">
+						3 1 0
+					</levels>
+					<value>
+						   -0.70911704600274
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							3
+						</map_entry>
+						<map_entry key="1">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							1
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.50000000000000" dertype="9" level="4" nonzero="true" serial_id="3278336" typelabel="ijkk" unique="true">
+					<levels n="3">
+						1 1 2
+					</levels>
+					<value>
+						    1.13261419254967
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							1
+						</map_entry>
+						<map_entry key="1">
+							1
+						</map_entry>
+						<map_entry key="2">
+							2
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							1
+						</map_entry>
+						<map_entry key="k">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.50000000000000" dertype="9" level="4" nonzero="true" serial_id="3278896" typelabel="ijjk" unique="true">
+					<levels n="3">
+						1 2 1
+					</levels>
+					<value>
+						    1.04659360185055
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							1
+						</map_entry>
+						<map_entry key="1">
+							2
+						</map_entry>
+						<map_entry key="2">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							1
+						</map_entry>
+						<map_entry key="k">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+				<derivative assigned="true" classtype="Derivative" coeff="    0.50000000000000" dertype="9" level="4" nonzero="true" serial_id="3279168" typelabel="iijk" unique="true">
+					<levels n="3">
+						2 1 1
+					</levels>
+					<value>
+						    1.04659360185055
+					</value>
+					<molecule>
+						3216160
+					</molecule>
+					<coordinates>
+						<coordinate>
+							3255680
+						</coordinate>
+						<coordinate>
+							3256032
+						</coordinate>
+						<coordinate>
+							3257632
+						</coordinate>
+					</coordinates>
+					<equivalent_derivatives/>
+					<nonzero_levels>
+						<map_entry key="0">
+							2
+						</map_entry>
+						<map_entry key="1">
+							1
+						</map_entry>
+						<map_entry key="2">
+							1
+						</map_entry>
+					</nonzero_levels>
+					<indices>
+						<map_entry key="i">
+							0
+						</map_entry>
+						<map_entry key="j">
+							1
+						</map_entry>
+						<map_entry key="k">
+							2
+						</map_entry>
+					</indices>
+				</derivative>
+			</derivatives>
+			<molecule>
+				3216160
+			</molecule>
+		</deriv_iterator>
+		<nvalue>
+			2
+		</nvalue>
+		<nderiv>
+			4
+		</nderiv>
+		<dispsizes n="3">
+			0.01     0.01000000000000     0.02000000000000
+		</dispsizes>
+		<molecule xmlns="qff_molecule">
+			3216160
+		</molecule>
+		<hessian bond_units="angstrom" energy_units="aj" ncol="3" ncoord="3" nrow="3">
+			       10.1834705604     -0.4770769155      0.3106008164
+       -0.4770769155     10.1834705604      0.3106008164
+        0.3106008164      0.3106008164      1.2943459226
+
+		</hessian>
+		<gradients bond_units="angstrom" energy_units="aj" n="3" ncoord="3">
+			      0.0000008928
+      0.0000008928
+      0.0000000313
+
+		</gradients>
+		<energy>
+			-326
+		</energy>
+		<simples>
+			<simple>
+				3252224
+			</simple>
+			<simple>
+				3247648
+			</simple>
+			<simple>
+				3255280
+			</simple>
+		</simples>
+		<coordinates>
+			<coordinate>
+				3255680
+			</coordinate>
+			<coordinate>
+				3256032
+			</coordinate>
+			<coordinate>
+				3257632
+			</coordinate>
+		</coordinates>
+	</qff>
+</document>

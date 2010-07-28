@@ -1,0 +1,1128 @@
+Registering STRE
+Registering BEND
+Registering OOP
+Registering TORS
+Registering LINX
+Registering LINY
+Registering LIN1
+Registering SYMM
+Registering CoordinateSubspace
+Registering Molecule
+Registering FitPoint
+Registering Fit
+Registering PointGroup
+Registering PointGroupClass
+Registering Rotation
+Registering Reflection
+Registering Inversion
+Registering ImproperRotation
+Registering IdentityElement
+Registering Displacement
+Registering DisplacementIterator
+Registering Derivative
+Registering DerivativeIterator
+Input options: 
+bond units = angstrom
+bvecdisp = 0.00001
+coordinate debug = 0
+debug = 0
+dispfile = default
+dispsizes = 0.01 0.01 0.01 0.02 0.02 0.02
+energy units = aj
+fit debug = 0
+fittype = formula
+geometry debug = 0
+geometry maxit = 1000
+geometry print frequency = 10
+geometry tolerance = 12
+mol details = none
+nderiv = 4
+nvalue = 2
+printfit = false
+robustdebug = 2
+robustness = 3
+statpt = true
+subgroup = c1
+symmetry debug = 0
+symmetry tolerance = 12
+usedispfile = false
+useequivalence = true
+usezero = true
+4 x 3 Matrix Coordinates (angstrom)
+        0.0000000000      0.0000000000     -0.0756412887
+        0.4702800022     -0.8145488615      0.3503288431
+       -0.9405600098      0.0000000000      0.3503288431
+        0.4702800022      0.8145488615      0.3503288431
+Abelian point group: C1
+Point Group C1 of order 1
+E
+
+    STRE       1 2      1.032522968961 Characters = [    1.00 ]
+    STRE       1 3      1.032522970787 Characters = [    1.00 ]
+    STRE       1 4      1.032522968961 Characters = [    1.00 ]
+    BEND     2 1 3    104.164129690725 Characters = [    1.00 ]
+    BEND     2 1 4    104.164129921097 Characters = [    1.00 ]
+    BEND     3 1 4    104.164129690725 Characters = [    1.00 ]
+There are a total of 6 nonredundant internal coordinates in your set, which is correct. Good job!
+Vector BB^T eigenvalues of size 6
+      1.0351078304
+      1.3690338365
+      1.3690338386
+      4.9007868048
+      4.9795726147
+      4.9795726207
+                                                            E
+    SYMM                1.032522968961 Characters = [    1.00 ]
+  1.0000    STRE       1 2      1.032522968961
+    SYMM                1.032522970787 Characters = [    1.00 ]
+  1.0000    STRE       1 3      1.032522970787
+    SYMM                1.032522968961 Characters = [    1.00 ]
+  1.0000    STRE       1 4      1.032522968961
+    SYMM                1.818007025578 Characters = [    1.00 ]
+  1.0000    BEND     2 1 3    104.164129690725
+    SYMM                1.818007029598 Characters = [    1.00 ]
+  1.0000    BEND     2 1 4    104.164129921097
+    SYMM                1.818007025578 Characters = [    1.00 ]
+  1.0000    BEND     3 1 4    104.164129690725
+Finding equivalent displacements for 1 out of 145
+Finding equivalent displacements for 2 out of 145
+Finding equivalent displacements for 3 out of 145
+Finding equivalent displacements for 4 out of 145
+Finding equivalent displacements for 5 out of 145
+Finding equivalent displacements for 6 out of 145
+Finding equivalent displacements for 7 out of 145
+Finding equivalent displacements for 8 out of 145
+Finding equivalent displacements for 9 out of 145
+Finding equivalent displacements for 10 out of 145
+Finding equivalent displacements for 11 out of 145
+Finding equivalent displacements for 12 out of 145
+Finding equivalent displacements for 13 out of 145
+Finding equivalent displacements for 14 out of 145
+Finding equivalent displacements for 15 out of 145
+Finding equivalent displacements for 16 out of 145
+Finding equivalent displacements for 17 out of 145
+Finding equivalent displacements for 18 out of 145
+Finding equivalent displacements for 19 out of 145
+Finding equivalent displacements for 20 out of 145
+Finding equivalent displacements for 21 out of 145
+Finding equivalent displacements for 22 out of 145
+Finding equivalent displacements for 23 out of 145
+Finding equivalent displacements for 24 out of 145
+Finding equivalent displacements for 25 out of 145
+Finding equivalent displacements for 26 out of 145
+Finding equivalent displacements for 27 out of 145
+Finding equivalent displacements for 28 out of 145
+Finding equivalent displacements for 29 out of 145
+Finding equivalent displacements for 30 out of 145
+Finding equivalent displacements for 31 out of 145
+Finding equivalent displacements for 32 out of 145
+Finding equivalent displacements for 33 out of 145
+Finding equivalent displacements for 34 out of 145
+Finding equivalent displacements for 35 out of 145
+Finding equivalent displacements for 36 out of 145
+Finding equivalent displacements for 37 out of 145
+Finding equivalent displacements for 38 out of 145
+Finding equivalent displacements for 39 out of 145
+Finding equivalent displacements for 40 out of 145
+Finding equivalent displacements for 41 out of 145
+Finding equivalent displacements for 42 out of 145
+Finding equivalent displacements for 43 out of 145
+Finding equivalent displacements for 44 out of 145
+Finding equivalent displacements for 45 out of 145
+Finding equivalent displacements for 46 out of 145
+Finding equivalent displacements for 47 out of 145
+Finding equivalent displacements for 48 out of 145
+Finding equivalent displacements for 49 out of 145
+Finding equivalent displacements for 50 out of 145
+Finding equivalent displacements for 51 out of 145
+Finding equivalent displacements for 52 out of 145
+Finding equivalent displacements for 53 out of 145
+Finding equivalent displacements for 54 out of 145
+Finding equivalent displacements for 55 out of 145
+Finding equivalent displacements for 56 out of 145
+Finding equivalent displacements for 57 out of 145
+Finding equivalent displacements for 58 out of 145
+Finding equivalent displacements for 59 out of 145
+Finding equivalent displacements for 60 out of 145
+Finding equivalent displacements for 61 out of 145
+Finding equivalent displacements for 62 out of 145
+Finding equivalent displacements for 63 out of 145
+Finding equivalent displacements for 64 out of 145
+Finding equivalent displacements for 65 out of 145
+Finding equivalent displacements for 66 out of 145
+Finding equivalent displacements for 67 out of 145
+Finding equivalent displacements for 68 out of 145
+Finding equivalent displacements for 69 out of 145
+Finding equivalent displacements for 70 out of 145
+Finding equivalent displacements for 71 out of 145
+Finding equivalent displacements for 72 out of 145
+Finding equivalent displacements for 73 out of 145
+Finding equivalent displacements for 74 out of 145
+Finding equivalent displacements for 75 out of 145
+Finding equivalent displacements for 76 out of 145
+Finding equivalent displacements for 77 out of 145
+Finding equivalent displacements for 78 out of 145
+Finding equivalent displacements for 79 out of 145
+Finding equivalent displacements for 80 out of 145
+Finding equivalent displacements for 81 out of 145
+Finding equivalent displacements for 82 out of 145
+Finding equivalent displacements for 83 out of 145
+Finding equivalent displacements for 84 out of 145
+Finding equivalent displacements for 85 out of 145
+Finding equivalent displacements for 86 out of 145
+Finding equivalent displacements for 87 out of 145
+Finding equivalent displacements for 88 out of 145
+Finding equivalent displacements for 89 out of 145
+Finding equivalent displacements for 90 out of 145
+Finding equivalent displacements for 91 out of 145
+Finding equivalent displacements for 92 out of 145
+Finding equivalent displacements for 93 out of 145
+Finding equivalent displacements for 94 out of 145
+Finding equivalent displacements for 95 out of 145
+Finding equivalent displacements for 96 out of 145
+Finding equivalent displacements for 97 out of 145
+Finding equivalent displacements for 98 out of 145
+Finding equivalent displacements for 99 out of 145
+Finding equivalent displacements for 100 out of 145
+Finding equivalent displacements for 101 out of 145
+Finding equivalent displacements for 102 out of 145
+Finding equivalent displacements for 103 out of 145
+Finding equivalent displacements for 104 out of 145
+Finding equivalent displacements for 105 out of 145
+Finding equivalent displacements for 106 out of 145
+Finding equivalent displacements for 107 out of 145
+Finding equivalent displacements for 108 out of 145
+Finding equivalent displacements for 109 out of 145
+Finding equivalent displacements for 110 out of 145
+Finding equivalent displacements for 111 out of 145
+Finding equivalent displacements for 112 out of 145
+Finding equivalent displacements for 113 out of 145
+Finding equivalent displacements for 114 out of 145
+Finding equivalent displacements for 115 out of 145
+Finding equivalent displacements for 116 out of 145
+Finding equivalent displacements for 117 out of 145
+Finding equivalent displacements for 118 out of 145
+Finding equivalent displacements for 119 out of 145
+Finding equivalent displacements for 120 out of 145
+Finding equivalent displacements for 121 out of 145
+Finding equivalent displacements for 122 out of 145
+Finding equivalent displacements for 123 out of 145
+Finding equivalent displacements for 124 out of 145
+Finding equivalent displacements for 125 out of 145
+Finding equivalent displacements for 126 out of 145
+Finding equivalent displacements for 127 out of 145
+Finding equivalent displacements for 128 out of 145
+Finding equivalent displacements for 129 out of 145
+Finding equivalent displacements for 130 out of 145
+Finding equivalent displacements for 131 out of 145
+Finding equivalent displacements for 132 out of 145
+Finding equivalent displacements for 133 out of 145
+Finding equivalent displacements for 134 out of 145
+Finding equivalent displacements for 135 out of 145
+Finding equivalent displacements for 136 out of 145
+Finding equivalent displacements for 137 out of 145
+Finding equivalent displacements for 138 out of 145
+Finding equivalent displacements for 139 out of 145
+Finding equivalent displacements for 140 out of 145
+Finding equivalent displacements for 141 out of 145
+Finding equivalent displacements for 142 out of 145
+Finding equivalent displacements for 143 out of 145
+Finding equivalent displacements for 144 out of 145
+Finding equivalent displacements for 145 out of 145
+Reading in data for 145 unique displacements, 145 total displacements
+
+Generating displacement 1 out of 145
+Generating displacement <0.000,0.000,0.000,0.000,0.000,-1.000>
+Generating displacement 2 out of 145
+Generating displacement <0.000,0.000,0.000,0.000,0.000,1.000>
+Generating displacement 3 out of 145
+Generating displacement <0.000,0.000,0.000,0.000,0.000,-2.000>
+Generating displacement 4 out of 145
+Generating displacement <0.000,0.000,0.000,0.000,0.000,2.000>
+Generating displacement 5 out of 145
+Generating displacement <0.000,0.000,0.000,0.000,-1.000,0.000>
+Generating displacement 6 out of 145
+Generating displacement <0.000,0.000,0.000,0.000,1.000,0.000>
+Generating displacement 7 out of 145
+Generating displacement <0.000,0.000,0.000,0.000,-2.000,0.000>
+Generating displacement 8 out of 145
+Generating displacement <0.000,0.000,0.000,0.000,2.000,0.000>
+Generating displacement 9 out of 145
+Generating displacement <0.000,0.000,0.000,-1.000,0.000,0.000>
+Generating displacement 10 out of 145
+Generating displacement <0.000,0.000,0.000,1.000,0.000,0.000>
+Generating displacement 11 out of 145
+Generating displacement <0.000,0.000,0.000,-2.000,0.000,0.000>
+Generating displacement 12 out of 145
+Generating displacement <0.000,0.000,0.000,2.000,0.000,0.000>
+Generating displacement 13 out of 145
+Generating displacement <0.000,0.000,-1.000,0.000,0.000,0.000>
+Generating displacement 14 out of 145
+Generating displacement <0.000,0.000,1.000,0.000,0.000,0.000>
+Generating displacement 15 out of 145
+Generating displacement <0.000,0.000,-2.000,0.000,0.000,0.000>
+Generating displacement 16 out of 145
+Generating displacement <0.000,0.000,2.000,0.000,0.000,0.000>
+Generating displacement 17 out of 145
+Generating displacement <0.000,-1.000,0.000,0.000,0.000,0.000>
+Generating displacement 18 out of 145
+Generating displacement <0.000,1.000,0.000,0.000,0.000,0.000>
+Generating displacement 19 out of 145
+Generating displacement <0.000,-2.000,0.000,0.000,0.000,0.000>
+Generating displacement 20 out of 145
+Generating displacement <0.000,2.000,0.000,0.000,0.000,0.000>
+Generating displacement 21 out of 145
+Generating displacement <-1.000,0.000,0.000,0.000,0.000,0.000>
+Generating displacement 22 out of 145
+Generating displacement <1.000,0.000,0.000,0.000,0.000,0.000>
+Generating displacement 23 out of 145
+Generating displacement <-2.000,0.000,0.000,0.000,0.000,0.000>
+Generating displacement 24 out of 145
+Generating displacement <2.000,0.000,0.000,0.000,0.000,0.000>
+Generating displacement 25 out of 145
+Generating displacement <0.000,0.000,0.000,0.000,0.000,0.000>
+Generating displacement 26 out of 145
+Generating displacement <0.000,0.000,0.000,0.000,-1.000,-1.000>
+Generating displacement 27 out of 145
+Generating displacement <0.000,0.000,0.000,0.000,-1.000,1.000>
+Generating displacement 28 out of 145
+Generating displacement <0.000,0.000,0.000,0.000,1.000,-1.000>
+Generating displacement 29 out of 145
+Generating displacement <0.000,0.000,0.000,0.000,1.000,1.000>
+Generating displacement 30 out of 145
+Generating displacement <0.000,0.000,0.000,0.000,1.000,2.000>
+Generating displacement 31 out of 145
+Generating displacement <0.000,0.000,0.000,0.000,2.000,1.000>
+Generating displacement 32 out of 145
+Generating displacement <0.000,0.000,0.000,0.000,-2.000,-1.000>
+Generating displacement 33 out of 145
+Generating displacement <0.000,0.000,0.000,0.000,-1.000,-2.000>
+Generating displacement 34 out of 145
+Generating displacement <0.000,0.000,0.000,-1.000,0.000,-1.000>
+Generating displacement 35 out of 145
+Generating displacement <0.000,0.000,0.000,-1.000,0.000,1.000>
+Generating displacement 36 out of 145
+Generating displacement <0.000,0.000,0.000,1.000,0.000,-1.000>
+Generating displacement 37 out of 145
+Generating displacement <0.000,0.000,0.000,1.000,0.000,1.000>
+Generating displacement 38 out of 145
+Generating displacement <0.000,0.000,0.000,1.000,0.000,2.000>
+Generating displacement 39 out of 145
+Generating displacement <0.000,0.000,0.000,2.000,0.000,1.000>
+Generating displacement 40 out of 145
+Generating displacement <0.000,0.000,0.000,-2.000,0.000,-1.000>
+Generating displacement 41 out of 145
+Generating displacement <0.000,0.000,0.000,-1.000,0.000,-2.000>
+Generating displacement 42 out of 145
+Generating displacement <0.000,0.000,0.000,-1.000,-1.000,0.000>
+Generating displacement 43 out of 145
+Generating displacement <0.000,0.000,0.000,-1.000,1.000,0.000>
+Generating displacement 44 out of 145
+Generating displacement <0.000,0.000,0.000,1.000,-1.000,0.000>
+Generating displacement 45 out of 145
+Generating displacement <0.000,0.000,0.000,1.000,1.000,0.000>
+Generating displacement 46 out of 145
+Generating displacement <0.000,0.000,0.000,1.000,2.000,0.000>
+Generating displacement 47 out of 145
+Generating displacement <0.000,0.000,0.000,2.000,1.000,0.000>
+Generating displacement 48 out of 145
+Generating displacement <0.000,0.000,0.000,-2.000,-1.000,0.000>
+Generating displacement 49 out of 145
+Generating displacement <0.000,0.000,0.000,-1.000,-2.000,0.000>
+Generating displacement 50 out of 145
+Generating displacement <0.000,0.000,-1.000,0.000,0.000,-1.000>
+Generating displacement 51 out of 145
+Generating displacement <0.000,0.000,-1.000,0.000,0.000,1.000>
+Generating displacement 52 out of 145
+Generating displacement <0.000,0.000,1.000,0.000,0.000,-1.000>
+Generating displacement 53 out of 145
+Generating displacement <0.000,0.000,1.000,0.000,0.000,1.000>
+Generating displacement 54 out of 145
+Generating displacement <0.000,0.000,1.000,0.000,0.000,2.000>
+Generating displacement 55 out of 145
+Generating displacement <0.000,0.000,2.000,0.000,0.000,1.000>
+Generating displacement 56 out of 145
+Generating displacement <0.000,0.000,-2.000,0.000,0.000,-1.000>
+Generating displacement 57 out of 145
+Generating displacement <0.000,0.000,-1.000,0.000,0.000,-2.000>
+Generating displacement 58 out of 145
+Generating displacement <0.000,0.000,-1.000,0.000,-1.000,0.000>
+Generating displacement 59 out of 145
+Generating displacement <0.000,0.000,-1.000,0.000,1.000,0.000>
+Generating displacement 60 out of 145
+Generating displacement <0.000,0.000,1.000,0.000,-1.000,0.000>
+Generating displacement 61 out of 145
+Generating displacement <0.000,0.000,1.000,0.000,1.000,0.000>
+Generating displacement 62 out of 145
+Generating displacement <0.000,0.000,1.000,0.000,2.000,0.000>
+Generating displacement 63 out of 145
+Generating displacement <0.000,0.000,2.000,0.000,1.000,0.000>
+Generating displacement 64 out of 145
+Generating displacement <0.000,0.000,-2.000,0.000,-1.000,0.000>
+Generating displacement 65 out of 145
+Generating displacement <0.000,0.000,-1.000,0.000,-2.000,0.000>
+Generating displacement 66 out of 145
+Generating displacement <0.000,0.000,-1.000,-1.000,0.000,0.000>
+Generating displacement 67 out of 145
+Generating displacement <0.000,0.000,-1.000,1.000,0.000,0.000>
+Generating displacement 68 out of 145
+Generating displacement <0.000,0.000,1.000,-1.000,0.000,0.000>
+Generating displacement 69 out of 145
+Generating displacement <0.000,0.000,1.000,1.000,0.000,0.000>
+Generating displacement 70 out of 145
+Generating displacement <0.000,0.000,1.000,2.000,0.000,0.000>
+Generating displacement 71 out of 145
+Generating displacement <0.000,0.000,2.000,1.000,0.000,0.000>
+Generating displacement 72 out of 145
+Generating displacement <0.000,0.000,-2.000,-1.000,0.000,0.000>
+Generating displacement 73 out of 145
+Generating displacement <0.000,0.000,-1.000,-2.000,0.000,0.000>
+Generating displacement 74 out of 145
+Generating displacement <0.000,-1.000,0.000,0.000,0.000,-1.000>
+Generating displacement 75 out of 145
+Generating displacement <0.000,-1.000,0.000,0.000,0.000,1.000>
+Generating displacement 76 out of 145
+Generating displacement <0.000,1.000,0.000,0.000,0.000,-1.000>
+Generating displacement 77 out of 145
+Generating displacement <0.000,1.000,0.000,0.000,0.000,1.000>
+Generating displacement 78 out of 145
+Generating displacement <0.000,1.000,0.000,0.000,0.000,2.000>
+Generating displacement 79 out of 145
+Generating displacement <0.000,2.000,0.000,0.000,0.000,1.000>
+Generating displacement 80 out of 145
+Generating displacement <0.000,-2.000,0.000,0.000,0.000,-1.000>
+Generating displacement 81 out of 145
+Generating displacement <0.000,-1.000,0.000,0.000,0.000,-2.000>
+Generating displacement 82 out of 145
+Generating displacement <0.000,-1.000,0.000,0.000,-1.000,0.000>
+Generating displacement 83 out of 145
+Generating displacement <0.000,-1.000,0.000,0.000,1.000,0.000>
+Generating displacement 84 out of 145
+Generating displacement <0.000,1.000,0.000,0.000,-1.000,0.000>
+Generating displacement 85 out of 145
+Generating displacement <0.000,1.000,0.000,0.000,1.000,0.000>
+Generating displacement 86 out of 145
+Generating displacement <0.000,1.000,0.000,0.000,2.000,0.000>
+Generating displacement 87 out of 145
+Generating displacement <0.000,2.000,0.000,0.000,1.000,0.000>
+Generating displacement 88 out of 145
+Generating displacement <0.000,-2.000,0.000,0.000,-1.000,0.000>
+Generating displacement 89 out of 145
+Generating displacement <0.000,-1.000,0.000,0.000,-2.000,0.000>
+Generating displacement 90 out of 145
+Generating displacement <0.000,-1.000,0.000,-1.000,0.000,0.000>
+Generating displacement 91 out of 145
+Generating displacement <0.000,-1.000,0.000,1.000,0.000,0.000>
+Generating displacement 92 out of 145
+Generating displacement <0.000,1.000,0.000,-1.000,0.000,0.000>
+Generating displacement 93 out of 145
+Generating displacement <0.000,1.000,0.000,1.000,0.000,0.000>
+Generating displacement 94 out of 145
+Generating displacement <0.000,1.000,0.000,2.000,0.000,0.000>
+Generating displacement 95 out of 145
+Generating displacement <0.000,2.000,0.000,1.000,0.000,0.000>
+Generating displacement 96 out of 145
+Generating displacement <0.000,-2.000,0.000,-1.000,0.000,0.000>
+Generating displacement 97 out of 145
+Generating displacement <0.000,-1.000,0.000,-2.000,0.000,0.000>
+Generating displacement 98 out of 145
+Generating displacement <0.000,-1.000,-1.000,0.000,0.000,0.000>
+Generating displacement 99 out of 145
+Generating displacement <0.000,-1.000,1.000,0.000,0.000,0.000>
+Generating displacement 100 out of 145
+Generating displacement <0.000,1.000,-1.000,0.000,0.000,0.000>
+Generating displacement 101 out of 145
+Generating displacement <0.000,1.000,1.000,0.000,0.000,0.000>
+Generating displacement 102 out of 145
+Generating displacement <0.000,1.000,2.000,0.000,0.000,0.000>
+Generating displacement 103 out of 145
+Generating displacement <0.000,2.000,1.000,0.000,0.000,0.000>
+Generating displacement 104 out of 145
+Generating displacement <0.000,-2.000,-1.000,0.000,0.000,0.000>
+Generating displacement 105 out of 145
+Generating displacement <0.000,-1.000,-2.000,0.000,0.000,0.000>
+Generating displacement 106 out of 145
+Generating displacement <-1.000,0.000,0.000,0.000,0.000,-1.000>
+Generating displacement 107 out of 145
+Generating displacement <-1.000,0.000,0.000,0.000,0.000,1.000>
+Generating displacement 108 out of 145
+Generating displacement <1.000,0.000,0.000,0.000,0.000,-1.000>
+Generating displacement 109 out of 145
+Generating displacement <1.000,0.000,0.000,0.000,0.000,1.000>
+Generating displacement 110 out of 145
+Generating displacement <1.000,0.000,0.000,0.000,0.000,2.000>
+Generating displacement 111 out of 145
+Generating displacement <2.000,0.000,0.000,0.000,0.000,1.000>
+Generating displacement 112 out of 145
+Generating displacement <-2.000,0.000,0.000,0.000,0.000,-1.000>
+Generating displacement 113 out of 145
+Generating displacement <-1.000,0.000,0.000,0.000,0.000,-2.000>
+Generating displacement 114 out of 145
+Generating displacement <-1.000,0.000,0.000,0.000,-1.000,0.000>
+Generating displacement 115 out of 145
+Generating displacement <-1.000,0.000,0.000,0.000,1.000,0.000>
+Generating displacement 116 out of 145
+Generating displacement <1.000,0.000,0.000,0.000,-1.000,0.000>
+Generating displacement 117 out of 145
+Generating displacement <1.000,0.000,0.000,0.000,1.000,0.000>
+Generating displacement 118 out of 145
+Generating displacement <1.000,0.000,0.000,0.000,2.000,0.000>
+Generating displacement 119 out of 145
+Generating displacement <2.000,0.000,0.000,0.000,1.000,0.000>
+Generating displacement 120 out of 145
+Generating displacement <-2.000,0.000,0.000,0.000,-1.000,0.000>
+Generating displacement 121 out of 145
+Generating displacement <-1.000,0.000,0.000,0.000,-2.000,0.000>
+Generating displacement 122 out of 145
+Generating displacement <-1.000,0.000,0.000,-1.000,0.000,0.000>
+Generating displacement 123 out of 145
+Generating displacement <-1.000,0.000,0.000,1.000,0.000,0.000>
+Generating displacement 124 out of 145
+Generating displacement <1.000,0.000,0.000,-1.000,0.000,0.000>
+Generating displacement 125 out of 145
+Generating displacement <1.000,0.000,0.000,1.000,0.000,0.000>
+Generating displacement 126 out of 145
+Generating displacement <1.000,0.000,0.000,2.000,0.000,0.000>
+Generating displacement 127 out of 145
+Generating displacement <2.000,0.000,0.000,1.000,0.000,0.000>
+Generating displacement 128 out of 145
+Generating displacement <-2.000,0.000,0.000,-1.000,0.000,0.000>
+Generating displacement 129 out of 145
+Generating displacement <-1.000,0.000,0.000,-2.000,0.000,0.000>
+Generating displacement 130 out of 145
+Generating displacement <-1.000,0.000,-1.000,0.000,0.000,0.000>
+Generating displacement 131 out of 145
+Generating displacement <-1.000,0.000,1.000,0.000,0.000,0.000>
+Generating displacement 132 out of 145
+Generating displacement <1.000,0.000,-1.000,0.000,0.000,0.000>
+Generating displacement 133 out of 145
+Generating displacement <1.000,0.000,1.000,0.000,0.000,0.000>
+Generating displacement 134 out of 145
+Generating displacement <1.000,0.000,2.000,0.000,0.000,0.000>
+Generating displacement 135 out of 145
+Generating displacement <2.000,0.000,1.000,0.000,0.000,0.000>
+Generating displacement 136 out of 145
+Generating displacement <-2.000,0.000,-1.000,0.000,0.000,0.000>
+Generating displacement 137 out of 145
+Generating displacement <-1.000,0.000,-2.000,0.000,0.000,0.000>
+Generating displacement 138 out of 145
+Generating displacement <-1.000,-1.000,0.000,0.000,0.000,0.000>
+Generating displacement 139 out of 145
+Generating displacement <-1.000,1.000,0.000,0.000,0.000,0.000>
+Generating displacement 140 out of 145
+Generating displacement <1.000,-1.000,0.000,0.000,0.000,0.000>
+Generating displacement 141 out of 145
+Generating displacement <1.000,1.000,0.000,0.000,0.000,0.000>
+Generating displacement 142 out of 145
+Generating displacement <1.000,2.000,0.000,0.000,0.000,0.000>
+Generating displacement 143 out of 145
+Generating displacement <2.000,1.000,0.000,0.000,0.000,0.000>
+Generating displacement 144 out of 145
+Generating displacement <-2.000,-1.000,0.000,0.000,0.000,0.000>
+Generating displacement 145 out of 145
+Generating displacement <-1.000,-2.000,0.000,0.000,0.000,0.000>
+Assigning values for displacement 1 < -0.00000000,  0.00000000,  0.00000011,  0.00000000, -0.00000266, -0.99999707,>
+	Assigned energy to <0.000,0.000,0.000,0.000,0.000,-1.000>
+Assigning values for displacement 2 < -0.00000000, -0.00000000,  0.00000011,  0.00000000,  0.00000295,  0.99999730,>
+	Assigned energy to <0.000,0.000,0.000,0.000,0.000,1.000>
+Assigning values for displacement 3 < -0.00000000,  0.00000000,  0.00000011, -0.00000000, -0.00000125, -1.99999846,>
+	Assigned energy to <0.000,0.000,0.000,0.000,0.000,-2.000>
+Assigning values for displacement 4 < -0.00000000,  0.00000000,  0.00000011,  0.00000000,  0.00000154,  1.99999870,>
+	Assigned energy to <0.000,0.000,0.000,0.000,0.000,2.000>
+Assigning values for displacement 5 <  0.00000000,  0.00000000,  0.00000000, -0.00000000, -1.00000000, -0.00000000,>
+	Assigned energy to <0.000,0.000,0.000,0.000,-1.000,0.000>
+Assigning values for displacement 6 <  0.00000000, -0.00000000,  0.00000000,  0.00000000,  1.00000000,  0.00000000,>
+	Assigned energy to <0.000,0.000,0.000,0.000,1.000,0.000>
+Assigning values for displacement 7 < -0.00000000, -0.00000000, -0.00000000, -0.00000000, -2.00000000, -0.00000000,>
+	Assigned energy to <0.000,0.000,0.000,0.000,-2.000,0.000>
+Assigning values for displacement 8 < -0.00000000, -0.00000000, -0.00000000,  0.00000000,  2.00000000,  0.00000000,>
+	Assigned energy to <0.000,0.000,0.000,0.000,2.000,0.000>
+Assigning values for displacement 9 <  0.00000000, -0.00000011, -0.00000000, -1.00000293,  0.00000000,  0.00000266,>
+	Assigned energy to <0.000,0.000,0.000,-1.000,0.000,0.000>
+Assigning values for displacement 10 <  0.00000000, -0.00000011, -0.00000000,  1.00000270,  0.00000000, -0.00000295,>
+	Assigned energy to <0.000,0.000,0.000,1.000,0.000,0.000>
+Assigning values for displacement 11 <  0.00000000, -0.00000011, -0.00000000, -2.00000154,  0.00000000,  0.00000125,>
+	Assigned energy to <0.000,0.000,0.000,-2.000,0.000,0.000>
+Assigning values for displacement 12 < -0.00000000, -0.00000012, -0.00000000,  2.00000130,  0.00000000, -0.00000154,>
+	Assigned energy to <0.000,0.000,0.000,2.000,0.000,0.000>
+Assigning values for displacement 13 <  0.00000000, -0.00000013, -1.00000000,  0.00000419, -0.00000000, -0.00000436,>
+	Assigned energy to <0.000,0.000,-1.000,0.000,0.000,0.000>
+Assigning values for displacement 14 <  0.00000000, -0.00000013,  1.00000000, -0.00000485, -0.00000000,  0.00000468,>
+	Assigned energy to <0.000,0.000,1.000,0.000,0.000,0.000>
+Assigning values for displacement 15 <  0.00000000, -0.00000013, -2.00000000,  0.00000193, -0.00000000, -0.00000210,>
+	Assigned energy to <0.000,0.000,-2.000,0.000,0.000,0.000>
+Assigning values for displacement 16 <  0.00000000, -0.00000013,  2.00000000, -0.00000259,  0.00000000,  0.00000242,>
+	Assigned energy to <0.000,0.000,2.000,0.000,0.000,0.000>
+Assigning values for displacement 17 < -0.00000000, -1.00000000, -0.00000000,  0.00000000,  0.00000000,  0.00000000,>
+	Assigned energy to <0.000,-1.000,0.000,0.000,0.000,0.000>
+Assigning values for displacement 18 < -0.00000000,  1.00000000, -0.00000000, -0.00000000,  0.00000000, -0.00000000,>
+	Assigned energy to <0.000,1.000,0.000,0.000,0.000,0.000>
+Assigning values for displacement 19 < -0.00000000, -2.00000000, -0.00000000,  0.00000000,  0.00000000,  0.00000000,>
+	Assigned energy to <0.000,-2.000,0.000,0.000,0.000,0.000>
+Assigning values for displacement 20 < -0.00000000,  2.00000000, -0.00000000, -0.00000000,  0.00000000, -0.00000000,>
+	Assigned energy to <0.000,2.000,0.000,0.000,0.000,0.000>
+Assigning values for displacement 21 < -1.00000000, -0.00000000,  0.00000013,  0.00000000,  0.00000436, -0.00000419,>
+	Assigned energy to <-1.000,0.000,0.000,0.000,0.000,0.000>
+Assigning values for displacement 22 <  1.00000000, -0.00000000,  0.00000013,  0.00000000, -0.00000468,  0.00000484,>
+	Assigned energy to <1.000,0.000,0.000,0.000,0.000,0.000>
+Assigning values for displacement 23 < -2.00000000, -0.00000000,  0.00000013,  0.00000000,  0.00000210, -0.00000193,>
+	Assigned energy to <-2.000,0.000,0.000,0.000,0.000,0.000>
+Assigning values for displacement 24 <  2.00000000, -0.00000000,  0.00000013, -0.00000000, -0.00000242,  0.00000259,>
+	Assigned energy to <2.000,0.000,0.000,0.000,0.000,0.000>
+Assigning values for displacement 25 < -0.00000000, -0.00000000, -0.00000000,  0.00000000,  0.00000000,  0.00000000,>
+	Assigned energy to <0.000,0.000,0.000,0.000,0.000,0.000>
+Assigning values for displacement 26 <  0.00000000, -0.00000011, -0.00000000,  0.00000270, -1.00000000, -1.00000298,>
+	Assigned energy to <0.000,0.000,0.000,0.000,-1.000,-1.000>
+Assigning values for displacement 27 <  0.00000000,  0.00000000,  0.00000000,  0.00000000, -1.00000000,  1.00000000,>
+	Assigned energy to <0.000,0.000,0.000,0.000,-1.000,1.000>
+Assigning values for displacement 28 < -0.00000000, -0.00000000,  0.00000000,  0.00000000,  1.00000000, -1.00000000,>
+	Assigned energy to <0.000,0.000,0.000,0.000,1.000,-1.000>
+Assigning values for displacement 29 <  0.00000000, -0.00000011, -0.00000000, -0.00000290,  1.00000000,  1.00000265,>
+	Assigned energy to <0.000,0.000,0.000,0.000,1.000,1.000>
+Assigning values for displacement 30 < -0.00000000, -0.00000000, -0.00000000,  0.00000000,  1.00000000,  2.00000000,>
+	Assigned energy to <0.000,0.000,0.000,0.000,1.000,2.000>
+Assigning values for displacement 31 < -0.00000000,  0.00000000,  0.00000000,  0.00000000,  2.00000000,  1.00000000,>
+	Assigned energy to <0.000,0.000,0.000,0.000,2.000,1.000>
+Assigning values for displacement 32 < -0.00000000, -0.00000000, -0.00000000, -0.00000000, -2.00000000, -1.00000000,>
+	Assigned energy to <0.000,0.000,0.000,0.000,-2.000,-1.000>
+Assigning values for displacement 33 < -0.00000000, -0.00000000,  0.00000000,  0.00000000, -1.00000000, -2.00000000,>
+	Assigned energy to <0.000,0.000,0.000,0.000,-1.000,-2.000>
+Assigning values for displacement 34 <  0.00000000, -0.00000000,  0.00000000, -1.00000000, -0.00000000, -1.00000000,>
+	Assigned energy to <0.000,0.000,0.000,-1.000,0.000,-1.000>
+Assigning values for displacement 35 < -0.00000000,  0.00000000, -0.00000000, -1.00000000,  0.00000000,  1.00000000,>
+	Assigned energy to <0.000,0.000,0.000,-1.000,0.000,1.000>
+Assigning values for displacement 36 < -0.00000000,  0.00000000, -0.00000000,  1.00000000,  0.00000000, -1.00000000,>
+	Assigned energy to <0.000,0.000,0.000,1.000,0.000,-1.000>
+Assigning values for displacement 37 < -0.00000000,  0.00000000, -0.00000000,  1.00000000,  0.00000000,  1.00000000,>
+	Assigned energy to <0.000,0.000,0.000,1.000,0.000,1.000>
+Assigning values for displacement 38 < -0.00000000,  0.00000000,  0.00000000,  1.00000000,  0.00000000,  2.00000000,>
+	Assigned energy to <0.000,0.000,0.000,1.000,0.000,2.000>
+Assigning values for displacement 39 <  0.00000000,  0.00000000, -0.00000000,  2.00000000,  0.00000000,  1.00000000,>
+	Assigned energy to <0.000,0.000,0.000,2.000,0.000,1.000>
+Assigning values for displacement 40 <  0.00000000,  0.00000000, -0.00000000, -2.00000000, -0.00000000, -1.00000000,>
+	Assigned energy to <0.000,0.000,0.000,-2.000,0.000,-1.000>
+Assigning values for displacement 41 < -0.00000000,  0.00000000,  0.00000000, -1.00000000, -0.00000000, -2.00000000,>
+	Assigned energy to <0.000,0.000,0.000,-1.000,0.000,-2.000>
+Assigning values for displacement 42 < -0.00000000, -0.00000000,  0.00000011, -1.00000000, -0.99999702, -0.00000270,>
+	Assigned energy to <0.000,0.000,0.000,-1.000,-1.000,0.000>
+Assigning values for displacement 43 <  0.00000000, -0.00000000, -0.00000000, -1.00000000,  1.00000000,  0.00000000,>
+	Assigned energy to <0.000,0.000,0.000,-1.000,1.000,0.000>
+Assigning values for displacement 44 <  0.00000000,  0.00000000,  0.00000000,  1.00000000, -1.00000000,  0.00000000,>
+	Assigned energy to <0.000,0.000,0.000,1.000,-1.000,0.000>
+Assigning values for displacement 45 < -0.00000000, -0.00000000,  0.00000012,  1.00000000,  0.99999735,  0.00000289,>
+	Assigned energy to <0.000,0.000,0.000,1.000,1.000,0.000>
+Assigning values for displacement 46 <  0.00000000,  0.00000000, -0.00000000,  1.00000000,  2.00000000,  0.00000000,>
+	Assigned energy to <0.000,0.000,0.000,1.000,2.000,0.000>
+Assigning values for displacement 47 < -0.00000000, -0.00000000, -0.00000000,  2.00000000,  1.00000000,  0.00000000,>
+	Assigned energy to <0.000,0.000,0.000,2.000,1.000,0.000>
+Assigning values for displacement 48 <  0.00000000, -0.00000000, -0.00000000, -2.00000000, -1.00000000,  0.00000000,>
+	Assigned energy to <0.000,0.000,0.000,-2.000,-1.000,0.000>
+Assigning values for displacement 49 < -0.00000000, -0.00000000, -0.00000000, -1.00000000, -2.00000000, -0.00000000,>
+	Assigned energy to <0.000,0.000,0.000,-1.000,-2.000,0.000>
+Assigning values for displacement 50 <  0.00000000, -0.00000000, -1.00000000,  0.00000000, -0.00000000, -1.00000000,>
+	Assigned energy to <0.000,0.000,-1.000,0.000,0.000,-1.000>
+Assigning values for displacement 51 < -0.00000000,  0.00000000, -1.00000000,  0.00000000,  0.00000000,  1.00000000,>
+	Assigned energy to <0.000,0.000,-1.000,0.000,0.000,1.000>
+Assigning values for displacement 52 <  0.00000000, -0.00000000,  1.00000000, -0.00000000, -0.00000000, -1.00000000,>
+	Assigned energy to <0.000,0.000,1.000,0.000,0.000,-1.000>
+Assigning values for displacement 53 < -0.00000000,  0.00000000,  1.00000000, -0.00000000,  0.00000000,  1.00000000,>
+	Assigned energy to <0.000,0.000,1.000,0.000,0.000,1.000>
+Assigning values for displacement 54 < -0.00000000, -0.00000000,  1.00000000,  0.00000000,  0.00000000,  2.00000000,>
+	Assigned energy to <0.000,0.000,1.000,0.000,0.000,2.000>
+Assigning values for displacement 55 <  0.00000000, -0.00000000,  2.00000000,  0.00000000,  0.00000000,  1.00000000,>
+	Assigned energy to <0.000,0.000,2.000,0.000,0.000,1.000>
+Assigning values for displacement 56 <  0.00000000, -0.00000000, -2.00000000, -0.00000000, -0.00000000, -1.00000000,>
+	Assigned energy to <0.000,0.000,-2.000,0.000,0.000,-1.000>
+Assigning values for displacement 57 < -0.00000001, -0.00000000, -1.00000000,  0.00000000, -0.00000000, -2.00000000,>
+	Assigned energy to <0.000,0.000,-1.000,0.000,0.000,-2.000>
+Assigning values for displacement 58 < -0.00000000,  0.00000000, -1.00000000,  0.00000000, -1.00000000, -0.00000000,>
+	Assigned energy to <0.000,0.000,-1.000,0.000,-1.000,0.000>
+Assigning values for displacement 59 < -0.00000000,  0.00000000, -1.00000000, -0.00000000,  1.00000000, -0.00000000,>
+	Assigned energy to <0.000,0.000,-1.000,0.000,1.000,0.000>
+Assigning values for displacement 60 <  0.00000000,  0.00000000,  1.00000000, -0.00000000, -1.00000000,  0.00000000,>
+	Assigned energy to <0.000,0.000,1.000,0.000,-1.000,0.000>
+Assigning values for displacement 61 < -0.00000000,  0.00000000,  1.00000000,  0.00000000,  1.00000000, -0.00000000,>
+	Assigned energy to <0.000,0.000,1.000,0.000,1.000,0.000>
+Assigning values for displacement 62 < -0.00000000, -0.00000000,  1.00000000, -0.00000000,  2.00000000, -0.00000000,>
+	Assigned energy to <0.000,0.000,1.000,0.000,2.000,0.000>
+Assigning values for displacement 63 <  0.00000000,  0.00000000,  2.00000000, -0.00000000,  1.00000000,  0.00000000,>
+	Assigned energy to <0.000,0.000,2.000,0.000,1.000,0.000>
+Assigning values for displacement 64 <  0.00000000, -0.00000000, -2.00000000, -0.00000000, -1.00000000,  0.00000000,>
+	Assigned energy to <0.000,0.000,-2.000,0.000,-1.000,0.000>
+Assigning values for displacement 65 <  0.00000000,  0.00000001, -1.00000000,  0.00000000, -2.00000000, -0.00000000,>
+	Assigned energy to <0.000,0.000,-1.000,0.000,-2.000,0.000>
+Assigning values for displacement 66 < -0.00000000, -0.00000008, -1.00000000, -1.00000689, -0.00000000,  0.00000647,>
+	Assigned energy to <0.000,0.000,-1.000,-1.000,0.000,0.000>
+Assigning values for displacement 67 < -0.00000000, -0.00000012, -1.00000000,  1.00000152,  0.00000000, -0.00000174,>
+	Assigned energy to <0.000,0.000,-1.000,1.000,0.000,0.000>
+Assigning values for displacement 68 < -0.00000000, -0.00000012,  1.00000000, -1.00000196,  0.00000000,  0.00000172,>
+	Assigned energy to <0.000,0.000,1.000,-1.000,0.000,0.000>
+Assigning values for displacement 69 < -0.00000000, -0.00000007,  1.00000000,  1.00000801,  0.00000000, -0.00000844,>
+	Assigned energy to <0.000,0.000,1.000,1.000,0.000,0.000>
+Assigning values for displacement 70 <  0.00000000, -0.00000010,  1.00000000,  2.00000208, -0.00000000, -0.00000237,>
+	Assigned energy to <0.000,0.000,1.000,2.000,0.000,0.000>
+Assigning values for displacement 71 <  0.00000000, -0.00000020,  2.00000000,  0.99998882, -0.00000000,  0.00001139,>
+	Assigned energy to <0.000,0.000,2.000,1.000,0.000,0.000>
+Assigning values for displacement 72 < -0.00000000, -0.00000021, -2.00000000, -0.99998792,  0.00000000, -0.00001183,>
+	Assigned energy to <0.000,0.000,-2.000,-1.000,0.000,0.000>
+Assigning values for displacement 73 < -0.00000000, -0.00000010, -1.00000000, -2.00000202,  0.00000000,  0.00000170,>
+	Assigned energy to <0.000,0.000,-1.000,-2.000,0.000,0.000>
+Assigning values for displacement 74 < -0.00000000, -1.00000000, -0.00000000,  0.00000000, -0.00000000, -1.00000000,>
+	Assigned energy to <0.000,-1.000,0.000,0.000,0.000,-1.000>
+Assigning values for displacement 75 < -0.00000000, -1.00000000, -0.00000000,  0.00000000,  0.00000000,  1.00000000,>
+	Assigned energy to <0.000,-1.000,0.000,0.000,0.000,1.000>
+Assigning values for displacement 76 < -0.00000000,  1.00000000,  0.00000000,  0.00000000, -0.00000000, -1.00000000,>
+	Assigned energy to <0.000,1.000,0.000,0.000,0.000,-1.000>
+Assigning values for displacement 77 <  0.00000000,  1.00000000, -0.00000000, -0.00000000,  0.00000000,  1.00000000,>
+	Assigned energy to <0.000,1.000,0.000,0.000,0.000,1.000>
+Assigning values for displacement 78 <  0.00000000,  1.00000000, -0.00000000, -0.00000000, -0.00000000,  2.00000000,>
+	Assigned energy to <0.000,1.000,0.000,0.000,0.000,2.000>
+Assigning values for displacement 79 < -0.00000000,  2.00000000, -0.00000000, -0.00000000,  0.00000000,  1.00000000,>
+	Assigned energy to <0.000,2.000,0.000,0.000,0.000,1.000>
+Assigning values for displacement 80 < -0.00000000, -2.00000000,  0.00000000, -0.00000000, -0.00000000, -1.00000000,>
+	Assigned energy to <0.000,-2.000,0.000,0.000,0.000,-1.000>
+Assigning values for displacement 81 <  0.00000000, -1.00000000,  0.00000000, -0.00000000, -0.00000000, -2.00000000,>
+	Assigned energy to <0.000,-1.000,0.000,0.000,0.000,-2.000>
+Assigning values for displacement 82 <  0.00000000, -1.00000000,  0.00000000, -0.00000000, -1.00000000, -0.00000000,>
+	Assigned energy to <0.000,-1.000,0.000,0.000,-1.000,0.000>
+Assigning values for displacement 83 <  0.00000000, -1.00000000,  0.00000000, -0.00000000,  1.00000000, -0.00000000,>
+	Assigned energy to <0.000,-1.000,0.000,0.000,1.000,0.000>
+Assigning values for displacement 84 <  0.00000000,  1.00000000,  0.00000000,  0.00000000, -1.00000000,  0.00000000,>
+	Assigned energy to <0.000,1.000,0.000,0.000,-1.000,0.000>
+Assigning values for displacement 85 <  0.00000000,  1.00000000,  0.00000000,  0.00000000,  1.00000000,  0.00000000,>
+	Assigned energy to <0.000,1.000,0.000,0.000,1.000,0.000>
+Assigning values for displacement 86 < -0.00000000,  1.00000000, -0.00000000,  0.00000000,  2.00000000,  0.00000000,>
+	Assigned energy to <0.000,1.000,0.000,0.000,2.000,0.000>
+Assigning values for displacement 87 < -0.00000000,  2.00000000, -0.00000000,  0.00000000,  1.00000000,  0.00000000,>
+	Assigned energy to <0.000,2.000,0.000,0.000,1.000,0.000>
+Assigning values for displacement 88 <  0.00000000, -2.00000000,  0.00000000,  0.00000000, -1.00000000,  0.00000000,>
+	Assigned energy to <0.000,-2.000,0.000,0.000,-1.000,0.000>
+Assigning values for displacement 89 < -0.00000000, -1.00000000, -0.00000000, -0.00000000, -2.00000000, -0.00000000,>
+	Assigned energy to <0.000,-1.000,0.000,0.000,-2.000,0.000>
+Assigning values for displacement 90 < -0.00000000, -1.00000000, -0.00000000, -1.00000000, -0.00000000,  0.00000000,>
+	Assigned energy to <0.000,-1.000,0.000,-1.000,0.000,0.000>
+Assigning values for displacement 91 < -0.00000000, -1.00000000, -0.00000000,  1.00000000,  0.00000000,  0.00000000,>
+	Assigned energy to <0.000,-1.000,0.000,1.000,0.000,0.000>
+Assigning values for displacement 92 <  0.00000000,  1.00000000, -0.00000000, -1.00000000, -0.00000000,  0.00000000,>
+	Assigned energy to <0.000,1.000,0.000,-1.000,0.000,0.000>
+Assigning values for displacement 93 < -0.00000000,  1.00000000,  0.00000000,  1.00000000,  0.00000000, -0.00000000,>
+	Assigned energy to <0.000,1.000,0.000,1.000,0.000,0.000>
+Assigning values for displacement 94 < -0.00000000,  1.00000000,  0.00000000,  2.00000000, -0.00000000, -0.00000000,>
+	Assigned energy to <0.000,1.000,0.000,2.000,0.000,0.000>
+Assigning values for displacement 95 < -0.00000000,  2.00000000, -0.00000000,  1.00000000,  0.00000000, -0.00000000,>
+	Assigned energy to <0.000,2.000,0.000,1.000,0.000,0.000>
+Assigning values for displacement 96 <  0.00000000, -2.00000000, -0.00000000, -1.00000000, -0.00000000, -0.00000000,>
+	Assigned energy to <0.000,-2.000,0.000,-1.000,0.000,0.000>
+Assigning values for displacement 97 <  0.00000000, -1.00000000,  0.00000000, -2.00000000, -0.00000000, -0.00000000,>
+	Assigned energy to <0.000,-1.000,0.000,-2.000,0.000,0.000>
+Assigning values for displacement 98 < -0.00000000, -1.00000000, -0.99999987,  0.00000000, -0.00000458,  0.00000475,>
+	Assigned energy to <0.000,-1.000,-1.000,0.000,0.000,0.000>
+Assigning values for displacement 99 < -0.00000000, -1.00000000,  1.00000000,  0.00000000,  0.00000000,  0.00000000,>
+	Assigned energy to <0.000,-1.000,1.000,0.000,0.000,0.000>
+Assigning values for displacement 100 < -0.00000000,  1.00000000, -1.00000000,  0.00000000, -0.00000000, -0.00000000,>
+	Assigned energy to <0.000,1.000,-1.000,0.000,0.000,0.000>
+Assigning values for displacement 101 < -0.00000000,  1.00000000,  1.00000013,  0.00000000,  0.00000446, -0.00000429,>
+	Assigned energy to <0.000,1.000,1.000,0.000,0.000,0.000>
+Assigning values for displacement 102 <  0.00000000,  1.00000000,  2.00000000, -0.00000000,  0.00000000,  0.00000000,>
+	Assigned energy to <0.000,1.000,2.000,0.000,0.000,0.000>
+Assigning values for displacement 103 <  0.00000000,  2.00000000,  1.00000000,  0.00000000, -0.00000000,  0.00000000,>
+	Assigned energy to <0.000,2.000,1.000,0.000,0.000,0.000>
+Assigning values for displacement 104 < -0.00000000, -2.00000000, -1.00000000,  0.00000000, -0.00000000, -0.00000000,>
+	Assigned energy to <0.000,-2.000,-1.000,0.000,0.000,0.000>
+Assigning values for displacement 105 <  0.00000000, -1.00000000, -2.00000000, -0.00000000,  0.00000000, -0.00000000,>
+	Assigned energy to <0.000,-1.000,-2.000,0.000,0.000,0.000>
+Assigning values for displacement 106 < -1.00000000, -0.00000000,  0.00000008,  0.00000000, -0.00000647, -0.99999311,>
+	Assigned energy to <-1.000,0.000,0.000,0.000,0.000,-1.000>
+Assigning values for displacement 107 < -1.00000000,  0.00000000,  0.00000012, -0.00000000,  0.00000174,  0.99999847,>
+	Assigned energy to <-1.000,0.000,0.000,0.000,0.000,1.000>
+Assigning values for displacement 108 <  1.00000000,  0.00000000,  0.00000012, -0.00000000, -0.00000172, -0.99999804,>
+	Assigned energy to <1.000,0.000,0.000,0.000,0.000,-1.000>
+Assigning values for displacement 109 <  1.00000000,  0.00000000,  0.00000007, -0.00000000,  0.00000844,  0.99999200,>
+	Assigned energy to <1.000,0.000,0.000,0.000,0.000,1.000>
+Assigning values for displacement 110 <  1.00000000, -0.00000000,  0.00000010, -0.00000000,  0.00000236,  1.99999793,>
+	Assigned energy to <1.000,0.000,0.000,0.000,0.000,2.000>
+Assigning values for displacement 111 <  2.00000000,  0.00000000,  0.00000020, -0.00000000, -0.00001139,  1.00001118,>
+	Assigned energy to <2.000,0.000,0.000,0.000,0.000,1.000>
+Assigning values for displacement 112 < -2.00000000, -0.00000000,  0.00000021,  0.00000000,  0.00001183, -1.00001208,>
+	Assigned energy to <-2.000,0.000,0.000,0.000,0.000,-1.000>
+Assigning values for displacement 113 < -1.00000000, -0.00000000,  0.00000010,  0.00000000, -0.00000169, -1.99999798,>
+	Assigned energy to <-1.000,0.000,0.000,0.000,0.000,-2.000>
+Assigning values for displacement 114 < -1.00000000,  0.00000000, -0.00000000, -0.00000000, -1.00000000,  0.00000000,>
+	Assigned energy to <-1.000,0.000,0.000,0.000,-1.000,0.000>
+Assigning values for displacement 115 < -1.00000000,  0.00000000, -0.00000000, -0.00000000,  1.00000000, -0.00000000,>
+	Assigned energy to <-1.000,0.000,0.000,0.000,1.000,0.000>
+Assigning values for displacement 116 <  1.00000000,  0.00000000,  0.00000000,  0.00000000, -1.00000000, -0.00000000,>
+	Assigned energy to <1.000,0.000,0.000,0.000,-1.000,0.000>
+Assigning values for displacement 117 <  1.00000000,  0.00000000, -0.00000000, -0.00000000,  1.00000000,  0.00000000,>
+	Assigned energy to <1.000,0.000,0.000,0.000,1.000,0.000>
+Assigning values for displacement 118 <  1.00000000, -0.00000000, -0.00000000, -0.00000000,  2.00000000, -0.00000000,>
+	Assigned energy to <1.000,0.000,0.000,0.000,2.000,0.000>
+Assigning values for displacement 119 <  2.00000000,  0.00000000,  0.00000000,  0.00000000,  1.00000000, -0.00000000,>
+	Assigned energy to <2.000,0.000,0.000,0.000,1.000,0.000>
+Assigning values for displacement 120 < -2.00000000, -0.00000000,  0.00000000,  0.00000000, -1.00000000, -0.00000000,>
+	Assigned energy to <-2.000,0.000,0.000,0.000,-1.000,0.000>
+Assigning values for displacement 121 < -1.00000000,  0.00000001,  0.00000000, -0.00000000, -2.00000000,  0.00000000,>
+	Assigned energy to <-1.000,0.000,0.000,0.000,-2.000,0.000>
+Assigning values for displacement 122 < -1.00000000, -0.00000000,  0.00000000, -1.00000000, -0.00000000,  0.00000000,>
+	Assigned energy to <-1.000,0.000,0.000,-1.000,0.000,0.000>
+Assigning values for displacement 123 < -1.00000000,  0.00000000, -0.00000000,  1.00000000,  0.00000000,  0.00000000,>
+	Assigned energy to <-1.000,0.000,0.000,1.000,0.000,0.000>
+Assigning values for displacement 124 <  1.00000000, -0.00000000,  0.00000000, -1.00000000, -0.00000000, -0.00000000,>
+	Assigned energy to <1.000,0.000,0.000,-1.000,0.000,0.000>
+Assigning values for displacement 125 <  1.00000000,  0.00000000, -0.00000000,  1.00000000,  0.00000000, -0.00000000,>
+	Assigned energy to <1.000,0.000,0.000,1.000,0.000,0.000>
+Assigning values for displacement 126 <  1.00000000, -0.00000000, -0.00000000,  2.00000000,  0.00000000,  0.00000000,>
+	Assigned energy to <1.000,0.000,0.000,2.000,0.000,0.000>
+Assigning values for displacement 127 <  2.00000000, -0.00000000,  0.00000000,  1.00000000,  0.00000000,  0.00000000,>
+	Assigned energy to <2.000,0.000,0.000,1.000,0.000,0.000>
+Assigning values for displacement 128 < -2.00000000, -0.00000000,  0.00000000, -1.00000000, -0.00000000, -0.00000000,>
+	Assigned energy to <-2.000,0.000,0.000,-1.000,0.000,0.000>
+Assigning values for displacement 129 < -1.00000000, -0.00000000, -0.00000001, -2.00000000, -0.00000000,  0.00000000,>
+	Assigned energy to <-1.000,0.000,0.000,-2.000,0.000,0.000>
+Assigning values for displacement 130 < -1.00000000,  0.00000000, -1.00000000, -0.00000000,  0.00000000, -0.00000000,>
+	Assigned energy to <-1.000,0.000,-1.000,0.000,0.000,0.000>
+Assigning values for displacement 131 < -1.00000000, -0.00000000,  1.00000000,  0.00000000,  0.00000000, -0.00000000,>
+	Assigned energy to <-1.000,0.000,1.000,0.000,0.000,0.000>
+Assigning values for displacement 132 <  1.00000000, -0.00000000, -1.00000000, -0.00000000,  0.00000000,  0.00000000,>
+	Assigned energy to <1.000,0.000,-1.000,0.000,0.000,0.000>
+Assigning values for displacement 133 <  1.00000000,  0.00000001,  1.00000000, -0.00000000, -0.00000000, -0.00000000,>
+	Assigned energy to <1.000,0.000,1.000,0.000,0.000,0.000>
+Assigning values for displacement 134 <  1.00000000,  0.00000000,  2.00000000, -0.00000000,  0.00000000,  0.00000000,>
+	Assigned energy to <1.000,0.000,2.000,0.000,0.000,0.000>
+Assigning values for displacement 135 <  2.00000000,  0.00000000,  1.00000000,  0.00000000,  0.00000000, -0.00000000,>
+	Assigned energy to <2.000,0.000,1.000,0.000,0.000,0.000>
+Assigning values for displacement 136 < -1.99999999,  0.00000000, -1.00000000, -0.00000000, -0.00000000,  0.00000000,>
+	Assigned energy to <-2.000,0.000,-1.000,0.000,0.000,0.000>
+Assigning values for displacement 137 < -1.00000000,  0.00000000, -1.99999999,  0.00000000, -0.00000000, -0.00000000,>
+	Assigned energy to <-1.000,0.000,-2.000,0.000,0.000,0.000>
+Assigning values for displacement 138 < -1.00000000, -1.00000013, -0.00000000, -0.00000474, -0.00000000,  0.00000458,>
+	Assigned energy to <-1.000,-1.000,0.000,0.000,0.000,0.000>
+Assigning values for displacement 139 < -1.00000000,  1.00000000, -0.00000000, -0.00000000, -0.00000000,  0.00000000,>
+	Assigned energy to <-1.000,1.000,0.000,0.000,0.000,0.000>
+Assigning values for displacement 140 <  1.00000000, -1.00000000, -0.00000000,  0.00000000,  0.00000000,  0.00000000,>
+	Assigned energy to <1.000,-1.000,0.000,0.000,0.000,0.000>
+Assigning values for displacement 141 <  1.00000000,  0.99999987, -0.00000000,  0.00000430, -0.00000000, -0.00000446,>
+	Assigned energy to <1.000,1.000,0.000,0.000,0.000,0.000>
+Assigning values for displacement 142 <  1.00000000,  2.00000000,  0.00000000,  0.00000000, -0.00000000,  0.00000000,>
+	Assigned energy to <1.000,2.000,0.000,0.000,0.000,0.000>
+Assigning values for displacement 143 <  2.00000000,  1.00000000,  0.00000000,  0.00000000,  0.00000000, -0.00000000,>
+	Assigned energy to <2.000,1.000,0.000,0.000,0.000,0.000>
+Assigning values for displacement 144 < -2.00000000, -1.00000000,  0.00000000, -0.00000000,  0.00000000, -0.00000000,>
+	Assigned energy to <-2.000,-1.000,0.000,0.000,0.000,0.000>
+Assigning values for displacement 145 < -1.00000000, -2.00000000, -0.00000000, -0.00000000, -0.00000000,  0.00000000,>
+	Assigned energy to <-1.000,-2.000,0.000,0.000,0.000,0.000>
+Minimum energy displacement is              0 0 0 0 0 0  E =  -241.771533978381
+Energy =  -55.455419768700
+
+Force field appears valid.  No points appear to have erroneous energies.
+All energy differences are smaller than   0.01109108
+All energy differences are larger than   0.00000055
+Vector Gradients of size 6
+      0.0000025735
+      0.0000025896
+      0.0000025735
+      0.0000001751
+      0.0000001796
+      0.0000001751
+Vector Frequencies of size 6
+   1411.6585028544
+   2076.3096012426
+   2076.3096020663
+   3833.2678183994
+   4108.2236334086
+   4108.2236479729Registering STRE
+Registering BEND
+Registering OOP
+Registering TORS
+Registering LINX
+Registering LINY
+Registering LIN1
+Registering SYMM
+Registering CoordinateSubspace
+Registering Molecule
+Registering FitPoint
+Registering Fit
+Registering PointGroup
+Registering PointGroupClass
+Registering Rotation
+Registering Reflection
+Registering Inversion
+Registering ImproperRotation
+Registering IdentityElement
+Registering Displacement
+Registering DisplacementIterator
+Registering Derivative
+Registering DerivativeIterator
+Input options: 
+bond units = angstrom
+bvecdisp = 0.00001
+coordinate debug = 0
+debug = 0
+dispfile = default
+dispsizes = 0.01 0.01 0.01 0.02 0.02 0.02
+energy units = aj
+fit debug = 0
+fittype = formula
+geometry debug = 0
+geometry maxit = 1000
+geometry print frequency = 10
+geometry tolerance = 12
+mol details = none
+nderiv = 4
+nvalue = 2
+printfit = false
+robustdebug = 2
+robustness = 3
+statpt = true
+subgroup = c1
+symmetry debug = 0
+symmetry tolerance = 12
+usedispfile = false
+useequivalence = true
+usezero = true
+4 x 3 Matrix Coordinates (angstrom)
+        0.0000000000      0.0000000000     -0.0756412887
+        0.4702800022     -0.8145488615      0.3503288431
+       -0.9405600098      0.0000000000      0.3503288431
+        0.4702800022      0.8145488615      0.3503288431
+Abelian point group: C1
+Point Group C1 of order 1
+E
+
+    STRE       1 2      1.032522968961 Characters = [    1.00 ]
+    STRE       1 3      1.032522970787 Characters = [    1.00 ]
+    STRE       1 4      1.032522968961 Characters = [    1.00 ]
+    BEND     2 1 3    104.164129690725 Characters = [    1.00 ]
+    BEND     2 1 4    104.164129921097 Characters = [    1.00 ]
+    BEND     3 1 4    104.164129690725 Characters = [    1.00 ]
+There are a total of 6 nonredundant internal coordinates in your set, which is correct. Good job!
+Vector BB^T eigenvalues of size 6
+      1.0351078304
+      1.3690338365
+      1.3690338386
+      4.9007868048
+      4.9795726147
+      4.9795726207
+                                                            E
+    SYMM                1.032522968961 Characters = [    1.00 ]
+  1.0000    STRE       1 2      1.032522968961
+    SYMM                1.032522970787 Characters = [    1.00 ]
+  1.0000    STRE       1 3      1.032522970787
+    SYMM                1.032522968961 Characters = [    1.00 ]
+  1.0000    STRE       1 4      1.032522968961
+    SYMM                1.818007025578 Characters = [    1.00 ]
+  1.0000    BEND     2 1 3    104.164129690725
+    SYMM                1.818007029598 Characters = [    1.00 ]
+  1.0000    BEND     2 1 4    104.164129921097
+    SYMM                1.818007025578 Characters = [    1.00 ]
+  1.0000    BEND     3 1 4    104.164129690725
+Molecule: 
+natoms = 4
+point group = 
+  N   0.00000000   0.00000000  -0.07564129
+  H   0.47028000  -0.81454886   0.35032884
+  H  -0.94056001   0.00000000   0.35032884
+  H   0.47028000   0.81454886   0.35032884
+    STRE       1 2      1.032522968958 Characters = [    1.00 ]
+    STRE       1 3      1.032522970796 Characters = [    1.00 ]
+    STRE       1 4      1.032522968958 Characters = [    1.00 ]
+    BEND     2 1 3    104.164129692382 Characters = [    1.00 ]
+    BEND     2 1 4    104.164129930060 Characters = [    1.00 ]
+    BEND     3 1 4    104.164129692382 Characters = [    1.00 ]
+    SYMM                1.032522968958 Characters = [    1.00 ]
+    SYMM                1.032522970796 Characters = [    1.00 ]
+    SYMM                1.032522968958 Characters = [    1.00 ]
+    SYMM                1.818007025606 Characters = [    1.00 ]
+    SYMM                1.818007029755 Characters = [    1.00 ]
+    SYMM                1.818007025606 Characters = [    1.00 ]
+Point Group C1 of order 1
+E
+
+Force field for 4th derivatives from 2th derivative displacements
+Molecule: 
+natoms = 4
+point group = C1
+  N   0.00000000   0.00000000  -0.07564129
+  H   0.47028000  -0.81454886   0.35032884
+  H  -0.94056001   0.00000000   0.35032884
+  H   0.47028000   0.81454886   0.35032884
+Displacement iterator with 145 displacements
+            0 0 0 0 0 -1  E =  -241.771327637279
+             0 0 0 0 0 1  E =  -241.771331119844
+            0 0 0 0 0 -2  E =  -241.770701569934
+             0 0 0 0 0 2  E =  -241.770729610511
+            0 0 0 0 -1 0  E =  -241.771327629432
+             0 0 0 0 1 0  E =  -241.771331129872
+            0 0 0 0 -2 0  E =  -241.770701566446
+             0 0 0 0 2 0  E =  -241.770729615742
+            0 0 0 -1 0 0  E =  -241.771327625944
+             0 0 0 1 0 0  E =  -241.771331134668
+            0 0 0 -2 0 0  E =  -241.770701565138
+             0 0 0 2 0 0  E =  -241.770729618794
+            0 0 -1 0 0 0  E =  -241.771077812073
+             0 0 1 0 0 0  E =  -241.771093457893
+            0 0 -2 0 0 0  E =  -241.769676558380
+             0 0 2 0 0 0  E =  -241.769802190995
+            0 -1 0 0 0 0  E =  -241.771077805534
+             0 1 0 0 0 0  E =  -241.771093463561
+            0 -2 0 0 0 0  E =  -241.769676554892
+             0 2 0 0 0 0  E =  -241.769802193175
+            -1 0 0 0 0 0  E =  -241.771077789839
+             1 0 0 0 0 0  E =  -241.771093477076
+            -2 0 0 0 0 0  E =  -241.769676546172
+             2 0 0 0 0 0  E =  -241.769802199714
+             0 0 0 0 0 0  E =  -241.771533978381
+           0 0 0 0 -1 -1  E =  -241.771155613917
+            0 0 0 0 -1 1  E =  -241.771089916907
+            0 0 0 0 1 -1  E =  -241.771089916907
+             0 0 0 0 1 1  E =  -241.771163572633
+             0 0 0 0 1 2  E =  -241.770597818883
+             0 0 0 0 2 1  E =  -241.770597818883
+           0 0 0 0 -2 -1  E =  -241.770563370787
+           0 0 0 0 -1 -2  E =  -241.770563370787
+           0 0 0 -1 0 -1  E =  -241.771155609557
+            0 0 0 -1 0 1  E =  -241.771089916907
+            0 0 0 1 0 -1  E =  -241.771089916907
+             0 0 0 1 0 1  E =  -241.771163576121
+             0 0 0 1 0 2  E =  -241.770597819319
+             0 0 0 2 0 1  E =  -241.770597819319
+           0 0 0 -2 0 -1  E =  -241.770563370787
+           0 0 0 -1 0 -2  E =  -241.770563370787
+           0 0 0 -1 -1 0  E =  -241.771155599530
+            0 0 0 -1 1 0  E =  -241.771089916907
+            0 0 0 1 -1 0  E =  -241.771089916907
+             0 0 0 1 1 0  E =  -241.771163583968
+             0 0 0 1 2 0  E =  -241.770597818883
+             0 0 0 2 1 0  E =  -241.770597818883
+           0 0 0 -2 -1 0  E =  -241.770563370787
+           0 0 0 -1 -2 0  E =  -241.770563370787
+           0 0 -1 0 0 -1  E =  -241.770813327222
+            0 0 -1 0 0 1  E =  -241.770932524852
+            0 0 1 0 0 -1  E =  -241.770944600040
+             0 0 1 0 0 1  E =  -241.770833741731
+             0 0 1 0 0 2  E =  -241.770175861756
+             0 0 2 0 0 1  E =  -241.769486313896
+           0 0 -2 0 0 -1  E =  -241.769353327261
+           0 0 -1 0 0 -2  E =  -241.770128466960
+           0 0 -1 0 -1 0  E =  -241.770813327222
+            0 0 -1 0 1 0  E =  -241.770932524852
+            0 0 1 0 -1 0  E =  -241.770944600476
+             0 0 1 0 1 0  E =  -241.770833741731
+             0 0 1 0 2 0  E =  -241.770175861756
+             0 0 2 0 1 0  E =  -241.769486313896
+           0 0 -2 0 -1 0  E =  -241.769353327697
+           0 0 -1 0 -2 0  E =  -241.770128467396
+           0 0 -1 -1 0 0  E =  -241.770847656732
+            0 0 -1 1 0 0  E =  -241.770899379885
+            0 0 1 -1 0 0  E =  -241.770910387371
+             0 0 1 1 0 0  E =  -241.770866740212
+             0 0 1 2 0 0  E =  -241.770240724311
+             0 0 2 1 0 0  E =  -241.769552081969
+           0 0 -2 -1 0 0  E =  -241.769422120126
+           0 0 -1 -2 0 0  E =  -241.770198444804
+           0 -1 0 0 0 -1  E =  -241.770813327222
+            0 -1 0 0 0 1  E =  -241.770932524852
+            0 1 0 0 0 -1  E =  -241.770944600040
+             0 1 0 0 0 1  E =  -241.770833741731
+             0 1 0 0 0 2  E =  -241.770175861756
+             0 2 0 0 0 1  E =  -241.769486313460
+           0 -2 0 0 0 -1  E =  -241.769353327697
+           0 -1 0 0 0 -2  E =  -241.770128467396
+           0 -1 0 0 -1 0  E =  -241.770847666760
+            0 -1 0 0 1 0  E =  -241.770899376833
+            0 1 0 0 -1 0  E =  -241.770910389115
+             0 1 0 0 1 0  E =  -241.770866728440
+             0 1 0 0 2 0  E =  -241.770240720387
+             0 2 0 0 1 0  E =  -241.769552094612
+           0 -2 0 0 -1 0  E =  -241.769422100508
+           0 -1 0 0 -2 0  E =  -241.770198447420
+           0 -1 0 -1 0 0  E =  -241.770813327222
+            0 -1 0 1 0 0  E =  -241.770932524852
+            0 1 0 -1 0 0  E =  -241.770944600040
+             0 1 0 1 0 0  E =  -241.770833741731
+             0 1 0 2 0 0  E =  -241.770175861756
+             0 2 0 1 0 0  E =  -241.769486313460
+           0 -2 0 -1 0 0  E =  -241.769353327697
+           0 -1 0 -2 0 0  E =  -241.770128467396
+           0 -1 -1 0 0 0  E =  -241.770647412735
+            0 -1 1 0 0 0  E =  -241.770611808435
+            0 1 -1 0 0 0  E =  -241.770611807999
+             0 1 1 0 0 0  E =  -241.770678130632
+             0 1 2 0 0 0  E =  -241.769411791889
+             0 2 1 0 0 0  E =  -241.769411791889
+           0 -2 -1 0 0 0  E =  -241.769272202855
+           0 -1 -2 0 0 0  E =  -241.769272202855
+           -1 0 0 0 0 -1  E =  -241.770847687686
+            -1 0 0 0 0 1  E =  -241.770899370293
+            1 0 0 0 0 -1  E =  -241.770910393910
+             1 0 0 0 0 1  E =  -241.770866702282
+             1 0 0 0 0 2  E =  -241.770240712539
+             2 0 0 0 0 1  E =  -241.769552127311
+           -2 0 0 0 0 -1  E =  -241.769422058218
+           -1 0 0 0 0 -2  E =  -241.770198452651
+           -1 0 0 0 -1 0  E =  -241.770813327222
+            -1 0 0 0 1 0  E =  -241.770932524852
+            1 0 0 0 -1 0  E =  -241.770944600476
+             1 0 0 0 1 0  E =  -241.770833741731
+             1 0 0 0 2 0  E =  -241.770175861756
+             2 0 0 0 1 0  E =  -241.769486313896
+           -2 0 0 0 -1 0  E =  -241.769353327697
+           -1 0 0 0 -2 0  E =  -241.770128467396
+           -1 0 0 -1 0 0  E =  -241.770813327222
+            -1 0 0 1 0 0  E =  -241.770932524852
+            1 0 0 -1 0 0  E =  -241.770944600040
+             1 0 0 1 0 0  E =  -241.770833741731
+             1 0 0 2 0 0  E =  -241.770175861756
+             2 0 0 1 0 0  E =  -241.769486313896
+           -2 0 0 -1 0 0  E =  -241.769353327261
+           -1 0 0 -2 0 0  E =  -241.770128466960
+           -1 0 -1 0 0 0  E =  -241.770647399220
+            -1 0 1 0 0 0  E =  -241.770611807999
+            1 0 -1 0 0 0  E =  -241.770611807999
+             1 0 1 0 0 0  E =  -241.770678146327
+             1 0 2 0 0 0  E =  -241.769411792325
+             2 0 1 0 0 0  E =  -241.769411792325
+           -2 0 -1 0 0 0  E =  -241.769272202419
+           -1 0 -2 0 0 0  E =  -241.769272202419
+           -1 -1 0 0 0 0  E =  -241.770647393988
+            -1 1 0 0 0 0  E =  -241.770611807999
+            1 -1 0 0 0 0  E =  -241.770611808435
+             1 1 0 0 0 0  E =  -241.770678153739
+             1 2 0 0 0 0  E =  -241.769411791889
+             2 1 0 0 0 0  E =  -241.769411791889
+           -2 -1 0 0 0 0  E =  -241.769272202855
+           -1 -2 0 0 0 0  E =  -241.769272202855
+Vector Gradients of size 6
+     -0.0023504751
+     -0.0057785440
+     -0.0057785444
+      0.0017297328
+      0.0017297328
+     -0.0207226628
+6 x 6 Matrix Force constants
+        8.9648370722     -0.2548170246     -0.2548170274      0.2875009269      0.2875009268      0.1192074376
+       -0.2548170246      8.9648369851     -0.2548170246      0.2875009274      0.1192074357      0.2875009274
+       -0.2548170274     -0.2548170246      8.9648370722      0.1192074376      0.2875009268      0.2875009269
+        0.2875009269      0.2875009274      0.1192074376      1.0229974643     -0.0870692810     -0.0870692784
+        0.2875009268      0.1192074357      0.2875009268     -0.0870692810      1.0229974599     -0.0870692810
+        0.1192074376      0.2875009274      0.2875009269     -0.0870692784     -0.0870692810      1.0229974643
+Minimum energy displacement is              0 0 0 0 0 0  E =  -241.771533978381
+Energy =  -55.455419768700
+
+Force field appears valid.  No points appear to have erroneous energies.
+All energy differences are smaller than   0.01109108
+All energy differences are larger than   0.00000055
+Vector Gradients of size 6
+      0.0000025735
+      0.0000025896
+      0.0000025735
+      0.0000001751
+      0.0000001796
+      0.0000001751
+Vector Frequencies of size 6
+   1411.6585027330
+   2076.3096013221
+   2076.3096021104
+   3833.2678183831
+   4108.2236334064
+   4108.2236479931

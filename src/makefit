@@ -1,0 +1,96 @@
+#! /usr/bin/env python
+
+import sys, re
+
+index_map = {
+    0 : "i",
+    1 : "j",
+    2 : "k",
+    3 : "l",
+}
+
+
+class FitTerm:
+    
+    header = 'disps.clear(); disps.assign(ncoord, 0);'
+    footer = """disp = iter->getDisplacement(disps);
+addPoint(disp, %16.12f);"""
+    template = 'disps[%s] = %d;'
+
+    def __init__(self, coef, *disps):
+        str_arr = [self.header]
+
+        index = 0
+        for disp in disps:
+            if not disp == 0:
+                str_arr.append(self.template % (index_map[index], disp)) 
+            index += 1
+
+        str_arr.append(self.footer % coef)
+
+        self.text = "\n".join(str_arr)
+
+    def __str__(self):
+        return self.text
+
+class Fit:
+    
+    def __init__(self, name, ncoords, terms):
+        str_arr = ["%s::%s(" % (name, name)]
+        for i in range(ncoords):
+            str_arr.append("    int %s," % index_map[i])
+        str_arr.append("    const DisplacementIteratorPtr& iter")
+        str_arr.append(")")
+        str_arr.append("{")
+        str_arr.append("    vector<double> disps;")
+        str_arr.append("    int ncoord = iter->ncoord();")
+        str_arr.append("    DisplacementPtr disp;")
+
+        for term in terms:
+            str_arr.append("\n")
+            lines = str(term).splitlines()
+            for line in lines:
+                str_arr.append("    %s" % line)    
+
+        str_arr.append("}")
+
+        str_arr.append("\n\n")
+
+        self.text = "\n".join(str_arr)
+    
+    def __str__(self):
+        return self.text
+
+name = ""
+ncoords = 0
+terms = []
+fittype = ""
+try:
+    fittype = sys.argv[1]
+    name = "Fit_%s" % fittype
+
+    input = "%s.pyfit" % fittype
+    text = open(input).read()
+
+    ncoords = int(sys.argv[2])
+except Exception, error:
+    print error
+    sys.stderr.write("usage error. I need [name ncoords]\n")
+    sys.exit()
+
+entries = text.split("+")
+for entry in entries:
+    entry = entry.strip()
+    match = re.compile("(.*?)[<](.*?)[>]").search(entry)
+    coef, disps = match.groups()
+    coef = eval(coef)
+    disps = map(eval, disps.split(","))[:ncoords]
+    term = FitTerm(coef, *disps)
+    terms.append(term)
+
+fit = Fit(name, ncoords, terms)
+
+fileobj = open("%s.fit" % fittype, "w")
+fileobj.write(str(fit))
+fileobj.close()
+

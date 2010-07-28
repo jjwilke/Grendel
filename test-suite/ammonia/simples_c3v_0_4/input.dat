@@ -1,0 +1,30 @@
+#*ANHARM*###### usage ######################
+NIsotop    Cubic     ReOrder   Fermi1    Sigma
+      NAtoms   Quartic   Coriolis  Fermi2   Print
+[Reordering vector (N(I5))]
+[Coriolis cutoff]
+[Fermi1 cutoff]
+[Fermi2 cutoff]
+Atom1_x             Atom1_y            Atom1_z       Atom_mass
+Atom2_x             Atom2_y            Atom2_z       Atom_mass
+.......             .......            .......       .........
+AtomN_x             AtomN_y            AtomN_z       Atom_mass
+[Isotope1 mass1]
+[Isotope1 mass2]
+................
+[Isotope1 massN]
+[Isotope2 mass1]
+................
+[IsotopeN massN]
+# ANHARM ###### The actual calculation ##############################
+    1    4   20   24    0    1    1    1    0   00
+20.0
+20.0
+20.0
+        0.0000000000        0.0000000000        0.0000000000   14.00307401
+       -1.7774008284        0.0000000000        0.8049668901    1.00782503
+        0.8887004143        1.5392742701        0.8049668901    1.00782503
+        0.8887004143       -1.5392742701        0.8049668901    1.00782503
+
+
+

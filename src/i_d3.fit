@@ -1,0 +1,35 @@
+Fit_i_d3::Fit_i_d3(
+    int i,
+    const DisplacementIteratorPtr& iter
+)
+{
+    vector<double> disps;
+    int ncoord = iter->ncoord();
+    DisplacementPtr disp;
+
+
+    disps.clear(); disps.assign(ncoord, 0);
+    disps[i] = -1;
+    disp = iter->getDisplacement(disps);
+    addPoint(disp,  -0.666666666667);
+
+
+    disps.clear(); disps.assign(ncoord, 0);
+    disps[i] = 1;
+    disp = iter->getDisplacement(disps);
+    addPoint(disp,   0.666666666667);
+
+
+    disps.clear(); disps.assign(ncoord, 0);
+    disps[i] = -2;
+    disp = iter->getDisplacement(disps);
+    addPoint(disp,   0.083333333333);
+
+
+    disps.clear(); disps.assign(ncoord, 0);
+    disps[i] = 2;
+    disp = iter->getDisplacement(disps);
+    addPoint(disp,  -0.083333333333);
+}
+
+

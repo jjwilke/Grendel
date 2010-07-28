@@ -1,0 +1,107 @@
+Fit_ijk::Fit_ijk(
+    int i,
+    int j,
+    int k,
+    const DisplacementIteratorPtr& iter
+)
+{
+    vector<double> disps;
+    int ncoord = iter->ncoord();
+    DisplacementPtr disp;
+
+
+    disps.clear(); disps.assign(ncoord, 0);
+    disps[i] = -1;
+    disp = iter->getDisplacement(disps);
+    addPoint(disp,  -0.500000000000);
+
+
+    disps.clear(); disps.assign(ncoord, 0);
+    disps[j] = -1;
+    disp = iter->getDisplacement(disps);
+    addPoint(disp,  -0.500000000000);
+
+
+    disps.clear(); disps.assign(ncoord, 0);
+    disps[k] = -1;
+    disp = iter->getDisplacement(disps);
+    addPoint(disp,  -0.500000000000);
+
+
+    disps.clear(); disps.assign(ncoord, 0);
+    disps[k] = 1;
+    disp = iter->getDisplacement(disps);
+    addPoint(disp,   0.500000000000);
+
+
+    disps.clear(); disps.assign(ncoord, 0);
+    disps[j] = 1;
+    disp = iter->getDisplacement(disps);
+    addPoint(disp,   0.500000000000);
+
+
+    disps.clear(); disps.assign(ncoord, 0);
+    disps[i] = 1;
+    disp = iter->getDisplacement(disps);
+    addPoint(disp,   0.500000000000);
+
+
+    disps.clear(); disps.assign(ncoord, 0);
+    disps[i] = -1;
+    disps[j] = -1;
+    disp = iter->getDisplacement(disps);
+    addPoint(disp,   0.500000000000);
+
+
+    disps.clear(); disps.assign(ncoord, 0);
+    disps[i] = -1;
+    disps[k] = -1;
+    disp = iter->getDisplacement(disps);
+    addPoint(disp,   0.500000000000);
+
+
+    disps.clear(); disps.assign(ncoord, 0);
+    disps[j] = -1;
+    disps[k] = -1;
+    disp = iter->getDisplacement(disps);
+    addPoint(disp,   0.500000000000);
+
+
+    disps.clear(); disps.assign(ncoord, 0);
+    disps[j] = 1;
+    disps[k] = 1;
+    disp = iter->getDisplacement(disps);
+    addPoint(disp,  -0.500000000000);
+
+
+    disps.clear(); disps.assign(ncoord, 0);
+    disps[i] = 1;
+    disps[k] = 1;
+    disp = iter->getDisplacement(disps);
+    addPoint(disp,  -0.500000000000);
+
+
+    disps.clear(); disps.assign(ncoord, 0);
+    disps[i] = 1;
+    disps[j] = 1;
+    disp = iter->getDisplacement(disps);
+    addPoint(disp,  -0.500000000000);
+
+
+    disps.clear(); disps.assign(ncoord, 0);
+    disps[i] = -1;
+    disps[j] = -1;
+    disps[k] = -1;
+    disp = iter->getDisplacement(disps);
+    addPoint(disp,  -0.500000000000);
+
+
+    disps.clear(); disps.assign(ncoord, 0);
+    disps[i] = 1;
+    disps[j] = 1;
+    disps[k] = 1;
+    disp = iter->getDisplacement(disps);
+    addPoint(disp,   0.500000000000);
+}
+
+
