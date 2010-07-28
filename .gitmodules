@@ -1,0 +1,3 @@
+[submodule "src/smartptr"]
+	path = src/smartptr
+	url = git@voltron.ccqc.uga.edu:~/programs/smartptr
