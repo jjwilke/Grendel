@@ -1,0 +1,28 @@
+$geometry
+bohr
+N        0.0000000000        0.0000000000       -0.1429413200
+H        0.8887004100       -1.5392742700        0.6620255700
+H       -1.7774008300        0.0000000000        0.6620255700
+H        0.8887004100        1.5392742700        0.6620255700
+$end
+
+$internals
+r1 = bond 1 2
+r2 = bond 1 3
+r3 = bond 1 4
+a1 = angle 2 1 3 
+a2 = angle 2 1 4
+a3 = angle 3 1 4
+$end
+
+$options
+bvecdisp = 0.00001
+bond units = angstrom
+energy units = aJ
+nderiv = 4
+nvalue = 2
+robustness = 3
+dispsizes = 0.01 0.01 0.01 0.02 0.02 0.02
+subgroup = c1
+$end
+
