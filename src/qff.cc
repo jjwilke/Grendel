@@ -684,6 +684,10 @@ ForceField::getXMLForceConstants(const XMLParser& xml, RectMatrixPtr& fc)
         except("Please input force constants in XML file in hartree/bohr units");
     }
 
+    string fctext = fcnode->getText();
+    int ncoords = mol_->natoms() * 3;
+    fc = getMatrix(fctext, ncoords, ncoords);
+
     return true;
 }
 

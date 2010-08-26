@@ -23,7 +23,7 @@ pyregexp::get_regexp_value(string regexp, string text, string method_name, int f
         abort();
 	}
     Py_INCREF(pmod);
-    pfunc = PyObject_GetAttrString(pmod, method_name.c_str()); 
+    pfunc = PyObject_GetAttrString(pmod, const_cast<char*>(method_name.c_str())); 
     Py_INCREF(pfunc);
     pargs = Py_BuildValue("ssi", regexp.c_str(), text.c_str(), flags);
     Py_INCREF(pargs);

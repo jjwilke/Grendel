@@ -10,15 +10,15 @@
 
 extern "C" {
 
-extern void DGEMM(const char*, const char*, const int*,
+extern void dgemm(const char*, const char*, const int*,
   const int*, const int*, const double*, const double*, const int*,
   const double*, const int*, const double*, double*, const int*);
 
-extern void DGEEV(const char*, const char*, const int*, const double*,
+extern void dgeev(const char*, const char*, const int*, const double*,
   const int*, const double*, const double*, const double*, const int*,
   const double*, const int*, const double*, const int*, const int*);
 
-extern void DSYEV(const char*, const char*, const int*, const double*,
+extern void dsyev(const char*, const char*, const int*, const double*,
   const int*, const double*, const double*, const int*, const int*);
 
 }
@@ -163,7 +163,7 @@ eigenvalues(
     //loss of precision... but what can you do
     int n_ = (int) n;
     int info = 0;
-    DSYEV("V", "U", &n_, m, &n_, vals, work, &worksize, &info);
+    dsyev("V", "U", &n_, m, &n_, vals, work, &worksize, &info);
     if (info != 0)
     {
         cerr << "Eigenvalue routined failed" << endl;
@@ -236,7 +236,7 @@ eigenvalues(
     //loss of precision... but what can you do
     int n_ = (int) n;
     int info = 0;
-    DGEEV("V", "V", &n_, vals, &n_, revals, ievals, levecs, &n_, revecs, &n_, work, &worksize, &info);
+    dgeev("V", "V", &n_, vals, &n_, revals, ievals, levecs, &n_, revecs, &n_, work, &worksize, &info);
 
     if (info != 0)
     {
@@ -406,7 +406,7 @@ multiply(
     int ncol_ = (int) ncol;
     int ldl_ = (int) ldl;
     int ldr_ = (int) ldr;
-    DGEMM(opl, opr, &nrow_, &ncol_, &nlink_, &alpha, ldata, &ldl_, rdata, &ldr_, &beta, prod_data, &nrow_);
+    dgemm(opl, opr, &nrow_, &ncol_, &nlink_, &alpha, ldata, &ldl_, rdata, &ldr_, &beta, prod_data, &nrow_);
 #endif
 
     //this is all transposed

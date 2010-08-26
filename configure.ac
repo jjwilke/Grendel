@@ -37,6 +37,8 @@ AC_ARG_WITH(include,
 CPPFLAGS=$withval
 echo Using extra include directories: $withval
 )
+CWD=`pwd`
+CPPFLAGS="$CPPFLAGS -I$CWD/src"
 
 AC_ARG_WITH(libs,
 [  --with-libs             Specifies libraries (-llib1 -llib2).],
@@ -82,12 +84,6 @@ havemkl=yes,
 AC_DEFINE(HAVE_MKL, 0, [Whether to use mkl])
 )
 
-AC_ARG_WITH(boost,
-[ --with-boost          Gives the root folder for boost],
-CXXFLAGS="$CXXFLAGS -I/$withval",
-echo Using standard include folder for boost
-)
-
 if test X$havemkl = Xyes ; then
     AC_ARG_WITH(mkl-arch,
         [  --with-mkl-arch            Give an mkl architecture (e.g. em64t, 32).  This defines lib folder],
@@ -100,18 +96,18 @@ fi
 if test X$havemkl = Xyes ; then
 LIBS="-lguide -lpthread $LIBS"
 fi
-
+ 
 #check for python
 AC_CHECK_PROGS([PYTHON], python, [:])
 if test "$PYTHON" = :; then
     AC_MSG_ERROR([Package requires at least Python v2.4])
 fi
-PYVER=esyscmd(""./getpyver"")
+PYVER=`./getpyver`
 PYDIST="python$PYVER"
 echo checking python version... found $PYDIST
-PYBASE=esyscmd(""./getpyinclude"")
+PYBASE=`./getpyinclude`
 PYDEFINC=$PYBASE/$PYDIST
-PYDEFLIBDIR=esyscmd(""./getpylib"")
+PYDEFLIBDIR=`./getpylib`
 echo found python include dir $PYDEFINC
 
 AC_ARG_WITH(python-include,
@@ -161,10 +157,10 @@ AC_DEFINE_UNQUOTED(GIGDATADIR,"${gigdatadir}",[The directory into which all data
 
 AC_DEFINE([PROGRAM],"GIGID-E","The name of the program")
 
-AC_CHECK_HEADER([boost/intrusive_ptr.hpp],
-,
-AC_MSG_ERROR([Package requires boost])
-)
+#AC_CHECK_HEADER([boost/intrusive_ptr.hpp],
+#,
+#AC_MSG_ERROR([Package requires boost])
+#)
 
 AC_SEARCH_LIBS(DGEMM,,
 echo Found blas library,

@@ -4,9 +4,27 @@ import sys
 import commands
 import os.path
 
-print sys.prefix
-folder = os.path.split(commands.getoutput('find %s -name "libpython*"' % sys.prefix).splitlines()[0])[0]
-print folder
+
+def get_lib():
+    try:
+        folder = os.path.split(commands.getoutput('find %s -name "libpython*"' % sys.prefix).splitlines()[0])[0]
+        print folder
+        return
+    except:
+        pass
+
+    try:
+        execfolder = commands.getoutput("which python")
+        binfolder = os.path.split(execfolder)[0]
+        basefolder = os.path.split(binfolder)[0]
+        libfolder = os.path.join(basefolder, "lib")
+        folder = os.path.split(commands.getoutput('find %s -name "libpython*"' % libfolder).splitlines()[0])[0]
+        print folder
+    except:
+        sys.exit("No python lib found")
+
+get_lib()
+    
 
 
 

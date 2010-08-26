@@ -130,7 +130,7 @@ int main(int argc, const char* argv[])
         else if (option == "--xmlprint") {GigideRuntime::run_xmlprint();}
 
         if      (option == "--dispcart")    GigideRuntime::run_dispcart();
-        else if (option == "--calc")        {GigideRuntime::run_calc();GigideRuntime::xml_commit();}
+        else if (option == "--calc")        {GigideRuntime::run_calc(); }//GigideRuntime::xml_commit();}
         else if (option == "--checkfit")    GigideRuntime::run_checkfit();
         else if (option == "--generate")    GigideRuntime::run_generate();
         else if (option == "--bvectest")    GigideRuntime::run_bvectest();
