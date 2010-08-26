@@ -4,6 +4,7 @@ import sys
 import commands
 import os.path
 
+print sys.prefix
 folder = os.path.split(commands.getoutput('find %s -name "libpython*"' % sys.prefix).splitlines()[0])[0]
 print folder
 
