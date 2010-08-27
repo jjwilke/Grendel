@@ -344,7 +344,7 @@ TaylorSeriesEnergy::print(ostream& os) const
     //convert the error to hartree
     double err = Units::convert(error(), Units::Hartree) * 1e6;
 
-    os << stream_printf("Eapprox = %14.10f, Error = %12.8f uH", energy_, err) << endl;
+    os << stream_printf("  Eapprox = %14.10f Error = %12.8f uH", energy_, err) << endl;
 }
 
 double
