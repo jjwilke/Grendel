@@ -61,7 +61,7 @@ SymmetryOperation::serialize(
 void
 SymmetryOperation::print(ostream& os) const
 {
-    os << description() << endl;
+    os << description();
 }
 
 bool
@@ -895,12 +895,14 @@ PointGroup::printClasses(ostream& os) const
 void
 PointGroup::print(ostream& os) const
 {
-    os << "Point Group " << pgstr_ << " of order " << order() << endl;
+    os << "Point Group " << pgstr_ << " of order " << order();
     vector<ConstSymmetryOperationPtr> symmops; getSymmetryElements(symmops);
     vector<ConstSymmetryOperationPtr>::iterator it;
     for (it = symmops.begin(); it != symmops.end(); ++it)
+    {
+        os << endl;
         (*it)->print(os);
-    os << endl;
+    }
 }
 
 bool
@@ -1029,9 +1031,12 @@ PointGroupClass::order() const
 void
 PointGroupClass::print(ostream& os) const
 {
-    os << stream_printf("Class of order %d for operation type %s", order(), SymmetryOperation::opname(type_).c_str()) << endl;
+    os << stream_printf("Class of order %d for operation type %s", order(), SymmetryOperation::opname(type_).c_str());
     for (int i=0; i < order(); ++i)
+    {
+        os << endl;
         members_[i]->print(os);
+    }
 }
 
 void

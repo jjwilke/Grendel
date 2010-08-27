@@ -132,18 +132,17 @@ InternalCoordinate::print(ostream& os, bool includechar, bool includesubchars) c
             os << stream_printf("%8.2f", chars_[i]);
         os << " ]";
     }
-    os << endl;
 
     if (includesubchars)
     {
         map<string, VectorPtr>::const_iterator it;
         for (it = subgroup_chars_.begin(); it != subgroup_chars_.end(); ++it)
         {
-            os << stream_printf("\t%5s: [", (it->first).c_str());
+            os << endl << stream_printf("\t%5s: [", (it->first).c_str());
             VectorPtr v = it->second;
             for (int i=0; i < v.n(); ++i)
                 os << stream_printf("%8.2f", v[i]);
-            os << " ]" << endl;
+            os << " ]";
         }
     }
 }
@@ -403,12 +402,14 @@ void
 SymmetryInternalCoordinate::printDetail(ostream& os) const
 {
     print(os, true, true);
+    os << endl;
     for (int i=0; i < simples_.size(); ++i)
     {
         if ( fabs(coeffs_[i]) > 1e-8 )
         {
             os << stream_printf("%8.4f", coeffs_.get_element(i));
             simples_[i]->print(os, false);
+            os << endl;
         }
     }
 }
@@ -1647,7 +1648,6 @@ CoordinateSubspace::printCharacters(
     os << endl;
     for (int col=0; col < opers.size(); ++col)
         os << stream_printf("%8.3f", chars[col]);
-    os << endl;
 }
 
 VectorPtr

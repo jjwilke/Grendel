@@ -41,10 +41,10 @@ ForceField::ForceField(
    const Set<ConstInternalCoordinatePtr>& coords,
    const Set<ConstSimpleInternalCoordinatePtr>& simples
 )
-    : coords_(coords), simples_(simples), mol_(center_mol), energy_(0)
+    : coords_(coords), simples_(simples), mol_(center_mol), energy_(0), 
+    disp_sizes_(GigideKeyword::getDisplacementSizes(coords.size()))
 {
     SetRuntime(ForceField);
-    disp_sizes_ = GigideKeyword::getDisplacementSizes(coords.size());
 
     //the number of displacement sizes must match number of coordinates
     if (coords.size() != disp_sizes_.size())
@@ -62,7 +62,7 @@ ForceField::ForceField(
     //the level of derivative the user will provide
     nvalue_ = KeywordSet::getKeyword("nvalue")->getValueInteger();
     int disp_level = nderiv_ - nvalue_;
-    disp_iter_ = new DisplacementIterator(coords, simples, center_mol);
+    disp_iter_ = new DisplacementIterator(coords, simples, center_mol, disp_sizes_);
     value_iter_ = new DerivativeIterator(nvalue_, coords, center_mol);
     compute_iter_ = new DerivativeIterator(disp_level, coords, center_mol);
     deriv_iter_ = new DerivativeIterator(nderiv_, coords, center_mol);
@@ -257,11 +257,11 @@ ForceField::buildNumericalFit()
     for (itdisp = disp_iter_->begin(); itdisp != disp_iter_->end(); ++itdisp)
     {
         DisplacementPtr disp = *itdisp;
-        vector<double> disp_numbers = disp->getDispNumbers();
+        vector<double> increments = disp->getIncrements();
         for (itder = fit_iter_->begin(); itder != fit_iter_->end(); ++itder, ++scratchptr)
         {
             DerivativePtr deriv = *itder;
-            double coeff = deriv->taylorCoeff(disp_numbers);
+            double coeff = deriv->taylorCoeff(increments);
             (*scratchptr) = coeff;
         }
     }
@@ -576,9 +576,10 @@ ForceField::generateDisplacements()
         DisplacementPtr disp = *it;
         if (disp->isUnique())
         {
-            vector<double> next_disp = disp->getDispNumbers();
-            disp->generateDisplacement(disp_sizes_);
-            cout << "...generated displacement " << dispnum << endl;
+            vector<double> increments = disp->getIncrements();
+            cout << "Generating "; disp->print();
+            disp->generateDisplacement();
+            cout << " ...generated displacement " << dispnum << endl;
             ++dispnum;
 
             disp->validate();
@@ -732,27 +733,27 @@ ForceField::readXMLDisplacement(const XMLParser& node, bool& extrazero)
     int geomdebug = KeywordSet::getKeyword("geometry debug")->getValueInteger();
 
     //from the geometry determine the displacement
-    vector<double> displacements = disp_iter_->computeDisplacements(geom, disp_sizes_);
+    vector<double> increments = disp_iter_->computeIncrements(geom);
 
     bool iszero = true;
-    for (int i=0; i < displacements.size(); i++)
+    for (int i=0; i < increments.size(); i++)
     {
-        if ( fabs(displacements[i]) > ZERODISP )
+        if ( fabs(increments[i]) > ZERODISP )
         {
             iszero = false;
             break;
         }
     }
 
-    DisplacementPtr disp = disp_iter_->findDisplacement(displacements);
+    DisplacementPtr disp = disp_iter_->findDisplacement(increments);
 
     if (disp.get() == NULL && nvalue > 0) //see if it is the zero displacement... this gets tacked on after
     {
         if (iszero)
         {
             disp_iter_->addZeroDisplacement();
-            disp = disp_iter_->findDisplacement(displacements);
-            disp->generateDisplacement(disp_sizes_);
+            disp = disp_iter_->findDisplacement(increments);
+            disp->generateDisplacement();
             extrazero = true;
         }
     }
@@ -760,7 +761,7 @@ ForceField::readXMLDisplacement(const XMLParser& node, bool& extrazero)
     if (disp.get() == NULL)
     {
         cerr << "Invalid displacement read in" << endl;
-        print_vector(displacements);
+        print_vector(increments);
         geom.print("Invalid geometry");
         return;
     }
@@ -768,13 +769,13 @@ ForceField::readXMLDisplacement(const XMLParser& node, bool& extrazero)
     cout << "Assigning values for displacement "; 
     if (dispnumber != -1)
         cout << dispnumber << " ";
-    print_vector(displacements, true, "%12.8f");
+    print_vector(increments, true, "%12.8f");
 
     if (disp->isAssigned())
     {
         stringstream sstr;
         sstr << "Multiple values read in for displacement" << endl;
-        print_vector(displacements, sstr);
+        print_vector(increments, sstr);
         geom.print("Invalid geometry", sstr);
         except(sstr.str());
     }
@@ -783,8 +784,8 @@ ForceField::readXMLDisplacement(const XMLParser& node, bool& extrazero)
     if (nvalue >= 1 && geomdebug >= 1)
     {
         ConstRectMatrixPtr exact_xyz = disp->getDisplacementMolecule()->getXYZ(); 
-        vector<double> exact_disps = disp_iter_->computeDisplacements(exact_xyz, disp_sizes_);
-        print_vector(exact_disps, false, "%12.8f"); 
+        vector<double> exact_increments = disp_iter_->computeIncrements(exact_xyz);
+        print_vector(exact_increments, false, "%12.8f"); 
     }
 
 
@@ -897,7 +898,7 @@ ForceField::readXMLData(string filename)
         for (DisplacementIterator::iterator it(disp_iter_->begin()); it != disp_iter_->end(); ++it, ++idisp)
         {
             cout << stream_printf("Generating displacement %d out of %d", idisp, ndisp) << endl;
-            (*it)->generateDisplacement(disp_sizes_);
+            (*it)->generateDisplacement();
         }
     }
     
@@ -933,7 +934,7 @@ ForceField::readXMLData(string filename)
             continue; //nothing to do
 
         sstr << disp->label() << " not assigned energy" << endl;
-        disp->generateDisplacement(disps);
+        disp->generateDisplacement();
         sstr << disp->getDisplacementMolecule()->getXYZString(bohr) << endl;
         sstr << endl;
         ++nmissing;
@@ -1118,6 +1119,18 @@ ForceField::compute()
     {
         AnharmWriter anharch(mol_, this);
         anharch.commit(DEFAULT_ANHARM_INPUT_FILE);
+    }
+
+
+    //now compute the taylor series approximations
+    vector<TaylorSeriesEnergyPtr> energies;
+    TaylorSeriesEnergy::buildEnergyApproximations(energies, disp_iter_, deriv_iter_);
+
+    vector<TaylorSeriesEnergyPtr>::const_iterator it(energies.begin());
+    for ( ; it != energies.end(); ++it)
+    {
+        TaylorSeriesEnergyPtr energy(*it);
+        energy->print();
     }
 }
 

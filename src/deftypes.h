@@ -68,6 +68,7 @@
 #define CoordinateSubspacePtr boost::intrusive_ptr<CoordinateSubspace>  
 
 #define TaylorTermPtr boost::intrusive_ptr<TaylorTerm>  
+#define TaylorSeriesEnergyPtr boost::intrusive_ptr<TaylorSeriesEnergy>  
 
 #define OptimizationPtr boost::intrusive_ptr<Optimization>  
 #define OptimizationStepPtr boost::intrusive_ptr<OptimizationStep>  

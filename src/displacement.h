@@ -13,6 +13,7 @@ namespace gigide {
 class TaylorTerm;
 class Displacement;
 class Derivative;
+class TaylorSeriesEnergy;
 
 /** 
     @class DisplacementMapping
@@ -95,13 +96,15 @@ class DisplacementMapping : public smartptr::Serializable
 class Displacement : public smartptr::Serializable
 {
     private:
-        /** The list of integers defining the displacements. Suppose we have the coordinate sets
+        /** The list of increments defining the displacements. Suppose we have the coordinate sets
             R(O1-H2), R(O1-H3), A(H2-O1-H3). A displacement of 0.5 along R(O1-H2),
             0 along R(O1-H3), and 2.0 along A(H2-O1-H3) would be represented as
-            would be <0.5, 0, 2.0> */
-        std::vector<double> displacements_;
+            would be <0.5, 0, 2.0>.  These are not absolute displacements! */
+        std::vector<double> increments_;
 
-        /** The label for the displacement. The label is exactly the vector #displacements_ */
+        std::vector<double> dispsizes_;
+
+        /** The label for the displacement. The label is exactly the vector #increments_ */
         std::string label_;
 
         /** The displacement matrix defining the displacement.  This is derived from the B-matrix */
@@ -113,8 +116,10 @@ class Displacement : public smartptr::Serializable
 
         /** Whether or not an energy has been assigned yet to this displacement */
         bool energy_assigned_;
+
         /** Whether or not gradients have been assigned yet to this displacement */
         bool grad_assigned_;
+
         /** Whether or force constants have been assigned yet to this displacement */
         bool fc_assigned_;
 
@@ -133,10 +138,13 @@ class Displacement : public smartptr::Serializable
         /** The molecule representing the displaced geometry */
         MoleculePtr dispmol_;
 
+        TaylorSeriesEnergyPtr approx_energy_;
+
         /**
             The set of simple internal coordinates used to generate the displaced geometry
         */
         Set<ConstSimpleInternalCoordinatePtr> simples_;
+
 
         /** 
             The set of coordinates the displacement is built on 
@@ -163,7 +171,7 @@ class Displacement : public smartptr::Serializable
         int refcount_;
 
         /**
-            The degree of the displacement.  This is just the sum of the vector #displacements_.
+            The degree of the displacement.  This is just the sum of the vector #increments_.
             This variable is necessary for quick validation of the equivalence of two displacements
         */
         double degree_;
@@ -184,15 +192,17 @@ class Displacement : public smartptr::Serializable
     public:
         /** 
             Constructor.
-            @param disps See #displacements_
+            @param increments See #increments_
             @param mol The center molecule in the displacement, not the displaced geometry!
             @param coords The set of internal coordinates
             @param simples The set of simple internal coordinates the internal coordinates are based on
         */
-        Displacement(const std::vector<double>& disps,
+        Displacement(const std::vector<double>& increments,
                      const ConstMoleculePtr& mol,
                      const Set<ConstInternalCoordinatePtr>& coords,
-                     const Set<ConstSimpleInternalCoordinatePtr>& simples);
+                     const Set<ConstSimpleInternalCoordinatePtr>& simples,
+                     const std::vector<double> dispsizes
+                    );
 
         
         /** 
@@ -203,7 +213,9 @@ class Displacement : public smartptr::Serializable
         */
         Displacement(const ConstMoleculePtr& mol,
                      const Set<ConstInternalCoordinatePtr>& coords,
-                     const Set<ConstSimpleInternalCoordinatePtr>& simples);
+                     const Set<ConstSimpleInternalCoordinatePtr>& simples,
+                     const std::vector<double> dispsizes
+                     );
 
         Displacement(const ArchivePtr& parser);
 
@@ -218,12 +230,11 @@ class Displacement : public smartptr::Serializable
         */
         void validate() const;
 
-
         /** 
-            Return displacement numbers.  See #displacements_
-            @return Displacement numbers
+            See #increments_
+            @return Increment numbers
         */
-        std::vector<double> getDispNumbers() const;
+        std::vector<double> getIncrements() const;
 
         /** 
             Returns the label for the displacement. See #label_
@@ -400,7 +411,7 @@ class Displacement : public smartptr::Serializable
             Prints a descriptive label 
             @param os The output stream to print to
         */
-        void print(std::ostream& os = std::cout) const;
+        void print(std::ostream& os = std::cout, bool include_e = true) const;
 
         /** 
             Sends back the displacement matrix associated with the displacment. This is just the
@@ -417,13 +428,12 @@ class Displacement : public smartptr::Serializable
         ConstMoleculePtr getDisplacementMolecule() const;
 
         /** 
-            Generate the displaced geometry for this displacement
-            @param displacements The displacement sizes for the internal coordinates
+            Generate the displaced geometry for this displacement.
         */
-        void generateDisplacement(const std::vector<double>& displacements);
+        void generateDisplacement();
 
         /**
-            Return the displacement extent of the ith coordinate in this displacement.
+            Return the increment of the ith coordinate in this displacement.
             This corresponds to multiples of the displacement size.  For example, suppose
             you are computing the first derivative of the second coordinate as
             \f[
@@ -433,27 +443,30 @@ class Displacement : public smartptr::Serializable
             displacement(0) -> 0 <br>
             displacement(1) -> 0 <br>
             displacement(2) -> -1 <br>
-            @return The displacement extent
+            @return The displacement increment
         */
+        double increment(int i) const;
+
         double displacement(int i) const;
 
         /**
-            Whether this displacement matches a given set of displacements. See #displacement.
+            Whether this displacement matches a given set of increments. See #increments_.
             This is equivalent to loop all elements of the vector and checking if
-            disps[i] == displacement(i).
-            @param disps The set of displacements
+            increments[i] == increment(i).
+            @param disps The set of increments
         */
-        bool matches(const std::vector<double>& disps) const;
+        bool matches(const std::vector<double>& increments) const;
 
         /**
-            Generate a label for the set of displacements.  This is just a string representation of the vector.
-            @param disps The set of displacements
+            Generate a label for the set of increments.  This is just a string representation of the vector.
+            @param disps The set of increments
             @return string label
         */
-        static std::string label(const std::vector<double>& disps);
+        static std::string label(const std::vector<double>& increments);
 
         /** 
             Generates a molecule with the followintg displacements in the internal coordinates.
+            These are actual DISPLACEMENTS, not increments.
             @param displacements The displacement sizes from the current molecular geometry
             @param mol A "guess" molecule for the final geometry
             @param coords The internal coordinates
@@ -468,6 +481,7 @@ class Displacement : public smartptr::Serializable
 
         /** 
             Generates a molecule with the followintg displacements in the internal coordinates.
+            These are actual DISPLACEMENTS, not increments.
             @param displacements The displacement sizes from the current molecular geometry
             @param mol A "guess" molecule for the final geometry
             @param coords The internal coordinates
@@ -512,16 +526,7 @@ class Displacement : public smartptr::Serializable
             std::vector<SimpleInternalCoordinatePtr>& newsimples
         );
 
-        /**
-            Compute how many units along a given internal coordinate the molecule is displaced.
-            @param mol The molecule to compute the displacement on
-            @param coord The coordinate to compute the displacement along
-            @param disp  The displacement size for the coordinate.  For example, if the internal coordinate value
-                         is displaced 0.02 along the coordinate and disp is 0.1, then the method would return
-                         2.0 as the displacement size.
-            @return The displacement size as a multiple of disp
-        */
-        static double computeDisplacement(const ConstMoleculePtr& mol, const ConstInternalCoordinatePtr& coord, double disp);
+
 };
 
 /** 
@@ -541,6 +546,8 @@ class DisplacementIterator : public smartptr::Serializable
 
         /** The number of unique displacements */
         int nunique_;
+
+        std::vector<double> dispsizes_;
 
         /** The complete set of TaylorTerms necessary for every displacement in the iterator */
         std::vector<TaylorTermPtr> terms_;
@@ -592,7 +599,8 @@ class DisplacementIterator : public smartptr::Serializable
         DisplacementIterator(
             const Set<ConstInternalCoordinatePtr>& coords, 
             const Set<ConstSimpleInternalCoordinatePtr>& simples, 
-            const ConstMoleculePtr& mol
+            const ConstMoleculePtr& mol,
+            const std::vector<double> dispsizes
         );
 
         DisplacementIterator(const ArchivePtr& parser);
@@ -628,6 +636,26 @@ class DisplacementIterator : public smartptr::Serializable
             RectMatrixPtr& symmop
         );
 
+        /**
+            Compute the displacement of a given set of xyz coordinates from the central molecule
+            as multiples of a given set of displacement sizes.  For example if the internal coordinate
+            displacements are <0.02,0.0,0.02> and the displacement sizes are <0.01,0.01,0.02> then
+            the computed displacements array would be <2.0, 0.0, 1.0>
+
+            @param xyz 
+        */
+        std::vector<double> computeIncrements(ConstRectMatrixPtr xyz); 
+
+        /**
+            Compute how many units along a given internal coordinate the molecule is displaced.
+            @param mol The molecule to compute the displacement on
+            @param coord The coordinate to compute the displacement along
+            @param disp  The displacement size for the coordinate.  For example, if the internal coordinate value
+                         is displaced 0.02 along the coordinate and disp is 0.1, then the method would return
+                         2.0 as the displacement size.
+            @return The displacement size as a multiple of disp
+        */
+        double computeIncrement(const ConstMoleculePtr& mol, const ConstInternalCoordinatePtr& coord, double disp);
 
         /**
             Read and generate displacements from a dispfile. See readDisplacements.
@@ -644,33 +672,24 @@ class DisplacementIterator : public smartptr::Serializable
         void addDisplacement(DisplacementPtr disp);
 
         /**
-            Get a displacement matching the given displacement sizes. See #displacements_.
+            Get a displacement matching the given increment sizes. See #increments_.
             If the displacement is not found, it is created and added to the iterator.
             Contrast with findDisplacement.
 
-            @param disps The displacements sizes of the displacement to find
+            @param increments The increment sizes of the displacement to find
             @return The matching displacement
         */
-        DisplacementPtr getDisplacement(std::vector<double>& disps);
+        DisplacementPtr getDisplacement(std::vector<double>& increment);
 
         /**
-            Find a displacement matching the given displacement sizes. See #displacements_.
+            Find a displacement matching the given increments. See #increments_.
             If the displacement is not found, it returns null. Contrast with getDisplacement.
 
-            @param disps The displacements sizes of the displacement to find
+            @param disps The increment sizes of the displacement to find
             @return The matching displacement
         */
-        DisplacementPtr findDisplacement(const std::vector<double>& disps);
+        DisplacementPtr findDisplacement(const std::vector<double>& increments);
 
-        /**
-            Compute the displacement of a given set of xyz coordinates from the central molecule
-            as multiples of a given set of displacement sizes.  For example if the internal coordinate
-            displacements are <0.02,0.0,0.02> and the displacement sizes are <0.01,0.01,0.02> then
-            the computed displacements array would be <2.0, 0.0, 1.0>
-
-            @param xyz 
-        */
-        std::vector<double> computeDisplacements(ConstRectMatrixPtr xyz, const std::vector<double>& dispsizes) const;
 
         /**
             Looks for the zero displacement.  Equivalent to calling findDisplacement with 

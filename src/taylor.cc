@@ -4,6 +4,8 @@
 #include <src/qff.h>
 #include <src/displacement.h>
 #include <src/derivative.h>
+#include <src/exception.h>
+#include <src/units.h>
 
 using namespace gigide;
 using namespace std;
@@ -41,6 +43,21 @@ TaylorTerm::TaylorTerm(
     }
 }
 
+void
+TaylorTerm::assignDerivative(
+    DerivativeIteratorPtr deriter
+)
+{
+    deriv_ = deriter->getDerivativeFromIndices(indices_);
+    if (!deriv_)
+    {
+        stringstream sstr;
+        sstr << "Could not find derivative for taylor term:" << endl;
+        print(sstr);
+        except(sstr.str());
+    }
+}
+
 string
 TaylorTerm::polynomialString(
     ConstDisplacementPtr disp
@@ -71,19 +88,31 @@ TaylorTerm::coef(
     double coef = prefactor_;
     vector<int>::const_iterator it;
     for (it = indices_.begin(); it != indices_.end(); ++it)
-        coef *= disp->displacement(*it);
+        coef *= disp->increment(*it);
     return coef;
+}
+
+double
+TaylorTerm::value(
+    ConstDisplacementPtr disp
+) const
+{
+    double coef = prefactor_;
+    vector<int>::const_iterator it;
+    for (it = indices_.begin(); it != indices_.end(); ++it)
+        coef *= disp->displacement(*it);
+    return coef * deriv_->value();
 }
 
 void
 TaylorTerm::getNonzeroTerms(
-    vector<TaylorTermPtr>& terms,
+    const vector<TaylorTermPtr>& terms,
     vector<TaylorTermPtr>& nonzero_terms,
     ConstDisplacementPtr disp,
     double tol
 )
 {
-    vector<TaylorTermPtr >::iterator it;
+    vector<TaylorTermPtr >::const_iterator it;
     for (it = terms.begin(); it != terms.end(); ++it)
     {
         TaylorTermPtr term = *it;
@@ -91,6 +120,12 @@ TaylorTerm::getNonzeroTerms(
         if ( fabs(coef) > tol )
             nonzero_terms.push_back(term);
     }
+}
+
+DerivativePtr
+TaylorTerm::deriv() const
+{
+    return deriv_;
 }
 
 void
@@ -185,7 +220,7 @@ TaylorTerm::accumulate(
     int polynomial = 1;
     for (it = indices_.begin(); it != indices_.end(); ++it)
     {
-        polynomial *= disp->displacement(*it);
+        polynomial *= disp->increment(*it);
     }
 
     coef_ += coef * polynomial;
@@ -234,3 +269,87 @@ TaylorTerm::reset()
 {
     coef_ = 0;
 }
+
+
+TaylorSeriesEnergy::TaylorSeriesEnergy(
+    const std::vector<TaylorTermPtr>& terms,
+    DisplacementPtr disp,
+    double E_0
+) : energy_(E_0), disp_(disp)
+{
+    //get the nonzero terms for this displacement
+    TaylorTerm::getNonzeroTerms(
+        terms,
+        terms_,
+        disp
+    );
+
+    //loop the nonzero terms and compute the value
+    vector<TaylorTermPtr>::const_iterator it(terms_.begin());
+    for ( ; it != terms_.end(); ++it)
+    {
+        TaylorTermPtr term(*it);
+        energy_ += term->value(disp);
+    }
+}
+
+void
+TaylorSeriesEnergy::buildEnergyApproximations(
+    vector<TaylorSeriesEnergyPtr>& energies,
+    DisplacementIteratorPtr dispiter,
+    DerivativeIteratorPtr deriter
+)
+{
+    //first, build the taylor terms
+    vector<TaylorTermPtr> terms;
+    int ncoords = deriter->ncoords();
+    int derlevel = deriter->level();
+    TaylorTerm::generateTerms(
+        terms,
+        0,
+        derlevel,
+        ncoords
+    );
+
+    //loop through the terms and assign the appropriate derivative
+    vector<TaylorTermPtr>::const_iterator it(terms.begin());
+    for ( ; it != terms.end(); ++it)
+    {
+        TaylorTermPtr term(*it);
+        term->assignDerivative(deriter);
+    }
+    
+    //get the zero displacement
+    DisplacementPtr disp0(dispiter->findZeroDisplacement());
+
+    if (!disp0)
+        except("Cannot build taylor series energy without a center displacment");
+
+    double E_0 = disp0->getEnergy();
+
+    //now that all of the terms have been assigned, create a taylor series energy object for each displacement
+    DisplacementIterator::iterator dispit(dispiter->begin());
+    for ( ; dispit != dispiter->end(); ++dispit)
+    {
+        DisplacementPtr disp(*dispit);
+        TaylorSeriesEnergyPtr edisp(new TaylorSeriesEnergy(terms, disp, E_0));
+        energies.push_back(edisp);
+    }
+}
+
+void
+TaylorSeriesEnergy::print(ostream& os) const
+{
+    os << "Taylor Series Energy for "; disp_->print(os, false);
+    //convert the error to hartree
+    double err = Units::convert(error(), Units::Hartree) * 1e6;
+
+    os << stream_printf("Eapprox = %14.10f, Error = %12.8f uH", energy_, err) << endl;
+}
+
+double
+TaylorSeriesEnergy::error() const
+{
+    return disp_->getEnergy() - energy_;
+}
+

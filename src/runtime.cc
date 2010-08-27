@@ -55,6 +55,7 @@ GigideRuntime::init_molecule()
     mol_->computePointGroup();
     cout << "Abelian point group: " << mol_->getPointGroup()->name() << endl;
     mol_->getPointGroup()->print();
+    cout << endl;
 }
 
 void
@@ -79,6 +80,7 @@ GigideRuntime::init_symmetry()
             SimpleInternalCoordinatePtr coord = *it;
             coord->computeCharacters();
             coord->print();
+            cout << endl;
         }
     }
 

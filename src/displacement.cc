@@ -25,9 +25,10 @@ SerialDeclare(DisplacementMapping);
 DisplacementIterator::DisplacementIterator(
     const Set<ConstInternalCoordinatePtr>& coords, 
     const Set<ConstSimpleInternalCoordinatePtr>& simples,
-    const ConstMoleculePtr& mol
+    const ConstMoleculePtr& mol,
+    const std::vector<double> dispsizes
 ) :
-    mol_(mol), simples_(simples), coords_(coords)
+    mol_(mol), simples_(simples), coords_(coords), dispsizes_(dispsizes)
 {
     SetRuntime(DisplacementIterator);
 
@@ -160,7 +161,7 @@ DisplacementIterator::readDispFile(
             for (int dispnum=0; dispnum < disp_combos.size(); dispnum++)
             {
                 vector<double> disp_sizes = disp_combos[dispnum];
-                DisplacementPtr new_disp = new Displacement(disp_sizes, mol_, coords_, simples_);
+                DisplacementPtr new_disp = new Displacement(disp_sizes, mol_, coords_, simples_, dispsizes_);
                 displacements_.push_back(new_disp);
             }
         }
@@ -208,7 +209,7 @@ DisplacementIterator::getDisplacement(vector<double>& disps)
     if (disp.get() != NULL)
         return disp;
 
-    disp = new Displacement(disps, mol_, coords_, simples_);
+    disp = new Displacement(disps, mol_, coords_, simples_, dispsizes_);
 
     addDisplacement(disp);
     return disp;
@@ -273,7 +274,7 @@ void
 DisplacementIterator::addZeroDisplacement()
 {
     vector<double> zeros(coords_.size(), 0);
-    DisplacementPtr new_disp = new Displacement(zeros, mol_, coords_, simples_);
+    DisplacementPtr new_disp = new Displacement(zeros, mol_, coords_, simples_, dispsizes_);
     displacements_.push_back(new_disp);
 }
 
@@ -404,20 +405,19 @@ DisplacementIterator::testEquivalence(
 
 
 vector<double>
-DisplacementIterator::computeDisplacements(
-    ConstRectMatrixPtr xyz, 
-    const vector<double>& dispsizes
-) const
+DisplacementIterator::computeIncrements(
+    ConstRectMatrixPtr xyz
+)
 {
     MoleculePtr dispmol = mol_->copy();
     dispmol->setXYZ(xyz);
-    vector<double> disps;
+    vector<double> increments;
     for (int i=0; i < coords_.size(); i++)
     {
         ConstInternalCoordinatePtr coord = coords_[i];
-        double disp = dispsizes[i];
-        double dispnum = Displacement::computeDisplacement(dispmol, coord, disp);
-        disps.push_back(dispnum);
+        double disp = dispsizes_[i];
+        double increment = computeIncrement(dispmol, coord, disp);
+        increments.push_back(increment);
     }
     
     int debug = KeywordSet::getKeyword("geometry debug")->getValueInteger();
@@ -431,7 +431,27 @@ DisplacementIterator::computeDisplacements(
     }
     
 
-    return disps;
+    return increments;
+}
+
+double
+DisplacementIterator::computeIncrement(const ConstMoleculePtr& mol, const ConstInternalCoordinatePtr& refcoord, double disp)
+{
+    double refval = refcoord->getValue();
+    double newval = refcoord->getValueForMolecule(mol);
+    double dispnum = (newval - refval) / disp;
+
+    int debug = KeywordSet::getKeyword("geometry debug")->getValueInteger();
+    if (debug >= 2)
+    {
+        cout << stream_printf("Reference value: %18.14f Displacement value: %18.14f Displacement: %18.14e",
+                              refval,
+                              newval,
+                              dispnum) << endl;
+    }
+
+    return dispnum;
+
 }
 
 DisplacementIterator::~DisplacementIterator()
@@ -442,11 +462,13 @@ DisplacementIterator::~DisplacementIterator()
         (*it)->clearMappings();
 }
 
-Displacement::Displacement(const vector<double>& disps, 
+Displacement::Displacement(const vector<double>& increments, 
                            const ConstMoleculePtr& mol,
                            const Set<ConstInternalCoordinatePtr>& coords,
-                           const Set<ConstSimpleInternalCoordinatePtr>& simples)
-  : mol_(mol), coords_(coords), simples_(simples), displacements_(disps)
+                           const Set<ConstSimpleInternalCoordinatePtr>& simples,
+                           const std::vector<double> dispsizes
+)
+  : mol_(mol), coords_(coords), simples_(simples), increments_(increments), dispsizes_(dispsizes)
 {
     SetRuntime(Displacement);
 
@@ -462,8 +484,10 @@ Displacement::Displacement(const vector<double>& disps,
 
 Displacement::Displacement(const ConstMoleculePtr& mol,
                            const Set<ConstInternalCoordinatePtr>& coords,
-                           const Set<ConstSimpleInternalCoordinatePtr>& simples)
-    : mol_(mol), coords_(coords), simples_(simples), displacements_(coords.size(), 0)
+                           const Set<ConstSimpleInternalCoordinatePtr>& simples,
+                           const std::vector<double> dispsizes
+)
+    : mol_(mol), coords_(coords), simples_(simples), increments_(coords.size(), 0), dispsizes_(dispsizes)
 {
     SetRuntime(Displacement);
 
@@ -492,7 +516,7 @@ Displacement::Displacement(const ArchivePtr& arch)
     serial_load(disptype);
     serial_load(gradients);
     serial_load(fc);
-    serial_load(displacements);
+    serial_load(increments);
     serial_load(dispmol);
     serial_load(displacement_matrix);
     serial_load(mol);
@@ -518,7 +542,7 @@ Displacement::serialize(const ArchivePtr& arch) const
     serial_save(disptype);
     serial_save(gradients);
     serial_save(fc);
-    serial_save(displacements);
+    serial_save(increments);
     serial_save(dispmol);
     serial_save(displacement_matrix);
     serial_save(mol);
@@ -532,18 +556,18 @@ Displacement::serialize(const ArchivePtr& arch) const
 void
 Displacement::init()
 {
-    label_ = label(displacements_);
+    label_ = label(increments_);
 
     //build the "displacement" matrix for this displacments
     //this just corresponds to the B vectors scaled by the displacement extent
     //start from the first coordinates b matrix
-    displacement_matrix_ = coords_[0]->getBMatrix() * displacements_[0];
+    displacement_matrix_ = coords_[0]->getBMatrix() * increments_[0];
     for (int i=1; i < coords_.size(); i++)
     {
-        double disp_size = displacements_[i];
-        if (disp_size){
+        double increment = increments_[i];
+        if ( fabs(increment) > 1e-6 ){
             ConstRectMatrixPtr disp = coords_[i]->getBMatrix();
-            displacement_matrix_.accumulate(disp * disp_size);
+            displacement_matrix_.accumulate(disp * increment);
         }
     }
 
@@ -558,9 +582,9 @@ Displacement::init()
     }
 
     degree_ = 0;
-    vector<double>::iterator it;
+    vector<double>::const_iterator it;
     vector<double> nonzero_disps;
-    for (it = displacements_.begin(); it != displacements_.end(); ++it)
+    for (it = increments_.begin(); it != increments_.end(); ++it)
     {
         double val = *it;
         degree_ += fabs(val);
@@ -575,13 +599,14 @@ Displacement::init()
     for (it = nonzero_disps.begin(); it != nonzero_disps.end(); ++it)
         sstr << stream_printf(" %4.2f", fabs(*it));
     disptype_ = sstr.str();
+
+    if (!dispsizes_.size())
+        dispsizes_ = GigideKeyword::getDisplacementSizes(coords_.size());
 }
 
 void
 Displacement::validate() const
 {
-    vector<double> disps = GigideKeyword::getDisplacementSizes(coords_.size());
-
     int debug = KeywordSet::getKeyword("geometry debug")->getValueInteger();
     double tol = pow(10, -1 * KeywordSet::getKeyword("geometry tolerance")->getValueInteger());
 
@@ -594,16 +619,16 @@ Displacement::validate() const
         double val = coord->getValueForMolecule(dispmol_);
         double refval = coord->getValue();
         double absdisp = val - refval;
-        double disp = absdisp / disps[i];
+        double disp = absdisp / dispsizes_[i];
 
         if (debug)
             cout << stream_printf("\td[%d] -> %20.14f   %20.14f   %20.14f", i, refval, val, disp) << endl;
 
         //this should match displacements
-        double error = fabs(disp - displacements_[i]) * disps[i]; //extra * is for renormalization
+        double error = fabs(disp - increments_[i]) * dispsizes_[i]; //extra * is for renormalization
         if (error > tol)
         {
-            cout << stream_printf("Dispsize = %8.4e Displacement = %18.12f", disps[i], displacements_[i]) << endl;
+            cout << stream_printf("Dispsize = %8.4e Displacement = %18.12f", dispsizes_[i], increments_[i]) << endl;
             cerr << stream_printf("\t        %20s   %20s   %20s", "Reference", "Displacement","Step") << endl;  
             cerr << stream_printf("\td[%d] -> %20.14f   %20.14f   %20.14f", i, refval, val, absdisp) << endl;
             cerr << stream_printf("Tolerance: %8.4e  Error: %8.4e", tol, error) << endl;
@@ -615,25 +640,6 @@ Displacement::validate() const
     }
 }
 
-double
-Displacement::computeDisplacement(const ConstMoleculePtr& mol, const ConstInternalCoordinatePtr& refcoord, double disp)
-{
-    double refval = refcoord->getValue();
-    double newval = refcoord->getValueForMolecule(mol);
-    double dispnum = (newval - refval) / disp;
-
-    int debug = KeywordSet::getKeyword("geometry debug")->getValueInteger();
-    if (debug >= 2)
-    {
-        cout << stream_printf("Reference value: %18.14f Displacement value: %18.14f Displacement: %18.14e",
-                              refval,
-                              newval,
-                              dispnum) << endl;
-    }
-
-    return dispnum;
-
-}
 
 void
 Displacement::clearMappings()
@@ -643,15 +649,15 @@ Displacement::clearMappings()
 
 bool
 Displacement::matches(
-    const vector<double>& disps
+    const vector<double>& increments
 ) const
 {
-    if (disps.size() != displacements_.size())
+    if (increments.size() != increments_.size())
         return false;
 
     vector<double>::const_iterator itme, itother;
-    for (itme = displacements_.begin(), itother = disps.begin();
-         itme != displacements_.end();
+    for (itme = increments_.begin(), itother = increments.begin();
+         itme != increments_.end();
          ++itme, ++itother)
     {
         if ( fabs(*itme - *itother) > ZERODISP ) //diff too big
@@ -683,9 +689,9 @@ Displacement::coords() const
 }
 
 vector<double>
-Displacement::getDispNumbers() const
+Displacement::getIncrements() const
 {
-    return displacements_;
+    return increments_;
 }
 
 double
@@ -775,20 +781,29 @@ Displacement::taylorRepresentation() const
 }
 
 double
+Displacement::increment(int i) const
+{
+    return increments_[i];
+}
+
+double
 Displacement::displacement(int i) const
 {
-    return displacements_[i];
+    return dispsizes_[i] * increments_[i];
 }
 
 void
-Displacement::print(ostream& os) const
+Displacement::print(ostream& os, bool include_e) const
 {
-    stringstream sstr;
-    for (int i=0; i < displacements_.size(); ++i)
+    os << "[";
+    int i=0;
+    for ( ; i < increments_.size() - 1; ++i)
     {
-         sstr << displacements_[i] << " ";
+         os << stream_printf("%5.2f, ", increments_[i]);
     }
-    os << stream_printf("%25s E = %18.12f", sstr.str().c_str(), energy_) << endl;
+    os << stream_printf("%5.2f]", increments_[i]);
+    if (energy_assigned_ && include_e)
+        os << stream_printf(" E = %18.12f", energy_);
 }
 
 bool
@@ -884,9 +899,9 @@ Displacement::assignEnergy(double energy)
 bool
 Displacement::isZeroDisplacement() const
 {
-    for (int i=0; i < displacements_.size(); i++)
+    for (int i=0; i < increments_.size(); i++)
     {
-        if (displacements_[i] != 0)
+        if (increments_[i] != 0)
             return false;
     }
     return true;
@@ -967,18 +982,16 @@ Displacement::getDerivativeValue(const ConstDerivativePtr& deriv) const
 }
 
 void
-Displacement::generateDisplacement(const vector<double>& disp_sizes)
+Displacement::generateDisplacement()
 {
-    cout << "Generating displacement " << label_ << endl;
-
-    vector<double> disp = getDispNumbers();
+    vector<double> disp = getIncrements();
     vector<double> displacements;
     for (int i=0; i < disp.size(); i++)
     {
-        double disp_degree = disp[i];
-        double disp_size = disp_sizes[i];
-        double total_disp = disp_degree * disp_size;
-        displacements.push_back(total_disp);
+        double increment = disp[i];
+        double dispsize = dispsizes_[i];
+        double totaldisp = increment * dispsize;
+        displacements.push_back(totaldisp);
     }
     dispmol_ = displaceGeometry(displacements, mol_, coords_, simples_);
 }
@@ -1285,3 +1298,4 @@ DisplacementMapping::assignForceConstants(ConstRectMatrixPtr xyzfc, ConstRectMat
     RectMatrixPtr transformed_grads = permop_ * xyzgrads * symmop_;
     disp_->assignForceConstants(transformed_fc, transformed_grads);
 }
+

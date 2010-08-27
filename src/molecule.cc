@@ -155,7 +155,10 @@ Molecule::print(ostream& os) const
     os << stream_printf("natoms = %d", natoms()) << endl;
     os << "point group = " << pg_->name() << endl;
     for (int i=0; i < natoms(); ++i)
+    {
         getAtom(i)->print(os);
+        os << endl;
+    }
 }
 
 ConstPointGroupPtr
@@ -717,6 +720,6 @@ Atom::print(ostream& os) const
                         symbol_.c_str(),
                         xyz_[0],
                         xyz_[1],
-                        xyz_[2]) << endl;
+                        xyz_[2]);
 }
 

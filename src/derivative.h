@@ -472,6 +472,13 @@ class DerivativeIterator : public smartptr::Serializable
         */
         DerivativePtr getDerivative(const std::vector<int>& levels) const;
 
+        /**
+            Fetch a derivative matching the indices.  See Derivative::indices_ for format.
+            @levels The set of indices defining the derivative
+            @return The derivative matching the indices
+        */
+        DerivativePtr getDerivativeFromIndices(const std::vector<int>& indices) const;
+
         /** 
             Find a combination derivative.  We have three different derivative iterators.  The main iterator
             iterates through all the final values that will be computed.  The compute iterator is the iterator
@@ -486,6 +493,8 @@ class DerivativeIterator : public smartptr::Serializable
             @return The mixed derivative
         */
         DerivativePtr findCombination(const ConstDerivativePtr& comp_deriv, const ConstDerivativePtr& value_deriv) const;
+
+        int ncoords() const;
 
 
 };

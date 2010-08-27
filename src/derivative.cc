@@ -82,6 +82,17 @@ DerivativeIterator::DerivativeIterator(
 }
 
 DerivativePtr
+DerivativeIterator::getDerivativeFromIndices(const vector<int>& indices) const
+{
+    vector<int> levels(coords_.size(), 0);
+    vector<int>::const_iterator it(indices.begin());
+    for ( ; it != indices.end(); ++it)
+        ++levels[*it];
+
+    return getDerivative(levels);
+}
+
+DerivativePtr
 DerivativeIterator::getDerivative(const vector<int>& levels) const
 {
     //iterate the map to find the displacement
@@ -109,6 +120,11 @@ DerivativeIterator::DerivativeIterator(const ArchivePtr& arch)
     serial_load(mol);
 }
 
+int
+DerivativeIterator::ncoords() const
+{
+    return coords_.size();
+}
 
 void
 DerivativeIterator::serialize(const ArchivePtr& arch) const

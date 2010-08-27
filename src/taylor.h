@@ -8,6 +8,9 @@
 namespace gigide {
 
 class Displacement;
+class DisplacementIterator;
+class Derivative;
+class DerivativeIterator;
 
 /**
     @class TaylorTerm
@@ -37,6 +40,8 @@ class TaylorTerm : public smartptr::Countable {
         */
         double prefactor_;
 
+        DerivativePtr deriv_;
+
     
     public:
         /**
@@ -53,6 +58,13 @@ class TaylorTerm : public smartptr::Countable {
         */
         TaylorTerm(
             const std::vector<int>& indices
+        );
+
+        /**
+        */
+        void
+        assignDerivative(
+            DerivativeIteratorPtr deriter
         );
 
         /**
@@ -84,6 +96,13 @@ class TaylorTerm : public smartptr::Countable {
         coef(ConstDisplacementPtr disp) const;
 
         /**
+            Compute the value of the taylor series term.  This is coef()
+            times the value of #deriv_
+        */
+        double
+        value(ConstDisplacementPtr disp) const;
+
+        /**
             Returns a string representation of the polynomial term associated with a displacement.
             @param disp The displacement to get the polynomial for
             @param string The string representation of the polynomail
@@ -107,7 +126,7 @@ class TaylorTerm : public smartptr::Countable {
         /**
             Return a string representation of the term in the index
             representation.  See #indices_.
-            @return A descriptive strin for the Taylor term
+            @return A descriptive string for the Taylor term
         */
         std::string
         name() const;
@@ -119,6 +138,8 @@ class TaylorTerm : public smartptr::Countable {
         void
         print(std::ostream& os = std::cout) const;
 
+        DerivativePtr deriv() const;
+
         /**
             Filter out all the nonzero contributions to a given displacement.
 
@@ -129,7 +150,7 @@ class TaylorTerm : public smartptr::Countable {
         */
         static void
         getNonzeroTerms(
-            std::vector<TaylorTermPtr>& terms,
+            const std::vector<TaylorTermPtr>& terms,
             std::vector<TaylorTermPtr>& nonzero_terms,
             ConstDisplacementPtr disp,
             double tol = 1e-6
@@ -169,6 +190,37 @@ class TaylorTerm : public smartptr::Countable {
             int maxdepth,
             int ncoords
         );
+
+};
+
+class TaylorSeriesEnergy : public smartptr::Countable {
+
+    private:
+        DisplacementPtr disp_;
+
+        std::vector<TaylorTermPtr> terms_;
+
+        double energy_;
+
+        TaylorSeriesEnergy(
+            const std::vector<TaylorTermPtr>& terms,
+            DisplacementPtr disp,
+            double E_0
+        );
+
+    public:
+        static void
+        buildEnergyApproximations(
+            std::vector<TaylorSeriesEnergyPtr>& energies,
+            DisplacementIteratorPtr dispiter,
+            DerivativeIteratorPtr deriter
+        );
+
+        void print(std::ostream& os = std::cout) const;
+
+        double get_energy() const;
+
+        double error() const;
 
 };
 
