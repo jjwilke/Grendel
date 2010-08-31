@@ -253,8 +253,6 @@ class KeywordIterator : public smartptr::Countable {
         */
         std::string getName() const;
 
-
-
         /**
             Move to the next keyword.
         */

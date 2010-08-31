@@ -925,26 +925,33 @@ ForceField::readXMLData(string filename)
 
     //loop through and figure out which displacements didn't get assigned a value
     stringstream sstr;
-    int nmissing = 0;
     vector<double> disps = GigideKeyword::getDisplacementSizes(coords_.size());
+
+    vector<DisplacementPtr> missing;
     for (DisplacementIterator::iterator it (disp_iter_->begin()); it != disp_iter_->end(); ++it)
     {
         DisplacementPtr disp = *it;
         if (disp->energyAssigned())
             continue; //nothing to do
 
-        sstr << disp->label() << " not assigned energy" << endl;
-        disp->generateDisplacement();
-        sstr << disp->getDisplacementMolecule()->getXYZString(bohr) << endl;
-        sstr << endl;
-        ++nmissing;
+        missing.push_back(disp);
+        cerr << disp->label() << " not assigned energy" << endl;
     }
 
-    if (nmissing)
+    if (missing.size())
     {
-        sstr << stream_printf("%d displacements not assigned energy", nmissing) << endl;
-        string errormsg = sstr.str();
-        except(errormsg);
+        ofstream dispcart;
+        dispcart.open("dispcart_missing");
+        for (int i=0; i < missing.size(); ++i)
+        {
+            DisplacementPtr disp(missing[i]);
+            disp->generateDisplacement();
+            writeMoleculeToDispcart(dispcart, disp->getDisplacementMolecule(), i + 1);
+        }
+        dispcart.close();
+
+        //generate a dispcart file of the missing displacements
+        except(stream_printf("%d displacements not assigned energy", missing.size()));
     }
 }
 
