@@ -1003,7 +1003,7 @@ ForceField::compute()
     if (mindisp.get() != NULL)
     {
             cout << "Minimum energy displacement is "; mindisp->print();
-            cout << stream_printf("Energy =  %16.12f", emin) << endl << endl;
+            //cout << stream_printf("Energy =  %16.12f", emin) << endl << endl;
     }
 
     DisplacementPtr center = disp_iter_->findZeroDisplacement();
