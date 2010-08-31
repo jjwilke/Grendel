@@ -266,7 +266,6 @@ class InternalCoordinate : public smartptr::Serializable {
         
         ConstVectorPtr subgroup_characters(gigstr subgroup) const;
 
-        bool matches(const ConstInternalCoordinatePtr& coord) const;
 
         /**
             Returns a description of the connectivity for the coordinate, e.g. R(1-2) for bond length,
@@ -403,6 +402,8 @@ class SimpleInternalCoordinate : public InternalCoordinate
                               and no content is cleared from the vector.
         */
         virtual void dummies(std::vector<int>& dummy_list) const;
+
+        virtual bool matches(const ConstSimpleInternalCoordinatePtr& coord) const;
 
         /**
             Fetches the connectivity of the internal coordinate. See #connectivity_.
@@ -779,6 +780,8 @@ class Lin1 : public SimpleInternalCoordinate {
         /**
         */
         double getValue() const;
+
+        bool matches(const ConstSimpleInternalCoordinatePtr& coord) const;
 
         /**
         */

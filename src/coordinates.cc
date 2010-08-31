@@ -56,7 +56,7 @@ InternalCoordinate::serialize(const ArchivePtr& arch) const
 }
 
 bool
-InternalCoordinate::matches(const ConstInternalCoordinatePtr& coord) const
+SimpleInternalCoordinate::matches(const ConstSimpleInternalCoordinatePtr& coord) const
 {
     return coordtype_ == coord->type() && connectivityString() == coord->connectivityString();
 }
@@ -472,7 +472,13 @@ SymmetryInternalCoordinate::copy(
     }
 
     if (simples_.size() != newsimples.size())
-        except("Symmetry internal coordinate copy failed.  Simple internals do not match.");
+    {
+        printDetail(cerr);
+        cerr << endl;
+        except(
+         stream_printf("Symmetry internal coordinate copy failed.  %d simple internals match, but I need %d", newsimples.size(), simples_.size())
+     );
+    }
 
     SymmetryInternalCoordinatePtr newsymm(new SymmetryInternalCoordinate(coeffs_, newsimples, mol));
     return newsymm;
@@ -1216,6 +1222,21 @@ Lin1::serialize(const ArchivePtr& arch) const
 {
     SimpleInternalCoordinate::serialize(arch);
     serial_save(ed);
+}
+
+bool
+Lin1::matches(const ConstSimpleInternalCoordinatePtr& coord) const
+{
+    bool check = SimpleInternalCoordinate::matches(coord);
+    if (!check)
+        return false;
+
+    ConstLin1Ptr cast(boost::dynamic_pointer_cast<const Lin1,const SimpleInternalCoordinate>(coord));
+    if (!cast)
+        return false;
+
+    VectorPtr diff = ed_ - cast->ed();
+    return (diff.maxabs() < 1e-8);
 }
 
 SimpleInternalCoordinatePtr
