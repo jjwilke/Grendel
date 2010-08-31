@@ -1207,7 +1207,7 @@ Lin1::Lin1(
     //const cast the molecule for now... no other way to do this
     //at least we are very conscious here of ditching the const modifier
     MoleculePtr unconstmol = boost::const_pointer_cast<Molecule, const Molecule>(mol);
-    dummy_ = unconstmol->register_dummy_atom(ed_);
+    dummy_ = unconstmol->registerDummyAtom(ed_);
 }
 
 Lin1::Lin1(const ArchivePtr& arch)

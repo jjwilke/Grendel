@@ -267,7 +267,7 @@ class Molecule : public smartptr::Serializable {
             @return The atom number based on zero counting as if it were a real atom.
                     This numbering therefore includes all atoms, dummies and real.
         */
-        int register_dummy_atom(ConstVectorPtr xyz);
+        int registerDummyAtom(ConstVectorPtr xyz);
 
         /** 
             @return Number of dummy atoms

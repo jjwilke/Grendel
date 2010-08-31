@@ -199,7 +199,7 @@ Molecule::getDummy(int num) const
     if (num < 0 || num >= dummies_.size()) {
         except(stream_printf("Invalid dummy atom number %d natoms = %d\n", num, dummies_.size()));
     }
-    return atoms_[num];
+    return dummies_[num];
 }
 
 int
@@ -623,7 +623,7 @@ Molecule::displaceAtom(int n, ConstVectorPtr disp)
 }
 
 int
-Molecule::register_dummy_atom(ConstVectorPtr xyz)
+Molecule::registerDummyAtom(ConstVectorPtr xyz)
 {
     AtomPtr atom = new Atom(xyz, "X");
     dummies_.push_back(atom);
