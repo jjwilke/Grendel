@@ -143,13 +143,13 @@ class Displacement : public smartptr::Serializable
         /**
             The set of simple internal coordinates used to generate the displaced geometry
         */
-        Set<ConstSimpleInternalCoordinatePtr> simples_;
+        smartptr::Set<ConstSimpleInternalCoordinatePtr> simples_;
 
 
         /** 
             The set of coordinates the displacement is built on 
         */
-        Set<ConstInternalCoordinatePtr> coords_;
+        smartptr::Set<ConstInternalCoordinatePtr> coords_;
 
         /**
             In testing a given fitting function, the displacement will be a sum
@@ -199,8 +199,8 @@ class Displacement : public smartptr::Serializable
         */
         Displacement(const std::vector<double>& increments,
                      const ConstMoleculePtr& mol,
-                     const Set<ConstInternalCoordinatePtr>& coords,
-                     const Set<ConstSimpleInternalCoordinatePtr>& simples,
+                     const smartptr::Set<ConstInternalCoordinatePtr>& coords,
+                     const smartptr::Set<ConstSimpleInternalCoordinatePtr>& simples,
                      const std::vector<double> dispsizes
                     );
 
@@ -212,8 +212,8 @@ class Displacement : public smartptr::Serializable
             @param simples The set of simple internal coordinates the internal coordinates are based on
         */
         Displacement(const ConstMoleculePtr& mol,
-                     const Set<ConstInternalCoordinatePtr>& coords,
-                     const Set<ConstSimpleInternalCoordinatePtr>& simples,
+                     const smartptr::Set<ConstInternalCoordinatePtr>& coords,
+                     const smartptr::Set<ConstSimpleInternalCoordinatePtr>& simples,
                      const std::vector<double> dispsizes
                      );
 
@@ -315,7 +315,7 @@ class Displacement : public smartptr::Serializable
         bool isUnique() const;
 
         /**
-            Sets the uniqueness of the displacement.
+            smartptr::Sets the uniqueness of the displacement.
             @param unique Whether the displacement is unique.
         */
         void setUnique(bool uniq);
@@ -324,7 +324,7 @@ class Displacement : public smartptr::Serializable
             Returns the set of internal coordinates the displacement is based on.
             @return The internal coordinates
         */
-        Set<ConstInternalCoordinatePtr> coords() const;
+        smartptr::Set<ConstInternalCoordinatePtr> coords() const;
 
         /** Assigns an energy to this displacement.  This will also assign the same energy to all 
             equivalent displacements.
@@ -475,8 +475,8 @@ class Displacement : public smartptr::Serializable
         static MoleculePtr displaceGeometry(
             const std::vector<double>& displacements,
             const ConstMoleculePtr& mol,
-            const Set<ConstInternalCoordinatePtr >& coords,
-            const Set<ConstSimpleInternalCoordinatePtr >& simples
+            const smartptr::Set<ConstInternalCoordinatePtr >& coords,
+            const smartptr::Set<ConstSimpleInternalCoordinatePtr >& simples
         );
 
         /** 
@@ -490,8 +490,8 @@ class Displacement : public smartptr::Serializable
         static MoleculePtr displaceGeometry(
             const std::vector<double>& displacements,
             const ConstMoleculePtr& mol,
-            const Set<ConstInternalCoordinatePtr>& coords,
-            const Set<ConstSimpleInternalCoordinatePtr >& simples,
+            const smartptr::Set<ConstInternalCoordinatePtr>& coords,
+            const smartptr::Set<ConstSimpleInternalCoordinatePtr >& simples,
             std::vector<InternalCoordinatePtr>& newcoords,
             std::vector<SimpleInternalCoordinatePtr>& newsimples
         );
@@ -506,8 +506,8 @@ class Displacement : public smartptr::Serializable
         static MoleculePtr generateGeometry(
             const std::vector<double>& values, 
             const ConstMoleculePtr& mol,
-            const Set<ConstInternalCoordinatePtr>& coords,
-            const Set<ConstSimpleInternalCoordinatePtr>& simples
+            const smartptr::Set<ConstInternalCoordinatePtr>& coords,
+            const smartptr::Set<ConstSimpleInternalCoordinatePtr>& simples
         );
 
         /** 
@@ -520,8 +520,8 @@ class Displacement : public smartptr::Serializable
         static MoleculePtr generateGeometry(
             const std::vector<double>& values, 
             const ConstMoleculePtr& mol,
-            const Set<ConstInternalCoordinatePtr>& coords,
-            const Set<ConstSimpleInternalCoordinatePtr>& simples,
+            const smartptr::Set<ConstInternalCoordinatePtr>& coords,
+            const smartptr::Set<ConstSimpleInternalCoordinatePtr>& simples,
             std::vector<InternalCoordinatePtr>& newcoords,
             std::vector<SimpleInternalCoordinatePtr>& newsimples
         );
@@ -556,10 +556,10 @@ class DisplacementIterator : public smartptr::Serializable
         std::vector<DisplacementPtr> displacements_; 
         
         /** The set of internal coordinates the displacements correspond to */
-        Set<ConstInternalCoordinatePtr> coords_;
+        smartptr::Set<ConstInternalCoordinatePtr> coords_;
 
         /** The set of simple internal coordinates the displacements correspond to */
-        Set<ConstSimpleInternalCoordinatePtr> simples_;
+        smartptr::Set<ConstSimpleInternalCoordinatePtr> simples_;
 
         /** The molecule the displacements will be performed on */
         ConstMoleculePtr mol_;
@@ -597,8 +597,8 @@ class DisplacementIterator : public smartptr::Serializable
             @param mol    The molecule displacements will be built from
         */
         DisplacementIterator(
-            const Set<ConstInternalCoordinatePtr>& coords, 
-            const Set<ConstSimpleInternalCoordinatePtr>& simples, 
+            const smartptr::Set<ConstInternalCoordinatePtr>& coords, 
+            const smartptr::Set<ConstSimpleInternalCoordinatePtr>& simples, 
             const ConstMoleculePtr& mol,
             const std::vector<double> dispsizes
         );
@@ -631,7 +631,7 @@ class DisplacementIterator : public smartptr::Serializable
         bool testEquivalence(
             const ConstDisplacementPtr& refdisp,
             const ConstDisplacementPtr& disp,
-            const Set<ConstSymmetryOperationPtr>& symmops,
+            const smartptr::Set<ConstSymmetryOperationPtr>& symmops,
             RectMatrixPtr& permop,
             RectMatrixPtr& symmop
         );

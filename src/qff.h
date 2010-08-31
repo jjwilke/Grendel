@@ -13,6 +13,7 @@
 #include <src/fit.h>
 #include <src/gigmatrix.h>
 #include <src/deftypes.h>
+#include <src/smartptr/src/pyxml.h>
 
 namespace gigide {
 
@@ -46,10 +47,10 @@ class ForceField : public smartptr::Serializable
         DisplacementIteratorPtr disp_iter_;
 
         /** The set of all internal coordinates */
-        Set<ConstInternalCoordinatePtr> coords_;
+        smartptr::Set<ConstInternalCoordinatePtr> coords_;
 
         /** The set of all simple internals comprising the internal coordinates */
-        Set<ConstSimpleInternalCoordinatePtr> simples_;
+        smartptr::Set<ConstSimpleInternalCoordinatePtr> simples_;
 
         /** The molecule for which a force field is being computed.  This is the undisplaced molecule */
         ConstMoleculePtr mol_;
@@ -89,8 +90,8 @@ class ForceField : public smartptr::Serializable
             @param simples    The set of simple internals comprising the coordinates
         */
         ForceField(const ConstMoleculePtr& center_mol, 
-                   const Set<ConstInternalCoordinatePtr>& coords,
-                   const Set<ConstSimpleInternalCoordinatePtr>& simples);
+                   const smartptr::Set<ConstInternalCoordinatePtr>& coords,
+                   const smartptr::Set<ConstSimpleInternalCoordinatePtr>& simples);
 
         ForceField(const ArchivePtr& parser);
 
@@ -103,7 +104,7 @@ class ForceField : public smartptr::Serializable
         RectMatrixPtr buildB() const;
 
         static SymmMatrixPtr formGMatrix(
-            const Set<ConstInternalCoordinatePtr>& coords
+            const smartptr::Set<ConstInternalCoordinatePtr>& coords
         );
 
 

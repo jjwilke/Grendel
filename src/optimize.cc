@@ -18,6 +18,7 @@ Optimization::Optimization(
 {
     SetRuntime(Optimization);
 
+#if 0
     //check for hessian
     ifstream ifile("hessian.xml");
     if (ifile) //we have a hessian file
@@ -34,6 +35,7 @@ Optimization::Optimization(
             hessian_.set_element(i,i,1.0);
         precond_ = hessian_.copy();
     }
+#endif
 }
 
 Optimization::Optimization(const ArchivePtr& arch)

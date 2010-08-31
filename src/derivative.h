@@ -110,7 +110,7 @@ class Derivative : public smartptr::Serializable
 		/** 
             The set of coordinates the derivatives are based on 
         */
-        Set<ConstInternalCoordinatePtr> coords_;
+        smartptr::Set<ConstInternalCoordinatePtr> coords_;
 
 		/**
             Depending on symmetry to be determined later, the derivative might be rigorously zero 
@@ -173,7 +173,7 @@ class Derivative : public smartptr::Serializable
 		*/
         Derivative(
             const std::vector<int>& levels,
-            const Set<ConstInternalCoordinatePtr>& coords,
+            const smartptr::Set<ConstInternalCoordinatePtr>& coords,
             const ConstMoleculePtr& mol
         );
 
@@ -328,7 +328,7 @@ class Derivative : public smartptr::Serializable
         double value() const;
 
         /** 
-            Sets the value of the deriavtive
+            smartptr::Sets the value of the deriavtive
             @param val The value of the derivative
         */
         void setValue(double val);
@@ -346,7 +346,7 @@ class Derivative : public smartptr::Serializable
         void printEquivalentDerivatives(std::ostream& os = std::cout) const;
 
         /**
-            Set the uniqueness of the derivative. Derivative is
+            smartptr::Set the uniqueness of the derivative. Derivative is
             assumed unique unless otherwise set.
             @param uniq
         */
@@ -393,7 +393,7 @@ class DerivativeIterator : public smartptr::Serializable
         std::vector<DerivativePtr> derivs_;
 
         /** The set of internal coordinates */
-        Set<ConstInternalCoordinatePtr> coords_;
+        smartptr::Set<ConstInternalCoordinatePtr> coords_;
 
         /** The molecule the derivatives are based on */
         ConstMoleculePtr mol_;
@@ -429,7 +429,7 @@ class DerivativeIterator : public smartptr::Serializable
         */
         DerivativeIterator(
             int level,
-            const Set<ConstInternalCoordinatePtr>& coords,
+            const smartptr::Set<ConstInternalCoordinatePtr>& coords,
             const ConstMoleculePtr& mol
         );
 

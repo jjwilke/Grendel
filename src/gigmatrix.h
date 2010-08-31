@@ -87,7 +87,7 @@ class Vector : public smartptr::Serializable {
 
         Vector(mdim_t n);
 
-        Vector(const ConstArchivePtr& arch);
+        Vector(const ArchivePtr& arch);
 
         void serialize(const ArchivePtr& arch) const;
 

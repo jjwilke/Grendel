@@ -30,7 +30,7 @@ class Midpoint : public XYZPoint {
     
     public:
         Midpoint(
-            const Set<ConstAtomPtr>& atoms
+            const smartptr::Set<ConstAtomPtr>& atoms
         );
 
 };

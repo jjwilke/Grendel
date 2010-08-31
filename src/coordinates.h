@@ -107,7 +107,7 @@ class InternalCoordinate : public smartptr::Serializable {
         static VectorPtr
         addDelocalizedInternalCoordinates(
             const ConstMoleculePtr& mol,
-            const Set<ConstSimpleInternalCoordinatePtr>& simples,
+            const smartptr::Set<ConstSimpleInternalCoordinatePtr>& simples,
             std::vector<InternalCoordinatePtr>& coords,
             double tol = 1e-8
         );
@@ -115,7 +115,7 @@ class InternalCoordinate : public smartptr::Serializable {
         static VectorPtr
         addDelocalizedInternalCoordinates(
             const ConstMoleculePtr& mol,
-            const Set<ConstSimpleInternalCoordinatePtr>& simples,
+            const smartptr::Set<ConstSimpleInternalCoordinatePtr>& simples,
             std::vector<SymmetryInternalCoordinatePtr>& coords,
             double tol = 1e-8
         );
@@ -129,7 +129,7 @@ class InternalCoordinate : public smartptr::Serializable {
         */
         static VectorPtr
         checkCompleteness(
-            const Set<ConstInternalCoordinatePtr>& coords, 
+            const smartptr::Set<ConstInternalCoordinatePtr>& coords, 
             const ConstMoleculePtr& mol
         );
 
@@ -178,13 +178,13 @@ class InternalCoordinate : public smartptr::Serializable {
         static int
         getCoordinateNumber(
             const ConstInternalCoordinatePtr& coord,
-            const Set<ConstInternalCoordinatePtr>& coords
+            const smartptr::Set<ConstInternalCoordinatePtr>& coords
         );
 
         /**
         */
         static RectMatrixPtr formBMatrix(
-            const Set<ConstInternalCoordinatePtr>& coords
+            const smartptr::Set<ConstInternalCoordinatePtr>& coords
         );
 
 		/** 
@@ -307,7 +307,7 @@ class InternalCoordinate : public smartptr::Serializable {
         */
         void testBVectors(double tol = 1e-10);
 
-        virtual InternalCoordinatePtr copy(const ConstMoleculePtr& mol, const Set<ConstSimpleInternalCoordinatePtr>& simples) const = 0;
+        virtual InternalCoordinatePtr copy(const ConstMoleculePtr& mol, const smartptr::Set<ConstSimpleInternalCoordinatePtr>& simples) const = 0;
 
         virtual InternalCoordinatePtr copy() const = 0;
 
@@ -414,7 +414,7 @@ class SimpleInternalCoordinate : public InternalCoordinate
 
         virtual SimpleInternalCoordinatePtr simple_copy(const ConstMoleculePtr& mol) const = 0;
 
-        InternalCoordinatePtr copy(const ConstMoleculePtr& mol, const Set<ConstSimpleInternalCoordinatePtr>& simples) const;
+        InternalCoordinatePtr copy(const ConstMoleculePtr& mol, const smartptr::Set<ConstSimpleInternalCoordinatePtr>& simples) const;
 
         InternalCoordinatePtr copy() const; 
 
@@ -807,12 +807,12 @@ class SymmetryInternalCoordinate : public InternalCoordinate
 
         /**
         */
-        Set<ConstSimpleInternalCoordinatePtr> simples_;
+        smartptr::Set<ConstSimpleInternalCoordinatePtr> simples_;
 
     public:
         SymmetryInternalCoordinate(
             const ConstVectorPtr& coeffs, 
-            const Set<ConstSimpleInternalCoordinatePtr>& coords, 
+            const smartptr::Set<ConstSimpleInternalCoordinatePtr>& coords, 
             const ConstMoleculePtr& mol);
 
         SymmetryInternalCoordinate(const ArchivePtr& arch);
@@ -849,7 +849,7 @@ class SymmetryInternalCoordinate : public InternalCoordinate
 							the symmetry internal only keeps track of the contribution simples.
 			@return The std::vector of coefficients
 		*/
-		VectorPtr getCoefficients(const Set<ConstSimpleInternalCoordinatePtr>& coords) const;
+		VectorPtr getCoefficients(const smartptr::Set<ConstSimpleInternalCoordinatePtr>& coords) const;
 
 		/** Translates the number of internal coordinates from the numbering for the given symmetry internal coordinate
 			(which may only depend on 3 internals) to the numbering for the complete set of simple internals (which may be 6,9,12)
@@ -857,14 +857,14 @@ class SymmetryInternalCoordinate : public InternalCoordinate
 			@param coords	 The complete set of internal coordinates
 			@return The number of the simple internal in the complete set based on zero counting
 		*/
-        int getSimpleCoordinateNumber(int simplenum, const Set<ConstSimpleInternalCoordinatePtr>& coords) const;
+        int getSimpleCoordinateNumber(int simplenum, const smartptr::Set<ConstSimpleInternalCoordinatePtr>& coords) const;
 
         /**
             See @link<connectivityString> connectivityString() @endlink
         */
         std::string connectivityString() const;
 
-        Set<ConstSimpleInternalCoordinatePtr> getSimples() const;
+        smartptr::Set<ConstSimpleInternalCoordinatePtr> getSimples() const;
 
         //InternalCoordinatePtr copy() const; 
 
@@ -872,7 +872,7 @@ class SymmetryInternalCoordinate : public InternalCoordinate
 
         SymmetryInternalCoordinatePtr carbon_copy() const;
 
-        InternalCoordinatePtr copy(const ConstMoleculePtr& mol, const Set<ConstSimpleInternalCoordinatePtr>& simples) const;
+        InternalCoordinatePtr copy(const ConstMoleculePtr& mol, const smartptr::Set<ConstSimpleInternalCoordinatePtr>& simples) const;
 
         void intder_normalize();
 
@@ -977,7 +977,7 @@ class CoordinateSubspace : public smartptr::Serializable {
             @throw GigideException Throws if subsapce is empty
         */
         void printCharacters(
-            const Set<ConstSymmetryOperationPtr>& opers,
+            const smartptr::Set<ConstSymmetryOperationPtr>& opers,
             std::ostream& os = std::cout
         ) const;
 

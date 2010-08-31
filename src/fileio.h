@@ -156,7 +156,7 @@ class InputFileWriter : public FileWriter
         */
         static void makeFile12(
             const ConstMoleculePtr& mol, 
-            const Set<ConstInternalCoordinatePtr>& coords,
+            const smartptr::Set<ConstInternalCoordinatePtr>& coords,
             ConstVectorPtr gradients
         );
 
@@ -193,12 +193,12 @@ class IntderWriter : public InputFileWriter
 
             /**
             */
-            Set<ConstSimpleInternalCoordinatePtr> simples_;
+            smartptr::Set<ConstSimpleInternalCoordinatePtr> simples_;
 
             /**
                 This will be empty if internal coordinates are the same as simples
             */
-            Set<ConstInternalCoordinatePtr> coords_;
+            smartptr::Set<ConstInternalCoordinatePtr> coords_;
 
             /**
                 Iterator for derivatives to print
@@ -237,8 +237,8 @@ class IntderWriter : public InputFileWriter
                          TransformationType type,
                          int nder,
                          const ConstDerivativeIteratorPtr& iter,
-                         const Set<ConstSimpleInternalCoordinatePtr>& simples,
-                         const Set<ConstInternalCoordinatePtr>&  coords,
+                         const smartptr::Set<ConstSimpleInternalCoordinatePtr>& simples,
+                         const smartptr::Set<ConstInternalCoordinatePtr>&  coords,
                          bool includexyz = true);
 
             /*
@@ -284,8 +284,8 @@ class IntderWriter : public InputFileWriter
             static RectMatrixPtr transformGradientsToCartesian(
                 ConstVectorPtr intgrads,
                 const ConstMoleculePtr& mol,
-                const Set<ConstSimpleInternalCoordinatePtr>& simples,
-                const Set<ConstInternalCoordinatePtr>& coords,
+                const smartptr::Set<ConstSimpleInternalCoordinatePtr>& simples,
+                const smartptr::Set<ConstInternalCoordinatePtr>& coords,
                 bool validate = false
             );
 
@@ -301,8 +301,8 @@ class IntderWriter : public InputFileWriter
             static VectorPtr transformGradientsToInternals(
                 ConstRectMatrixPtr xyzgrads,
                 const ConstMoleculePtr& mol,
-                const Set<ConstSimpleInternalCoordinatePtr>& simples,
-                const Set<ConstInternalCoordinatePtr>& coords,
+                const smartptr::Set<ConstSimpleInternalCoordinatePtr>& simples,
+                const smartptr::Set<ConstInternalCoordinatePtr>& coords,
                 bool validate = false
             );
 
@@ -320,8 +320,8 @@ class IntderWriter : public InputFileWriter
                 ConstRectMatrixPtr intfc,
                 ConstVectorPtr intgrads,
                 const ConstMoleculePtr& mol,
-                const Set<ConstSimpleInternalCoordinatePtr>& simples,
-                const Set<ConstInternalCoordinatePtr>& coords,
+                const smartptr::Set<ConstSimpleInternalCoordinatePtr>& simples,
+                const smartptr::Set<ConstInternalCoordinatePtr>& coords,
                 bool validate = false
             );
 
@@ -339,8 +339,8 @@ class IntderWriter : public InputFileWriter
                 ConstRectMatrixPtr xyzfc,
                 ConstRectMatrixPtr xyzgrads,
                 const ConstMoleculePtr& mol,
-                const Set<ConstSimpleInternalCoordinatePtr>& simples,
-                const Set<ConstInternalCoordinatePtr>& coords,
+                const smartptr::Set<ConstSimpleInternalCoordinatePtr>& simples,
+                const smartptr::Set<ConstInternalCoordinatePtr>& coords,
                 bool validate = false
             );
 

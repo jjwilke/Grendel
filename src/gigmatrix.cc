@@ -459,22 +459,8 @@ Matrix::Matrix(const ArchivePtr& arch)
 
     mdim_t size;
     void* ptr;
-    ConstArchivePtr node = arch->loadBinary(&ptr, size, "data");
+    arch->loadBinary(&ptr, size, "data", "");
     data_ = (double *) ptr;
-    node->getAttribute(nrow_, "nrow");
-    node->getAttribute(ncol_, "ncol");
-
-    if (node.get() == NULL)
-    {
-        cerr << "No data on matrix node" << endl;
-        abort();
-    }
-
-    if (size != nrow_ * ncol_ * sizeof(double))
-    {
-        cerr << stream_printf("Data size %ld does not match dims %ld x %ld", size, nrow_, ncol_) << endl;
-        abort();
-    }
 }
 
 void
@@ -482,9 +468,7 @@ Matrix::serialize(const ArchivePtr& arch) const
 {
     Serializable::serialize(arch);
     mdim_t size = nrow_ * ncol_ * sizeof(double);
-    ArchivePtr node = arch->writeBinary(data_, size, "data");
-    node->setAttribute(nrow_, "nrow");
-    node->setAttribute(ncol_, "ncol");
+    arch->writeBinary(data_, size, "data", "");
 }
 
 Matrix::~Matrix()
@@ -689,14 +673,15 @@ Vector::Vector(double* d, mdim_t n) :
     //memcpy(data_, d, n * sizeof(double));
 }
 
-Vector::Vector(const ConstArchivePtr& arch)
+Vector::Vector(const ArchivePtr& arch)
 {
     SetRuntime(Vector);
 
     mdim_t size;
     void* ptr;
-    ConstArchivePtr node = arch->loadBinary(&ptr, size, "data");
+    arch->loadBinary(&ptr, size, "data", "");
     data_ = (double *) ptr;
+#if 0
     node->getAttribute(n_, "n");
 
     if (node.get() == NULL)
@@ -710,6 +695,7 @@ Vector::Vector(const ConstArchivePtr& arch)
         cerr << stream_printf("Data size %ld does not match dim %ld", size, n_) << endl;
         abort();
     }
+#endif
 }
 
 void
@@ -717,9 +703,8 @@ Vector::serialize(const ArchivePtr& arch) const
 {
     Serializable::serialize(arch);
 
-    ArchivePtr node = arch->writeBinary(data_, n_ * sizeof(double), "data");
-    node->setAttribute(n_, "n");
-
+    arch->writeBinary(data_, n_ * sizeof(double), "data", "");
+    //node->setAttribute(n_, "n");
 }
 
 Matrix*

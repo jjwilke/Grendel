@@ -11,16 +11,16 @@ class OptimizationStep : public smartptr::Serializable {
     private:
         ForceFieldPtr qff_;
         ConstMoleculePtr mol_;
-        Set<ConstInternalCoordinatePtr> coords_;
-        Set<ConstSimpleInternalCoordinatePtr> simples_;
+        smartptr::Set<ConstInternalCoordinatePtr> coords_;
+        smartptr::Set<ConstSimpleInternalCoordinatePtr> simples_;
 
         bool computed_;
 
     public:
         OptimizationStep(
             const ConstMoleculePtr& mol,
-            const Set<ConstInternalCoordinatePtr>& coords,
-            const Set<ConstSimpleInternalCoordinatePtr>& simples
+            const smartptr::Set<ConstInternalCoordinatePtr>& coords,
+            const smartptr::Set<ConstSimpleInternalCoordinatePtr>& simples
         );
 
         OptimizationStep(const ArchivePtr& arch);
@@ -52,14 +52,14 @@ class Optimization : public smartptr::Serializable {
         double tol_;
 
         ConstMoleculePtr mol_;
-        Set<ConstInternalCoordinatePtr> coords_;
-        Set<ConstSimpleInternalCoordinatePtr> simples_;
+        smartptr::Set<ConstInternalCoordinatePtr> coords_;
+        smartptr::Set<ConstSimpleInternalCoordinatePtr> simples_;
 
     public:
         Optimization(
             const ConstMoleculePtr& mol,
-            const Set<ConstInternalCoordinatePtr>& coords,
-            const Set<ConstSimpleInternalCoordinatePtr>& simples
+            const smartptr::Set<ConstInternalCoordinatePtr>& coords,
+            const smartptr::Set<ConstSimpleInternalCoordinatePtr>& simples
         );
 
         Optimization(const ArchivePtr& arch);

@@ -105,9 +105,7 @@ Molecule::serialize(const ArchivePtr& arch) const
 void
 Molecule::computePointGroup(const ArchivePtr& arch)
 {
-    //restore the point group
-    ArchivePtr node = arch->fetchBranch("point_group", "topgroup");
-    pg_ = new PointGroup(node);
+    serial_load(pg);
 }
 
 void

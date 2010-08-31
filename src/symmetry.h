@@ -393,7 +393,7 @@ class PointGroupClass : public smartptr::Serializable {
         /**
             The set of symmetry operations in the class
         */
-        Set<ConstSymmetryOperationPtr> members_;
+        smartptr::Set<ConstSymmetryOperationPtr> members_;
 
         /**
         */
@@ -470,7 +470,7 @@ class PointGroupClass : public smartptr::Serializable {
         bool
         testMembership(
             const ConstSymmetryOperationPtr& op,
-            const Set<ConstSymmetryOperationPtr>& symmops
+            const smartptr::Set<ConstSymmetryOperationPtr>& symmops
         ) const;
 };
 
@@ -659,16 +659,16 @@ class PointGroup : public smartptr::Serializable {
 
         void
         formBasis(
-            const Set<ConstSymmetryInternalCoordinatePtr>& internals,
+            const smartptr::Set<ConstSymmetryInternalCoordinatePtr>& internals,
             std::vector<CoordinateSubspacePtr>& subspaces
         ) const;
 
         void
         formBasis(
-            const Set<ConstSimpleInternalCoordinatePtr>& simples
+            const smartptr::Set<ConstSimpleInternalCoordinatePtr>& simples
         );
 
-        Set<PointGroupPtr>
+        smartptr::Set<PointGroupPtr>
         getSubgroups() const;
 
         void

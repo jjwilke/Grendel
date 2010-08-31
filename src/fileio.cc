@@ -12,6 +12,7 @@
 using namespace std;
 using namespace gigide;
 using namespace pyregexp;
+using namespace smartptr;
 
 
 string gigide::getFileText(gigstr filename, gigstr comment)

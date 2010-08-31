@@ -4,6 +4,7 @@
 
 using namespace gigide;
 using namespace std;
+using namespace smartptr;
 
 XYZPoint::XYZPoint(
     ConstVectorPtr xyz

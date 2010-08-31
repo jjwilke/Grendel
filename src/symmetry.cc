@@ -684,7 +684,7 @@ Reflection::Reflection(const ArchivePtr& arch)
     SetRuntime(Reflection);
 
     boost::intrusive_ptr<Vector> tmp;
-    arch->serialize(Archive::Read, tmp, "axis");
+    arch->serialize(Archive::Read, tmp, "axis", "");
     VectorPtr axis(tmp.get()); 
     init(axis);
 }
