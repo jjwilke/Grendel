@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.60)
-AC_INIT(gigide, 1.0, Jeremiah Wilke jjwilke@uga.edu)
+AC_INIT(gigide, 3.0, Jeremiah Wilke jjwilke@uga.edu)
 #sanity check to ensure that source files exist
 AC_CONFIG_SRCDIR([src/main.cc])
 AM_INIT_AUTOMAKE

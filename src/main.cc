@@ -53,6 +53,12 @@ run_final_anharm()
 
 int main(int argc, const char* argv[])
 {
+    cout << "GRENDEL++ " << VERSION << endl;
+    cout << "A code for general energy derivatives for electronic structure methods." << endl;
+    cout << " OR " << endl;
+    cout << "GIGIDE.  Gigide is a general internal coordinate derivative engine." << endl;
+    cout << endl;
+
     Py_Initialize();
 
     //configure the python path so it knows where to find the python libraries
