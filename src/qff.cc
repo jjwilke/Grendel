@@ -1002,7 +1002,7 @@ ForceField::compute()
 
     if (mindisp.get() != NULL)
     {
-            cout << "Minimum energy displacement is "; mindisp->print();
+            cout << "Minimum energy displacement is "; mindisp->print(); cout << endl;
             //cout << stream_printf("Energy =  %16.12f", emin) << endl << endl;
     }
 
@@ -1134,11 +1134,16 @@ ForceField::compute()
     TaylorSeriesEnergy::buildEnergyApproximations(energies, disp_iter_, deriv_iter_);
 
     vector<TaylorSeriesEnergyPtr>::const_iterator it(energies.begin());
+    double error = 0;
     for ( ; it != energies.end(); ++it)
     {
         TaylorSeriesEnergyPtr energy(*it);
-        energy->print();
+        double pterror = energy->error();
+        error += pterror * pterror;
+        //energy->print();
     }
+    error = sqrt(error);
+    cout << stream_printf("RMS Error in Fit for all points: %12.8f uH", error) << endl;
 }
 
 void
