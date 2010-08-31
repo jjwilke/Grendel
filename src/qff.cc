@@ -17,6 +17,7 @@
 #include <src/derivative.h>
 #include <src/displacement.h>
 #include <src/permutation.h>
+#include <src/units.h>
 
 #define USE_SVD 0
 
@@ -1108,6 +1109,24 @@ ForceField::compute()
         }
     }
 
+    //now compute the taylor series approximations
+    vector<TaylorSeriesEnergyPtr> energies;
+    TaylorSeriesEnergy::buildEnergyApproximations(energies, disp_iter_, deriv_iter_);
+
+    vector<TaylorSeriesEnergyPtr>::const_iterator it(energies.begin());
+    double error = 0;
+    for ( ; it != energies.end(); ++it)
+    {
+        TaylorSeriesEnergyPtr energy(*it);
+        double pterror = energy->error();
+        error += pterror * pterror;
+        //energy->print();
+    }
+
+    error = sqrt(error / energies.size());
+    error = Units::convert(error, Units::Hartree) * 1e6; //go to microhartree
+    cout << stream_printf("RMS Error in Fit for all points: %12.8f uH", error) << endl;
+
     //now that all derivatives have been computed, build the important arrays
     buildArrays();
 
@@ -1129,21 +1148,6 @@ ForceField::compute()
     }
 
 
-    //now compute the taylor series approximations
-    vector<TaylorSeriesEnergyPtr> energies;
-    TaylorSeriesEnergy::buildEnergyApproximations(energies, disp_iter_, deriv_iter_);
-
-    vector<TaylorSeriesEnergyPtr>::const_iterator it(energies.begin());
-    double error = 0;
-    for ( ; it != energies.end(); ++it)
-    {
-        TaylorSeriesEnergyPtr energy(*it);
-        double pterror = energy->error();
-        error += pterror * pterror;
-        //energy->print();
-    }
-    error = sqrt(error);
-    cout << stream_printf("RMS Error in Fit for all points: %12.8f uH", error) << endl;
 }
 
 void
