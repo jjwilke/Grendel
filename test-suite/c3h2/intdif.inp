@@ -1,0 +1,42 @@
+$geometry
+bohr
+C    0.0000000000    0.0000000000    2.2964106831 
+C    0.0000000000    0.0000000000   -0.2134165122 
+C    0.0000000000    0.0000000000   -2.6472862285 
+H    1.7502911331    0.0000000000    3.3594644283 
+H   -1.7502911331    0.0000000000    3.3594644283 
+$end
+
+$internals
+r12 = bond 1 2
+r23 = bond 2 3
+r34 = bond 1 4
+r35 = bond 1 5
+a234 = bend 2 1 4
+a235 = bend 2 1 5
+o2345 = out 2 1 4 5
+l1x = lin1 3 2 1 1.0 0.0 0.0
+l1y = lin1 3 2 1 0.0 1.0 0.0
+$end
+
+$symmetry
+symm1 = r12
+symm2 = r23
+symm3 = r34 + r35
+symm4 = a234 + a235
+symm5 = l1x
+symm6 = o2345
+symm7 = r34 - r35
+symm8 = a234 - a235
+symm9 = l1y
+$end
+
+$options
+bvecdisp = 0.00001
+bond units = angstrom
+energy units = aJ
+nderiv = 4
+dispsizes = 0.01 0.01 0.01 0.02 0.03 0.03 0.01 0.02 0.03
+symmetry tolerance = 4
+$end
+
