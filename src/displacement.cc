@@ -357,11 +357,24 @@ DisplacementIterator::testEquivalence(
     int exp = KeywordSet::getKeyword("symmetry tolerance")->getValueInteger();
     double tol = pow(10, -exp);
 
+#if 0
+    vector<double> incs(refdisp->getIncrements()); 
+    bool printstuff = (fabs(incs[7] + 2.0) < 1e-8) && (fabs(incs[8] + 1.0) < 1e-8);
+    if (printstuff)
+    {
+        refdisp->print();
+        debug = 2;
+    }
+#endif
+
     if (debug >= 2)
+    {
+        disp->print();
         cout << stream_printf("\tDegree mismatch=%d Type mismatch=%d Magnitude mismatch=%d",
                               degree_mismatch,
                               type_mismatch,
                               mag_mismatch) << endl;
+    }
 
     if (degree_mismatch || type_mismatch || mag_mismatch)
         return false;
@@ -590,14 +603,14 @@ Displacement::init()
         degree_ += fabs(val);
 
         if (val != 0)
-            nonzero_disps.push_back(val);
+            nonzero_disps.push_back(fabs(val));
     }
 
     sort(nonzero_disps.begin(), nonzero_disps.end());
     
     stringstream sstr;
     for (it = nonzero_disps.begin(); it != nonzero_disps.end(); ++it)
-        sstr << stream_printf(" %4.2f", fabs(*it));
+        sstr << stream_printf(" %4.2f", *it);
     disptype_ = sstr.str();
 
     if (!dispsizes_.size())
