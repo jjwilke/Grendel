@@ -3,7 +3,7 @@
 git submodule init
 git submodule update
 aclocal
-glibtoolize
+libtoolize
 automake --add-missing
 automake
 autoconf
