@@ -21,6 +21,7 @@
 #include <src/gigmatrix.h>
 
 #include <src/smartptr/src/set.h>
+#include <src/smartptr/src/xmlarchive.h>
 
 namespace gigide {
 

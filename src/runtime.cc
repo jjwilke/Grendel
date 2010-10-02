@@ -30,16 +30,15 @@ GigideRuntime::run_anharm()
 void
 GigideRuntime::xml_commit()
 {
-#if 0
     //reset the writer
-    archive_ = new smartptr::Archive();
+    archive_ = new smartptr::XMLArchive();
 
     archive_->serialize<Molecule>(Archive::Write, mol_, "molecule", "mainmol");
     archive_->serialize(Archive::Write, simples_, "simples", "mainsimples");
     archive_->serialize(Archive::Write, coords_, "coordinates", "maincoords");
-    archive_->serialize(Archive::Write, qff_, "qff");
-    archive_->xml()->toFile("gigide.xml");
-#endif
+    serial_call_save(archive_, qff_, "qff");
+    //archive_->serialize(Archive::Write, qff_, "qff");
+    archive_->toFile("gigide.xml");
 }
 
 void
@@ -207,6 +206,8 @@ GigideRuntime::run_calc()
 #if HAS_INTDER && HAS_ANHARM
     run_anharm();
 #endif
+    
+    xml_commit();
 }
 
 void

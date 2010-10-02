@@ -21,7 +21,7 @@ $options
 bvecdisp = 0.00001
 bond units = angstrom
 energy units = aJ
-nderiv = 4
+nderiv = 2
 nvalue = 0
 debug = 0
 robustness = 2
