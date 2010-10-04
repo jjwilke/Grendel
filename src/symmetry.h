@@ -589,12 +589,12 @@ class PointGroup : public smartptr::Serializable {
         /**
             @param os
         */
-        void printClasses(std::ostream& os = cout) const;
+        void printClasses(std::ostream& os = std::cout) const;
 
         /**
             @param os
         */
-        void print(std::ostream& os = cout) const;
+        void print(std::ostream& os = std::cout) const;
 
         /**
             @return Whether this corresponds to an abelian point group

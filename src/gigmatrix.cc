@@ -4,6 +4,7 @@
 #include <src/printstream.h>
 #include <algorithm>
 
+#undef heisenbug
 #define heisenbug cout << "Heisenbug: " << __FILE__ << " " << __LINE__ << endl
 
 #define VALGRIND 0
@@ -461,6 +462,14 @@ Matrix::Matrix(const ArchivePtr& arch)
     void* ptr;
     arch->loadBinary(&ptr, size, "data", "");
     data_ = (double *) ptr;
+    serial_load(nrow);
+    serial_load(ncol);
+
+    if (nrow_ * ncol_ * sizeof(double) != size)
+    {
+        cerr << "Matrix data not aligned with nrow x ncol" << endl;
+        abort();
+    }
 }
 
 void
@@ -469,6 +478,8 @@ Matrix::serialize(const ArchivePtr& arch) const
     Serializable::serialize(arch);
     mdim_t size = nrow_ * ncol_ * sizeof(double);
     arch->writeBinary(data_, size, "data", "");
+    serial_save(nrow);
+    serial_save(ncol);
 }
 
 Matrix::~Matrix()
@@ -681,21 +692,13 @@ Vector::Vector(const ArchivePtr& arch)
     void* ptr;
     arch->loadBinary(&ptr, size, "data", "");
     data_ = (double *) ptr;
-#if 0
-    node->getAttribute(n_, "n");
-
-    if (node.get() == NULL)
-    {
-        cerr << "No data on matrix node" << endl;
-        abort();
-    }
+    serial_load(n);
 
     if (size != n_ * sizeof(double))
     {
         cerr << stream_printf("Data size %ld does not match dim %ld", size, n_) << endl;
         abort();
     }
-#endif
 }
 
 void
@@ -704,7 +707,7 @@ Vector::serialize(const ArchivePtr& arch) const
     Serializable::serialize(arch);
 
     arch->writeBinary(data_, n_ * sizeof(double), "data", "");
-    //node->setAttribute(n_, "n");
+    serial_save(n);
 }
 
 Matrix*

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <pyregexp.h>
 #include <string>
-#include <iostream.h>
+#include <iostream>
 #include <sstream>
 #include <ostream>
 #include <fstream>
@@ -9,6 +9,7 @@
 using namespace std;
 using namespace pyregexp;
 
+#undef heisenbug
 #define heisenbug cout << "Heisenbug: " << __FILE__ << " " << __LINE__ << endl
 
 PyObject* 
@@ -229,4 +230,5 @@ pyregexp::group_matches(vector< vector<string> >& raw_matches, vector<string>& m
         }
     }
 }
+
 

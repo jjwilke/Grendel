@@ -36,7 +36,7 @@ GigideRuntime::xml_commit()
     archive_->serialize<Molecule>(Archive::Write, mol_, "molecule", "mainmol");
     archive_->serialize(Archive::Write, simples_, "simples", "mainsimples");
     archive_->serialize(Archive::Write, coords_, "coordinates", "maincoords");
-    serial_call_save(archive_, qff_, "qff");
+    serial_call_save(archive_, qff_, "qff", "");
     //archive_->serialize(Archive::Write, qff_, "qff");
     archive_->toFile("gigide.xml");
 }
@@ -145,8 +145,7 @@ GigideRuntime::molecule()
 void
 GigideRuntime::run_xmlprint()
 {
-#if 0
-    ArchivePtr arch(new smartptr::Archive("gigide.xml"));
+    XMLArchivePtr arch(new smartptr::XMLArchive("gigide.xml"));
 
     MoleculePtr testmol;
     arch->serialize(Archive::Read, testmol, "molecule", "mainmol");
@@ -155,19 +154,25 @@ GigideRuntime::run_xmlprint()
     vector<SimpleInternalCoordinatePtr> simples;
     arch->serialize(Archive::Read, simples, "simples", "mainsimples");
     for (int i=0; i < simples.size(); ++i)
+    {
         simples[i]->print();
+        cout << endl;
+    }
 
     vector<InternalCoordinatePtr> coords;
     arch->serialize(Archive::Read, simples, "coordinates", "maincoords");
     for (int i=0; i < coords.size(); ++i)
+    {
         coords[i]->print();
+        cout << endl;
+    }
 
     //testmol->computePointGroup(molnode);
     testmol->getPointGroup()->print();
 
     
     ForceFieldPtr qff;
-    arch->serialize(Archive::Read, qff, "qff");
+    serial_call_load(arch, qff, "qff", "");
     if (qff.get() == NULL)
         except("Could not find force field on tag qff");
 
@@ -178,7 +183,6 @@ GigideRuntime::run_xmlprint()
 #endif
 #if HAS_INTDER && HAS_ANHARM
     run_anharm();
-#endif
 #endif
 }
 

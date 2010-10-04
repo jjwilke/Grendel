@@ -1,4 +1,4 @@
-#include <iostream.h>
+#include <iostream>
 #include <stdio.h>
 #include <fstream>
 #include <sstream>
@@ -23,7 +23,6 @@
 
 #define ZERODISP 1e-3
 
-#define heisenbug cout << "Heisenbug: " << __FILE__ << " " << __LINE__ << endl
 
 #define dbg cout
 
@@ -1199,7 +1198,7 @@ ForceField::print(ostream& os) const
 {
     os << stream_printf("Force field for %dth derivatives from %dth derivative displacements", nderiv_, nvalue_) << endl;
     mol_->print(os);
-    disp_iter_->print(os);
+    disp_iter_->print(os); os <<endl;
     if (grads_.nonnull())
         grads_.print("Gradients", os);
     if (fc_.nonnull())

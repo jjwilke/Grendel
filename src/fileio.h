@@ -3,7 +3,7 @@
 #define intdif_fileio_h
 
 #include <stdio.h>
-#include <iostream.h>
+#include <iostream>
 #include <fstream>
 #include <sstream>
 #include <src/coordinates.h>

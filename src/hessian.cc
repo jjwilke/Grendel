@@ -1,6 +1,6 @@
 
 #include <src/hessian.h>
-#include <iostream.h>
+#include <iostream>
 
 using namespace gigide;
 using namespace std;

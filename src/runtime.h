@@ -1,7 +1,7 @@
 #include <pyregexp.h>
 #include <stdio.h>
 #include <string>
-#include <iostream.h>
+#include <iostream>
 #include <sstream>
 #include <config.h>
 #include <stdio.h>

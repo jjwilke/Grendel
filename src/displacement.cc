@@ -128,9 +128,12 @@ DisplacementIterator::end()
 void
 DisplacementIterator::print(ostream& os) const
 {
-    os << stream_printf("Displacement iterator with %d displacements", displacements_.size()) << endl;
+    os << stream_printf("Displacement iterator with %d displacements", displacements_.size());
     for (const_iterator it(begin()); it != end(); ++it)
+    {
+        os << endl;
         (*it)->print(os);
+    }
 }
 
 void
@@ -527,6 +530,7 @@ Displacement::Displacement(const ArchivePtr& arch)
     serial_load(degree);
     serial_load(dispmag);
     serial_load(disptype);
+    serial_load(dispsizes);
     serial_load(gradients);
     serial_load(fc);
     serial_load(increments);
@@ -553,6 +557,7 @@ Displacement::serialize(const ArchivePtr& arch) const
     serial_save(degree);
     serial_save(dispmag);
     serial_save(disptype);
+    serial_save(dispsizes);
     serial_save(gradients);
     serial_save(fc);
     serial_save(increments);

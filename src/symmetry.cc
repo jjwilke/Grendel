@@ -1210,8 +1210,7 @@ PointGroup::close()
     vector<ConstSymmetryOperationPtr>::iterator iti;
     for (iti = symmops_.begin(); iti != symmops_.end(); ++iti)
     {
-        ConstSymmetryOperationPtr op = *iti;
-
+        ConstSymmetryOperationPtr op(*iti);
         if (op->type() == SymmetryOperation::inversion) hasinv = true;
         else if (op->type() == SymmetryOperation::rotation) ++naxes;
         else if (op->type() == SymmetryOperation::reflection) ++nplanes;

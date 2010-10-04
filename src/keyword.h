@@ -2,7 +2,7 @@
 #ifndef intdif_keyword_h
 #define intdif_keyword_h
 
-#include <iostream.h>
+#include <iostream>
 #include <sstream>
 #include <map>
 #include <src/pyregexp.h>

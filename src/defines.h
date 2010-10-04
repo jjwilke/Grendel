@@ -2,7 +2,9 @@
 #ifndef _gigide_src_defines_h_
 #define _gigide_src_defines_h_
 
+#undef heisenbug
 #define heisenbug cout << "Heisenbug: " << __FILE__ << " " << __LINE__ << endl
+
 #define delcheck cout << "Destructor: " << __FILE__ << " " << __LINE__ << endl
 #define concheck cout << "Constructor: " << __FILE__ << " " << __LINE__ << endl
 
