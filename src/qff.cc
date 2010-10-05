@@ -607,7 +607,7 @@ bool
 ForceField::getXMLXYZ(const XMLParser& xml, RectMatrixPtr& geom)
 {
     /** Get the xyz coordinates */
-    XMLParser xyznode = xml->getChildElement("xyz");
+    XMLParser xyznode = xml->fetchChild("xyz");
     if (xyznode.get() == NULL)
         return false;
 
@@ -628,7 +628,7 @@ ForceField::getXMLXYZ(const XMLParser& xml, RectMatrixPtr& geom)
 bool
 ForceField::getXMLGradients(const XMLParser& xml, RectMatrixPtr& gradients)
 {
-    XMLParser gradnode = xml->fetchNode("gradient");
+    XMLParser gradnode = xml->fetchChild("gradient");
     if (gradnode.get() == NULL)
         return false;
 
@@ -663,7 +663,7 @@ ForceField::getXMLGradients(const XMLParser& xml, RectMatrixPtr& gradients)
 bool
 ForceField::getXMLForceConstants(const XMLParser& xml, RectMatrixPtr& fc)
 {
-    XMLParser fcnode = xml->fetchNode("fc");
+    XMLParser fcnode = xml->fetchChild("fc");
     if (fcnode.get() == NULL)
         return false;
 
@@ -695,8 +695,8 @@ ForceField::getXMLForceConstants(const XMLParser& xml, RectMatrixPtr& fc)
 void
 ForceField::readXMLDisplacement(const XMLParser& node, bool& extrazero)
 {
-    if (node.get() == NULL)
-        except("How the fuck did this happen?");
+    if (!node)
+        except("Recieved null node in readXMLDisplacement");
 
     int nvalue = KeywordSet::getKeyword("nvalue")->getValueInteger();
     string energyunits = KeywordSet::getKeyword("energy units")->getValueString();
@@ -708,7 +708,7 @@ ForceField::readXMLDisplacement(const XMLParser& node, bool& extrazero)
         stringstream sstr(ntext);
         sstr >> dispnumber;
     }
-    XMLParser molnode = node->fetchNode("molecule");
+    XMLParser molnode = node->fetchChild("molecule");
 
     RectMatrixPtr geom;
     RectMatrixPtr gradients;
@@ -886,9 +886,7 @@ ForceField::readXMLData(string filename)
                      disp_iter_->nunique(), disp_iter_->ndisps()) << endl << endl;
 
     
-    XMLParser xml(new pyxml::PyXMLDomParser(filename));
-    vector<XMLParser> nodes; 
-    xml->getElementsByTagName(nodes, "displacement");
+
 
     int nvalue = KeywordSet::getKeyword("nvalue")->getValueInteger();
     if (nvalue >= 1) //the displacements have to know their geometries
@@ -904,13 +902,13 @@ ForceField::readXMLData(string filename)
     
     int ntot = 0;
     bool extrazero = false;
-    vector<XMLParser>::iterator it;
-    for (it=nodes.begin(); it != nodes.end(); ++it, ++ntot)
+    XMLParser xml(new pyxml::PyXMLDomParser(filename));
+    XMLParser node(xml->firstChild("displacement"));
+    while (node) //keep iterating until we run out of displacements
     {
-        XMLParser disp = *it;
-        if (disp.get() == NULL)
-            except(stream_printf("XML node %d is null", ntot + 1));
-        readXMLDisplacement(disp, extrazero);
+        readXMLDisplacement(node, extrazero);
+        node = node->nextSibling("displacement");
+        ++ntot;
     }
 
     int nunique = disp_iter_->nunique();

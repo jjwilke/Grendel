@@ -62,6 +62,25 @@ class XMLParser(object):
             import sys
             sys.stderr.write("%s\n" % error)
 
+    def getNextSibling(self, name):
+        parser = None
+        check = None
+        node = self.parser
+        try:
+            while node:
+                node = node.nextSibling
+                if not node:
+                    return None
+                check = node.nodeName
+                if node.__class__ == self.parser.__class__ and name == check: #this is an element
+                    parser = XMLParser(node=node)
+                    return parser
+            return None
+        except Exception, error:
+            import sys
+            sys.stderr.write("%s\n" % traceback(error))
+            return None
+
     def createNode(self, name):
         try:
             import xml.dom.minidom

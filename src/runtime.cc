@@ -1,4 +1,6 @@
 #include <src/runtime.h>
+#include <src/timer.h>
+
 
 using namespace std;
 using namespace gigide;
@@ -30,6 +32,7 @@ GigideRuntime::run_anharm()
 void
 GigideRuntime::xml_commit()
 {
+    gigtimer::Timer::start("xml commit");
     //reset the writer
     archive_ = new smartptr::XMLArchive();
 
@@ -39,6 +42,7 @@ GigideRuntime::xml_commit()
     serial_call_save(archive_, qff_, "qff", "");
     //archive_->serialize(Archive::Write, qff_, "qff");
     archive_->toFile("gigide.xml");
+    gigtimer::Timer::stop("xml commit");
 }
 
 void
@@ -145,6 +149,7 @@ GigideRuntime::molecule()
 void
 GigideRuntime::run_xmlprint()
 {
+    gigtimer::Timer::start("xml");
     XMLArchivePtr arch(new smartptr::XMLArchive("gigide.xml"));
 
     MoleculePtr testmol;
@@ -175,8 +180,10 @@ GigideRuntime::run_xmlprint()
     serial_call_load(arch, qff, "qff", "");
     if (qff.get() == NULL)
         except("Could not find force field on tag qff");
+    gigtimer::Timer::stop("xml");
 
     qff->print();
+    gigtimer::Timer::start("compute");
     qff->compute();
 #if HAS_INTDER
     run_intder();
@@ -184,6 +191,7 @@ GigideRuntime::run_xmlprint()
 #if HAS_INTDER && HAS_ANHARM
     run_anharm();
 #endif
+    gigtimer::Timer::stop("compute");
 }
 
 void
@@ -202,7 +210,10 @@ GigideRuntime::run_calc()
     if (qff_.get() == NULL)
         init_qff();
 
+    gigtimer::Timer::start("read xml data");
     qff_->readXMLData();
+    gigtimer::Timer::stop("read xml data");
+    gigtimer::Timer::start("compute");
     qff_->compute();
 #if HAS_INTDER
     run_intder();
@@ -210,7 +221,8 @@ GigideRuntime::run_calc()
 #if HAS_INTDER && HAS_ANHARM
     run_anharm();
 #endif
-    
+    gigtimer::Timer::stop("compute");
+
     xml_commit();
 }
 
