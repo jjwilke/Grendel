@@ -19,6 +19,8 @@
 #include <src/permutation.h>
 #include <src/units.h>
 
+#include <src/smartptr/src/rapidxml.h>
+
 #define USE_SVD 0
 
 #define ZERODISP 1e-3
@@ -902,8 +904,10 @@ ForceField::readXMLData(string filename)
     
     int ntot = 0;
     bool extrazero = false;
-    XMLParser xml(new pyxml::PyXMLDomParser(filename));
-    XMLParser node(xml->firstChild("displacement"));
+    XMLDocumentPtr xml(new rapidxml::RapidXMLDocument(filename));
+    //XMLDocumentPtr xml(new pyxml::PyXMLDocument(filename));
+    XMLParser docnode(xml->documentNode());
+    XMLParser node(docnode->firstChild("displacement"));
     while (node) //keep iterating until we run out of displacements
     {
         readXMLDisplacement(node, extrazero);

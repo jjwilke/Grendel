@@ -32,12 +32,12 @@ KeywordValue::getValueString() const
 int
 KeywordValue::count() const
 {
-	stringstream sstr(valtext_);
+    stringstream sstr(valtext_);
     int cnt = 0;
     string nextval;
-	while (!sstr.eof())
+    while (!sstr.eof())
     {
-		sstr >> nextval;
+        sstr >> nextval;
         ++cnt;
     }
     return cnt;

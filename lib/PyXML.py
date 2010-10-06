@@ -21,13 +21,16 @@ class XMLParser(object):
         try:
             import xml.dom.minidom
             if filename:
-                self.parser = xml.dom.minidom.parse(filename).firstChild
+                self.parser = xml.dom.minidom.parse(filename)
+                self.firstChild = XMLParser(node=self.parser.firstChild)
             elif isinstance(node, xml.dom.minidom.Node):
                 self.parser = node
             else:
                 impl = xml.dom.getDOMImplementation()
                 doc = impl.createDocument("gigide", "document", None)
-                self.parser = doc.firstChild
+                self.parser = doc
+                self.firstChild = XMLParser(node=self.parser.firstChild)
+
         except Exception, error:
             import sys
             import time
@@ -40,7 +43,6 @@ class XMLParser(object):
         try:
             return XMLParser(node=self.parser.ownerDocument.firstChild)
         except Exception, error:
-            print self.parser.ownerDocument
             import sys
             sys.stderr.write("%s\n" % traceback(error))
 
