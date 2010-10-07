@@ -23,7 +23,7 @@ Optimization::Optimization(
     ifstream ifile("hessian.xml");
     if (ifile) //we have a hessian file
     {
-        ArchivePtr arch(new smartptr::Archive("hessian.xml"));
+        XMLArchivePtr arch(new smartptr::XMLArchive("hessian.xml"));
         serial_load(hessian);
         precond_ = hessian_.i();
     }
@@ -38,7 +38,7 @@ Optimization::Optimization(
 #endif
 }
 
-Optimization::Optimization(const ArchivePtr& arch)
+Optimization::Optimization(const XMLArchivePtr& arch)
     : Serializable(arch)
 {
     SetRuntime(Optimization);
@@ -49,7 +49,7 @@ Optimization::Optimization(const ArchivePtr& arch)
 }
 
 void
-Optimization::serialize(const ArchivePtr& arch) const
+Optimization::serialize(const XMLArchivePtr& arch) const
 {
     Serializable::serialize(arch);
     serial_save(hessian);
@@ -92,14 +92,14 @@ OptimizationStep::OptimizationStep(
     SetRuntime(OptimizationStep);
 }
 
-OptimizationStep::OptimizationStep(const ArchivePtr& arch)
+OptimizationStep::OptimizationStep(const XMLArchivePtr& arch)
 {
     SetRuntime(OptimizationStep);
     serial_load(qff);
 }
 
 void
-OptimizationStep::serialize(const ArchivePtr& arch) const
+OptimizationStep::serialize(const XMLArchivePtr& arch) const
 {
     serial_save(qff);
 }

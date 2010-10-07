@@ -108,7 +108,7 @@ DerivativeIterator::getDerivative(const vector<int>& levels) const
     return NULL;
 }
 
-DerivativeIterator::DerivativeIterator(const ArchivePtr& arch)
+DerivativeIterator::DerivativeIterator(const XMLArchivePtr& arch)
     : Serializable(arch)
 {
     SetRuntime(DerivativeIterator);
@@ -127,7 +127,7 @@ DerivativeIterator::ncoords() const
 }
 
 void
-DerivativeIterator::serialize(const ArchivePtr& arch) const
+DerivativeIterator::serialize(const XMLArchivePtr& arch) const
 {
     Serializable::serialize(arch);
     serial_save(deriv_level);
@@ -382,7 +382,7 @@ Derivative::Derivative(
     assigned_ = false;
 }
 
-Derivative::Derivative(const ArchivePtr& arch)
+Derivative::Derivative(const XMLArchivePtr& arch)
     : Serializable(arch)
 {
 
@@ -407,7 +407,7 @@ Derivative::Derivative(const ArchivePtr& arch)
 }
 
 void
-Derivative::serialize(const ArchivePtr& arch) const
+Derivative::serialize(const XMLArchivePtr& arch) const
 {
     Serializable::serialize(arch);
     serial_save(coeff);

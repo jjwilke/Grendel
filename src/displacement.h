@@ -55,10 +55,10 @@ class DisplacementMapping : public smartptr::Serializable
         );
 
         DisplacementMapping(
-            const ArchivePtr& parser 
+            const XMLArchivePtr& parser
         );
 
-        void serialize(const ArchivePtr& writer) const;
+        void serialize(const XMLArchivePtr& writer) const;
         
         /**
             Get the displacement
@@ -217,13 +217,13 @@ class Displacement : public smartptr::Serializable
                      const std::vector<double> dispsizes
                      );
 
-        Displacement(const ArchivePtr& parser);
+        Displacement(const XMLArchivePtr& parser);
 
         /**
             Adds xml output describing the displacement
             @param writer The xml document to add the data to
         */
-        void serialize(const ArchivePtr& writer) const;
+        void serialize(const XMLArchivePtr& writer) const;
 
         /**
             Validate that the generated geometry matches the displacement expected
@@ -603,9 +603,9 @@ class DisplacementIterator : public smartptr::Serializable
             const std::vector<double> dispsizes
         );
 
-        DisplacementIterator(const ArchivePtr& parser);
+        DisplacementIterator(const XMLArchivePtr& parser);
 
-        void serialize(const ArchivePtr& writer) const;
+        void serialize(const XMLArchivePtr& writer) const;
 
         /** 
             Tries to find an equivalent displacement from the complete set of displacements

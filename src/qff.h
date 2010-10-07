@@ -13,7 +13,6 @@
 #include <src/fit.h>
 #include <src/gigmatrix.h>
 #include <src/deftypes.h>
-#include <src/smartptr/src/pyxml.h>
 
 namespace gigide {
 
@@ -74,10 +73,10 @@ class ForceField : public smartptr::Serializable
 
         int nvalue_;
 
-        bool getXMLGradients(const XMLParser& xml, RectMatrixPtr& gradients);
-        bool getXMLEnergy(const XMLParser& xml, double& energy);
-        bool getXMLForceConstants(const XMLParser& xml, RectMatrixPtr& fc);
-        bool getXMLXYZ(const XMLParser& xml, RectMatrixPtr& xyz);
+        bool getXMLGradients(const XMLArchivePtr& xml, RectMatrixPtr& gradients);
+        bool getXMLEnergy(const XMLArchivePtr& xml, double& energy);
+        bool getXMLForceConstants(const XMLArchivePtr& xml, RectMatrixPtr& fc);
+        bool getXMLXYZ(const XMLArchivePtr& xml, RectMatrixPtr& xyz);
 
     private:
         void testDerivative(VectorPtr fit, DisplacementIteratorPtr dispit, int nderiv);
@@ -93,12 +92,12 @@ class ForceField : public smartptr::Serializable
                    const smartptr::Set<ConstInternalCoordinatePtr>& coords,
                    const smartptr::Set<ConstSimpleInternalCoordinatePtr>& simples);
 
-        ForceField(const ArchivePtr& parser);
+        ForceField(const XMLArchivePtr& parser);
 
         /**
         */
         void
-        serialize(const ArchivePtr& writer) const;
+        serialize(const XMLArchivePtr& writer) const;
 
         /** Builds the B matrix from the internal coordinates */
         RectMatrixPtr buildB() const;
@@ -179,7 +178,7 @@ class ForceField : public smartptr::Serializable
             @param node The XML node representing a displacement
             @param disp The displacement to store data in 
         */
-        void readXMLDisplacement(const XMLParser& node, bool& extrazero);
+        void readXMLDisplacement(const XMLArchivePtr& node, bool& extrazero);
 
         int nderiv() const;
 

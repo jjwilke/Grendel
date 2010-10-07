@@ -31,7 +31,7 @@ InternalCoordinate::InternalCoordinate(const ConstMoleculePtr& mol, gigstr name)
 {
 }
 
-InternalCoordinate::InternalCoordinate(const ArchivePtr& arch)
+InternalCoordinate::InternalCoordinate(const XMLArchivePtr& arch)
     : Serializable(arch)
 {
     serial_load(mol);
@@ -45,7 +45,7 @@ InternalCoordinate::~InternalCoordinate()
 }
 
 void
-InternalCoordinate::serialize(const ArchivePtr& arch) const
+InternalCoordinate::serialize(const XMLArchivePtr& arch) const
 {
     Serializable::serialize(arch);
     serial_save(mol);
@@ -316,7 +316,7 @@ SymmetryInternalCoordinate::SymmetryInternalCoordinate(
     init();
 }
 
-SymmetryInternalCoordinate::SymmetryInternalCoordinate(const ArchivePtr& arch)
+SymmetryInternalCoordinate::SymmetryInternalCoordinate(const XMLArchivePtr& arch)
     : InternalCoordinate(arch)
 {
     SetRuntime(SymmetryInternalCoordinate);
@@ -325,7 +325,7 @@ SymmetryInternalCoordinate::SymmetryInternalCoordinate(const ArchivePtr& arch)
 }
 
 void
-SymmetryInternalCoordinate::serialize(const ArchivePtr& arch) const
+SymmetryInternalCoordinate::serialize(const XMLArchivePtr& arch) const
 {
     InternalCoordinate::serialize(arch);
     serial_save(simples);
@@ -502,7 +502,7 @@ SimpleInternalCoordinate::SimpleInternalCoordinate(
     resetAtoms();
 }
 
-SimpleInternalCoordinate::SimpleInternalCoordinate(const ArchivePtr& arch)
+SimpleInternalCoordinate::SimpleInternalCoordinate(const XMLArchivePtr& arch)
     : InternalCoordinate(arch)
 {
     serial_load(connectivity);
@@ -510,7 +510,7 @@ SimpleInternalCoordinate::SimpleInternalCoordinate(const ArchivePtr& arch)
 }
 
 void
-SimpleInternalCoordinate::serialize(const ArchivePtr& arch) const
+SimpleInternalCoordinate::serialize(const XMLArchivePtr& arch) const
 {
     InternalCoordinate::serialize(arch);
 
@@ -613,14 +613,14 @@ BondLength::BondLength(
     init();
 }
 
-BondLength::BondLength(const ArchivePtr& arch)
+BondLength::BondLength(const XMLArchivePtr& arch)
     : SimpleInternalCoordinate(arch)
 {
     SetRuntime(BondLength);
 }
 
 void
-BondLength::serialize(const ArchivePtr& arch) const
+BondLength::serialize(const XMLArchivePtr& arch) const
 {
     SimpleInternalCoordinate::serialize(arch);
 }
@@ -675,14 +675,14 @@ BondAngle::BondAngle(
     init();
 }
 
-BondAngle::BondAngle(const ArchivePtr& arch)
+BondAngle::BondAngle(const XMLArchivePtr& arch)
     : SimpleInternalCoordinate(arch)
 {
     SetRuntime(BondAngle);
 }
 
 void
-BondAngle::serialize(const ArchivePtr& arch) const
+BondAngle::serialize(const XMLArchivePtr& arch) const
 {
     SimpleInternalCoordinate::serialize(arch);
 }
@@ -777,14 +777,14 @@ OutOfPlaneBend::OutOfPlaneBend(
     init();
 }
 
-OutOfPlaneBend::OutOfPlaneBend(const ArchivePtr& arch)
+OutOfPlaneBend::OutOfPlaneBend(const XMLArchivePtr& arch)
     : SimpleInternalCoordinate(arch)
 {
     SetRuntime(OutOfPlaneBend);
 }
 
 void
-OutOfPlaneBend::serialize(const ArchivePtr& arch) const
+OutOfPlaneBend::serialize(const XMLArchivePtr& arch) const
 {
     SimpleInternalCoordinate::serialize(arch);
 }
@@ -874,14 +874,14 @@ PeriodicCoordinate::PeriodicCoordinate(
     discontinuity_ = discontinuity;
 }
 
-PeriodicCoordinate::PeriodicCoordinate(const ArchivePtr& arch)
+PeriodicCoordinate::PeriodicCoordinate(const XMLArchivePtr& arch)
     : SimpleInternalCoordinate(arch)
 {
     serial_load(discontinuity);
 }
 
 void
-PeriodicCoordinate::serialize(const ArchivePtr& arch) const
+PeriodicCoordinate::serialize(const XMLArchivePtr& arch) const
 {
     SimpleInternalCoordinate::serialize(arch);
     serial_save(discontinuity);
@@ -913,14 +913,14 @@ Torsion::Torsion(
     init();
 }
 
-Torsion::Torsion(const ArchivePtr& arch)
+Torsion::Torsion(const XMLArchivePtr& arch)
     : PeriodicCoordinate(arch)
 {
     SetRuntime(Torsion);
 }
 
 void
-Torsion::serialize(const ArchivePtr& arch) const
+Torsion::serialize(const XMLArchivePtr& arch) const
 {
     PeriodicCoordinate::serialize(arch);
 }
@@ -1035,14 +1035,14 @@ LinX::LinX(
     init();
 }
 
-LinX::LinX(const ArchivePtr& arch)
+LinX::LinX(const XMLArchivePtr& arch)
     : SimpleInternalCoordinate(arch)
 {
     SetRuntime(LinX);
 }
 
 void
-LinX::serialize(const ArchivePtr& arch) const
+LinX::serialize(const XMLArchivePtr& arch) const
 {
     SimpleInternalCoordinate::serialize(arch);
 }
@@ -1122,14 +1122,14 @@ LinY::LinY(
     init();
 }
 
-LinY::LinY(const ArchivePtr& arch)
+LinY::LinY(const XMLArchivePtr& arch)
     : SimpleInternalCoordinate(arch)
 {
     SetRuntime(LinY);
 }
 
 void
-LinY::serialize(const ArchivePtr& arch) const
+LinY::serialize(const XMLArchivePtr& arch) const
 {
     SimpleInternalCoordinate::serialize(arch);
 }
@@ -1210,7 +1210,7 @@ Lin1::Lin1(
     dummy_ = unconstmol->registerDummyAtom(ed_);
 }
 
-Lin1::Lin1(const ArchivePtr& arch)
+Lin1::Lin1(const XMLArchivePtr& arch)
     : SimpleInternalCoordinate(arch)
 {
     SetRuntime(Lin1);
@@ -1218,7 +1218,7 @@ Lin1::Lin1(const ArchivePtr& arch)
 }
 
 void
-Lin1::serialize(const ArchivePtr& arch) const
+Lin1::serialize(const XMLArchivePtr& arch) const
 {
     SimpleInternalCoordinate::serialize(arch);
     serial_save(ed);
@@ -1570,7 +1570,7 @@ CoordinateSubspace::CoordinateSubspace(
 }
 
 CoordinateSubspace::CoordinateSubspace(
-    const ArchivePtr& arch
+    const XMLArchivePtr& arch
 ) : Serializable(arch)
 {
     SetRuntime(CoordinateSubspace);
@@ -1580,7 +1580,7 @@ CoordinateSubspace::CoordinateSubspace(
 }
 
 void
-CoordinateSubspace::serialize(const ArchivePtr& arch) const
+CoordinateSubspace::serialize(const XMLArchivePtr& arch) const
 {
     Serializable::serialize(arch);
     serial_save(madeabelian);

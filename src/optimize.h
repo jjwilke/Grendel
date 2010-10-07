@@ -23,9 +23,9 @@ class OptimizationStep : public smartptr::Serializable {
             const smartptr::Set<ConstSimpleInternalCoordinatePtr>& simples
         );
 
-        OptimizationStep(const ArchivePtr& arch);
+        OptimizationStep(const XMLArchivePtr& arch);
 
-        void serialize(const ArchivePtr& arch) const;
+        void serialize(const XMLArchivePtr& arch) const;
 
         void writeDisplacements();
 
@@ -62,9 +62,9 @@ class Optimization : public smartptr::Serializable {
             const smartptr::Set<ConstSimpleInternalCoordinatePtr>& simples
         );
 
-        Optimization(const ArchivePtr& arch);
+        Optimization(const XMLArchivePtr& arch);
 
-        void serialize(const ArchivePtr& arch) const;
+        void serialize(const XMLArchivePtr& arch) const;
 
         void takeStep();
 

@@ -88,11 +88,11 @@ class InternalCoordinate : public smartptr::Serializable {
         */
         InternalCoordinate(const ConstMoleculePtr& mol, gigstr name);
 
-        InternalCoordinate(const ArchivePtr& arch);
+        InternalCoordinate(const XMLArchivePtr& arch);
 
         virtual ~InternalCoordinate();
 
-        void serialize(const ArchivePtr& arch) const;
+        void serialize(const XMLArchivePtr& arch) const;
 
         /** 
             Static method for constructing delocalized internal coordinates from
@@ -366,9 +366,9 @@ class SimpleInternalCoordinate : public InternalCoordinate
             gigstr name
         );
 
-        SimpleInternalCoordinate(const ArchivePtr& arch);
+        SimpleInternalCoordinate(const XMLArchivePtr& arch);
 
-        void serialize(const ArchivePtr& arch) const;
+        void serialize(const XMLArchivePtr& arch) const;
 
         /**
             Returns a string representing the connectivity. See #connectivity_.
@@ -437,9 +437,9 @@ class BondLength : public SimpleInternalCoordinate {
             const ConstMoleculePtr& mol
         );
 
-        BondLength(const ArchivePtr& arch);
+        BondLength(const XMLArchivePtr& arch);
 
-        void serialize(const ArchivePtr& arch) const;
+        void serialize(const XMLArchivePtr& arch) const;
 
         /**
         */
@@ -473,9 +473,9 @@ class BondAngle: public SimpleInternalCoordinate {
             const ConstMoleculePtr& mol
         );
 
-        BondAngle(const ArchivePtr& arch);
+        BondAngle(const XMLArchivePtr& arch);
 
-        void serialize(const ArchivePtr& arch) const;
+        void serialize(const XMLArchivePtr& arch) const;
 
         SimpleInternalCoordinatePtr simple_copy(const ConstMoleculePtr& mol) const;
 
@@ -525,9 +525,9 @@ class OutOfPlaneBend: public SimpleInternalCoordinate {
             const ConstMoleculePtr& mol
         );
 
-        OutOfPlaneBend(const ArchivePtr& arch);
+        OutOfPlaneBend(const XMLArchivePtr& arch);
 
-        void serialize(const ArchivePtr& arch) const;
+        void serialize(const XMLArchivePtr& arch) const;
 
         SimpleInternalCoordinatePtr simple_copy(const ConstMoleculePtr& mol) const;
 
@@ -586,9 +586,9 @@ class PeriodicCoordinate : public SimpleInternalCoordinate {
                 double period,
                 gigstr name);
 
-            PeriodicCoordinate(const ArchivePtr& arch);
+            PeriodicCoordinate(const XMLArchivePtr& arch);
 
-            void serialize(const ArchivePtr& arch) const;
+            void serialize(const XMLArchivePtr& arch) const;
 
             /** 
                 Take value and adapts it to the periodicity condition. See #discontinuity_.  The value is computed as
@@ -619,9 +619,9 @@ class Torsion: public PeriodicCoordinate {
             double discontinuity = -PI/4
         );
 
-        Torsion(const ArchivePtr& arch);
+        Torsion(const XMLArchivePtr& arch);
 
-        void serialize(const ArchivePtr& arch) const;
+        void serialize(const XMLArchivePtr& arch) const;
 
         SimpleInternalCoordinatePtr simple_copy(const ConstMoleculePtr& mol) const;
 
@@ -674,9 +674,9 @@ class LinX: public SimpleInternalCoordinate {
             const ConstMoleculePtr& mol
         );
 
-        LinX(const ArchivePtr& arch);
+        LinX(const XMLArchivePtr& arch);
 
-        void serialize(const ArchivePtr& arch) const;
+        void serialize(const XMLArchivePtr& arch) const;
 
         SimpleInternalCoordinatePtr simple_copy(const ConstMoleculePtr& mol) const;
 
@@ -721,9 +721,9 @@ class LinY: public SimpleInternalCoordinate {
             const ConstMoleculePtr& mol
         );
 
-        LinY(const ArchivePtr& arch);
+        LinY(const XMLArchivePtr& arch);
 
-        void serialize(const ArchivePtr& arch) const;
+        void serialize(const XMLArchivePtr& arch) const;
 
         SimpleInternalCoordinatePtr simple_copy(const ConstMoleculePtr& mol) const;
 
@@ -771,9 +771,9 @@ class Lin1 : public SimpleInternalCoordinate {
             const std::vector<double>& vec
         );
 
-        Lin1(const ArchivePtr& arch);
+        Lin1(const XMLArchivePtr& arch);
 
-        void serialize(const ArchivePtr& arch) const;
+        void serialize(const XMLArchivePtr& arch) const;
 
         SimpleInternalCoordinatePtr simple_copy(const ConstMoleculePtr& mol) const;
 
@@ -818,9 +818,9 @@ class SymmetryInternalCoordinate : public InternalCoordinate
             const smartptr::Set<ConstSimpleInternalCoordinatePtr>& coords, 
             const ConstMoleculePtr& mol);
 
-        SymmetryInternalCoordinate(const ArchivePtr& arch);
+        SymmetryInternalCoordinate(const XMLArchivePtr& arch);
 
-        void serialize(const ArchivePtr& arch) const;
+        void serialize(const XMLArchivePtr& arch) const;
 
         double getValueForMolecule(const ConstMoleculePtr& mol) const;
 
@@ -915,9 +915,9 @@ class CoordinateSubspace : public smartptr::Serializable {
         */
         CoordinateSubspace(const ConstMoleculePtr& mol);
 
-        CoordinateSubspace(const ArchivePtr& arch);
+        CoordinateSubspace(const XMLArchivePtr& arch);
 
-        void serialize(const ArchivePtr& arch) const;
+        void serialize(const XMLArchivePtr& arch) const;
 
         /**
             Order = 1 for abelian irreps <br>

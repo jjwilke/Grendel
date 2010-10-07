@@ -43,7 +43,7 @@ SymmetryOperation::SymmetryOperation(
 }
 
 SymmetryOperation::SymmetryOperation(
-    const ArchivePtr& arch
+    const XMLArchivePtr& arch
 ) : Serializable(arch)
 {
     serial_load_enum(type);
@@ -51,7 +51,7 @@ SymmetryOperation::SymmetryOperation(
 
 void
 SymmetryOperation::serialize(
-    const ArchivePtr& arch
+    const XMLArchivePtr& arch
 ) const
 {
     Serializable::serialize(arch);
@@ -519,7 +519,7 @@ Rotation::init()
     name_ = sstr.str();
 }
 
-Rotation::Rotation(const ArchivePtr& arch)
+Rotation::Rotation(const XMLArchivePtr& arch)
     : SymmetryOperation(arch)
 {
     SetRuntime(Rotation);
@@ -530,7 +530,7 @@ Rotation::Rotation(const ArchivePtr& arch)
 }
 
 void
-Rotation::serialize(const ArchivePtr& arch) const
+Rotation::serialize(const XMLArchivePtr& arch) const
 {
     SymmetryOperation::serialize(arch);
     serial_save(order);
@@ -613,7 +613,7 @@ ImproperRotation::init()
     name_ = sstr.str();
 }
 
-ImproperRotation::ImproperRotation(const ArchivePtr& arch)
+ImproperRotation::ImproperRotation(const XMLArchivePtr& arch)
     : SymmetryOperation(arch)
 {
     SetRuntime(ImproperRotation);
@@ -624,7 +624,7 @@ ImproperRotation::ImproperRotation(const ArchivePtr& arch)
 }
 
 void
-ImproperRotation::serialize(const ArchivePtr& arch) const
+ImproperRotation::serialize(const XMLArchivePtr& arch) const
 {
     SymmetryOperation::serialize(arch);
     serial_save(order);
@@ -678,19 +678,19 @@ Reflection::Reflection(
     init(axis);
 }
 
-Reflection::Reflection(const ArchivePtr& arch)
+Reflection::Reflection(const XMLArchivePtr& arch)
     : SymmetryOperation(arch)
 {
     SetRuntime(Reflection);
 
     boost::intrusive_ptr<Vector> tmp;
-    arch->serialize(Archive::Read, tmp, "axis", "");
+    arch->serialize_obj(XMLArchive::Read, tmp, "axis");
     VectorPtr axis(tmp.get()); 
     init(axis);
 }
 
 void
-Reflection::serialize(const ArchivePtr& arch) const
+Reflection::serialize(const XMLArchivePtr& arch) const
 {
     SymmetryOperation::serialize(arch);
     serial_save(axis);
@@ -773,7 +773,7 @@ Inversion::init()
     name_ = "I";
 }
 
-Inversion::Inversion(const ArchivePtr& arch)
+Inversion::Inversion(const XMLArchivePtr& arch)
     : SymmetryOperation(arch)
 {
     SetRuntime(Inversion);
@@ -781,7 +781,7 @@ Inversion::Inversion(const ArchivePtr& arch)
 }
 
 void
-Inversion::serialize(const ArchivePtr& arch) const
+Inversion::serialize(const XMLArchivePtr& arch) const
 {
     SymmetryOperation::serialize(arch);
 }
@@ -803,7 +803,7 @@ IdentityElement::init()
     name_ = "E";
 }
 
-IdentityElement::IdentityElement(const ArchivePtr& arch)
+IdentityElement::IdentityElement(const XMLArchivePtr& arch)
     : SymmetryOperation(arch)
 {
     SetRuntime(IdentityElement);
@@ -811,7 +811,7 @@ IdentityElement::IdentityElement(const ArchivePtr& arch)
 }
 
 void
-IdentityElement::serialize(const ArchivePtr& arch) const
+IdentityElement::serialize(const XMLArchivePtr& arch) const
 {
     SymmetryOperation::serialize(arch);
 }
@@ -835,7 +835,7 @@ PointGroup::PointGroup(
 
 }
 
-PointGroup::PointGroup(const ArchivePtr& arch) 
+PointGroup::PointGroup(const XMLArchivePtr& arch)
     : Serializable(arch)
 {
     SetRuntime(PointGroup);
@@ -859,7 +859,7 @@ PointGroup::~PointGroup()
 }
 
 void
-PointGroup::serialize(const ArchivePtr& arch) const
+PointGroup::serialize(const XMLArchivePtr& arch) const
 {
     Serializable::serialize(arch);
     serial_save(valid);
@@ -1006,7 +1006,7 @@ PointGroupClass::PointGroupClass(
 }
 
 PointGroupClass::PointGroupClass(
-    const ArchivePtr& arch
+    const XMLArchivePtr& arch
 ) 
 {
     SetRuntime(PointGroupClass);
@@ -1015,7 +1015,7 @@ PointGroupClass::PointGroupClass(
 }
 
 void
-PointGroupClass::serialize(const ArchivePtr& arch) const
+PointGroupClass::serialize(const XMLArchivePtr& arch) const
 {
     Serializable::serialize(arch);
     serial_save_enum(type);

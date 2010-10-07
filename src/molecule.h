@@ -45,9 +45,9 @@ class Atom : public smartptr::Serializable {
 		*/
         Atom(ConstVectorPtr xyz, gigstr atomic_symbol);
 
-        Atom(const ArchivePtr& arch);
+        Atom(const XMLArchivePtr& arch);
 
-        void serialize(const ArchivePtr& arch) const;
+        void serialize(const XMLArchivePtr& arch) const;
 
 		/** 
             Gets the xyz coordinates
@@ -189,12 +189,12 @@ class Molecule : public smartptr::Serializable {
             smartptr::Serializable constructor
         */
         Molecule(
-            const ArchivePtr& arch
+            const XMLArchivePtr& arch
         );
 
         Molecule(const ConstMoleculePtr& mol);
 
-        void serialize(const ArchivePtr& arch) const;
+        void serialize(const XMLArchivePtr& arch) const;
 
         /**
             Compute the abelian point group corresponding to the molecule
@@ -207,7 +207,7 @@ class Molecule : public smartptr::Serializable {
         */
         void computePointGroup();
 
-        void computePointGroup(const ArchivePtr& arch);
+        void computePointGroup(const XMLArchivePtr& arch);
 
 		/** 
             Figures out whether a molecule has the given symmetry operation

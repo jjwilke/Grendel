@@ -30,9 +30,9 @@ class Matrix : public smartptr::Serializable {
 
         Matrix(Vector* v, mdim_t nrow, mdim_t ncol);
 
-        Matrix(const ArchivePtr& arch);
+        Matrix(const XMLArchivePtr& arch);
 
-        void serialize(const ArchivePtr& arch) const;
+        void serialize(const XMLArchivePtr& arch) const;
 
         ~Matrix();
 
@@ -87,9 +87,9 @@ class Vector : public smartptr::Serializable {
 
         Vector(mdim_t n);
 
-        Vector(const ArchivePtr& arch);
+        Vector(const XMLArchivePtr& arch);
 
-        void serialize(const ArchivePtr& arch) const;
+        void serialize(const XMLArchivePtr& arch) const;
 
         ~Vector();
 

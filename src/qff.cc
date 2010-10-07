@@ -19,8 +19,6 @@
 #include <src/permutation.h>
 #include <src/units.h>
 
-#include <src/smartptr/src/rapidxml.h>
-
 #define USE_SVD 0
 
 #define ZERODISP 1e-3
@@ -116,7 +114,7 @@ ForceField::ForceField(
     disp_iter_->mapEquivalentDisplacements();
 }
 
-ForceField::ForceField(const ArchivePtr& arch)
+ForceField::ForceField(const XMLArchivePtr& arch)
     : Serializable(arch)
 {
     SetRuntime(ForceField);
@@ -139,7 +137,7 @@ ForceField::ForceField(const ArchivePtr& arch)
 }
 
 void
-ForceField::serialize(const ArchivePtr& arch) const
+ForceField::serialize(const XMLArchivePtr& arch) const
 {
     Serializable::serialize(arch);
 
@@ -590,53 +588,76 @@ ForceField::generateDisplacements()
 }
 
 bool
-ForceField::getXMLEnergy(const XMLParser& xml, double& energy)
+ForceField::getXMLEnergy(const XMLArchivePtr& xml, double& energy)
 {
     /** Get the energy */
-    XMLParser enode = xml->getChildByAttribute("energy", "type", "molecular");
-    if (enode.get() == NULL)
-        return false;
+    xml->stepIn("energy");
 
-    if (!enode->hasAttribute("value")) return false;
-    string etext = enode->getAttribute("value");
+    //XMLParser enode = xml->getChildByAttribute("energy", "type", "molecular");
+
+    if (xml->null())
+    {
+        xml->stepOut();
+        return false;
+    }
+
+    if (!xml->hasAttribute("value"))
+    {
+        xml->stepOut();
+        return false;
+    }
+
+    string etext; xml->getAttribute(etext, "value");
     stringstream sstr(etext);
     sstr >> energy;
+
+    xml->stepOut();
 
     return true; //energy found
 }
 
 bool
-ForceField::getXMLXYZ(const XMLParser& xml, RectMatrixPtr& geom)
+ForceField::getXMLXYZ(const XMLArchivePtr& xml, RectMatrixPtr& geom)
 {
     /** Get the xyz coordinates */
-    XMLParser xyznode = xml->fetchChild("xyz");
-    if (xyznode.get() == NULL)
+    xml->stepIn("xyz");
+    if (xml->null())
+    {
+        xml->stepOut();
         return false;
+    }
 
-    string xyztext = xyznode->getText();
+    string xyztext; xml->getValue(xyztext);
 
     vector<string> atoms;
     //we want specific units
     string outunits = KeywordSet::getKeyword("bond units")->getValueString();
     //the input units are not necessarily given
     string inunits = "bohr";
-    if (xyznode->hasAttribute("units"))
-        inunits = xyznode->getAttribute("units");
+    if (xml->hasAttribute("units"))
+        xml->getAttribute(inunits, "units");
 
     geom = getXYZMatrix(atoms, xyztext, inunits, outunits);
+
+    xml->stepOut();
+
     return true;
 }
 
 bool
-ForceField::getXMLGradients(const XMLParser& xml, RectMatrixPtr& gradients)
+ForceField::getXMLGradients(const XMLArchivePtr& xml, RectMatrixPtr& gradients)
 {
-    XMLParser gradnode = xml->fetchChild("gradient");
-    if (gradnode.get() == NULL)
+    xml->stepIn("gradient");
+    if (xml->null())
+    {
+        xml->stepOut();
         return false;
+    }
 
     string gradtype = "xyz";
-    if (gradnode->hasAttribute("type"))     
-        gradtype = gradnode->getAttribute("type");
+    if (xml->hasAttribute("type"))
+        xml->getAttribute(gradtype, "type");
+
     if (gradtype == "internals")
     {
         except("Cannot read in internals gradients. Please give only xyz gradients.");
@@ -649,29 +670,35 @@ ForceField::getXMLGradients(const XMLParser& xml, RectMatrixPtr& gradients)
 
     //if not internals specified, do xyz 
     string gradunits = "hartree/bohr";
-    if (gradnode->hasAttribute("units"))
-        gradunits = gradnode->getAttribute("units");
+    if (xml->hasAttribute("units"))
+        xml->getAttribute(gradunits, "units");
+
     if (gradunits != "hartree/bohr")
     {
         except("Please input gradients in XML file in hartree/bohr units");
     }
 
-    string gradtext = gradnode->getText();
+    string gradtext; xml->getValue(gradtext);
     gradients = getMatrix(gradtext, mol_->natoms(), 3);
+
+    xml->stepOut();
 
     return true;
 }
 
 bool
-ForceField::getXMLForceConstants(const XMLParser& xml, RectMatrixPtr& fc)
+ForceField::getXMLForceConstants(const XMLArchivePtr& xml, RectMatrixPtr& fc)
 {
-    XMLParser fcnode = xml->fetchChild("fc");
-    if (fcnode.get() == NULL)
+    xml->stepIn("fc");
+    if (xml->null())
+    {
+        xml->stepOut();
         return false;
+    }
 
     string fctype = "xyz";
-    if (fcnode->hasAttribute("type"))
-        fcnode->getAttribute(fctype, "type");
+    if (xml->hasAttribute("type"))
+        xml->getAttribute(fctype, "type");
 
     if (fctype != "xyz")
     {
@@ -679,25 +706,27 @@ ForceField::getXMLForceConstants(const XMLParser& xml, RectMatrixPtr& fc)
     }
 
     string fcunits = "hartree/bohr";
-    if (fcnode->hasAttribute("units"))
-        fcnode->getAttribute(fcunits, "units");
+    if (xml->hasAttribute("units"))
+        xml->getAttribute(fcunits, "units");
 
     if (fcunits != "hartree/bohr")
     {
         except("Please input force constants in XML file in hartree/bohr units");
     }
 
-    string fctext = fcnode->getText();
+    string fctext; xml->getValue(fctext);
     int ncoords = mol_->natoms() * 3;
     fc = getMatrix(fctext, ncoords, ncoords);
+
+    xml->stepOut();
 
     return true;
 }
 
 void
-ForceField::readXMLDisplacement(const XMLParser& node, bool& extrazero)
+ForceField::readXMLDisplacement(const XMLArchivePtr& node, bool& extrazero)
 {
-    if (!node)
+    if (node->null())
         except("Recieved null node in readXMLDisplacement");
 
     int nvalue = KeywordSet::getKeyword("nvalue")->getValueInteger();
@@ -710,7 +739,8 @@ ForceField::readXMLDisplacement(const XMLParser& node, bool& extrazero)
         stringstream sstr(ntext);
         sstr >> dispnumber;
     }
-    XMLParser molnode = node->fetchChild("molecule");
+
+    node->stepIn("molecule");
 
     RectMatrixPtr geom;
     RectMatrixPtr gradients;
@@ -718,7 +748,7 @@ ForceField::readXMLDisplacement(const XMLParser& node, bool& extrazero)
 
     double energy;
 
-    bool foundxyz = getXMLXYZ(molnode, geom);
+    bool foundxyz = getXMLXYZ(node, geom);
 
     if (!foundxyz)
     {
@@ -879,6 +909,8 @@ ForceField::readXMLDisplacement(const XMLParser& node, bool& extrazero)
             assignForceConstants(xyzfc, xyzgrads);
 
     }
+
+    node->stepOut();
 }
 
 void
@@ -904,14 +936,12 @@ ForceField::readXMLData(string filename)
     
     int ntot = 0;
     bool extrazero = false;
-    XMLDocumentPtr xml(new rapidxml::RapidXMLDocument(filename));
-    //XMLDocumentPtr xml(new pyxml::PyXMLDocument(filename));
-    XMLParser docnode(xml->documentNode());
-    XMLParser node(docnode->firstChild("displacement"));
-    while (node) //keep iterating until we run out of displacements
+    XMLArchivePtr xml(new smartptr::XMLArchive(filename));
+    xml->stepIn("displacement");
+    while (xml->nonnull()) //keep iterating until we run out of displacements
     {
-        readXMLDisplacement(node, extrazero);
-        node = node->nextSibling("displacement");
+        readXMLDisplacement(xml, extrazero);
+        xml->nextSibling("displacement");
         ++ntot;
     }
 

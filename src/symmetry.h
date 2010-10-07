@@ -41,12 +41,12 @@ class SymmetryOperation : public smartptr::Serializable {
         );
 
         SymmetryOperation(
-            const ArchivePtr& parser
+            const XMLArchivePtr& parser
         );
 
         void
         serialize(
-            const ArchivePtr& ptr
+            const XMLArchivePtr& ptr
         ) const;
 
         /**
@@ -219,10 +219,10 @@ class ImproperRotation : public SymmetryOperation {
         );
 
         ImproperRotation(
-            const ArchivePtr& parser
+            const XMLArchivePtr& parser
         );
 
-        void serialize(const ArchivePtr& writer) const;
+        void serialize(const XMLArchivePtr& writer) const;
 
         std::string description() const;
 
@@ -270,10 +270,10 @@ class Rotation : public SymmetryOperation {
         );
 
         Rotation(
-            const ArchivePtr& parser
+            const XMLArchivePtr& parser
         );
 
-        void serialize(const ArchivePtr& writer) const;
+        void serialize(const XMLArchivePtr& writer) const;
 
         /**
             @return See #order_;
@@ -310,10 +310,10 @@ class Reflection : public SymmetryOperation {
         );
 
         Reflection(
-            const ArchivePtr& parser
+            const XMLArchivePtr& parser
         );
 
-        void serialize(const ArchivePtr& writer) const;
+        void serialize(const XMLArchivePtr& writer) const;
 
         /**
             Constructs an axis based on 3 points in a plane.
@@ -350,10 +350,10 @@ class Inversion : public SymmetryOperation {
         Inversion();
 
         Inversion(
-            const ArchivePtr& parser
+            const XMLArchivePtr& parser
         );
 
-        void serialize(const ArchivePtr& writer) const;
+        void serialize(const XMLArchivePtr& writer) const;
 
 };
 
@@ -373,10 +373,10 @@ class IdentityElement : public SymmetryOperation {
         IdentityElement();
 
         IdentityElement(
-            const ArchivePtr& parser
+            const XMLArchivePtr& parser
         );
 
-        void serialize(const ArchivePtr& writer) const;
+        void serialize(const XMLArchivePtr& writer) const;
 };
 
 /**
@@ -411,10 +411,10 @@ class PointGroupClass : public smartptr::Serializable {
 
         
         PointGroupClass(
-            const ArchivePtr& parser
+            const XMLArchivePtr& parser
         );
 
-        void serialize(const ArchivePtr& writer) const;
+        void serialize(const XMLArchivePtr& writer) const;
 
         /**
             @return The number of symmetry operations in the class
@@ -556,12 +556,12 @@ class PointGroup : public smartptr::Serializable {
         );
 
         PointGroup(
-            const ArchivePtr& parser
+            const XMLArchivePtr& parser
         );
 
         virtual ~PointGroup();
 
-        void serialize(const ArchivePtr& writer) const;
+        void serialize(const XMLArchivePtr& writer) const;
 
         /**
             @return The name of the point group

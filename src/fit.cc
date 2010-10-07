@@ -115,7 +115,7 @@ FitPoint::FitPoint(
     disp_->incrementRefcount();
 }
 
-FitPoint::FitPoint(const ArchivePtr& arch)
+FitPoint::FitPoint(const XMLArchivePtr& arch)
 {
     SetRuntime(FitPoint);
     serial_load(coef);
@@ -123,7 +123,7 @@ FitPoint::FitPoint(const ArchivePtr& arch)
 }
 
 void
-FitPoint::serialize(const ArchivePtr& arch) const
+FitPoint::serialize(const XMLArchivePtr& arch) const
 {
     Serializable::serialize(arch);
     serial_save(coef);
@@ -191,14 +191,14 @@ Fit::Fit(
     init(iter, coefs);
 }
 
-Fit::Fit(const ArchivePtr& arch)
+Fit::Fit(const XMLArchivePtr& arch)
 {
     SetRuntime(Fit);
     serial_load(points);
 }
 
 void
-Fit::serialize(const ArchivePtr& arch) const
+Fit::serialize(const XMLArchivePtr& arch) const
 {
     Serializable::serialize(arch);
     serial_save(points);

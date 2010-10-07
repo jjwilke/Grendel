@@ -36,11 +36,10 @@ GigideRuntime::xml_commit()
     //reset the writer
     archive_ = new smartptr::XMLArchive();
 
-    archive_->serialize<Molecule>(Archive::Write, mol_, "molecule", "mainmol");
-    archive_->serialize(Archive::Write, simples_, "simples", "mainsimples");
-    archive_->serialize(Archive::Write, coords_, "coordinates", "maincoords");
-    serial_call_save(archive_, qff_, "qff", "");
-    //archive_->serialize(Archive::Write, qff_, "qff");
+    serial_call_save(archive_, mol_, "molecule");
+    serial_call_save(archive_, simples_, "simples");
+    serial_call_save(archive_, coords_, "coordinates");
+    serial_call_save(archive_, qff_, "qff");
     archive_->toFile("gigide.xml");
     gigtimer::Timer::stop("xml commit");
 }
@@ -153,11 +152,11 @@ GigideRuntime::run_xmlprint()
     XMLArchivePtr arch(new smartptr::XMLArchive("gigide.xml"));
 
     MoleculePtr testmol;
-    arch->serialize(Archive::Read, testmol, "molecule", "mainmol");
+    serial_call_load(arch, testmol, "molecule");
     testmol->print();
 
     vector<SimpleInternalCoordinatePtr> simples;
-    arch->serialize(Archive::Read, simples, "simples", "mainsimples");
+    serial_call_load(arch, simples, "simples");
     for (int i=0; i < simples.size(); ++i)
     {
         simples[i]->print();
@@ -165,20 +164,19 @@ GigideRuntime::run_xmlprint()
     }
 
     vector<InternalCoordinatePtr> coords;
-    arch->serialize(Archive::Read, simples, "coordinates", "maincoords");
+    serial_call_load(arch, simples, "coordinates");
     for (int i=0; i < coords.size(); ++i)
     {
         coords[i]->print();
         cout << endl;
     }
 
-    //testmol->computePointGroup(molnode);
     testmol->getPointGroup()->print();
 
     
     ForceFieldPtr qff;
-    serial_call_load(arch, qff, "qff", "");
-    if (qff.get() == NULL)
+    serial_call_load(arch, qff, "qff");
+    if (!qff)
         except("Could not find force field on tag qff");
     gigtimer::Timer::stop("xml");
 
@@ -257,11 +255,11 @@ GigideRuntime::run_displace()
     mol->getXYZ().print("new geometry");
 }
 
-ArchivePtr GigideRuntime::archive_ = NULL;
-MoleculePtr GigideRuntime::mol_ = NULL;
+XMLArchivePtr GigideRuntime::archive_ = 0;
+MoleculePtr GigideRuntime::mol_ = 0;
 std::vector<SimpleInternalCoordinatePtr> GigideRuntime::simples_;
 std::vector<InternalCoordinatePtr> GigideRuntime::coords_;
-ForceFieldPtr GigideRuntime::qff_ = NULL;
-GigideInputFilePtr GigideRuntime::input_ = NULL;
-KeywordSetPtr GigideRuntime::keymap_ = NULL;
+ForceFieldPtr GigideRuntime::qff_ = 0;
+GigideInputFilePtr GigideRuntime::input_ = 0;
+KeywordSetPtr GigideRuntime::keymap_ = 0;
 

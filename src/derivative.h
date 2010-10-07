@@ -177,9 +177,9 @@ class Derivative : public smartptr::Serializable
             const ConstMoleculePtr& mol
         );
 
-        Derivative(const ArchivePtr& parser);
+        Derivative(const XMLArchivePtr& parser);
 
-        void serialize(const ArchivePtr& writer) const;
+        void serialize(const XMLArchivePtr& writer) const;
 
         /** 
             Computes the coefficient of the derivative in the Taylor expansion for a given set of displacements.
@@ -433,9 +433,9 @@ class DerivativeIterator : public smartptr::Serializable
             const ConstMoleculePtr& mol
         );
 
-        DerivativeIterator(const ArchivePtr& parser);
+        DerivativeIterator(const XMLArchivePtr& parser);
 
-        void serialize(const ArchivePtr& writer) const;
+        void serialize(const XMLArchivePtr& writer) const;
 
         ~DerivativeIterator();
 

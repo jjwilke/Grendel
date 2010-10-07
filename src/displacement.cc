@@ -77,7 +77,7 @@ DisplacementIterator::DisplacementIterator(
     readDispFile(basedir);
 }
 
-DisplacementIterator::DisplacementIterator(const ArchivePtr& arch)
+DisplacementIterator::DisplacementIterator(const XMLArchivePtr& arch)
     : Serializable(arch)
 {
     SetRuntime(DisplacementIterator);
@@ -90,7 +90,7 @@ DisplacementIterator::DisplacementIterator(const ArchivePtr& arch)
 }
 
 void
-DisplacementIterator::serialize(const ArchivePtr& arch) const
+DisplacementIterator::serialize(const XMLArchivePtr& arch) const
 {
     Serializable::serialize(arch);
     serial_save(deriv_level);
@@ -517,7 +517,7 @@ Displacement::Displacement(const ConstMoleculePtr& mol,
     init();
 }
 
-Displacement::Displacement(const ArchivePtr& arch)
+Displacement::Displacement(const XMLArchivePtr& arch)
     : Serializable(arch)
 {
     SetRuntime(Displacement);
@@ -544,7 +544,7 @@ Displacement::Displacement(const ArchivePtr& arch)
 }
 
 void
-Displacement::serialize(const ArchivePtr& arch) const
+Displacement::serialize(const XMLArchivePtr& arch) const
 {
     Serializable::serialize(arch);
 
@@ -1252,7 +1252,7 @@ DisplacementMapping::DisplacementMapping(
     SetRuntime(DisplacementMapping);
 }
 
-DisplacementMapping::DisplacementMapping(const ArchivePtr& arch)
+DisplacementMapping::DisplacementMapping(const XMLArchivePtr& arch)
 {
     SetRuntime(DisplacementMapping);
     serial_load(disp);
@@ -1261,7 +1261,7 @@ DisplacementMapping::DisplacementMapping(const ArchivePtr& arch)
 }
 
 void
-DisplacementMapping::serialize(const ArchivePtr& arch) const
+DisplacementMapping::serialize(const XMLArchivePtr& arch) const
 {
     Serializable::serialize(arch);
     serial_save(disp);

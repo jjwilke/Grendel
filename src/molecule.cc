@@ -76,14 +76,14 @@ Molecule::Molecule(const ConstMoleculePtr& mol)
     decref();
 }
 
-Molecule::Molecule(const ArchivePtr& arch)
+Molecule::Molecule(const XMLArchivePtr& arch)
     : Serializable(arch)
 {
     SetRuntime(Molecule);
     initialize_statics();
 
     serial_load(xyz);
-    serial_load_ns(pg, topgroup);
+    serial_load(pg);
     serial_load(atoms);
 
     init();
@@ -94,16 +94,16 @@ Molecule::~Molecule()
 }
 
 void
-Molecule::serialize(const ArchivePtr& arch) const
+Molecule::serialize(const XMLArchivePtr& arch) const
 {
     Serializable::serialize(arch);
     serial_save(xyz);
-    serial_save_ns(pg, topgroup);
+    serial_save(pg);
     serial_save(atoms);
 }
 
 void
-Molecule::computePointGroup(const ArchivePtr& arch)
+Molecule::computePointGroup(const XMLArchivePtr& arch)
 {
     serial_load(pg);
 }
@@ -657,7 +657,7 @@ Atom::Atom(
     SetRuntime(Atom);
 }
 
-Atom::Atom(const ArchivePtr& arch)
+Atom::Atom(const XMLArchivePtr& arch)
   : Serializable(arch)
 {
     SetRuntime(Atom);
@@ -667,7 +667,7 @@ Atom::Atom(const ArchivePtr& arch)
 }
 
 void
-Atom::serialize(const ArchivePtr& arch) const
+Atom::serialize(const XMLArchivePtr& arch) const
 {
     Serializable::serialize(arch);
     serial_save(xyz);

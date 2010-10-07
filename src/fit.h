@@ -27,10 +27,10 @@ class FitPoint : public smartptr::Serializable {
         );
 
         FitPoint(
-            const ArchivePtr& parser
+            const XMLArchivePtr& parser
         );
 
-        void serialize(const ArchivePtr& writer) const;
+        void serialize(const XMLArchivePtr& writer) const;
 
         double
         contribution(
@@ -88,10 +88,10 @@ class Fit : public smartptr::Serializable {
         Fit();
 
         Fit(
-            const ArchivePtr& parser
+            const XMLArchivePtr& parser
         );
 
-        void serialize(const ArchivePtr& writer) const;
+        void serialize(const XMLArchivePtr& writer) const;
 
         void init(
             DisplacementIteratorPtr iter,

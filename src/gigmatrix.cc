@@ -454,13 +454,13 @@ Matrix::Matrix(Vector* v, mdim_t nrow, mdim_t ncol)
     assign(v->data());
 }
 
-Matrix::Matrix(const ArchivePtr& arch)
+Matrix::Matrix(const XMLArchivePtr& arch)
 {
     SetRuntime(Matrix);
 
     mdim_t size;
     void* ptr;
-    arch->loadBinary(&ptr, size, "data", "");
+    arch->loadBinary(&ptr, size, "data");
     data_ = (double *) ptr;
     serial_load(nrow);
     serial_load(ncol);
@@ -473,11 +473,11 @@ Matrix::Matrix(const ArchivePtr& arch)
 }
 
 void
-Matrix::serialize(const ArchivePtr& arch) const
+Matrix::serialize(const XMLArchivePtr& arch) const
 {
     Serializable::serialize(arch);
     mdim_t size = nrow_ * ncol_ * sizeof(double);
-    arch->writeBinary(data_, size, "data", "");
+    arch->writeBinary(data_, size, "data");
     serial_save(nrow);
     serial_save(ncol);
 }
@@ -684,13 +684,13 @@ Vector::Vector(double* d, mdim_t n) :
     //memcpy(data_, d, n * sizeof(double));
 }
 
-Vector::Vector(const ArchivePtr& arch)
+Vector::Vector(const XMLArchivePtr& arch)
 {
     SetRuntime(Vector);
 
     mdim_t size;
     void* ptr;
-    arch->loadBinary(&ptr, size, "data", "");
+    arch->loadBinary(&ptr, size, "data");
     data_ = (double *) ptr;
     serial_load(n);
 
@@ -702,11 +702,11 @@ Vector::Vector(const ArchivePtr& arch)
 }
 
 void
-Vector::serialize(const ArchivePtr& arch) const
+Vector::serialize(const XMLArchivePtr& arch) const
 {
     Serializable::serialize(arch);
 
-    arch->writeBinary(data_, n_ * sizeof(double), "data", "");
+    arch->writeBinary(data_, n_ * sizeof(double), "data");
     serial_save(n);
 }
 

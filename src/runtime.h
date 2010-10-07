@@ -28,7 +28,7 @@ namespace gigide {
 class GigideRuntime {
 
     private:
-        static ArchivePtr archive_;
+        static XMLArchivePtr archive_;
 
         static MoleculePtr mol_;
 
