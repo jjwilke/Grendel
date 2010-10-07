@@ -591,9 +591,7 @@ bool
 ForceField::getXMLEnergy(const XMLArchivePtr& xml, double& energy)
 {
     /** Get the energy */
-    xml->stepIn("energy");
-
-    //XMLParser enode = xml->getChildByAttribute("energy", "type", "molecular");
+    xml->stepTo("energy", "type", "molecular");
 
     if (xml->null())
     {
@@ -750,6 +748,8 @@ ForceField::readXMLDisplacement(const XMLArchivePtr& node, bool& extrazero)
 
     bool foundxyz = getXMLXYZ(node, geom);
 
+
+
     if (!foundxyz)
     {
         cerr << "No xyz coordinates for displacement";
@@ -757,6 +757,8 @@ ForceField::readXMLDisplacement(const XMLArchivePtr& node, bool& extrazero)
             cerr << " " << dispnumber << ".";
         cerr << " Must have xyz coordinates to determine displacement." << endl;
     }
+
+    node->stepOut(); //leave molecule
 
     bool founde = getXMLEnergy(node, energy);
     bool foundgrads = getXMLGradients(node, gradients);
@@ -779,7 +781,7 @@ ForceField::readXMLDisplacement(const XMLArchivePtr& node, bool& extrazero)
 
     DisplacementPtr disp = disp_iter_->findDisplacement(increments);
 
-    if (disp.get() == NULL && nvalue > 0) //see if it is the zero displacement... this gets tacked on after
+    if (!disp && nvalue > 0) //see if it is the zero displacement... this gets tacked on after
     {
         if (iszero)
         {
@@ -790,7 +792,7 @@ ForceField::readXMLDisplacement(const XMLArchivePtr& node, bool& extrazero)
         }
     }
 
-    if (disp.get() == NULL)
+    if (!disp)
     {
         cerr << "Invalid displacement read in" << endl;
         print_vector(increments);
@@ -910,7 +912,6 @@ ForceField::readXMLDisplacement(const XMLArchivePtr& node, bool& extrazero)
 
     }
 
-    node->stepOut();
 }
 
 void

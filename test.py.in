@@ -62,7 +62,7 @@ def run_test(msg_arr, dirname, files):
             os.remove("gigide.out")
 
         validate(msg_arr, "calc")
-        #validate(msg_arr, "xmlprint")
+        validate(msg_arr, "xmlprint")
 
         time.sleep(2)
         os.chdir(topdir)
