@@ -9,7 +9,7 @@ using namespace std;
 using namespace gigide;
 using namespace pyregexp;
 
-KeywordValue::KeywordValue(gigstr val)
+KeywordValue::KeywordValue(const std::string& val)
     : valtext_(val)
 {
 }
@@ -175,7 +175,7 @@ KeywordValue::~KeywordValue()
 
 KeywordSetPtr KeywordSet::keyset_;
 
-KeywordSet::KeywordSet(gigstr inputtext, gigstr defaults)
+KeywordSet::KeywordSet(const std::string& inputtext, const std::string& defaults)
 {
 	//first add the defaults
 	addKeywords(defaults);
@@ -185,19 +185,19 @@ KeywordSet::KeywordSet(gigstr inputtext, gigstr defaults)
     keyset_ = this;
 }
 
-KeywordSet::KeywordSet(gigstr inputtext)
+KeywordSet::KeywordSet(const std::string& inputtext)
 {
 	addKeywords(inputtext, false); //do not validate
 }
 
 KeywordValuePtr
-KeywordSet::getKeyword(gigstr key)
+KeywordSet::getKeyword(const std::string& key)
 {
     return keyset_->get(key);
 }
 
 KeywordValuePtr
-KeywordSet::get(gigstr key) const
+KeywordSet::get(const std::string& key) const
 {
     map<string, KeywordValuePtr>::const_iterator it;
     it = keymap_.find(key);
@@ -232,7 +232,7 @@ KeywordSet::printKeywords(ostream& os)
 }
 
 void
-KeywordSet::addKeywords(gigstr text, bool check)
+KeywordSet::addKeywords(const std::string& text, bool check)
 {
 	stringstream defaultstr(text);
 	string key_regexp = "\\s*([a-zA-Z \\d_]*[a-zA-Z\\d])\\s*[=]\\s*([a-zA-Z\\-\\d][+a-zA-Z \\-\\d.]*[a-zA-Z\\d]*)\\s*";
@@ -304,7 +304,7 @@ KeywordSet::size() const
 }
 
 KeywordIterator::KeywordIterator(
-    gigstr section
+    const std::string& section
 )
 {
     keyset_ = new KeywordSet(section);

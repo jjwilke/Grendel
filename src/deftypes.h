@@ -3,8 +3,6 @@
 
 #include <src/smartptr/src/ref.h>
 
-#define gigstr const std::string&
-
 #define InternalCoordinatePtr boost::intrusive_ptr<InternalCoordinate>
 #define SimpleInternalCoordinatePtr  boost::intrusive_ptr<SimpleInternalCoordinate>
 #define SymmetryInternalCoordinatePtr  boost::intrusive_ptr<SymmetryInternalCoordinate>

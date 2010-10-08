@@ -1,6 +1,6 @@
 bond units = bohr
 bvecdisp = 0.01
-energy units = attajoule
+energy units = aj
 useequivalence = true
 usezero = true
 usedispfile = false

@@ -85,6 +85,7 @@ Molecule::Molecule(const XMLArchivePtr& arch)
     serial_load(xyz);
     serial_load(pg);
     serial_load(atoms);
+    serial_load(dummies);
 
     init();
 }
@@ -100,24 +101,17 @@ Molecule::serialize(const XMLArchivePtr& arch) const
     serial_save(xyz);
     serial_save(pg);
     serial_save(atoms);
-}
-
-void
-Molecule::computePointGroup(const XMLArchivePtr& arch)
-{
-    serial_load(pg);
+    serial_save(dummies);
 }
 
 void
 Molecule::init()
 {
-
     for (int i=0; i < natoms(); ++i)
     {
         //get a map linking atom to number
         number_map_[atoms_[i].get()] = i;
     }
-
 
     //figure out whether it is linear
     if (atoms_.size() == 1) 
@@ -179,7 +173,7 @@ Molecule::natoms() const
 }
 
 double
-Molecule::getMass(gigstr symbol)
+Molecule::getMass(const std::string& symbol)
 {
     return MASSES[symbol];
 }
@@ -582,7 +576,7 @@ Molecule::setXYZ(ConstRectMatrixPtr newxyz)
 }
 
 string
-Molecule::getXYZString(gigstr units, int indent_level) const
+Molecule::getXYZString(const std::string& units, int indent_level) const
 {
     string indent = "";
     for (int i=0; i < indent_level; ++i) 
@@ -632,7 +626,7 @@ Molecule::registerDummyAtom(ConstVectorPtr xyz)
 }
 
 double
-Molecule::getConversion(gigstr units)
+Molecule::getConversion(const std::string& units)
 {
     string bondunits = KeywordSet::getKeyword("bond units")->getValueString();
     if (units ==  bondunits)
@@ -648,7 +642,7 @@ Molecule::getConversion(gigstr units)
 
 Atom::Atom(
     ConstVectorPtr xyz, 
-    gigstr symbol
+    const std::string& symbol
 ) : 
     symbol_(symbol), 
     mass_(Molecule::getMass(symbol)),

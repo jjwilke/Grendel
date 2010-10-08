@@ -253,7 +253,7 @@ class Derivative : public smartptr::Serializable
             @param The string in #typelabel_
             @return The coordinate number associated with the letter
         */
-        int index(gigstr str) const;
+        int index(const std::string& str) const;
 
         void
         addEquivalentDerivative(DerivativePtr equiv);

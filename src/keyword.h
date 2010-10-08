@@ -48,7 +48,7 @@ class KeywordValue : public smartptr::Countable {
             Constructor
 			@param val 	The keyword value to store
 		*/
-        KeywordValue(gigstr val);
+        KeywordValue(const std::string& val);
 
 		/** 
             Casts the option text as a double
@@ -148,20 +148,20 @@ class KeywordSet : public smartptr::Countable {
 			@param inputtest The text with the user specified options
 			@param defaults  The text defining default values that user may or may not have overridden
 		*/
-        KeywordSet(gigstr inputtext, gigstr defaults);
+        KeywordSet(const std::string& inputtext, const std::string& defaults);
 
 		/** 
             Constructor
 			@param inputtest The text with the user specified options
 		*/
-        KeywordSet(gigstr inputtext);
+        KeywordSet(const std::string& inputtext);
 
 		/** 
             Returns a keyword value object with the given name
 			@param key The keyword name
 			@return The keyword value
 		*/
-        static KeywordValuePtr getKeyword(gigstr key);
+        static KeywordValuePtr getKeyword(const std::string& key);
 
         /**
             Prints the universal (static) keyword set
@@ -184,7 +184,7 @@ class KeywordSet : public smartptr::Countable {
             @param key The name of the keyword to return
             @return The keyword value object 
         */
-        KeywordValuePtr get(gigstr key) const;
+        KeywordValuePtr get(const std::string& key) const;
 
         /**
             @param i The keyword number 
@@ -215,7 +215,7 @@ class KeywordSet : public smartptr::Countable {
 			@param text The text specifying keywords
             @param check 
 		*/
-        void addKeywords(gigstr text, bool check = false);
+        void addKeywords(const std::string& text, bool check = false);
 
 };
 
@@ -241,7 +241,7 @@ class KeywordIterator : public smartptr::Countable {
         /**
             The text of the section to create keywords for
         */
-        KeywordIterator(gigstr section);
+        KeywordIterator(const std::string& section);
 
         /**
             @return The current keyword in the iteration

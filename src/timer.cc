@@ -1,6 +1,7 @@
 #include <time.h>
 #include <sys/time.h>
 #include <src/timer.h>
+#include <src/smartptr/src/xmlarchive.h>
 #include <cmath>
 
 using namespace gigtimer;
@@ -8,10 +9,14 @@ using namespace std;
 
 Timer::active_map Timer::active_;
 Timer::total_map Timer::totals_;
+bool Timer::is_on_ = true;
 
 void
 Timer::start(const timestr& region)
 {
+    if (!is_on_)
+        return;
+
     active_map::iterator it = active_.find(region);
     if (it != active_.end())
     {
@@ -35,6 +40,9 @@ Timer::getTime()
 void
 Timer::stop(const timestr& region)
 {
+    if (!is_on_)
+        return;
+
     active_map::iterator it = active_.find(region);
     if (it == active_.end())
     {
@@ -83,3 +91,14 @@ Timer::print(ostream& os)
     os << endl;
 }
 
+void
+Timer::turnOn()
+{
+    is_on_ = true;
+}
+
+void
+Timer::turnOff()
+{
+    is_on_ = false;
+}

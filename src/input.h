@@ -28,7 +28,7 @@ class InputFile : public smartptr::Countable {
         /**
             @param text The input file text
         */
-        InputFile(gigstr text);
+        InputFile(const std::string& text);
 
         /**
             Gets a keyword iterator for a particular section.  This current assumes that sections appear as <br>
@@ -41,14 +41,14 @@ class InputFile : public smartptr::Countable {
             @return A keyword iterator for all of the input. Iterator is empty if
                     section does not exist.
         */
-        KeywordIteratorPtr getKeywords(gigstr section_name) const;
+        KeywordIteratorPtr getKeywords(const std::string& section_name) const;
 
         /**
             Tests whether a section exists.
             @param section_name Current case-sensitive
             @return Whether the section exists
         */
-        bool hasSection(gigstr section_name) const;
+        bool hasSection(const std::string& section_name) const;
 
         /**
             Returns the text of a section. Does not include 
@@ -56,7 +56,7 @@ class InputFile : public smartptr::Countable {
             @param section_name Case-sensitive
             @return The text of the section.  Empty string if section does not exist.
         */
-        std::string getSection(gigstr section_name) const;
+        std::string getSection(const std::string& section_name) const;
 
         /**
             Retrieve the list of all included sections.
@@ -73,7 +73,7 @@ class InputFile : public smartptr::Countable {
             @param section_name
             @return The XYZ coordinates
         */
-        RectMatrixPtr getGeometry(std::vector<std::string>& atomlist, gigstr section_name = "geometry") const;
+        RectMatrixPtr getGeometry(std::vector<std::string>& atomlist, const std::string& section_name = "geometry") const;
 
 };
 
@@ -100,7 +100,7 @@ class GigideInputFile : public InputFile {
         */
         void
         appendCoordinates(
-            gigstr name,
+            const std::string& name,
             const KeywordValuePtr& keyval,
             const ConstMoleculePtr& mol,
             std::vector<InternalCoordinatePtr>& coords,
@@ -193,15 +193,15 @@ class GigideInputFile : public InputFile {
 
         void
         geometryError(
-            gigstr value,
-            gigstr spec
+            const std::string& value,
+            const std::string& spec
         );
     
     public:
         /**
             @param text
         */
-        GigideInputFile(gigstr text);
+        GigideInputFile(const std::string& text);
 
         /**
             Get the keyword set defined by the $options section.

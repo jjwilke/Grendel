@@ -26,7 +26,7 @@ SerialDeclare(Lin1);
 SerialDeclare(SymmetryInternalCoordinate);
 SerialDeclare(CoordinateSubspace);
 
-InternalCoordinate::InternalCoordinate(const ConstMoleculePtr& mol, gigstr name)
+InternalCoordinate::InternalCoordinate(const ConstMoleculePtr& mol, const std::string& name)
     : mol_(mol), coordtype_(name)
 {
 }
@@ -104,7 +104,7 @@ InternalCoordinate::character(int cls) const
 }
 
 ConstVectorPtr
-InternalCoordinate::subgroup_characters(gigstr subgroup) const
+InternalCoordinate::subgroup_characters(const std::string& subgroup) const
 {
     map<string, VectorPtr>::const_iterator it = subgroup_chars_.find(subgroup);
 
@@ -494,7 +494,7 @@ SymmetryInternalCoordinate::carbon_copy() const
 SimpleInternalCoordinate::SimpleInternalCoordinate(
     const vector<int>& connect, 
     const ConstMoleculePtr& mol,
-    gigstr name
+    const std::string& name
 )
     : InternalCoordinate(mol, name), 
       connectivity_(connect)
@@ -867,7 +867,7 @@ PeriodicCoordinate::PeriodicCoordinate(
     const ConstMoleculePtr& mol, 
     double discontinuity,
     double period,
-    gigstr name
+    const std::string& name
 ) : SimpleInternalCoordinate(connect, mol, name)
 {
     period_ = period;
@@ -1215,6 +1215,7 @@ Lin1::Lin1(const XMLArchivePtr& arch)
 {
     SetRuntime(Lin1);
     serial_load(ed);
+    serial_load(dummy);
 }
 
 void
@@ -1222,6 +1223,7 @@ Lin1::serialize(const XMLArchivePtr& arch) const
 {
     SimpleInternalCoordinate::serialize(arch);
     serial_save(ed);
+    serial_save(dummy);
 }
 
 bool

@@ -336,7 +336,7 @@ ForceField::computeDerivatives(DerivativePtr value)
     {
         DerivativePtr deriv = *itder;
         DerivativePtr total_deriv = deriv_iter_->findCombination(deriv, value);
-        if (total_deriv.get() == NULL)
+        if (!total_deriv)
         {
             stringstream sstr;
             sstr << "Could not find combination derivative" << endl;
@@ -1001,7 +1001,7 @@ ForceField::getDerivativeValues(const ConstDerivativePtr& deriv) const
     for (DisplacementIterator::iterator it(disp_iter_->begin()); it != disp_iter_->end(); ++it, ++num)
     {
         DisplacementPtr disp = *it;
-        if (disp.get() == NULL)
+        if (!disp.get())
         {
             except("Got null displacement in derivative iteration.  This should not be possible");
         }
@@ -1033,14 +1033,14 @@ ForceField::compute()
         }
     }
 
-    if (mindisp.get() != NULL)
+    if (!mindisp)
     {
             cout << "Minimum energy displacement is "; mindisp->print(); cout << endl;
             //cout << stream_printf("Energy =  %16.12f", emin) << endl << endl;
     }
 
     DisplacementPtr center = disp_iter_->findZeroDisplacement();
-    if (center.get() != NULL)
+    if (!center)
     {
         double ecenter = center->getEnergy() * econv;
         if ( fabs(ecenter - emin) > 1e-12 )
@@ -1070,7 +1070,7 @@ ForceField::compute()
         {
             cout << "WARNING! Displacement never got assigned energy "; disp->print();
             ConstMoleculePtr mol  = disp->getDisplacementMolecule();
-            if (mol.get() == NULL)
+            if (!mol)
                 cout << mol->getXYZString() << endl;
             else
                 cout << endl;

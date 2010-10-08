@@ -43,7 +43,7 @@ class Atom : public smartptr::Serializable {
 			@param atomic_symbol A symbol specifying the atom.  For now, only the standard H,He,C,etc. symbols are allowed
 								 In future versions, non-standard D,C13,isotope symbols will be allowed.
 		*/
-        Atom(ConstVectorPtr xyz, gigstr atomic_symbol);
+        Atom(ConstVectorPtr xyz, const std::string& atomic_symbol);
 
         Atom(const XMLArchivePtr& arch);
 
@@ -207,12 +207,10 @@ class Molecule : public smartptr::Serializable {
         */
         void computePointGroup();
 
-        void computePointGroup(const XMLArchivePtr& arch);
-
-		/** 
+        /**
             Figures out whether a molecule has the given symmetry operation
-			@param op	A matrix specifying some symmetry operation
-		*/
+            @param op	A matrix specifying some symmetry operation
+        */
         bool hasSymmOp(ConstSymmetryOperationPtr op) const;
 
 		/** 
@@ -310,7 +308,7 @@ class Molecule : public smartptr::Serializable {
             @param indent_level How many tabs to add before the geometry
             @return A neatly formatted string of the xyz coordinates. Atom labels not included.
 		*/
-        std::string getXYZString(gigstr units = angstrom, int indent_level = 0) const;
+        std::string getXYZString(const std::string& units = angstrom, int indent_level = 0) const;
 
         /**
             @return Whether the molecule is linear
@@ -340,7 +338,7 @@ class Molecule : public smartptr::Serializable {
 			@param symbol The atomic symbol
 			@return The corresponding mass
 		*/
-		static double getMass(gigstr symbol);
+		static double getMass(const std::string& symbol);
 
         
         /**
@@ -350,7 +348,7 @@ class Molecule : public smartptr::Serializable {
                          For example, if input units are "bohr" and "angstrom" is param,
                          function returns 0.529...
         */
-        static double getConversion(gigstr units);
+        static double getConversion(const std::string& units);
 
         virtual ~Molecule();
 };

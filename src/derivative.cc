@@ -4,6 +4,7 @@
 #include <src/permutation.h>
 #include <src/exception.h>
 #include <src/molecule.h>
+#include <src/timer.h>
 
 using namespace gigide;
 using namespace std;
@@ -114,9 +115,13 @@ DerivativeIterator::DerivativeIterator(const XMLArchivePtr& arch)
     SetRuntime(DerivativeIterator);
 
     serial_load(deriv_level);
+
     serial_load(nonzero_level);
+
     serial_load(coords);
+
     serial_load(derivs);
+
     serial_load(mol);
 }
 
@@ -385,8 +390,8 @@ Derivative::Derivative(
 Derivative::Derivative(const XMLArchivePtr& arch)
     : Serializable(arch)
 {
-
     SetRuntime(Derivative);
+
     serial_load(coeff);
     serial_load(level);
     serial_load(nonzero);
@@ -527,7 +532,7 @@ Derivative::value() const
 }
 
 int
-Derivative::index(gigstr str) const
+Derivative::index(const std::string& str) const
 {
     map<string, int>::const_iterator it = indices_.find(str);
     if (it == indices_.end())

@@ -9,6 +9,10 @@
 
 namespace gigtimer {
 
+
+#define tstart(x) gigtimer::Timer::start(x)
+#define tstop(x) gigtimer::Timer::stop(x)
+
 class Timer {
 
     typedef std::string timestr;
@@ -20,6 +24,7 @@ class Timer {
         typedef std::map<timestr, time_t> total_map;
         static active_map active_;
         static total_map totals_;
+        static bool is_on_;
     
     public:
         
@@ -32,6 +37,10 @@ class Timer {
         static void getDisplay(time_t total, unsigned int& hours, unsigned int& minutes, time_t& seconds);
 
         static void print(std::ostream& os = std::cout);
+
+        static void turnOn();
+
+        static void turnOff();
         
 };
 

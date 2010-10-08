@@ -12,13 +12,13 @@ using namespace gigide;
 using namespace pyregexp;
 using namespace std;
 
-InputFile::InputFile(gigstr text)
+InputFile::InputFile(const std::string& text)
 {
     filetext_ = text;
 }
 
 KeywordIteratorPtr
-InputFile::getKeywords(gigstr section_name) const
+InputFile::getKeywords(const std::string& section_name) const
 {
     string section = getSection(section_name);
     KeywordIteratorPtr keyset = new KeywordIterator(section);
@@ -26,7 +26,7 @@ InputFile::getKeywords(gigstr section_name) const
 }
 
 string
-InputFile::getSection(gigstr section_name) const
+InputFile::getSection(const std::string& section_name) const
 {
     if (!hasSection(section_name))
         return "";
@@ -37,7 +37,7 @@ InputFile::getSection(gigstr section_name) const
 }
 
 bool
-InputFile::hasSection(gigstr section_name) const
+InputFile::hasSection(const std::string& section_name) const
 {
     string regexp = section_name + "\n(.*?)[$]end";
     bool test = has_regexp_match(regexp, filetext_, IncludeLineBreaks);
@@ -45,7 +45,7 @@ InputFile::hasSection(gigstr section_name) const
 }
 
 RectMatrixPtr 
-InputFile::getGeometry(vector<string>& atomlist, gigstr section_name) const
+InputFile::getGeometry(vector<string>& atomlist, const std::string& section_name) const
 {
     string geomsection = getSection(section_name);
 
@@ -69,7 +69,7 @@ InputFile::getSectionNames(std::vector<std::string>& names) const
     findmatch(names, regexp, filetext_, 1, FindAll);
 }
 
-GigideInputFile::GigideInputFile(gigstr filetext)
+GigideInputFile::GigideInputFile(const std::string& filetext)
     : InputFile(filetext)
 {
 }
@@ -125,7 +125,7 @@ GigideInputFile::addSymmetryInternalCoordinates(
     for (int c=0; c < simples.size(); c++)
     {
         SimpleInternalCoordinatePtr coord = label_map[simples[c]];
-        if (coord.get() == NULL)
+        if (!coord)
         {
             except(stream_printf("%s is not a valid name in $symmetry", simples[c].c_str()));
         }
@@ -152,7 +152,7 @@ GigideInputFile::addSymmetryInternalCoordinates(
 
 void
 GigideInputFile::appendCoordinates(
-    gigstr name,
+    const std::string& name,
     const KeywordValuePtr& keyval,
     const ConstMoleculePtr& mol,
     vector<InternalCoordinatePtr>& coords,
@@ -207,7 +207,7 @@ GigideInputFile::appendCoordinates(
         //figure out from the string map which simple internal coordinate this corresponds to
         string simple_label = simple_matches[n];
         SimpleInternalCoordinatePtr simple = label_map[simple_label];
-        if (simple.get() == NULL)
+        if (!simple)
         {
             except(stream_printf("Unrecognized coordinate label %s", simple_label.c_str()));
         }
@@ -402,8 +402,8 @@ GigideInputFile::readXYZPoints(
 
 void
 GigideInputFile::geometryError(
-    gigstr value,
-    gigstr spec
+    const std::string& value,
+    const std::string& spec
 )
 {
     except(stream_printf("Invalid geometry specifier %s for %s", spec.c_str(), value.c_str()));
@@ -475,11 +475,11 @@ GigideInputFile::readAxes(
         {
             string name1 = keyval->popString();
             AxisPtr ax1 = axes[name1];
-            if (ax1.get() == NULL) geometryError(name, name1);
+            if (!ax1) geometryError(name, name1);
                 
             string name2 = keyval->popString();
             AxisPtr ax2 = axes[name2];
-            if (ax2.get() == NULL) geometryError(name, name2);
+            if (!ax2) geometryError(name, name2);
 
             VectorPtr vec = ax2->getVector() + ax1->getVector();
             AxisPtr axis = new Axis(vec);
@@ -517,7 +517,7 @@ GigideInputFile::readSymmetryOperations(
             int order = keyval->popInteger();
             string axname = keyval->popString();
             AxisPtr axis = axes[axname];
-            if (axis.get() == NULL) geometryError(name, axname);
+            if (!axis) geometryError(name, axname);
             
             op = new Rotation(axis->getVector(), order);
         }
@@ -526,7 +526,7 @@ GigideInputFile::readSymmetryOperations(
             int order = keyval->popInteger();
             string axname = keyval->popString();
             AxisPtr axis = axes[axname];
-            if (axis.get() == NULL) geometryError(name, axname);
+            if (!axis) geometryError(name, axname);
             
             op = new ImproperRotation(axis->getVector(), order);
         }
@@ -537,7 +537,7 @@ GigideInputFile::readSymmetryOperations(
             {
                 string axname = keyval->popString();
                 AxisPtr axis = axes[axname];
-                if (axis.get() == NULL) geometryError(name, axname);
+                if (!axis) geometryError(name, axname);
 
                 op = new Reflection(axis->getVector());
             }
@@ -546,15 +546,15 @@ GigideInputFile::readSymmetryOperations(
                 string ptname;
                 ptname = keyval->popString();
                 XYZPointPtr pt1 = points[ptname];
-                if (pt1.get() == NULL) geometryError(name, ptname);
+                if (!pt1) geometryError(name, ptname);
 
                 ptname = keyval->popString();
                 XYZPointPtr pt2 = points[ptname];
-                if (pt2.get() == NULL) geometryError(name, ptname);
+                if (!pt2) geometryError(name, ptname);
 
                 ptname = keyval->popString();
                 XYZPointPtr pt3 = points[ptname];
-                if (pt3.get() == NULL) geometryError(name, ptname);
+                if (!pt3) geometryError(name, ptname);
 
                 op = new Reflection(pt1, pt2, pt3);
             }

@@ -15,7 +15,7 @@ using namespace pyregexp;
 using namespace smartptr;
 
 
-string gigide::getFileText(gigstr filename, gigstr comment)
+string gigide::getFileText(const std::string& filename, const std::string& comment)
 {
     ifstream infile(filename.c_str());
 
@@ -71,7 +71,7 @@ FileWriter::addEndl()
 }
 
 void
-FileWriter::commit(gigstr filename)
+FileWriter::commit(const std::string& filename)
 {
     ofstream outfile;
     outfile.open(filename.c_str());
@@ -80,7 +80,7 @@ FileWriter::commit(gigstr filename)
 }
 
 void
-FileWriter::add(gigstr newtext)
+FileWriter::add(const std::string& newtext)
 {
     contents_ << newtext;
 }
@@ -166,7 +166,7 @@ void
 InputFileWriter::makeFCFile(
     const ConstMoleculePtr& mol, 
     ConstRectMatrixPtr fc, 
-    gigstr filename
+    const std::string& filename
 )
 {
     ofstream outfile;
@@ -426,7 +426,7 @@ IntderWriter::closeSection()
 }
 
 void
-IntderWriter::commit(gigstr filename)
+IntderWriter::commit(const std::string& filename)
 {
     writeHeader();
     writeSimpleCoordinates();
@@ -751,7 +751,7 @@ AnharmWriter::writeXYZ()
 }
 
 void
-AnharmWriter::commit(gigstr filename)
+AnharmWriter::commit(const std::string& filename)
 {
     writeHeader();
     writeResonanceCutoffs();
@@ -761,7 +761,7 @@ AnharmWriter::commit(gigstr filename)
 }
 
 RectMatrixPtr 
-gigide::getMatrix(gigstr text, mdim_t nrow, mdim_t ncol)
+gigide::getMatrix(const std::string& text, mdim_t nrow, mdim_t ncol)
 {
     //now that we have the geometry section, get the xyz coordinates
     string regexp = "([-]?\\d+[.]\\d+)\\s+([-]?\\d+[.]\\d+)\\s+([-]?\\d+[.]\\d+)";
@@ -783,9 +783,9 @@ gigide::getMatrix(gigstr text, mdim_t nrow, mdim_t ncol)
 }
 
 RectMatrixPtr gigide::getXYZMatrix(vector<string>& atomlist,
-                                   gigstr geomsection,
-                                   gigstr inputunits,
-                                   gigstr outputunits)
+                                   const std::string& geomsection,
+                                   const std::string& inputunits,
+                                   const std::string& outputunits)
 {
     //get the atom list
     string regexp = "([a-zA-Z]{1,3})\\s+[-]?\\d+[.]\\d*"; 
@@ -813,7 +813,7 @@ RectMatrixPtr gigide::getXYZMatrix(vector<string>& atomlist,
     return xyzmat;
 }
 
-VectorPtr gigide::getVector(gigstr text)
+VectorPtr gigide::getVector(const std::string& text)
 {
     string regexp = "[-]?\\d+[.]\\d+";
     size_t length=0;

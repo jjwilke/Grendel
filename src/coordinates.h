@@ -86,7 +86,7 @@ class InternalCoordinate : public smartptr::Serializable {
             @param mol The molecule the coordinate is based on
             @param name The name of the coordinate
         */
-        InternalCoordinate(const ConstMoleculePtr& mol, gigstr name);
+        InternalCoordinate(const ConstMoleculePtr& mol, const std::string& name);
 
         InternalCoordinate(const XMLArchivePtr& arch);
 
@@ -264,7 +264,7 @@ class InternalCoordinate : public smartptr::Serializable {
 
         double character(int cls) const;
         
-        ConstVectorPtr subgroup_characters(gigstr subgroup) const;
+        ConstVectorPtr subgroup_characters(const std::string& subgroup) const;
 
 
         /**
@@ -363,7 +363,7 @@ class SimpleInternalCoordinate : public InternalCoordinate
         SimpleInternalCoordinate(
             const std::vector<int>& connect, 
             const ConstMoleculePtr& mol,
-            gigstr name
+            const std::string& name
         );
 
         SimpleInternalCoordinate(const XMLArchivePtr& arch);
@@ -584,7 +584,7 @@ class PeriodicCoordinate : public SimpleInternalCoordinate {
                 const ConstMoleculePtr& mol, 
                 double discontinuity, 
                 double period,
-                gigstr name);
+                const std::string& name);
 
             PeriodicCoordinate(const XMLArchivePtr& arch);
 

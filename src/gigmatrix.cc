@@ -3,6 +3,7 @@
 #include <math.h>
 #include <src/printstream.h>
 #include <algorithm>
+#include <src/timer.h>
 
 #undef heisenbug
 #define heisenbug cout << "Heisenbug: " << __FILE__ << " " << __LINE__ << endl

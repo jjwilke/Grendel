@@ -164,7 +164,7 @@ GigideRuntime::run_xmlprint()
     }
 
     vector<InternalCoordinatePtr> coords;
-    serial_call_load(arch, simples, "coordinates");
+    serial_call_load(arch, coords, "coordinates");
     for (int i=0; i < coords.size(); ++i)
     {
         coords[i]->print();
@@ -190,12 +190,13 @@ GigideRuntime::run_xmlprint()
     run_anharm();
 #endif
     gigtimer::Timer::stop("compute");
+
 }
 
 void
 GigideRuntime::run_dispcart()
 {
-    if (qff_.get() == NULL)
+    if (!qff_)
         init_qff();
 
     qff_->generateDisplacements();
@@ -205,7 +206,7 @@ GigideRuntime::run_dispcart()
 void
 GigideRuntime::run_calc()
 {
-    if (qff_.get() == NULL)
+    if (!qff_)
         init_qff();
 
     gigtimer::Timer::start("read xml data");

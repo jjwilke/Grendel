@@ -17,7 +17,7 @@ namespace gigide {
     @param comment The comment delimiter for ignoring lines
 	@return The text of the file as a string minus comments
 */
-std::string getFileText(gigstr filename, gigstr comment);
+std::string getFileText(const std::string& filename, const std::string& comment);
 
 /**
     Get the the list of atoms and xyz coordinates. Converts coordinates
@@ -31,9 +31,9 @@ std::string getFileText(gigstr filename, gigstr comment);
     @throw
 */
 RectMatrixPtr getXYZMatrix(std::vector<std::string>& atomlist,
-                           gigstr filetext,
-                           gigstr inputunits,
-                           gigstr outputunits);
+                           const std::string& filetext,
+                           const std::string& inputunits,
+                           const std::string& outputunits);
 
 /**
     Given a block of text, read all numerical values and create a matrix
@@ -43,14 +43,14 @@ RectMatrixPtr getXYZMatrix(std::vector<std::string>& atomlist,
     @return nrow x ncol matrix
     @throw GigideException If nrow * ncol does not match the total number of values
 */
-RectMatrixPtr getMatrix(gigstr filetext, mdim_t nrow, mdim_t ncol);
+RectMatrixPtr getMatrix(const std::string& filetext, mdim_t nrow, mdim_t ncol);
 
 /**
     Given a block of text, read all numerical values and create vector
     @param text
     @return Vector of values
 */
-VectorPtr getVector(gigstr text);
+VectorPtr getVector(const std::string& text);
 
 class DerivativeIterator;
 class ForceField;
@@ -70,13 +70,13 @@ class FileWriter
             Commits the contents accumulated so far to the given file. See #content_.
             @param filename The filename to print to
         */
-        virtual void commit(gigstr filename);
+        virtual void commit(const std::string& filename);
 
         /** 
             Adds new contents to the file 
             @param newtext The text to add to the file
         */
-        void add(gigstr newtext);
+        void add(const std::string& newtext);
 
         /**
             Add a new line to the file.
@@ -101,7 +101,7 @@ class InputFileWriter : public FileWriter
         static void makeFCFile(
             const ConstMoleculePtr& mol, 
             ConstRectMatrixPtr fc,
-            gigstr filename
+            const std::string& filename
         );
 
     protected:
@@ -243,7 +243,7 @@ class IntderWriter : public InputFileWriter
 
             /*
             */
-            void commit(gigstr filename);
+            void commit(const std::string& filename);
 
             /** Writes a derivative to the intder input file. */
             void writeDerivatives();
@@ -371,7 +371,7 @@ class AnharmWriter : public InputFileWriter
         /**
             @param filename
         */
-        void commit(gigstr filename);
+        void commit(const std::string& filename);
 
         /**
         */
