@@ -38,7 +38,7 @@ CPPFLAGS=$withval
 echo Using extra include directories: $withval
 )
 CWD=`pwd`
-CPPFLAGS="$CPPFLAGS -I$CWD/src"
+CPPFLAGS="$CPPFLAGS -I$CWD/src -I$CWD/src/smartptr/src"
 
 AC_ARG_WITH(libs,
 [  --with-libs             Specifies libraries (-llib1 -llib2).],
