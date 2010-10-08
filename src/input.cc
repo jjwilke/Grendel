@@ -9,7 +9,7 @@
 #define Z 2
 
 using namespace gigide;
-using namespace pyregexp;
+using namespace smartptr;
 using namespace std;
 
 InputFile::InputFile(const std::string& text)

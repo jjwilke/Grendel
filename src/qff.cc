@@ -9,7 +9,7 @@
 #include <src/fileio.h>
 #include <src/fit.h>
 #include <src/defines.h>
-#include <src/pyregexp.h>
+//#include <src/pyregexp.h>
 #include <src/exception.h>
 #include <src/symmetry.h>
 #include <src/utilities.h>

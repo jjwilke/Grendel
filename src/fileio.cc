@@ -1,7 +1,6 @@
 #include <config.h>
 #include <iostream>
 #include <algorithm>
-#include <src/pyregexp.h>
 #include <src/exception.h>
 #include <src/fileio.h>
 #include <src/utilities.h>
@@ -9,9 +8,10 @@
 #include <src/derivative.h>
 #include <src/displacement.h>
 
+#include <src/smartptr/src/regexp.h>
+
 using namespace std;
 using namespace gigide;
-using namespace pyregexp;
 using namespace smartptr;
 
 

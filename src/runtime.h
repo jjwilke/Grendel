@@ -1,4 +1,3 @@
-#include <pyregexp.h>
 #include <stdio.h>
 #include <string>
 #include <iostream>
@@ -22,6 +21,7 @@
 
 #include <src/smartptr/src/set.h>
 #include <src/smartptr/src/xmlarchive.h>
+#include <src/smartptr/src/regexp.h>
 
 namespace gigide {
 

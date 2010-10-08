@@ -1,4 +1,3 @@
-#include <pyregexp.h>
 #include <stdio.h>
 #include <string>
 #include <iostream>
@@ -22,11 +21,13 @@
 #include <src/runtime.h>
 #include <src/timer.h>
 
+#include <src/smartptr/src/regexp.h>
 #include <src/smartptr/src/set.h>
 
 using namespace std;
 using namespace gigide;
 
+#define USE_PYTHON 0
 
 void
 run_final_intder()
@@ -59,6 +60,7 @@ int main(int argc, const char* argv[])
     cout << "GIGIDE.  Gigide is a general internal coordinate derivative engine." << endl;
     cout << endl;
 
+#if USE_PYTHON
     Py_Initialize();
 
     //configure the python path so it knows where to find the python libraries
@@ -71,6 +73,7 @@ int main(int argc, const char* argv[])
     Py_DECREF(pmod);
     Py_DECREF(ppath);
     Py_DECREF(pstring);
+#endif
 
     gigtimer::Timer::start("gigide");
     try {
@@ -153,7 +156,9 @@ int main(int argc, const char* argv[])
     gigtimer::Timer::stop("gigide");
     //commit the xml
 
+#if USE_PYTHON
     Py_Finalize();
+#endif
 
     gigtimer::Timer::print();
 

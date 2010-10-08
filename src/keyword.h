@@ -5,10 +5,11 @@
 #include <iostream>
 #include <sstream>
 #include <map>
-#include <src/pyregexp.h>
 #include <src/printstream.h>
 #include <src/defines.h>
 #include <src/deftypes.h>
+
+#include <src/smartptr/src/regexp.h>
 
 namespace gigide {
 

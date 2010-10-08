@@ -1,13 +1,14 @@
 
 #include <src/keyword.h>
-#include <src/pyregexp.h>
 #include <src/printstream.h>
 #include <src/exception.h>
 #include <sstream>
 
+#include <src/smartptr/src/regexp.h>
+
 using namespace std;
 using namespace gigide;
-using namespace pyregexp;
+using namespace smartptr;
 
 KeywordValue::KeywordValue(const std::string& val)
     : valtext_(val)
