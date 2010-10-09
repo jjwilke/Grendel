@@ -209,7 +209,7 @@ DisplacementPtr
 DisplacementIterator::getDisplacement(vector<double>& disps)
 {
     DisplacementPtr disp = findDisplacement(disps);
-    if (disp.get() != NULL)
+    if (!disp)
         return disp;
 
     disp = new Displacement(disps, mol_, coords_, simples_, dispsizes_);
@@ -231,7 +231,7 @@ DisplacementIterator::findDisplacement(const vector<double>& disps)
         }
     }
     //nothing found
-    return NULL;
+    return 0;
 }
 
 int 
@@ -270,7 +270,7 @@ DisplacementIterator::findZeroDisplacement()
 bool
 DisplacementIterator::hasZeroDisplacement()
 {
-    return findZeroDisplacement().get() != NULL;
+    return findZeroDisplacement();
 }
 
 void

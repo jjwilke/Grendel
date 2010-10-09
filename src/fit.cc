@@ -335,7 +335,7 @@ Fit::assignFit(
     }
 
     FitPtr fit =  factories_[robustness][typelabel]->getFit(deriv, iter);
-    if (fit.get() == NULL)
+    if (!fit)
     {
         stringstream sstr;
         sstr << "No fitting function for derivative for robustness " << robustness << endl;

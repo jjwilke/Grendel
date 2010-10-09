@@ -874,7 +874,7 @@ Vector::n() const
 
 template <class T> 
 MatrixTemplate<T>::MatrixTemplate()
-    : Parent(NULL)
+    : Parent(0)
 {
 }
 
@@ -888,14 +888,14 @@ template <class T>
 bool
 MatrixTemplate<T>::null() const
 {
-    return get() == NULL;
+    return !get();
 }
 
 template <class T> 
 bool
 MatrixTemplate<T>::nonnull() const
 {
-    return get() != NULL;
+    return get();
 }
 
 template <class T> 
@@ -1025,7 +1025,7 @@ MatrixTemplate<T>::ncol() const
 
 template <class T> 
 RectMatrixTemplate<T>::RectMatrixTemplate()
-    : Parent(NULL)
+    : Parent(0)
 {
 }
 
@@ -1196,7 +1196,7 @@ VectorTemplate<T>::VectorTemplate(mdim_t n)
 
 template <class T>
 VectorTemplate<T>::VectorTemplate()
-    : Parent(NULL)
+    : Parent(0)
 {
 }
 
@@ -1322,14 +1322,14 @@ template <class T>
 bool
 VectorTemplate<T>::null() const
 {
-    return get() == NULL;
+    return !get();
 }
 
 template <class T>
 bool
 VectorTemplate<T>::nonnull() const
 {
-    return get() != NULL;
+    return get();
 }
 
 template <class T>
@@ -1430,7 +1430,7 @@ VectorTemplate<T>::symmetric_outer_product() const
 
 template <class T> 
 SymmMatrixTemplate<T>::SymmMatrixTemplate()
-    : Parent(NULL)
+    : Parent(0)
 {
 }
 

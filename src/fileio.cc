@@ -229,7 +229,7 @@ IntderWriter::IntderWriter(
     includexyz_ = includexyz;
 
     ConstSymmetryInternalCoordinatePtr coord = boost::dynamic_pointer_cast<const SymmetryInternalCoordinate,const InternalCoordinate>(coords_[0]);
-    has_symms_ = coord.get() != NULL;
+    has_symms_ = coord;
 }
 
 void
@@ -277,7 +277,7 @@ intder_sort(int i, int j){return i > j;}
 void
 IntderWriter::writeDerivatives()
 {
-    if (iter_.get() == NULL) //ther are no internal coordinate derivatives to write
+    if (!iter_) //ther are no internal coordinate derivatives to write
         return;
 
     stringstream out;
@@ -337,7 +337,7 @@ IntderWriter::writeSymmetryCoordinates()
     for (int i=0; i < coords_.size(); i++)
     {
         ConstSymmetryInternalCoordinatePtr coord = boost::dynamic_pointer_cast<const SymmetryInternalCoordinate,const InternalCoordinate>(coords_[i]);
-        if (coord.get() == NULL) //these aren't symmetry internals, these are simple internals
+        if (!coord) //these aren't symmetry internals, these are simple internals
         {
             addEndl();
             return;

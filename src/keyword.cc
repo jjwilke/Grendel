@@ -257,7 +257,7 @@ KeywordSet::addKeywords(const std::string& text, bool check)
 			KeywordValuePtr keyval = new KeywordValue(option);
             //this should have overwritten the default value... grab it to make sure it is nonnull
             KeywordValuePtr test = keymap_[key];
-            if (check && test.get() == NULL)
+            if (check && !test)
             {
                 keymap_.erase(keymap_.find(key));
                 stringstream sstr;

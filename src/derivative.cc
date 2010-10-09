@@ -106,7 +106,7 @@ DerivativeIterator::getDerivative(const vector<int>& levels) const
         }
     }
     //nothing found
-    return NULL;
+    return 0;
 }
 
 DerivativeIterator::DerivativeIterator(const XMLArchivePtr& arch)

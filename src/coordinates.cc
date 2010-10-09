@@ -250,7 +250,7 @@ computeChars(
     {
         PointGroupClassPtr cls = *itclass;
         ConstSymmetryOperationPtr symm_op = cls->getRepresentative();
-        if (symm_op.get() == NULL)
+        if (!symm_op)
         {
             except("Null symmetry operation.  This should not be.");
         }
@@ -656,7 +656,7 @@ BondLength::recompute()
     int n1 = mol_number(1);
     int n2 = mol_number(2);
 
-    if (at1.get() == NULL || at2.get() == NULL)
+    if (!at1 || !at2)
         except("BondLength got assigned null atoms");
     
     VectorPtr b1 = at1->getXYZ() - at2->getXYZ(); b1.normalize();
