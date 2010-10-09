@@ -3,7 +3,6 @@ bvecdisp = 0.01
 energy units = aj
 useequivalence = true
 usezero = true
-usedispfile = false
 nderiv = 2
 nvalue = 0
 dispsizes = 0.01

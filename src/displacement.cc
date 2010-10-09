@@ -46,35 +46,6 @@ DisplacementIterator::DisplacementIterator(
     );
 
     nunique_ = 0;
-
-    bool usedispfile = KeywordSet::getKeyword("usedispfile")->getValueBoolean();
-    if (!usedispfile)
-        return;
-
-    except("Dispfile not yet implemented.  Please turn off usedispfile");
-
-    string basedir = GIGDATADIR;
-    switch(deriv_level_)
-    {
-        case 0:
-            basedir += "/derivs_0th";
-            break;
-        case 1:
-            basedir += "/derivs_1st";
-            break;
-        case 2:
-            basedir += "/derivs_2nd";
-            break;
-        case 3:
-            basedir += "/derivs_3rd";
-            break;
-        case 4:
-            basedir += "/derivs_4th";
-            break;
-        default:
-            except(stream_printf("Invalid derivative level %d. Please try again.\n", deriv_level_));
-    }
-    readDispFile(basedir);
 }
 
 DisplacementIterator::DisplacementIterator(const XMLArchivePtr& arch)
