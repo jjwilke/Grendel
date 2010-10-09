@@ -74,7 +74,7 @@ KeywordValue::getValueBoolean() const
 void
 KeywordValue::getValueVectorString(vector<string>& vec) const
 {
-	findmatch(vec, "([a-zA-Z\\d]+)", valtext_, 1, FindAll);
+	findmatch(vec, "([a-zA-Z\\d]+)", valtext_, FindAll);
 }
 
 vector<int>
@@ -251,7 +251,7 @@ KeywordSet::addKeywords(const std::string& text, bool check)
 
 		if (has_regexp_match(key_regexp, nextline, LowerCase))
 		{
-			vector<string> keyoption_pair; findmatch(keyoption_pair, key_regexp, line, 2, LowerCase | StripWhitespace); //2 groups
+			vector<string> keyoption_pair; findmatch(keyoption_pair, key_regexp, line, LowerCase | StripWhitespace); //2 groups
 			string key = keyoption_pair[0];
 			string option = keyoption_pair[1];
 			KeywordValuePtr keyval = new KeywordValue(option);

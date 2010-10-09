@@ -66,7 +66,7 @@ void
 InputFile::getSectionNames(std::vector<std::string>& names) const
 {
     string regexp = "[$](.*?)\\n";
-    findmatch(names, regexp, filetext_, 1, FindAll);
+    findmatch(names, regexp, filetext_, FindAll);
 }
 
 GigideInputFile::GigideInputFile(const std::string& filetext)
@@ -177,7 +177,7 @@ GigideInputFile::appendCoordinates(
     vector< SimpleInternalCoordinatePtr > simples_in_symm;
 
     string coord_text = keyval->getValueString();
-    vector<string> simple_matches; findmatch(simple_matches, label_regexp, coord_text, 1, FindAll);
+    vector<string> simple_matches; findmatch(simple_matches, label_regexp, coord_text, FindAll);
     //now that we know how many simples are involved, build an empty vector of coefficients
     coeffs = new Vector(simple_matches.size()); 
     for (int n=0; n < simple_matches.size(); ++n)

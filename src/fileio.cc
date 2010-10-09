@@ -479,7 +479,7 @@ IntderWriter::transformGradientsToInternals(
     string file12 = getFileText("file12", ""); //pass blank comment, no comments
     string regexp = "[-]?\\d+[.]\\d+[ ]+([-]?\\d+[.]\\d+)\\n";
     size_t nummatches;
-    double* gradvals = get_regexp_double_array(regexp, file12, nummatches, FindAll);
+    double* gradvals = get_regexp_double_array(regexp, file12, nummatches);
     VectorPtr gradients(nummatches); 
     gradients.assign(gradvals);
     delete[] gradvals;
@@ -533,7 +533,7 @@ IntderWriter::transformForceConstantsToInternals(
 
     string regexp = "([-]?\\d+[.]\\d+)";
     size_t nummatches;
-    double* fcvals = get_regexp_double_array(regexp, file16, nummatches, FindAll);
+    double* fcvals = get_regexp_double_array(regexp, file16, nummatches);
     int ncoords = coords.size();
     RectMatrixPtr intfc(ncoords, ncoords);
     intfc.assign(fcvals);
@@ -589,7 +589,7 @@ IntderWriter::transformGradientsToCartesian(
     string file11 = getFileText("file11", ""); //pass blank comment, no comments
     string regexp = "([-]?\\d+[.]\\d+)";
     size_t nummatches;
-    double* gradvals = get_regexp_double_array(regexp, file11, nummatches, FindAll);
+    double* gradvals = get_regexp_double_array(regexp, file11, nummatches);
 
     //some versions have different offsets so we compute the offset here
     int offset = nummatches - mol->natoms() * 3;
@@ -649,7 +649,7 @@ IntderWriter::transformForceConstantsToCartesian(
     string file15 = getFileText("file15", ""); //pass blank comment, no comments
     string regexp = "([-]?\\d+[.]\\d+)";
     size_t nummatches;
-    double* fcvals = get_regexp_double_array(regexp, file15, nummatches, FindAll);
+    double* fcvals = get_regexp_double_array(regexp, file15, nummatches);
     int nxyz = 3 * mol->natoms();
     RectMatrixPtr xyzfc(nxyz, nxyz);
     xyzfc.assign(fcvals);
@@ -766,7 +766,7 @@ gigide::getMatrix(const std::string& text, mdim_t nrow, mdim_t ncol)
     //now that we have the geometry section, get the xyz coordinates
     string regexp = "([-]?\\d+[.]\\d+)\\s+([-]?\\d+[.]\\d+)\\s+([-]?\\d+[.]\\d+)";
     size_t length=0;
-    double* values = get_regexp_double_array(regexp, text, length, FindAll);
+    double* values = get_regexp_double_array(regexp, text, length);
 
     //check consistency of the match and given dimensions
     if (length != nrow * ncol)
@@ -791,7 +791,7 @@ RectMatrixPtr gigide::getXYZMatrix(vector<string>& atomlist,
     string regexp = "([a-zA-Z]{1,3})\\s+[-]?\\d+[.]\\d*"; 
 	//the reg exp looks for all combinations of 3 letters followed by a space followed by a decimal number
 	//e.g. He 3.25
-    findmatch(atomlist, regexp, geomsection, 1, FindAll | IncludeLineBreaks | UpperCase);
+    findmatch(atomlist, regexp, geomsection, FindAll | IncludeLineBreaks | UpperCase);
 
     //now get the xyz coordinates
     RectMatrixPtr xyzmat;
@@ -817,7 +817,7 @@ VectorPtr gigide::getVector(const std::string& text)
 {
     string regexp = "[-]?\\d+[.]\\d+";
     size_t length=0;
-    double* values = get_regexp_double_array(regexp, text, length, FindAll);
+    double* values = get_regexp_double_array(regexp, text, length);
 
     //now get the xyz coordinates
     VectorPtr vec = new Vector(length);
