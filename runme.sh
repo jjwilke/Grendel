@@ -1,9 +1,9 @@
 #!/usr/bin/env tcsh
 
-git submodule init
-git submodule update
+#git submodule init
+#git submodule update
 aclocal
-libtoolize
+glibtoolize
 automake --add-missing
 automake
 autoconf
