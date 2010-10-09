@@ -209,7 +209,7 @@ DisplacementPtr
 DisplacementIterator::getDisplacement(vector<double>& disps)
 {
     DisplacementPtr disp = findDisplacement(disps);
-    if (!disp)
+    if (disp)
         return disp;
 
     disp = new Displacement(disps, mol_, coords_, simples_, dispsizes_);
