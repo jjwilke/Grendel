@@ -1,4 +1,3 @@
-
 #include <src/hessian.h>
 #include <iostream>
 
