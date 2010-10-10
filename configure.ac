@@ -100,29 +100,29 @@ LIBS="-lguide -lpthread $LIBS"
 fi
  
 #check for python
-AC_CHECK_PROGS([PYTHON], python, [:])
-if test "$PYTHON" = :; then
-    AC_MSG_ERROR([Package requires at least Python v2.4])
-fi
-PYVER=`./getpyver`
-PYDIST="python$PYVER"
-echo checking python version... found $PYDIST
-PYBASE=`./getpyinclude`
-PYDEFINC=$PYBASE/$PYDIST
-PYDEFLIBDIR=`./getpylib`
-echo found python include dir $PYDEFINC
+#AC_CHECK_PROGS([PYTHON], python, [:])
+#if test "$PYTHON" = :; then
+#    AC_MSG_ERROR([Package requires at least Python v2.4])
+#fi
+#PYVER=`./getpyver`
+#PYDIST="python$PYVER"
+#echo checking python version... found $PYDIST
+#PYBASE=`./getpyinclude`
+#PYDEFINC=$PYBASE/$PYDIST
+#PYDEFLIBDIR=`./getpylib`
+#echo found python include dir $PYDEFINC
 
-AC_ARG_WITH(python-include,
-[  --with-python-include   Gives the path to the python include directory.] ,
-PYINCLUDE=$withval,
-PYINCLUDE=$PYDEFINC
-)
+#AC_ARG_WITH(python-include,
+#[  --with-python-include   Gives the path to the python include directory.] ,
+#PYINCLUDE=$withval,
+#PYINCLUDE=$PYDEFINC
+#)
 
-AC_ARG_WITH(python-libdir,
-[  --with-python-libdir    Gives the path to the python include directory.] ,
-PYLIBDIR=$withval,
-PYLIBDIR=$PYDEFLIBDIR
-)
+#AC_ARG_WITH(python-libdir,
+#[  --with-python-libdir    Gives the path to the python include directory.] ,
+#PYLIBDIR=$withval,
+#PYLIBDIR=$PYDEFLIBDIR
+#)
 
 AC_ARG_WITH(intder,
 [  --with-intder   Gives the path to intder.] ,
@@ -146,9 +146,9 @@ AC_DEFINE_UNQUOTED(ANHARM_PATH,"${anharmpath}", [The location of anharm])
 AC_DEFINE_UNQUOTED(HAS_ANHARM,${hasanharm}, [Whether anharm exists])
 AC_SUBST(HAS_ANHARM, $hasanharm)
 
-LIBS="$LIBS -l$PYDIST"
-CPPFLAGS="$CPPFLAGS -I$PYINCLUDE"
-LDFLAGS="$LDFLAGS -L$PYLIBDIR"
+#LIBS="$LIBS -l$PYDIST"
+#CPPFLAGS="$CPPFLAGS -I$PYINCLUDE"
+#LDFLAGS="$LDFLAGS -L$PYLIBDIR"
 
 #PKG_CHECK_MODULES([DEPS], libxml++-2.6 >= 2.14.0)
 #AC_SUBST(DEPS_CFLAGS)
