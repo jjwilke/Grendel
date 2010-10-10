@@ -22,10 +22,10 @@ std::stream_printf(const char* fmt, ...)
 void
 std::print_map(
     map<string, string>& keymap,
-    stringstream& sstr
+    ostream& os
 )
 {
     map<string, string>::iterator it;
     for (it = keymap.begin(); it != keymap.end(); it++)
-        sstr << stream_printf("%20s : %s", it->first.c_str(), it->second.c_str()) << endl;
+        os << stream_printf("%20s : %s", it->first.c_str(), it->second.c_str()) << endl;
 }

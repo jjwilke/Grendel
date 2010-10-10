@@ -9,26 +9,26 @@
 
 namespace std {
 
-std::string 
+string 
 stream_printf(const char* fmt, ...);
 
 template <
   class Type
 > void
 print_keys(
-    std::map<std::string, Type>& keymap,
-    std::stringstream& sstr
+    map<string, Type>& keymap,
+    ostream& os = cout
 )
 {
-    typename std::map<std::string, Type>::iterator it;
+    typename map<string, Type>::iterator it;
     for (it = keymap.begin(); it != keymap.end(); it++)
-        sstr << it->first << std::endl;
+        os << it->first << endl;
 }
 
 void
 print_map(
-    std::map<std::string, std::string>& keymap,
-    std::stringstream& sstr
+    map<string, string>& keymap,
+    ostream& os = cout
 );
 
 }

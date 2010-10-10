@@ -69,6 +69,15 @@ class KeywordValue : public smartptr::Countable {
 		*/
         int getValueInteger() const;
 
+        /**
+            Read a value formatted as memory input (e.g 100 mw, 1 gb).  The first value is
+            read as a double. The second value is determines a mutliplier.  The final value
+            is cast as a size_t in bytes.
+            @return The memory specification in bytes
+            
+        */
+        size_t getValueMemory() const;
+
 		/** 
             Casts the option text as a boolean
 			@return The keyword value as a boolean
@@ -284,6 +293,8 @@ class GigideKeyword {
         static std::string getBondUnits();
 
         static std::string getEnergyUnits();
+
+        static size_t getArchiveMemory();
 
 };
 

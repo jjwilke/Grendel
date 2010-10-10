@@ -23,3 +23,4 @@ dispfile = default
 fittype = formula
 printfit = false
 subgroup = none
+archive memory = 100 MB

@@ -30,6 +30,38 @@ KeywordValue::getValueString() const
 	return valtext_;
 }
 
+size_t
+KeywordValue::getValueMemory() const
+{
+    double prefactor;
+    size_t inc;
+
+    std::string incstr;
+    stringstream sstr(valtext_);
+
+    sstr >> prefactor;
+    sstr >> incstr;
+
+    if      (incstr == "b")
+        inc = 1;
+    else if (incstr == "kb")
+        inc = 1 << 10;
+    else if (incstr == "mb")
+        inc = 1 << 20;
+    else if (incstr == "gb")
+        inc = 1 << 30;
+    else if (incstr == "mw")
+        inc = 8 * (1 << 20);
+    else
+    {
+        except("Invalid memory storage specifier.  I need something like B, KB, MB, GB, or MW");
+    }
+
+    double dblmem = prefactor * inc;
+    size_t mem = (size_t) dblmem;
+    return mem;
+}
+
 int
 KeywordValue::count() const
 {
@@ -220,9 +252,7 @@ KeywordSet::print(ostream& os) const
     map<string, KeywordValuePtr>::const_iterator it;
     for (it = keymap_.begin(); it != keymap_.end(); ++it)
     {
-        os <<  (it->first).c_str() << " = "
-             <<  (it->second)->getValueString().c_str()
-             << endl;
+        os << stream_printf("%30s = %s", it->first.data(), it->second->getValueString().data()) << endl;
     }
 }
 
@@ -364,6 +394,12 @@ string
 GigideKeyword::getEnergyUnits()
 {
     return KeywordSet::getKeyword("energy units")->getValueString();
+}
+
+size_t
+GigideKeyword::getArchiveMemory()
+{
+    return KeywordSet::getKeyword("archive memory")->getValueMemory();
 }
 
 

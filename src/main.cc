@@ -60,21 +60,6 @@ int main(int argc, const char* argv[])
     cout << "GIGIDE.  Gigide is a general internal coordinate derivative engine." << endl;
     cout << endl;
 
-#if USE_PYTHON
-    Py_Initialize();
-
-    //configure the python path so it knows where to find the python libraries
-    PyObject *pmod, *ppath, *pstring;
-    pmod = PyImport_ImportModule("sys"); //I could validate, but this should never fail
-    ppath = PyObject_GetAttrString(pmod, "path");
-    pstring = PyString_FromString(GIGDATADIR);
-    PyList_Append(ppath, pstring);
-
-    Py_DECREF(pmod);
-    Py_DECREF(ppath);
-    Py_DECREF(pstring);
-#endif
-
     gigtimer::Timer::start("gigide");
     try {
         //check the command line options
@@ -155,10 +140,6 @@ int main(int argc, const char* argv[])
 
     gigtimer::Timer::stop("gigide");
     //commit the xml
-
-#if USE_PYTHON
-    Py_Finalize();
-#endif
 
     gigtimer::Timer::print();
 
