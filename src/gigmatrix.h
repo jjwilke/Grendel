@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <src/smartptr/src/serialize.h>
+#include <math.h>
 
 namespace gigide {
 
@@ -13,6 +14,8 @@ class RectMatrixPtr;
 class ConstRectMatrixPtr;
 class SymmMatrixPtr;
 class ConstSymmMatrixPtr;
+
+
 
 typedef size_t mdim_t;
 
@@ -52,7 +55,7 @@ class Matrix : public smartptr::Serializable {
 
         void printValues(std::ostream& os = std::cout) const;
 
-        void print(std::string title, std::ostream& os = std::cout) const;
+        void print(const std::string& title, std::ostream& os = std::cout) const;
 
         Matrix* add(const Matrix* r) const;
 
@@ -113,7 +116,7 @@ class Vector : public smartptr::Serializable {
 
         void assign(double s);
 
-        void print(std::string title, std::ostream& os = std::cout) const;
+        void print(const std::string& title, std::ostream& os = std::cout) const;
 
         void printValues(std::ostream& os = std::cout) const;
 
@@ -155,7 +158,7 @@ class MatrixTemplate : public boost::intrusive_ptr<T> {
 
         void printValues(std::ostream& os = std::cout) const;
 
-        void print(std::string title, std::ostream& os = std::cout) const;
+        void print(const std::string& title, std::ostream& os = std::cout) const;
 
         void zero();
 
@@ -314,7 +317,7 @@ class VectorTemplate : public boost::intrusive_ptr<T> {
 
         void assign(const ConstVectorPtr& v);
 
-        void print(std::string title, std::ostream& os = std::cout) const;
+        void print(const std::string& title, std::ostream& os = std::cout) const;
 
         void printValues(std::ostream& os = std::cout) const;
 
@@ -543,7 +546,859 @@ bool equals(const ConstRectMatrixPtr& l, const ConstRectMatrixPtr& r, double tol
 
 bool equals(const ConstVectorPtr& l, const ConstVectorPtr& r, double tol = 1e-8);
 
+void instantiate();
+
+void
+error(
+    const Matrix* l,
+    const Matrix* r,
+    const std::string& op
+);
+
+void
+error(
+    const Vector* l,
+    const Vector* r,
+    const std::string& op
+);
+
+void
+scale_array(
+    double* v,
+    double s,
+    mdim_t n
+);
+
+void
+assign_array(
+    double* v,
+    double d,
+    mdim_t n
+);
+
+double 
+max_array(
+    const double* v,
+    mdim_t n
+);
+
+void
+transpose(
+    double* vals,
+    mdim_t nrow,
+    mdim_t ncol
+);
+
+void
+eigenvalues(
+    const Matrix* matrix,
+    Vector* evals,
+    Matrix* evecs
+);
+
+void
+eigenvalues(
+    const Matrix* matrix,
+    Vector* rvals,
+    Vector* ivals,
+    Matrix* Levecs,
+    Matrix* Revecs
+);
+
+double*
+subtract_arrays(
+    const double* l,
+    const double* r,
+    mdim_t n
+);
+
+double*
+add_arrays(
+    const double* l,
+    const double* r,
+    mdim_t n
+);
+
+void
+accumulate_array(
+    double* target,
+    const double* src,
+    mdim_t n
+);
+
+Matrix*
+multiply(
+    const Matrix* l,
+    const Matrix* r,
+    bool transpose_l = false,
+    bool transpose_r = false
+);
+
+template <class T> 
+MatrixTemplate<T>::MatrixTemplate()
+    : Parent(0)
+{
 }
+
+template <class T> 
+MatrixTemplate<T>::MatrixTemplate(T* m)
+    : Parent(m)
+{
+}
+
+template <class T> 
+bool
+MatrixTemplate<T>::null() const
+{
+    return !get();
+}
+
+template <class T> 
+bool
+MatrixTemplate<T>::nonnull() const
+{
+    return get();
+}
+
+template <class T> 
+void
+MatrixTemplate<T>::scale(double s)
+{
+    get()->scale(s);
+}
+
+template <class T> 
+void
+MatrixTemplate<T>::zero()
+{
+    get()->assign(0.0);
+}
+
+template <class T> 
+double
+MatrixTemplate<T>::get_element(mdim_t i, mdim_t j) const
+{
+    return get()->get_element(i,j);
+}
+
+template <class T> 
+const VectorPtr
+MatrixTemplate<T>::toConstVector() const
+{
+    mdim_t size = get()->nrow() * get()->ncol();
+    Vector* v = new Vector(const_cast<double*>(data()), size);
+    const VectorPtr vptr(v);
+    return vptr;
+}
+
+template <class T> 
+VectorPtr
+MatrixTemplate<T>::toVector() const
+{
+    Vector* v = get()->toVector();
+    return v;
+}
+
+template <class T> 
+const double*
+MatrixTemplate<T>::data() const
+{
+    return get()->data();
+}
+
+template <class T> 
+void
+MatrixTemplate<T>::printValues(std::ostream& os) const
+{
+    nullcheck();
+    get()->printValues(os);
+}
+
+template <class T> 
+void
+MatrixTemplate<T>::print(const std::string& title, std::ostream& os) const
+{
+    nullcheck();
+    get()->print(title, os);
+}
+
+template <class T> 
+void
+MatrixTemplate<T>::nullcheck() const
+{
+    if (null())
+    {
+        std::cerr << "Called method on null matrix" << endl;
+        abort();
+    }
+}
+
+template <class T> 
+double
+MatrixTemplate<T>::maxabs() const
+{
+    nullcheck();
+    mdim_t nrow = get()->nrow();
+    mdim_t ncol = get()->ncol();
+    return max_array(data(), nrow * ncol);
+}
+
+template <class T> 
+VectorPtr
+MatrixTemplate<T>::get_row(mdim_t row) const
+{
+    nullcheck();
+    mdim_t ncol = get()->ncol();
+    Vector* v = new Vector(ncol);
+    for (mdim_t col=0; col < ncol; ++col)
+        v->set_element(col, get_element(row, col));
+    return v;
+}
+
+template <class T> 
+VectorPtr
+MatrixTemplate<T>::get_column(mdim_t col) const
+{
+    nullcheck();
+    mdim_t nrow = get()->nrow();
+    Vector* v = new Vector(nrow);
+    for (mdim_t row=0; row < nrow; ++row)
+        v->set_element(row, get_element(row, col));
+    return v;
+}
+
+
+template <class T> 
+mdim_t
+MatrixTemplate<T>::nrow() const
+{
+    nullcheck();
+    return get()->nrow();
+}
+
+
+template <class T> 
+mdim_t
+MatrixTemplate<T>::ncol() const
+{
+    nullcheck();
+    return get()->ncol();
+}
+
+template <class T> 
+RectMatrixTemplate<T>::RectMatrixTemplate()
+    : Parent(0)
+{
+}
+
+template <class T> 
+RectMatrixTemplate<T>::~RectMatrixTemplate()
+{
+}
+
+template <class T> 
+RectMatrixTemplate<T>::RectMatrixTemplate(T* m)
+    : Parent(m)
+{
+}
+
+template <class T> 
+RectMatrixTemplate<T>::RectMatrixTemplate(mdim_t nrow, mdim_t ncol)
+    : Parent(new Matrix(nrow, ncol))
+{
+}
+
+template <class T> 
+RectMatrixTemplate<T>::RectMatrixTemplate(const RectMatrixPtr& m)
+    : Parent(m.get())
+{
+}
+
+template <class T> 
+void
+RectMatrixTemplate<T>::accumulate_element(mdim_t i, mdim_t j, double val)
+{
+    nullcheck();
+    get()->accumulate_element(i,j,val);
+}
+
+template <class T>
+void
+RectMatrixTemplate<T>::set_element(mdim_t i, mdim_t j, double val)
+{
+    nullcheck();
+    get()->set_element(i,j,val);
+}
+
+template <class T> 
+void
+RectMatrixTemplate<T>::accumulate(const ConstRectMatrixPtr& m)
+{
+    nullcheck();
+    get()->accumulate(m.get());
+}
+
+template <class T> 
+void
+RectMatrixTemplate<T>::assign(const ConstRectMatrixPtr& m)
+{
+    nullcheck();
+    get()->assign(m.data());
+}
+
+template <class T> 
+void
+RectMatrixTemplate<T>::assign(const double* vals)
+{
+    nullcheck();
+    get()->assign(vals);
+}
+
+
+template <class T> 
+RectMatrixPtr
+RectMatrixTemplate<T>::t() const
+{
+    nullcheck();
+    return get()->t();
+}
+
+template <class T> 
+void
+RectMatrixTemplate<T>::assign_row(const ConstVectorPtr& v, mdim_t row)
+{
+    nullcheck();
+    for (mdim_t col=0; col < Parent::ncol(); ++col)
+        set_element(row, col, v[col]);
+}
+
+template <class T> 
+void
+RectMatrixTemplate<T>::assign_column(const ConstVectorPtr& v, mdim_t col)
+{
+    nullcheck();
+    for (mdim_t row=0; row < Parent::nrow(); ++row)
+        set_element(row, col, v[row]);
+}
+
+template <class T> 
+RectMatrixPtr
+RectMatrixTemplate<T>::clone() const
+{
+    nullcheck();
+    return new Matrix(Parent::nrow(), Parent::ncol());
+}
+
+template <class T> 
+RectMatrixPtr
+RectMatrixTemplate<T>::copy() const
+{
+    nullcheck();
+    Matrix* m = new Matrix(Parent::nrow(), Parent::ncol());
+    m->assign(Parent::data());
+    return m;
+}
+
+template <class T> 
+RectMatrixPtr
+RectMatrixTemplate<T>::get_subblock(mdim_t rowstart, mdim_t rowstop, mdim_t colstart, mdim_t colstop) const
+{
+    nullcheck();
+    mdim_t nr = rowstop - rowstart + 1;
+    mdim_t nc = colstop - colstart + 1;
+    Matrix* ptr = new Matrix(nr, nc);
+    mdim_t r = 0;
+    for (mdim_t row=rowstart; row <= rowstop; ++row, ++r)
+    {
+        mdim_t c = 0;
+        for (mdim_t col=colstart; col <= colstop; ++col, ++c)
+        {
+            ptr->set_element(r, c, Parent::get_element(row, col)); 
+        }
+    }
+    return ptr;
+}
+
+template <class T> 
+void
+RectMatrixTemplate<T>::assign_subblock(const ConstRectMatrixPtr& block, mdim_t rowstart, mdim_t colstart)
+{
+    nullcheck();
+    mdim_t nr = block.nrow();
+    mdim_t nc = block.ncol();
+    mdim_t row, r, col, c;
+    for (r=0, row=rowstart; r < nr; ++r, ++row)
+    {
+        for (c=0, col=colstart; c < nc; ++c, ++col)
+        {
+            set_element(row, col, block.get_element(r,c));
+        }
+    }
+}
+
+template <class T> 
+void
+RectMatrixTemplate<T>::eigen(VectorPtr& revals, VectorPtr& ievals, RectMatrixPtr& Levecs, RectMatrixPtr& Revecs) const
+{
+    nullcheck();
+
+    if (revals.null()) revals = new Vector(Parent::nrow());
+    if (ievals.null()) ievals = new Vector(Parent::nrow());
+    if (Levecs.null()) Levecs = new Matrix(Parent::nrow(), Parent::nrow());
+    if (Revecs.null()) Revecs = new Matrix(Parent::nrow(), Parent::nrow());
+
+    eigenvalues(get(), revals.get(), ievals.get(), Levecs.get(), Revecs.get());
+}
+
+template <class T>
+VectorTemplate<T>::VectorTemplate(mdim_t n)
+    : Parent(new Vector(n))
+{
+}
+
+template <class T>
+VectorTemplate<T>::VectorTemplate()
+    : Parent(0)
+{
+}
+
+template <class T>
+VectorTemplate<T>::VectorTemplate(T* v)
+    : Parent(v)
+{
+}
+
+template <class T>
+VectorTemplate<T>::VectorTemplate(const ConstVectorPtr& v)
+    : Parent(v.get())
+{
+}
+
+template <class T>
+mdim_t
+VectorTemplate<T>::n() const
+{
+    nullcheck();
+    return get()->n();
+}
+
+template <class T>
+double
+VectorTemplate<T>::dot(const ConstVectorPtr& v) const
+{
+    nullcheck();
+    return get()->dot(v.get());
+}
+
+template <class T>
+void
+VectorTemplate<T>::nullcheck() const
+{
+    if (null())
+    {
+        std::cerr << "Called method on null matrix" << endl;
+        abort();
+    }
+}
+
+template <class T>
+void
+VectorTemplate<T>::printValues(std::ostream& os) const
+{
+    nullcheck();
+    get()->printValues(os);
+}
+
+template <class T>
+void
+VectorTemplate<T>::print(const std::string& title, std::ostream& os) const
+{
+    nullcheck();
+    get()->print(title, os);
+}
+
+template <class T>
+void
+VectorTemplate<T>::assign(const ConstVectorPtr& v)
+{
+    nullcheck();
+    get()->assign(v.data());
+}
+
+template <class T>
+void
+VectorTemplate<T>::assign(const double* vals)
+{
+    nullcheck();
+    get()->assign(vals);
+}
+
+template <class T>
+const double*
+VectorTemplate<T>::data() const
+{
+    nullcheck();
+    return get()->data();
+}
+
+template <class T>
+double
+VectorTemplate<T>::operator[](mdim_t i) const
+{
+    nullcheck();
+    return get()->get_element(i);
+}
+
+template <class T>
+double
+VectorTemplate<T>::get_element(mdim_t i) const
+{
+    nullcheck();
+    return get()->get_element(i);
+}
+
+template <class T>
+void
+VectorTemplate<T>::set_element(mdim_t i, double val)
+{
+    nullcheck();
+    get()->set_element(i, val);
+}
+
+template <class T>
+void
+VectorTemplate<T>::accumulate_element(mdim_t i, double val)
+{
+    nullcheck();
+    get()->accumulate_element(i, val);
+}
+
+template <class T>
+void
+VectorTemplate<T>::sort()
+{
+    get()->sort();
+}
+
+template <class T>
+bool
+VectorTemplate<T>::null() const
+{
+    return !get();
+}
+
+template <class T>
+bool
+VectorTemplate<T>::nonnull() const
+{
+    return get();
+}
+
+template <class T>
+void
+VectorTemplate<T>::zero()
+{
+    nullcheck();
+    get()->assign(0.0);
+}
+
+template <class T>
+double
+VectorTemplate<T>::norm() const
+{
+    nullcheck();
+    double n2 = get()->dot(get());
+    return sqrt(n2);
+}
+
+template <class T>
+void
+VectorTemplate<T>::accumulate(const ConstVectorPtr& v)
+{
+    nullcheck();
+    v.nullcheck();
+    get()->accumulate(v.get());
+}
+
+template <class T>
+void
+VectorTemplate<T>::scale(double d)
+{
+    nullcheck();
+    get()->scale(d);
+}
+
+template <class T>
+void
+VectorTemplate<T>::assign(double d)
+{
+    nullcheck();
+    get()->assign(d);
+}
+
+template <class T>
+void
+VectorTemplate<T>::normalize()
+{
+    nullcheck();
+    double normsq = get()->dot(get()); 
+    double oonorm = 1.0/sqrt(normsq);
+    scale(oonorm);
+}
+
+template <class T>
+VectorPtr
+VectorTemplate<T>::copy() const
+{
+    nullcheck();
+    Vector* v = new Vector(n());
+    v->assign(data());
+    return v;
+}
+
+template <class T>
+VectorPtr
+VectorTemplate<T>::clone() const
+{
+    nullcheck();
+    Vector* v = new Vector(n());
+    return v;
+}
+
+template <class T>
+double
+VectorTemplate<T>::maxabs() const
+{
+    nullcheck();
+    return max_array(data(), n());
+}
+
+template <class T>
+SymmMatrixPtr
+VectorTemplate<T>::symmetric_outer_product() const
+{
+    nullcheck();
+    const double* v = data();
+    Matrix* m = new Matrix(n(), n());
+    for (mdim_t i=0; i < n(); ++i)
+    {
+        for (mdim_t j=0; j < n(); ++j)
+        {
+            m->set_element(i, j, v[i] * v[j]);
+        }
+    }
+    return m;
+}
+
+template <class T> 
+SymmMatrixTemplate<T>::SymmMatrixTemplate()
+    : Parent(0)
+{
+}
+
+template <class T> 
+SymmMatrixTemplate<T>::SymmMatrixTemplate(mdim_t n)
+    : Parent(new Matrix(n,n))
+{
+}
+
+template <class T> 
+SymmMatrixTemplate<T>::SymmMatrixTemplate(T* m)
+    : Parent(m)
+{
+}
+
+template <class T> 
+SymmMatrixTemplate<T>::SymmMatrixTemplate(const SymmMatrixPtr& m)
+    : Parent(m.get())
+{
+    m.nullcheck();
+}
+
+template <class T> 
+mdim_t
+SymmMatrixTemplate<T>::n() const
+{
+    nullcheck();
+    return get()->nrow();
+}
+
+template <class T> 
+void
+SymmMatrixTemplate<T>::set_element(mdim_t i, mdim_t j, double val)
+{
+    nullcheck();
+    get()->set_element(i,j,val);
+    get()->set_element(j,i,val);
+}
+
+template <class T> 
+void
+SymmMatrixTemplate<T>::accumulate_element(mdim_t i, mdim_t j, double val)
+{
+    nullcheck();
+    get()->accumulate_element(i, j, val);
+}
+
+template <class T> 
+void
+SymmMatrixTemplate<T>::accumulate(const SymmMatrixPtr& m)
+{
+    nullcheck();
+    get()->accumulate(m.get());
+}
+
+template <class T> 
+SymmMatrixPtr
+SymmMatrixTemplate<T>::clone() const
+{
+    nullcheck();
+    return new Matrix(n(), n());
+}
+
+template <class T> 
+SymmMatrixPtr
+SymmMatrixTemplate<T>::copy() const
+{
+    nullcheck();
+    Matrix* m = new Matrix(n(), n());
+    m->assign(Parent::data());
+    return m;
+}
+
+template <class T> 
+void
+SymmMatrixTemplate<T>::assign(const SymmMatrixPtr& m)
+{
+    get()->assign(m->data());
+}
+
+template <class T> 
+void
+SymmMatrixTemplate<T>::eigen(VectorPtr& evals, RectMatrixPtr& evecs) const
+{
+    nullcheck();
+
+    if (evals.null()) evals = new Vector(n());
+    if (evecs.null()) evecs = new Matrix(n(), n());
+
+    eigenvalues(get(), evals.get(), evecs.get());
+}
+
+template <class T> 
+SymmMatrixPtr
+SymmMatrixTemplate<T>::sqrt_matrix(double tol) const
+{
+    nullcheck();
+    RectMatrixPtr evecs;
+    VectorPtr evals;
+    SymmMatrixPtr epsilon(n());
+
+    eigen(evals, evecs);
+    for (mdim_t i=0; i < n(); ++i)
+    {
+        double val = evals[i];
+        if ( fabs(val) > tol)
+            epsilon.set_element(i, i, sqrt(val));
+    }
+
+    SymmMatrixPtr sqrtmat = clone();
+    sqrtmat.accumulate_transform(evecs, epsilon);
+
+    return sqrtmat;
+}
+
+template <class T> 
+SymmMatrixPtr
+SymmMatrixTemplate<T>::invsqrt_matrix(double tol) const
+{
+    nullcheck();
+    RectMatrixPtr evecs;
+    VectorPtr evals;
+    SymmMatrixPtr epsilon(n());
+
+    eigen(evals, evecs);
+    for (mdim_t i=0; i < n(); ++i)
+    {
+        double val = evals[i];
+        if ( fabs(val) > tol)
+            epsilon.set_element(i, i, 1.0/sqrt(val));
+    }
+
+    SymmMatrixPtr sqrtmat = clone();
+    sqrtmat.accumulate_transform(evecs, epsilon);
+
+    return sqrtmat;
+}
+
+template <class T> 
+SymmMatrixPtr
+SymmMatrixTemplate<T>::i(double tol) const
+{
+    nullcheck();
+    RectMatrixPtr evecs;
+    VectorPtr evals;
+    SymmMatrixPtr epsilon(n());
+
+    eigen(evals, evecs);
+    for (mdim_t i=0; i < n(); ++i)
+    {
+        double val = evals[i];
+        if ( fabs(val) > tol )
+            epsilon.set_element(i, i, 1.0/val);
+    }
+
+    SymmMatrixPtr inv = clone();
+    inv.accumulate_transform(evecs, epsilon);
+
+    return inv;
+}
+
+template <class T> 
+void
+SymmMatrixTemplate<T>::accumulate_transform(const ConstRectMatrixPtr& r, const ConstSymmMatrixPtr& s)
+{
+    nullcheck();
+    r.nullcheck();
+    s.nullcheck();
+
+    Matrix* temp = multiply(r.get(), s.get());
+    Matrix* final = multiply(temp, r.get(), false, true);
+    get()->accumulate(final);
+    delete temp;
+    delete final;
+}
+
+template <class T> 
+void
+SymmMatrixTemplate<T>::accumulate_transform(const ConstSymmMatrixPtr& r, const ConstSymmMatrixPtr& s)
+{
+    nullcheck();
+    r.nullcheck();
+    s.nullcheck();
+    Matrix* temp = multiply(r.get(), s.get());
+
+    Matrix* final = multiply(temp, r.get());
+    get()->accumulate(final);
+    delete temp;
+    delete final;
+}
+
+template <class T> 
+void
+SymmMatrixTemplate<T>::accumulate_symmetric_product(const ConstRectMatrixPtr& m)
+{
+    nullcheck();
+    m.nullcheck();
+
+    Matrix* prod = multiply(m.get(), m.get(), false, true); //multiply by transpose
+    get()->accumulate(prod);
+    delete prod;
+}
+
+
+}
+
 
 namespace smartptr {
     SerialDecideSubptr(gigide::RectMatrixPtr);

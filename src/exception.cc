@@ -1,7 +1,7 @@
-
 #include <src/exception.h>
 #include <sstream>
 #include <iostream>
+#include <cstring>
 
 using namespace gigide;
 using namespace std;
@@ -32,6 +32,8 @@ GigideException::what() const throw()
     sstr << "file: " << file_ << "\n";
     sstr << "line: " << line_;
     sstr << "      " << endl;
+
+    return sstr.str().c_str();
 
     string str = sstr.str();
 

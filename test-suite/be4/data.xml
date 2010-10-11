@@ -1,0 +1,367 @@
+<?xml version="1.0"?>
+
+<project>
+	<displacement number="1">
+		<molecule>
+			<xyz units="ang">
+				Be	0.0000000000	0.0028656565	1.2529226567
+				Be	0.0000000000	1.1822220279	-0.4149391187
+				Be	1.0113525770	-0.5925438422	-0.4189917690
+				Be	-1.0113525770	-0.5925438422	-0.4189917690
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.816833410489" />
+	</displacement>
+	<displacement number="2">
+		<molecule>
+			<xyz units="ang">
+				Be	0.0000000000	-0.0029080542	1.2488400267
+				Be	0.0000000000	1.1764483172	-0.4190217487
+				Be	1.0313525785	-0.5867701315	-0.4149091390
+				Be	-1.0313525785	-0.5867701315	-0.4149091390
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8168355826655" />
+	</displacement>
+	<displacement number="3">
+		<molecule>
+			<xyz units="ang">
+				Be	0.0000000000	0.0056895273	1.2549194349
+				Be	0.0000000000	1.1850458987	-0.4129423405
+				Be	1.0013525762	-0.5953677130	-0.4209885472
+				Be	-1.0013525762	-0.5953677130	-0.4209885472
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8166911629231" />
+	</displacement>
+	<displacement number="4">
+		<molecule>
+			<xyz units="ang">
+				Be	0.0000000000	-0.0058591398	1.2467532940
+				Be	0.0000000000	1.1734972316	-0.4211084814
+				Be	1.0413525793	-0.5838190459	-0.4128224063
+				Be	-1.0413525793	-0.5838190459	-0.4128224063
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8167085630063" />
+	</displacement>
+	<displacement number="5">
+		<molecule>
+			<xyz units="ang">
+				Be	0.0000000000	0.0000000000	1.2508963315
+				Be	0.0000000000	1.1793563714	-0.4169654438
+				Be	1.0213525778	-0.5896781857	-0.4169654438
+				Be	-1.0213525778	-0.5896781857	-0.4169654438
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8168793159014" />
+	</displacement>
+	<displacement number="6">
+		<molecule>
+			<xyz units="ang">
+				Be	0.0024851700	0.0014348136	1.2549489727
+				Be	-0.0075074741	1.1750219292	-0.4169474899
+				Be	1.0138451036	-0.5940126279	-0.4169474899
+				Be	-1.0088227995	-0.5824441148	-0.4210539928
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.816796973471" />
+	</displacement>
+	<displacement number="7">
+		<molecule>
+			<xyz units="ang">
+				Be	0.0024780363	-0.0043429603	1.2508663519
+				Be	-0.0074558533	1.1691929037	-0.4210664357
+				Be	1.0338235627	-0.5881672889	-0.4129004320
+				Be	-1.0288457457	-0.5766826544	-0.4168994842
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8167803208318" />
+	</displacement>
+	<displacement number="8">
+		<molecule>
+			<xyz units="ang">
+				Be	-0.0025145437	-0.0014517725	1.2467837323
+				Be	0.0074927830	1.1836823317	-0.4169474242
+				Be	1.0288453608	-0.5853522254	-0.4169474242
+				Be	-1.0338236001	-0.5968783338	-0.4128888839
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8168011107975" />
+	</displacement>
+	<displacement number="9">
+		<molecule>
+			<xyz units="ang">
+				Be	-0.0025103843	-0.0044005039	1.2446970218
+				Be	0.0074669854	1.1807596969	-0.4190157248
+				Be	1.0388565195	-0.5824369937	-0.4148430171
+				Be	-1.0438131206	-0.5939221994	-0.4108382798
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8166832452164" />
+	</displacement>
+	<displacement number="10">
+		<molecule>
+			<xyz units="ang">
+				Be	0.0049339472	0.0000246817	1.2569457338
+				Be	-0.0149790029	1.1678011249	-0.4189259814
+				Be	1.0163009654	-0.5954600686	-0.4149331551
+				Be	-1.0062559097	-0.5723657380	-0.4230865973
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8166642966054" />
+	</displacement>
+	<displacement number="11">
+		<molecule>
+			<xyz units="ang">
+				Be	-0.0099515184	-0.0057455119	1.2467742627
+				Be	0.0099515184	1.1735548770	-0.4210083414
+				Be	1.0213040955	-0.5781591707	-0.4210083414
+				Be	-1.0213040955	-0.5896501944	-0.4047575798
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8167826136667" />
+	</displacement>
+	<displacement number="12">
+		<molecule>
+			<xyz units="ang">
+				Be	-0.0049755224	-0.0028726192	1.2427113790
+				Be	-0.0050244783	1.1880024938	-0.4169454577
+				Be	1.0263281002	-0.5983525727	-0.4169454577
+				Be	-1.0163280995	-0.5867773018	-0.4088204636
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8167946046424" />
+	</displacement>
+	<displacement number="13">
+		<molecule>
+			<xyz units="ang">
+				Be	0.0100494419	0.0058020480	1.2549384462
+				Be	-0.0100494419	1.1851013297	-0.4128425921
+				Be	1.0213031366	-0.6012537368	-0.4128425921
+				Be	-1.0213031366	-0.5896496408	-0.4292532620
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.816786904478" />
+	</displacement>
+	<displacement number="14">
+		<molecule>
+			<xyz units="ang">
+				Be	0.0126180152	0.0072850145	1.2528412149
+				Be	-0.0176180156	1.1922786179	-0.4107453608
+				Be	1.0237345637	-0.6113969580	-0.4107453608
+				Be	-1.0187345633	-0.5881666744	-0.4313504933
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8166549109802" />
+	</displacement>
+	<displacement number="15">
+		<molecule>
+			<xyz units="ang">
+				Be	-0.0173854041	-0.0100374677	1.2405965552
+				Be	0.0123854037	1.1749600813	-0.4229956004
+				Be	1.0237379807	-0.5767539664	-0.4229956004
+				Be	-1.0187379803	-0.5881686472	-0.3946053544
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8166355002645" />
+	</displacement>
+	<displacement number="16">
+		<molecule>
+			<xyz units="ang">
+				Be	0.0000000000	0.0000000000	1.2569753069
+				Be	0.0000000000	1.1678093651	-0.4189917690
+				Be	1.0113525770	-0.5839046826	-0.4189917690
+				Be	-1.0113525770	-0.5839046826	-0.4189917690
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8167702050393" />
+	</displacement>
+	<displacement number="17">
+		<molecule>
+			<xyz units="ang">
+				Be	0.0000000000	-0.0000000000	1.2447274169
+				Be	0.0000000000	1.1909033777	-0.4149091390
+				Be	1.0313525785	-0.5954516888	-0.4149091390
+				Be	-1.0313525785	-0.5954516888	-0.4149091390
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8167756970168" />
+	</displacement>
+	<displacement number="18">
+		<molecule>
+			<xyz units="ang">
+				Be	-0.0050124217	-0.0028939230	1.2488500190
+				Be	-0.0050124217	1.1764624484	-0.4190117564
+				Be	1.0163401561	-0.5925721087	-0.4190117564
+				Be	-1.0063153126	-0.5809964166	-0.4108265061
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8167700607961" />
+	</displacement>
+	<displacement number="19">
+		<molecule>
+			<xyz units="ang">
+				Be	0.0049879386	0.0028797877	1.2529326490
+				Be	0.0049879386	1.1822361591	-0.4149291264
+				Be	1.0263405164	-0.5867983980	-0.4149291264
+				Be	-1.0363163937	-0.5983175488	-0.4230743961
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8167758400942" />
+	</displacement>
+	<displacement number="20">
+		<molecule>
+			<xyz units="ang">
+				Be	-0.0099807112	-0.0028514951	1.2488202927
+				Be	0.0099807112	1.1764485648	-0.4189618463
+				Be	1.0113029384	-0.5810134476	-0.4231105720
+				Be	-1.0113029384	-0.5925836221	-0.4067478744
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8167555903179" />
+	</displacement>
+	<displacement number="21">
+		<molecule>
+			<xyz units="ang">
+				Be	0.0100198658	0.0029221602	1.2529024139
+				Be	-0.0100198658	1.1822217774	-0.4148790989
+				Be	1.0313042824	-0.5983344414	-0.4108622906
+				Be	-1.0313042824	-0.5868094962	-0.4271610244
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8167617360179" />
+	</displacement>
+	<displacement number="22">
+		<molecule>
+			<xyz units="ang">
+				Be	-0.0050072180	0.0028909187	1.2528926394
+				Be	0.0150523253	1.1822129136	-0.4148728116
+				Be	1.0062551460	-0.5809616794	-0.4231470162
+				Be	-1.0163002533	-0.6041421529	-0.4148728116
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8167343225822" />
+	</displacement>
+	<displacement number="23">
+		<molecule>
+			<xyz units="ang">
+				Be	0.0000000000	0.0057648794	1.2488100877
+				Be	0.0000000000	1.1965688302	-0.4108978093
+				Be	1.0113525770	-0.6011668548	-0.4189561392
+				Be	-1.0113525770	-0.6011668548	-0.4189561392
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.816736688599" />
+	</displacement>
+	<displacement number="24">
+		<molecule>
+			<xyz units="ang">
+				Be	-0.0100399167	0.0000595925	1.2447270942
+				Be	0.0100194869	1.1908274974	-0.4148854418
+				Be	1.0113126610	-0.5896185932	-0.4231346812
+				Be	-1.0112922312	-0.6012684966	-0.4067069712
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8167344666753" />
+	</displacement>
+	<displacement number="25">
+		<molecule>
+			<xyz units="ang">
+				Be	0.0050319707	0.0085973992	1.2569756108
+				Be	0.0050319707	1.1879537706	-0.4108861646
+				Be	1.0062959502	-0.5925095084	-0.4189674914
+				Be	-1.0163598916	-0.6040416613	-0.4271219548
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8167365455357" />
+	</displacement>
+	<displacement number="26">
+		<molecule>
+			<xyz units="ang">
+				Be	-0.0049976138	0.0000165736	1.2447575531
+				Be	-0.0050465583	1.1908416147	-0.4149352111
+				Be	1.0163499156	-0.6012201820	-0.4189755807
+				Be	-1.0063057436	-0.5896380063	-0.4108467613
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8167488555579" />
+	</displacement>
+	<displacement number="27">
+		<molecule>
+			<xyz units="ang">
+				Be	-0.0099219317	-0.0086826310	1.2446977583
+				Be	0.0099219317	1.1706180902	-0.4230853158
+				Be	1.0313052162	-0.5752612331	-0.4188764260
+				Be	-1.0313052162	-0.5866742261	-0.4027360165
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8167202138689" />
+	</displacement>
+	<displacement number="28">
+		<molecule>
+			<xyz units="ang">
+				Be	0.0100786142	0.0086402174	1.2569449830
+				Be	-0.0100786142	1.1879391672	-0.4108355859
+				Be	1.0113019537	-0.6041318812	-0.4147925957
+				Be	-1.0113019537	-0.5924475034	-0.4313168014
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8167222351085" />
+	</displacement>
+	<displacement number="29">
+		<molecule>
+			<xyz units="ang">
+				Be	-0.0049535554	-0.0058047128	1.2406347502
+				Be	-0.0050025045	1.1851215825	-0.4189853597
+				Be	1.0363063884	-0.5954433695	-0.4148858134
+				Be	-1.0263503286	-0.5838735002	-0.4067635771
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8167507238675" />
+	</displacement>
+	<displacement number="30">
+		<molecule>
+			<xyz units="ang">
+				Be	0.0075147329	0.0043386331	1.2508662348
+				Be	-0.0025169842	1.1894501961	-0.4128808314
+				Be	1.0288355943	-0.5969048704	-0.4128808314
+				Be	-1.0338333430	-0.5968839588	-0.4251045719
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8167455724695" />
+	</displacement>
+	<displacement number="31">
+		<molecule>
+			<xyz units="ang">
+				Be	-0.0074853632	-0.0043216765	1.2508664696
+				Be	0.0024827122	1.1692427597	-0.4210460593
+				Be	1.0138352892	-0.5824712880	-0.4210460593
+				Be	-1.0088326382	-0.5824497952	-0.4087743510
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.81673829659" />
+	</displacement>
+	<displacement number="32">
+		<molecule>
+			<xyz units="ang">
+				Be	0.0000000000	0.0114915614	1.2590220925
+				Be	0.0000000000	1.1908479328	-0.4088396829
+				Be	1.0213525778	-0.6011697471	-0.4250912048
+				Be	-1.0213525778	-0.6011697471	-0.4250912048
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8167317134854" />
+	</displacement>
+	<displacement number="33">
+		<molecule>
+			<xyz units="ang">
+				Be	0.0000000000	-0.0116046662	1.2426905934
+				Be	0.0000000000	1.1677517052	-0.4251711820
+				Be	1.0213525778	-0.5780735195	-0.4087597057
+				Be	-1.0213525778	-0.5780735195	-0.4087597057
+			</xyz>
+		</molecule>
+		<energy type="molecular" value="-58.8167235713395" />
+	</displacement>
+</project>

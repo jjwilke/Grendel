@@ -1,4 +1,5 @@
 #include <config.h>
+#include <algorithm>
 #include <src/displacement.h>
 #include <src/keyword.h>
 #include <src/exception.h>
