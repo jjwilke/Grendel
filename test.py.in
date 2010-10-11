@@ -12,7 +12,7 @@ if not has_anharm:
     sys.exit("Cannot run test suite without valid anharm")
 
 def get_freqs(text):
-    text = re.compile("THEORE(.*?)ANHARM", re.DOTALL).search(text).groups()[0]
+    text = re.compile("THEORE(.*?)ANHARM", re.DOTALL | re.IGNORECASE).search(text).groups()[0]
     modes = re.compile("\d+\s+(\d+[.]\d+)\s+([-]?\d+[.]\d+)").findall(text)
     harmonics = []
     shifts = []
