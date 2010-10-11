@@ -508,8 +508,8 @@ GigideInputFile::readSymmetryOperations(
     for (iter->start(); !iter->finished(); iter->next())
     {
         KeywordValuePtr keyval = iter->getKeyword();
-        string name = iter->getName();
-        string type = keyval->popString();
+        string name(iter->getName());
+        string type(keyval->popString());
 
         SymmetryOperationPtr op;
         if      (type == "c")
@@ -525,7 +525,7 @@ GigideInputFile::readSymmetryOperations(
         {
             int order = keyval->popInteger();
             string axname = keyval->popString();
-            AxisPtr axis = axes[axname];
+            AxisPtr axis(axes[axname]);
             if (!axis) geometryError(name, axname);
             
             op = new ImproperRotation(axis->getVector(), order);
@@ -536,7 +536,7 @@ GigideInputFile::readSymmetryOperations(
             if (count == 1) //axis specified
             {
                 string axname = keyval->popString();
-                AxisPtr axis = axes[axname];
+                AxisPtr axis(axes[axname]);
                 if (!axis) geometryError(name, axname);
 
                 op = new Reflection(axis->getVector());
@@ -545,15 +545,15 @@ GigideInputFile::readSymmetryOperations(
             {
                 string ptname;
                 ptname = keyval->popString();
-                XYZPointPtr pt1 = points[ptname];
+                XYZPointPtr pt1(points[ptname]);
                 if (!pt1) geometryError(name, ptname);
 
                 ptname = keyval->popString();
-                XYZPointPtr pt2 = points[ptname];
+                XYZPointPtr pt2(points[ptname]);
                 if (!pt2) geometryError(name, ptname);
 
                 ptname = keyval->popString();
-                XYZPointPtr pt3 = points[ptname];
+                XYZPointPtr pt3(points[ptname]);
                 if (!pt3) geometryError(name, ptname);
 
                 op = new Reflection(pt1, pt2, pt3);
@@ -565,8 +565,14 @@ GigideInputFile::readSymmetryOperations(
         }
         else
         {
-            except(stream_printf("Unrecognized symmetry operation %s", type.c_str()));
+            except(stream_printf("Unrecognized symmetry operation %s", type.data()));
         }
+
+        if (!op)
+        {
+            cerr << "invalid specification of " << type << endl;
+        }
+
         symmops[name] = op;
         unconstmol->addSymmetryOperation(op);
     }

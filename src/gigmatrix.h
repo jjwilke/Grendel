@@ -728,7 +728,7 @@ MatrixTemplate<T>::nullcheck() const
 {
     if (null())
     {
-        std::cerr << "Called method on null matrix" << endl;
+        std::cerr << "Called method on null matrix" << std::endl;
         abort();
     }
 }
@@ -996,7 +996,7 @@ VectorTemplate<T>::nullcheck() const
 {
     if (null())
     {
-        std::cerr << "Called method on null matrix" << endl;
+        std::cerr << "Called method on null matrix" << std::endl;
         abort();
     }
 }

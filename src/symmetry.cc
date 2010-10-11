@@ -569,10 +569,12 @@ ImproperRotation::ImproperRotation(
     int exponent
 ) : SymmetryOperation(SymmetryOperation::improper_rotation),
     order_(order),
-    exponent_(exponent)
+    exponent_(exponent),
+    axis_(axis.copy())
 {
     SetRuntime(ImproperRotation);
-    axis_ = axis.copy(); axis_.normalize();
+    axis_.normalize();
+    init();
 }
 
 void

@@ -1035,14 +1035,14 @@ ForceField::compute()
         }
     }
 
-    if (!mindisp)
+    if (mindisp)
     {
             cout << "Minimum energy displacement is "; mindisp->print(); cout << endl;
             //cout << stream_printf("Energy =  %16.12f", emin) << endl << endl;
     }
 
     DisplacementPtr center = disp_iter_->findZeroDisplacement();
-    if (!center)
+    if (center)
     {
         double ecenter = center->getEnergy() * econv;
         if ( fabs(ecenter - emin) > 1e-12 )
