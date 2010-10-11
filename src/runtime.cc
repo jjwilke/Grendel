@@ -42,6 +42,8 @@ GigideRuntime::xml_commit()
     serial_call_save(archive_, qff_, "qff");
     archive_->toFile("gigide.xml");
     gigtimer::Timer::stop("xml commit");
+
+    cout << "Archive Size: " << archive_->getDataSize() << endl;
 }
 
 void
