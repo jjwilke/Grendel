@@ -34,7 +34,10 @@ GigideRuntime::xml_commit()
 {
     gigtimer::Timer::start("xml commit");
     //reset the writer
-    archive_ = new smartptr::XMLArchive(GigideKeyword::getArchiveMemory());
+    archive_ = new smartptr::XMLArchive(
+        GigideKeyword::getArchiveMemory(),
+        XMLArchive::Checkpoint
+    );
 
     serial_call_save(archive_, mol_, "molecule");
     serial_call_save(archive_, simples_, "simples");
@@ -151,7 +154,13 @@ void
 GigideRuntime::run_xmlprint()
 {
     gigtimer::Timer::start("xml");
-    XMLArchivePtr arch(new smartptr::XMLArchive("gigide.xml", GigideKeyword::getArchiveMemory()));
+    XMLArchivePtr arch(
+        new smartptr::XMLArchive(
+            "gigide.xml",
+            GigideKeyword::getArchiveMemory(),
+            XMLArchive::Checkpoint
+       )
+   );
 
     MoleculePtr testmol;
     serial_call_load(arch, testmol, "molecule");
