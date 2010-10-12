@@ -18,13 +18,9 @@ DerivativeIterator::DerivativeIterator(
     int level,
     const Set<ConstInternalCoordinatePtr>& coords,
     const ConstMoleculePtr& mol
-) : coords_(coords), mol_(mol)
+) : coords_(coords), mol_(mol), deriv_level_(level)
 {
     SetRuntime(DerivativeIterator);
-
-    this->deriv_level_ = level;
-    this->coords_ = coords;
-    mol_ = mol;
     
     vector< vector<int> > deriv_combinations;
     for (int i=0; i <= deriv_level_; ++i)
