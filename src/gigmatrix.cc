@@ -1,9 +1,10 @@
 #include <src/gigmatrix.h>
 #include <cstdarg>
-#include <src/printstream.h>
 #include <algorithm>
-#include <src/timer.h>
 #include <cstring>
+
+#include <src/smartptr/src/timer.h>
+#include <src/smartptr/src/printstream.h>
 
 #undef heisenbug
 #define heisenbug cout << "Heisenbug: " << __FILE__ << " " << __LINE__ << endl

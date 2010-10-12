@@ -4,7 +4,6 @@
 #include <sstream>
 #include <config.h>
 #include <stdio.h>
-#include <src/printstream.h>
 #include <src/utilities.h>
 #include <src/fileio.h>
 #include <src/qff.h>
@@ -22,6 +21,7 @@
 #include <src/smartptr/src/set.h>
 #include <src/smartptr/src/xmlarchive.h>
 #include <src/smartptr/src/regexp.h>
+#include <src/smartptr/src/printstream.h>
 
 namespace gigide {
 

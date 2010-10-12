@@ -1,5 +1,6 @@
 #include <src/runtime.h>
-#include <src/timer.h>
+
+#include <src/smartptr/src/timer.h>
 
 
 using namespace std;
@@ -32,7 +33,7 @@ GigideRuntime::run_anharm()
 void
 GigideRuntime::xml_commit()
 {
-    gigtimer::Timer::start("xml commit");
+    timer::Timer::start("xml commit");
     //reset the writer
     archive_ = new smartptr::XMLArchive(
         XMLArchive::Checkpoint
@@ -43,7 +44,7 @@ GigideRuntime::xml_commit()
     serial_call_save(archive_, coords_, "coordinates");
     serial_call_save(archive_, qff_, "qff");
     archive_->toFile("gigide.xml");
-    gigtimer::Timer::stop("xml commit");
+    timer::Timer::stop("xml commit");
 }
 
 void
@@ -150,7 +151,7 @@ GigideRuntime::molecule()
 void
 GigideRuntime::run_xmlprint()
 {
-    gigtimer::Timer::start("xml");
+    timer::Timer::start("xml");
     XMLArchivePtr arch(
         new smartptr::XMLArchive(
             "gigide.xml",
@@ -185,10 +186,10 @@ GigideRuntime::run_xmlprint()
     serial_call_load(arch, qff, "qff");
     if (!qff)
         except("Could not find force field on tag qff");
-    gigtimer::Timer::stop("xml");
+    timer::Timer::stop("xml");
 
     qff->print();
-    gigtimer::Timer::start("compute");
+    timer::Timer::start("compute");
     qff->compute();
 #if HAS_INTDER
     run_intder();
@@ -196,7 +197,7 @@ GigideRuntime::run_xmlprint()
 #if HAS_INTDER && HAS_ANHARM
     run_anharm();
 #endif
-    gigtimer::Timer::stop("compute");
+    timer::Timer::stop("compute");
 
 }
 
@@ -216,10 +217,10 @@ GigideRuntime::run_calc()
     if (!qff_)
         init_qff();
 
-    gigtimer::Timer::start("read xml data");
+    timer::Timer::start("read xml data");
     qff_->readXMLData();
-    gigtimer::Timer::stop("read xml data");
-    gigtimer::Timer::start("compute");
+    timer::Timer::stop("read xml data");
+    timer::Timer::start("compute");
     qff_->compute();
 #if HAS_INTDER
     run_intder();
@@ -227,7 +228,7 @@ GigideRuntime::run_calc()
 #if HAS_INTDER && HAS_ANHARM
     run_anharm();
 #endif
-    gigtimer::Timer::stop("compute");
+    timer::Timer::stop("compute");
 
     xml_commit();
 }

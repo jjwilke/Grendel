@@ -1,6 +1,5 @@
 
 #include <src/keyword.h>
-#include <src/printstream.h>
 #include <src/exception.h>
 #include <sstream>
 

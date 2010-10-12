@@ -4,7 +4,8 @@
 #include <src/permutation.h>
 #include <src/exception.h>
 #include <src/molecule.h>
-#include <src/timer.h>
+
+#include <src/smartptr/src/timer.h>
 
 using namespace gigide;
 using namespace std;
