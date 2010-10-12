@@ -35,7 +35,6 @@ GigideRuntime::xml_commit()
     gigtimer::Timer::start("xml commit");
     //reset the writer
     archive_ = new smartptr::XMLArchive(
-        GigideKeyword::getArchiveMemory(),
         XMLArchive::Checkpoint
     );
 
@@ -45,8 +44,6 @@ GigideRuntime::xml_commit()
     serial_call_save(archive_, qff_, "qff");
     archive_->toFile("gigide.xml");
     gigtimer::Timer::stop("xml commit");
-
-    cout << "Archive Size: " << archive_->getDataSize() << endl;
 }
 
 void
@@ -157,7 +154,6 @@ GigideRuntime::run_xmlprint()
     XMLArchivePtr arch(
         new smartptr::XMLArchive(
             "gigide.xml",
-            GigideKeyword::getArchiveMemory(),
             XMLArchive::Checkpoint
        )
    );

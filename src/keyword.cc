@@ -396,10 +396,5 @@ GigideKeyword::getEnergyUnits()
     return KeywordSet::getKeyword("energy units")->getValueString();
 }
 
-size_t
-GigideKeyword::getArchiveMemory()
-{
-    return KeywordSet::getKeyword("archive memory")->getValueMemory();
-}
 
 

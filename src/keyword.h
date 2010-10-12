@@ -294,8 +294,6 @@ class GigideKeyword {
 
         static std::string getEnergyUnits();
 
-        static size_t getArchiveMemory();
-
 };
 
 }

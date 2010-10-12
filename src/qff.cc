@@ -937,10 +937,14 @@ ForceField::readXMLData(string filename)
     
     int ntot = 0;
     bool extrazero = false;
-    size_t mem = KeywordSet::getKeyword("archive memory")->getValueMemory();
-    
+    size_t xml_mem = KeywordSet::getKeyword("xml archive memory")->getValueMemory();
+    size_t bin_mem = KeywordSet::getKeyword("binary archive memory")->getValueMemory();
+
     XMLArchivePtr xml(
-        new smartptr::XMLArchive(filename, mem, XMLArchive::Checkpoint)
+        new smartptr::XMLArchive(
+            filename,
+            XMLArchive::Checkpoint
+        )
     );
 
     xml->stepIn("displacement");

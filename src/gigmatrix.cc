@@ -444,13 +444,11 @@ Matrix::Matrix(const XMLArchivePtr& arch)
     SetRuntime(Matrix);
 
     mdim_t size;
-    void* ptr;
-    arch->loadBinary(&ptr, size, "data");
-    data_ = (double *) ptr;
+    arch->getBinary<double>(data_, size, "data");
     serial_load(nrow);
     serial_load(ncol);
 
-    if (nrow_ * ncol_ * sizeof(double) != size)
+    if (nrow_ * ncol_ != size)
     {
         cerr << "Matrix data not aligned with nrow x ncol" << endl;
         abort();
@@ -461,8 +459,8 @@ void
 Matrix::serialize(const XMLArchivePtr& arch) const
 {
     Serializable::serialize(arch);
-    mdim_t size = nrow_ * ncol_ * sizeof(double);
-    arch->writeBinary(data_, size, "data");
+    mdim_t size = nrow_ * ncol_;
+    arch->setBinary<double>(data_, size, "data");
     serial_save(nrow);
     serial_save(ncol);
 }
@@ -664,9 +662,6 @@ Vector::Vector(double* d, mdim_t n) :
     n_(n), data_(d)
 {
     SetRuntime(Vector);
-
-    //data_ = new double[n];
-    //memcpy(data_, d, n * sizeof(double));
 }
 
 Vector::Vector(const XMLArchivePtr& arch)
@@ -674,12 +669,10 @@ Vector::Vector(const XMLArchivePtr& arch)
     SetRuntime(Vector);
 
     mdim_t size;
-    void* ptr;
-    arch->loadBinary(&ptr, size, "data");
-    data_ = (double *) ptr;
+    arch->getBinary(data_, size, "data");
     serial_load(n);
 
-    if (size != n_ * sizeof(double))
+    if (size != n_)
     {
         cerr << stream_printf("Data size %ld does not match dim %ld", size, n_) << endl;
         abort();
@@ -691,7 +684,7 @@ Vector::serialize(const XMLArchivePtr& arch) const
 {
     Serializable::serialize(arch);
 
-    arch->writeBinary(data_, n_ * sizeof(double), "data");
+    arch->setBinary(data_, n_, "data");
     serial_save(n);
 }
 

@@ -23,4 +23,6 @@ dispfile = default
 fittype = formula
 printfit = false
 subgroup = none
-archive memory = 100 MB
+binary archive memory = 100 MB
+xml archive memory = 10 MB
+
