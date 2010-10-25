@@ -7,9 +7,10 @@
 #include <src/defines.h>
 #include <src/keyword.h>
 #include <src/coordinates.h>
-#include <src/printstream.h>
 #include <src/deftypes.h>
 #include <iostream>
+
+#include <src/smartptr/src/printstream.h>
 
 namespace gigide {
 

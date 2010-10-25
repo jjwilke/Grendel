@@ -686,7 +686,7 @@ Reflection::Reflection(const XMLArchivePtr& arch)
     SetRuntime(Reflection);
 
     boost::intrusive_ptr<Vector> tmp;
-    arch->serialize_obj(XMLArchive::Read, tmp, "axis");
+    serial_call_load(arch, tmp, "axis");
     VectorPtr axis(tmp.get()); 
     init(axis);
 }

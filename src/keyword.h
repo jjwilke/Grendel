@@ -5,11 +5,11 @@
 #include <iostream>
 #include <sstream>
 #include <map>
-#include <src/printstream.h>
 #include <src/defines.h>
 #include <src/deftypes.h>
 
 #include <src/smartptr/src/regexp.h>
+#include <src/smartptr/src/printstream.h>
 
 namespace gigide {
 
@@ -293,8 +293,6 @@ class GigideKeyword {
         static std::string getBondUnits();
 
         static std::string getEnergyUnits();
-
-        static size_t getArchiveMemory();
 
 };
 

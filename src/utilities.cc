@@ -1,9 +1,10 @@
 #include <src/defines.h>
 #include <src/utilities.h>
-#include <src/printstream.h>
 #include <src/exception.h>
 #include <sstream>
 #include <cmath>
+
+#include <src/smartptr/src/printstream.h>
 
 using namespace gigide;
 using namespace std;

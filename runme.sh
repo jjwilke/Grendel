@@ -1,7 +1,7 @@
 #!/usr/bin/env tcsh
 
-git submodule init
-git submodule update
+#git submodule init
+#git submodule update
 aclocal
 glibtoolize
 automake --add-missing

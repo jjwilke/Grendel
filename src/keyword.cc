@@ -1,6 +1,5 @@
 
 #include <src/keyword.h>
-#include <src/printstream.h>
 #include <src/exception.h>
 #include <sstream>
 
@@ -396,10 +395,5 @@ GigideKeyword::getEnergyUnits()
     return KeywordSet::getKeyword("energy units")->getValueString();
 }
 
-size_t
-GigideKeyword::getArchiveMemory()
-{
-    return KeywordSet::getKeyword("archive memory")->getValueMemory();
-}
 
 

@@ -4,7 +4,6 @@
 #include <sstream>
 #include <config.h>
 #include <stdio.h>
-#include <src/printstream.h>
 #include <src/utilities.h>
 #include <src/fileio.h>
 #include <src/qff.h>
@@ -19,10 +18,11 @@
 #include <src/deftypes.h>
 #include <src/gigmatrix.h>
 #include <src/runtime.h>
-#include <src/timer.h>
 
+#include <src/smartptr/src/timer.h>
 #include <src/smartptr/src/regexp.h>
 #include <src/smartptr/src/set.h>
+#include <src/smartptr/src/printstream.h>
 
 using namespace std;
 using namespace gigide;
@@ -60,7 +60,7 @@ int main(int argc, const char* argv[])
     cout << "GIGIDE.  Gigide is a general internal coordinate derivative engine." << endl;
     cout << endl;
 
-    gigtimer::Timer::start("gigide");
+    timer::Timer::start("gigide");
     try {
         //check the command line options
         map<string, string> argvmap;
@@ -138,10 +138,10 @@ int main(int argc, const char* argv[])
         throw;
     }
 
-    gigtimer::Timer::stop("gigide");
+    timer::Timer::stop("gigide");
     //commit the xml
 
-    gigtimer::Timer::print();
+    timer::Timer::print();
 
     return 0;
 }
