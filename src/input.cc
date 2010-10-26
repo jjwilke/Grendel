@@ -183,7 +183,7 @@ GigideInputFile::appendCoordinates(
     for (int n=0; n < simple_matches.size(); ++n)
     {
         string simple_name = simple_matches[n];
-        string coeff_regexp = "([\\-+]?\\s*\\d+[.]?\\d*)\\s+" ; coeff_regexp += simple_name;
+        string coeff_regexp = "([\\-]?\\s*\\d+[.]?\\d*)\\s+" ; coeff_regexp += simple_name;
         string sign_regexp = "([\\-+])\\s*" ; sign_regexp += simple_name;
         bool has_coeff = has_regexp_match(coeff_regexp, coord_text);
         bool has_sign = has_regexp_match(sign_regexp, coord_text);
@@ -197,6 +197,8 @@ GigideInputFile::appendCoordinates(
             string sign = get_regexp_string(sign_regexp, coord_text);
             if      (sign == "-") coeff = -1.0;
             else if (sign == "+") coeff = 1.0;
+            else
+                except("Gigide has a sign, but for some reason the regep match is not working");
         }
         else //must be the first coordinate it must +1
         {
