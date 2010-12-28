@@ -7,8 +7,8 @@ using namespace gigide;
 using namespace std;
 
 GigideException::GigideException(
-    string msg,
-    const char* file,
+    const string& msg,
+    const string& file,
     int line
 ) throw() : runtime_error(msg), 
     msg_(msg), 
@@ -18,12 +18,12 @@ GigideException::GigideException(
 }
 
 void
-GigideException::rewrite_msg(string msg) throw()
+GigideException::rewrite_msg(const string& msg) throw()
 {
     msg_ = msg;
 }
     
-const char* 
+const char*
 GigideException::what() const throw()
 {
     stringstream sstr;
@@ -33,16 +33,13 @@ GigideException::what() const throw()
     sstr << "line: " << line_;
     sstr << "      " << endl;
 
-    return sstr.str().c_str();
-
     string str = sstr.str();
-
     char* charstr = new char[str.size()];
-    memcpy(charstr, str.c_str(), str.size() * sizeof(char));
+    memcpy(charstr, str.data(), str.size() * sizeof(char));
     return charstr;
 }
 
-const char* 
+string 
 GigideException::file() const throw()
 {
     return file_;
@@ -54,14 +51,14 @@ GigideException::line() const throw()
     return line_;
 }
 
-const char*
+string
 GigideException::location() const throw()
 {
     stringstream sstr;
     sstr << "file: " << file_ << "\n";
     sstr << "line: " << line_;
 
-    string str = sstr.str();
+    const string& str = sstr.str();
     char* charstr = new char[str.size()];
     memcpy(charstr, str.c_str(), str.size() * sizeof(char));
     return charstr;
@@ -72,8 +69,8 @@ GigideException::~GigideException() throw()
 }
 
 SanityCheckError::SanityCheckError(
-    string message,
-    const char* file,
+    const string& message,
+    const string& file,
     int line
     ) throw() 
   : GigideException(message, file, line)
@@ -86,10 +83,10 @@ SanityCheckError::SanityCheckError(
 SanityCheckError::~SanityCheckError() throw() {}
 
 InputException::InputException(
-    string msg,
-    string param_name,
+    const string& msg,
+    const string& param_name,
     int value,
-    const char* file,
+    const string& file,
     int line
 ) throw() : GigideException(msg, file, line)
 {
@@ -97,10 +94,10 @@ InputException::InputException(
 }
 
 InputException::InputException(
-    string msg,
-    string param_name,
-    string value,
-    const char* file,
+    const string& msg,
+    const string& param_name,
+    const string& value,
+    const string& file,
     int line
 ) throw() : GigideException(msg, file, line)
 {
@@ -108,10 +105,10 @@ InputException::InputException(
 }
 
 InputException::InputException(
-    string msg,
-    string param_name,
+    const string& msg,
+    const string& param_name,
     double value,
-    const char* file,
+    const string& file,
     int line
 ) throw() : GigideException(msg, file, line)
 {
@@ -119,9 +116,9 @@ InputException::InputException(
 }
 
 InputException::InputException(
-    string msg,
-    string param_name,
-    const char* file,
+    const string& msg,
+    const string& param_name,
+    const string& file,
     int line
 ) throw() : GigideException(msg, file, line)
 {
@@ -132,8 +129,8 @@ template <
     class T
 > void
 InputException::write_input_msg(
-    string msg,
-    string param_name,
+    const string& msg,
+    const string& param_name,
     T value
 ) throw()
 {
@@ -145,10 +142,10 @@ InputException::write_input_msg(
 }
 
 StepSizeError::StepSizeError(
-    string value_name,
+    const string& value_name,
     double max,
     double actual,
-    const char* file,
+    const string& file,
     int line) throw()
     : LimitExceeded<double>(value_name + " step size", max, actual, file, line)
 {
@@ -157,9 +154,9 @@ StepSizeError::StepSizeError(
 StepSizeError::~StepSizeError() throw() {}
 
 MaxIterationsExceeded::MaxIterationsExceeded(
-    string routine_name,
+    const string& routine_name,
     int max,
-    const char* file,
+    const string& file,
     int line)  throw()
     : LimitExceeded<int>(routine_name + " iterations", max, max, file, line)
 {
@@ -168,11 +165,11 @@ MaxIterationsExceeded::MaxIterationsExceeded(
 MaxIterationsExceeded::~MaxIterationsExceeded() throw() {}
 
 ConvergenceError::ConvergenceError(
-    string routine_name,
+    const string& routine_name,
     int max,
     double desired_accuracy,
     double actual_accuracy,
-    const char* file,
+    const string& file,
     int line) throw()
     : MaxIterationsExceeded(routine_name + " iterations", max, file, line), desired_acc_(desired_accuracy), actual_acc_(actual_accuracy)
 {
@@ -191,19 +188,19 @@ double
 ConvergenceError::actual_accuracy() const throw() {return actual_acc_;}
 
 ResourceAllocationError::ResourceAllocationError(
-    string resource_name,
+    const string& resource_name,
     size_t max,
     size_t actual,
-    const char* file,
+    const string& file,
     int line)  throw()
     : LimitExceeded<size_t>(resource_name, max, actual, file, line)
 {
 }
 
 FeatureNotImplemented::FeatureNotImplemented(
-    string module_name,
-    string feature_name,
-    const char* file,
+    const string& module_name,
+    const string& feature_name,
+    const string& file,
     int line
 ) throw() 
  : GigideException("psi exception", file, line)

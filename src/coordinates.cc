@@ -219,6 +219,7 @@ InternalCoordinate::checkCompleteness(
         }
 
         string msg = sstr.str();
+        
         except(msg);
     }
 

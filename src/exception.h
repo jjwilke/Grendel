@@ -18,7 +18,7 @@ class GigideException : public std::runtime_error {
 
     private:
         std::string msg_;
-        const char* file_;
+        std::string file_;
         int line_;
 
     protected:
@@ -26,7 +26,7 @@ class GigideException : public std::runtime_error {
         * Override default message for exception throw in what
         * @param msg The message for what to throw
         */
-        void rewrite_msg(std::string msg) throw();
+        void rewrite_msg(const std::string& msg) throw();
 
     public:
         /**
@@ -36,8 +36,8 @@ class GigideException : public std::runtime_error {
         * @param line The line number that threw the exception (use __LINE__ macro)
         */
         GigideException(
-            std::string message,
-            const char* file,
+            const std::string& message,
+            const std::string& file,
             int line
         ) throw ();
 
@@ -53,13 +53,13 @@ class GigideException : public std::runtime_error {
         * Accessor method
         * @return File that threw the exception
         */
-        const char* file() const throw();
+        std::string file() const throw();
 
         /**
         * Accessor method
         * @return A string description of line and file that threw exception
         */
-        const char* location() const throw();
+        std::string location() const throw();
 
         /**
         * Accessor method
@@ -82,8 +82,8 @@ class SanityCheckError : public GigideException {
         * @param line The line number that threw the exception (use __LINE__ macro)
         */
         SanityCheckError(
-            std::string message,
-            const char* file,
+            const std::string& message,
+            const std::string& file,
             int line
         ) throw();
 
@@ -105,9 +105,9 @@ class FeatureNotImplemented : public GigideException {
         * @param line The line number that threw the exception (use __LINE__ macro)
         */
         FeatureNotImplemented(
-            std::string module, 
-            std::string feature,
-            const char* file,
+            const std::string& module, 
+            const std::string& feature,
+            const std::string& file,
             int line
         ) throw();
 
@@ -132,12 +132,12 @@ class LimitExceeded : public GigideException {
         * Accessor method
         * @return A string description of the limit that was exceeded
         */
-        const char* description() const throw()
+        std::string description() const throw()
         {
             std::stringstream sstr;
             sstr << "value for " << resource_name_ << " exceeded.\n"
                  << "allowed: " << maxval_ << " actual: " << errorval_;
-            return sstr.str().c_str();
+            return sstr.str();
         }
 
     public:
@@ -150,10 +150,10 @@ class LimitExceeded : public GigideException {
         * @param line The line number that threw the exception (use __LINE__ macro)
         */
         LimitExceeded(
-            std::string resource_name,
-            T maxval,
-            T errorval,
-            const char* file,
+            const std::string& resource_name,
+            const T& maxval,
+            const T& errorval,
+            const std::string& file,
             int line) throw() : GigideException(resource_name, file, line), maxval_(maxval), errorval_(errorval), resource_name_(resource_name)
         {
             rewrite_msg(description());
@@ -189,10 +189,10 @@ class StepSizeError : public LimitExceeded<double> {
         * @param line The line number that threw the exception (use __LINE__ macro)
         */
         StepSizeError(
-            std::string resource_name,
+            const std::string& resource_name,
             double max,
             double actual,
-            const char* file,
+            const std::string& file,
             int line) throw();
 
         ~StepSizeError() throw();
@@ -214,9 +214,9 @@ class MaxIterationsExceeded : public LimitExceeded<int> {
         * @param line The line number that threw the exception (use __LINE__ macro)
         */
         MaxIterationsExceeded(
-            std::string routine_name,
+            const std::string& routine_name,
             int max,
-            const char* file,
+            const std::string& file,
             int line) throw();
 
         ~MaxIterationsExceeded() throw();
@@ -239,11 +239,11 @@ class ConvergenceError : public MaxIterationsExceeded {
         * @param line The line number that threw the exception (use __LINE__ macro)
         */
         ConvergenceError(
-            std::string routine_name,
+            const std::string& routine_name,
             int max,
             double desired_accuracy,
             double actual_accuracy,
-            const char* file,
+            const std::string& file,
             int line) throw();
 
         /** Accessor method 
@@ -279,10 +279,10 @@ class ResourceAllocationError : public LimitExceeded<size_t> {
         * @param line The line number that threw the exception (use __LINE__ macro)
         */
         ResourceAllocationError(
-            std::string resource_name,
+            const std::string& resource_name,
             size_t max,
             size_t actual,
-            const char* file,
+            const std::string& file,
             int line) throw ();
 
         ~ResourceAllocationError() throw();
@@ -298,7 +298,7 @@ class InputException : public GigideException {
         * Template method for writing generic input exception message
         */
         template <class T> void
-        write_input_msg(std::string msg, std::string param_name, T val) throw();
+        write_input_msg(const std::string& msg, const std::string& param_name, T val) throw();
 
     public:
         /**
@@ -310,10 +310,10 @@ class InputException : public GigideException {
         * @param line The line number that threw the exception (use __LINE__ macro)
         */
         InputException(
-            std::string msg,
-            std::string param_name,
+            const std::string& msg,
+            const std::string& param_name,
             int value,
-            const char* file, 
+            const std::string& file,
             int line
         ) throw();
 
@@ -326,10 +326,10 @@ class InputException : public GigideException {
         * @param line The line number that threw the exception (use __LINE__ macro)
         */
         InputException(
-            std::string msg,
-            std::string param_name,
+            const std::string& msg,
+            const std::string& param_name,
             double value,
-            const char* file, 
+            const std::string& file,
             int line
         ) throw();
 
@@ -342,10 +342,10 @@ class InputException : public GigideException {
         * @param line The line number that threw the exception (use __LINE__ macro)
         */
         InputException(
-            std::string msg,
-            std::string param_name,
-            std::string value,
-            const char* file, 
+            const std::string &msg,
+            const std::string &param_name,
+            const std::string &value,
+            const std::string &file, 
             int line
         ) throw();
 
@@ -357,9 +357,9 @@ class InputException : public GigideException {
         * @param line The line number that threw the exception (use __LINE__ macro)
         */
         InputException(
-            std::string msg,
-            std::string param_name,
-            const char* file, 
+            const std::string& msg,
+            const std::string& param_name,
+            const std::string& file, 
             int line
         ) throw();
 };

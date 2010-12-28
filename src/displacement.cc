@@ -1049,7 +1049,7 @@ Displacement::generateGeometry(
     MoleculePtr dispmol = mol->copy();
 
     //create the copies to be used in generating the geometry
-    for (int i=0; i < main_coords.size(); ++i)
+    for (int i=0; i < main_simples.size(); ++i)
         simples.push_back(main_simples[i]->simple_copy(dispmol));
 
     for (int i=0; i < main_coords.size(); ++i)
