@@ -70,9 +70,9 @@ class SymmetryOperation : public smartptr::Serializable {
                 1 & 1\\
                 1 & 0
             \f}
-			@param oper The symmetry operation
+            @param oper The symmetry operation
             @throw If the symmetry operation is not valid for the molecule
-		*/
+        */
         RectMatrixPtr getPermutationMatrix(const ConstMoleculePtr& mol) const;
 
         /**

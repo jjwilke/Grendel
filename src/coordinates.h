@@ -80,7 +80,7 @@ class InternalCoordinate : public smartptr::Serializable {
 
     public:
 
-		/** 
+        /**
             Parent constructor.  At this level, InternalCoordinate is still abstract and cannot
             be instantiated.
             @param mol The molecule the coordinate is based on
@@ -88,6 +88,10 @@ class InternalCoordinate : public smartptr::Serializable {
         */
         InternalCoordinate(const ConstMoleculePtr& mol, const std::string& name);
 
+        /**
+            Serialization constructor.
+            @param arch
+        */
         InternalCoordinate(const XMLArchivePtr& arch);
 
         virtual ~InternalCoordinate();
@@ -112,6 +116,16 @@ class InternalCoordinate : public smartptr::Serializable {
             double tol = 1e-8
         );
 
+        /**
+            Static method for constructing delocalized internal coordinates from
+            a set of simple internal coordinates.
+            @param mol The molecule the coordinates are based on
+            @param simples A vector of simple internal coordinates to use in constructing delocalized internals
+            @param coords A vector of coordinates.  The delocalized internals will be appened to this vector upon return.
+            @param tol The tolerance for throwing out small eigenvalues. Barring machine precision issues, the matrix
+                       should be positive definite.
+            @return The eigenvalues of the B*B^T matrix
+        */
         static VectorPtr
         addDelocalizedInternalCoordinates(
             const ConstMoleculePtr& mol,
@@ -132,7 +146,6 @@ class InternalCoordinate : public smartptr::Serializable {
             const smartptr::Set<ConstInternalCoordinatePtr>& coords, 
             const ConstMoleculePtr& mol
         );
-
 
         /** 
             Compute the characters for the given internal coordinate 
@@ -187,25 +200,25 @@ class InternalCoordinate : public smartptr::Serializable {
             const smartptr::Set<ConstInternalCoordinatePtr>& coords
         );
 
-		/** 
+        /**
             Returns the B matrix associated with the molecule
-			@return A matrix with rows corresponding to atoms and columns corresponding to the x,y,z disps of 
-			        their B std::vectors.
-		*/
+            @return A matrix with rows corresponding to atoms and columns corresponding to the x,y,z disps of
+                    their B vectors.
+        */
         ConstRectMatrixPtr getBMatrix() const;
 
-		/** 
-            Returns the B std::vector associated with an individual atom 
-			@param A RefPtr to an atom
-			@return The B std::vector for the internal coordinate associated with that atom
-		*/
+        /**
+            Returns the B vector associated with an individual atom
+            @param A RefPtr to an atom
+            @return The B vector for the internal coordinate associated with that atom
+        */
         ConstVectorPtr getBVector(const ConstAtomPtr& atom) const;
 
-		/** 
-            Get the value of the coordinate at the current molecular geometry. In bohr/angstrom or radian depending on the coordinate.
-            
+        /**
+            Get the value of the coordinate at the current molecular geometry.
+            In bohr/angstrom or radian depending on the coordinate.
             @return Internal coordinate value
-		*/
+        */
         virtual double getValue() const = 0;
 
         /**
@@ -241,9 +254,9 @@ class InternalCoordinate : public smartptr::Serializable {
             For torsion angles, etc, that are periodic, we need a way of canonicalizng the values
             to recognize that 2\f$\pi\f$ and 0 are the same, for example. By default, for things like regular angles, bonds, linx,
 		    we just send back the original value.
-		    @param  val The value to canonicalize
-		    @return The canonicalized value, adjusted to meet a given choice of periodicity
-		*/
+            @param  val The value to canonicalize
+            @return The canonicalized value, adjusted to meet a given choice of periodicity
+        */
         virtual double canonicalizeValue(double val) const;
 
         /** 
@@ -254,12 +267,12 @@ class InternalCoordinate : public smartptr::Serializable {
         */
         virtual void recompute() = 0;
 
-		/** 
+        /**
             Returns the characters of the coordinates with symm ops ordered as in Cotton, 3rd ed 
             for default Abelian groups. For non-abelian, order is given by user input.
 
-			@return The vector of characters for the internal coordinate
-		*/
+            @return The vector of characters for the internal coordinate
+        */
         ConstVectorPtr characters() const;
 
         double character(int cls) const;
@@ -275,14 +288,14 @@ class InternalCoordinate : public smartptr::Serializable {
         */
         virtual std::string connectivityString() const = 0;
 
-		/** Prints a description of the coordinate to standard out 
+        /** Prints a description of the coordinate to standard out
             @param os The ostream to print to, e.g. cout, cerr, stringstream
-			@param includechar Whether to also print the symmetry operation characters of the coordinate
+            @param includechar Whether to also print the symmetry operation characters of the coordinate
             @param includesubchars Wether to also print the characters for subgroups
-		*/
+        */
         void print(std::ostream& os = std::cout, bool includechars = true, bool includesubchars = false) const;
 
-		/** 
+        /**
             Returns a description of the coordinate. <br>
            <b><i> STRE </i></b> bond length <br>
            <b><i> BEND </i></b> bond angle <br>
@@ -292,9 +305,8 @@ class InternalCoordinate : public smartptr::Serializable {
            <b><i> LINY </i></b> y line bend <br>
            <b><i> LIN1 </i></b> fixed vector linear bend <br>
            <b><i> SYMM </i></b> symmetry internal coordinate <br>
-
-			@return The coordinate type
-		*/
+            @return The coordinate type
+        */
         std::string type() const;
 
         /**
@@ -306,10 +318,31 @@ class InternalCoordinate : public smartptr::Serializable {
         */
         void testBVectors(double tol = 1e-10);
 
-        virtual InternalCoordinatePtr copy(const ConstMoleculePtr& mol, const smartptr::Set<ConstSimpleInternalCoordinatePtr>& simples) const = 0;
+        /**
+            Create a copy of the internal coordinate based on a new molecule
+            and based on a new set of simple internals.  The simples are only
+            relevant for symmetry internal coordinates.
+            @param mol
+            @param simples
+        */
+        virtual InternalCoordinatePtr copy(
+            const ConstMoleculePtr& mol,
+            const smartptr::Set<ConstSimpleInternalCoordinatePtr>& simples
+        ) const = 0;
 
+        /**
+            Create an exact copy of the internal coordinate based
+            on the same molecule and the same simple internal
+            coordinates.
+        */
         virtual InternalCoordinatePtr copy() const = 0;
 
+        /**
+            Sets the magnitude of the coefficient vector to 1.  The coefficient
+            vector defines the linear combination of simple internal coordinates.
+            This is in contrast to B vector normalization which normalizes the
+            magnitude of the B vector displacement.
+        */
         virtual void
         intder_normalize() = 0;
 
@@ -325,7 +358,7 @@ class InternalCoordinate : public smartptr::Serializable {
 class SimpleInternalCoordinate : public InternalCoordinate
 {
     protected:
-		/** 
+        /**
             Maps coordinate specific numbering to atom object. See #getAtom.
         */
         std::map<int, ConstAtomPtr> atom_map_;
@@ -337,7 +370,8 @@ class SimpleInternalCoordinate : public InternalCoordinate
         std::vector<int> connectivity_;
 
     protected:
-		/** 
+
+        /**
             Given the coordinate specific numbering, returns the atom number in the molecule.
             For example, in methane, the bond angle H2-C1-H5 would have coordinate specific numbering
             1->H2, 2->C1, 3->H5 so mol_number would map 1->2, 2-1, 3->5.
@@ -354,12 +388,12 @@ class SimpleInternalCoordinate : public InternalCoordinate
         void resetAtoms();
 
     public:
-		/** 
+        /**
             Constructor
-			@param connect	The connectivity of the internal coordinate. See #connectivity_
-			@param mol		The molecule to build the internal coordinates on
+            @param connect  The connectivity of the internal coordinate. See #connectivity_
+            @param mol      The molecule to build the internal coordinates on
             @param name     The name of the coordinate type
-		*/
+        */
         SimpleInternalCoordinate(
             const std::vector<int>& connect, 
             const ConstMoleculePtr& mol,
@@ -395,8 +429,8 @@ class SimpleInternalCoordinate : public InternalCoordinate
         double getValueForMolecule(const ConstMoleculePtr& mol) const;
 
         /**
-            Fetches the dummy atom numbers for this molecule.  The dummy atom number is zero-based
-            corresponding to the molecule numbering. By default, nothing is done.
+            Fetches the dummy atom numbers for this molecule.  The dummy atom number
+            is zero-based corresponding to the molecule numbering. By default, nothing is done.
 
             @param dummy_list The vector to append dummy atom numbers to.  Numbers are appended
                               and no content is cleared from the vector.
@@ -413,6 +447,12 @@ class SimpleInternalCoordinate : public InternalCoordinate
         */
         void connectivity(std::vector<int>& connect) const;
 
+        /**
+            Copy the coordinate, but link it to the new molecule.
+            Overridden in subclasses.
+            @param mol The new molecule
+            @return Equivalent coordinate based on new molecular coordinates
+        */
         virtual SimpleInternalCoordinatePtr simple_copy(const ConstMoleculePtr& mol) const = 0;
 
         InternalCoordinatePtr copy(const ConstMoleculePtr& mol, const smartptr::Set<ConstSimpleInternalCoordinatePtr>& simples) const;

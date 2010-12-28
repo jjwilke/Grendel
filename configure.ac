@@ -146,10 +146,6 @@ AC_DEFINE_UNQUOTED(ANHARM_PATH,"${anharmpath}", [The location of anharm])
 AC_DEFINE_UNQUOTED(HAS_ANHARM,${hasanharm}, [Whether anharm exists])
 AC_SUBST(HAS_ANHARM, $hasanharm)
 
-#LIBS="$LIBS -l$PYDIST"
-#CPPFLAGS="$CPPFLAGS -I$PYINCLUDE"
-#LDFLAGS="$LDFLAGS -L$PYLIBDIR"
-
 #PKG_CHECK_MODULES([DEPS], libxml++-2.6 >= 2.14.0)
 #AC_SUBST(DEPS_CFLAGS)
 #AC_SUBST(DEPS_LIBS)
@@ -158,11 +154,6 @@ gigdatadir="$prefix/lib"
 AC_DEFINE_UNQUOTED(GIGDATADIR,"${gigdatadir}",[The directory into which all data files will be installed])
 
 AC_DEFINE([PROGRAM],"GIGID-E","The name of the program")
-
-#AC_CHECK_HEADER([boost/intrusive_ptr.hpp],
-#,
-#AC_MSG_ERROR([Package requires boost])
-#)
 
 AC_SEARCH_LIBS(DGEMM,,
 echo Found blas library,
