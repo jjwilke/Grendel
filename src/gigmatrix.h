@@ -718,8 +718,10 @@ template <class T>
 void
 MatrixTemplate<T>::print(const std::string& title, std::ostream& os) const
 {
-    nullcheck();
-    get()->print(title, os);
+    if (get() == 0)
+        os << "null matrix" << std::endl;
+    else
+        get()->print(title, os);
 }
 
 template <class T> 
@@ -1401,6 +1403,9 @@ SymmMatrixTemplate<T>::accumulate_symmetric_product(const ConstRectMatrixPtr& m)
 
 
 namespace smartptr {
+    SerialDecideConstSubptr(gigide::ConstSymmMatrixPtr);
+    SerialDecideConstSubptr(gigide::ConstRectMatrixPtr);
+    SerialDecideConstSubptr(gigide::ConstVectorPtr);
     SerialDecideSubptr(gigide::RectMatrixPtr);
     SerialDecideSubptr(gigide::SymmMatrixPtr);
     SerialDecideSubptr(gigide::VectorPtr);
