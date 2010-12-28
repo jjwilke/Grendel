@@ -1,3 +1,3 @@
 [submodule "src/smartptr"]
 	path = src/smartptr
-	url = git@voltron.ccqc.uga.edu:~/smartptr
+	url = git@login1.ccqc.uga.edu:~/smartptr
