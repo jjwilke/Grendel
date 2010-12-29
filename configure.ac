@@ -14,6 +14,7 @@ LT_INIT()
 AC_PROG_CXX
 AC_PROG_CC
 AC_PROG_RANLIB
+AC_PROG_F77
 AC_PROG_LIBTOOL
 
 AC_LANG([C++])
@@ -31,6 +32,7 @@ AC_CONFIG_FILES([Makefile
                  src/smartptr/src/Makefile
                  src/smartptr/src/libs/regex/src/Makefile
                  src/smartptr/src/libs/smart_ptr/src/Makefile
+                 src/anharm/Makefile
                  lib/Makefile
                  test.py])
 
