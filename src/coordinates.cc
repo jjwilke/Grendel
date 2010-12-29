@@ -1,12 +1,5 @@
-#include <src/coordinates.h>
-#include <src/coordinates.h>
-#include <src/molecule.h>
-#include <src/symmetry.h>
-#include <src/utilities.h>
-#include <src/exception.h>
+#include "gigide.h"
 #include <math.h>
-
-#include <src/smartptr/src/ref.h>
 
 #define X 0
 #define Y 1

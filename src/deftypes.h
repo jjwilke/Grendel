@@ -3,17 +3,6 @@
 
 #include <src/smartptr/src/ref.h>
 
-#define InternalCoordinatePtr boost::intrusive_ptr<InternalCoordinate>
-#define SimpleInternalCoordinatePtr  boost::intrusive_ptr<SimpleInternalCoordinate>
-#define SymmetryInternalCoordinatePtr  boost::intrusive_ptr<SymmetryInternalCoordinate>
-#define LinXPtr  boost::intrusive_ptr<LinX>
-#define LinYPtr  boost::intrusive_ptr<LinY>
-#define Lin1Ptr  boost::intrusive_ptr<Lin1>
-#define BondAnglePtr  boost::intrusive_ptr<BondAngle>
-#define BondLengthPtr  boost::intrusive_ptr<BondLength>   
-#define TorsionPtr  boost::intrusive_ptr<Torsion>
-#define OutOfPlaneBendPtr  boost::intrusive_ptr<OutOfPlaneBend>  
-#define PeriodicCoordinatePtr  boost::intrusive_ptr<PeriodicCoordinate>   
 
 #define DisplacementMappingPtr boost::intrusive_ptr<DisplacementMapping>   
 #define DisplacementPtr boost::intrusive_ptr<Displacement>

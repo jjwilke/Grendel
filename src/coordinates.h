@@ -2,21 +2,14 @@
 #define gigide_coordinate_h_
 
 #include <src/deftypes.h>
-#include <math.h>
-#include <vector>
-#include <src/defines.h>
-#include <src/gigmatrix.h>
-#include <iostream>
 
-#include <src/smartptr/src/set.h>
-#include <src/smartptr/src/printstream.h>
+#include "gigide.hpp"
+
 
 namespace gigide {
 
 class Molecule;
 class Atom;
-class SimpleInternalCoordinate;
-class SymmetryInternalCoordinate;
 class SymmetryOperation;
 class PointGroup;
 
