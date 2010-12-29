@@ -33,6 +33,7 @@ AC_CONFIG_FILES([Makefile
                  src/smartptr/src/libs/regex/src/Makefile
                  src/smartptr/src/libs/smart_ptr/src/Makefile
                  src/anharm/Makefile
+                 src/intder/Makefile
                  lib/Makefile
                  test.py])
 
@@ -126,24 +127,28 @@ fi
 #PYLIBDIR=$PYDEFLIBDIR
 #)
 
-AC_ARG_WITH(intder,
-[  --with-intder   Gives the path to intder.] ,
-intderpath=$withval
-hasintder=1,
-intderpath="none"
-hasintder=0
-)
+#AC_ARG_WITH(intder,
+#[  --with-intder   Gives the path to intder.] ,
+#intderpath=$withval
+#hasintder=1,
+#intderpath="none"
+#hasintder=0
+#)
+hasintder=1
+intderpath="$prefix/bin/intder"
 AC_DEFINE_UNQUOTED(INTDER_PATH,"${intderpath}", [The location of intder])
 AC_DEFINE_UNQUOTED(HAS_INTDER,${hasintder}, [Whether intder exists])
 AC_SUBST(HAS_INTDER, $hasintder)
 
-AC_ARG_WITH(anharm,
-[  --with-anharm   Gives the path to anharm.] ,
-anharmpath=$withval
-hasanharm=1,
-anharmpath="none"
-hasanharm=0
-)
+#AC_ARG_WITH(anharm,
+#[  --with-anharm   Gives the path to anharm.] ,
+#anharmpath=$withval
+#hasanharm=1,
+#anharmpath="none"
+#hasanharm=0
+#)
+hasanharm=1
+anharmpath="$prefix/bin/anharm"
 AC_DEFINE_UNQUOTED(ANHARM_PATH,"${anharmpath}", [The location of anharm])
 AC_DEFINE_UNQUOTED(HAS_ANHARM,${hasanharm}, [Whether anharm exists])
 AC_SUBST(HAS_ANHARM, $hasanharm)

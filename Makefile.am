@@ -3,7 +3,8 @@ src/smartptr/src/libs/regex/src \
 src/smartptr/src/libs/smart_ptr/src \
 src \
 lib \
-src/anharm
+src/anharm \
+src/intder
 
-validate:
+test:
 	python test.py
