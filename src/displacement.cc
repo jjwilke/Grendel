@@ -1,15 +1,5 @@
-#include <config.h>
 #include <algorithm>
-#include <src/displacement.h>
-#include <src/keyword.h>
-#include <src/exception.h>
-#include <src/fileio.h>
-#include <src/defines.h>
-#include <src/taylor.h>
-#include <src/permutation.h>
-#include <src/symmetry.h>
-#include <src/derivative.h>
-#include <src/utilities.h>
+#include "gigide.h"
 
 #define ZERODISP 1e-3
 

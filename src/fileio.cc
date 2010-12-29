@@ -1,14 +1,8 @@
 #include <config.h>
 #include <iostream>
 #include <algorithm>
-#include <src/exception.h>
-#include <src/fileio.h>
-#include <src/utilities.h>
-#include <src/qff.h>
-#include <src/derivative.h>
-#include <src/displacement.h>
 
-#include <src/smartptr/src/regexp.h>
+#include "gigide.h"
 
 using namespace std;
 using namespace gigide;

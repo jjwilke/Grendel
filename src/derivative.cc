@@ -1,11 +1,4 @@
-#include <src/derivative.h>
-#include <src/symmetry.h>
-#include <src/utilities.h>
-#include <src/permutation.h>
-#include <src/exception.h>
-#include <src/molecule.h>
-
-#include <src/smartptr/src/timer.h>
+#include "gigide.h"
 
 using namespace gigide;
 using namespace std;

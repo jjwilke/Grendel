@@ -1,27 +1,7 @@
-#include <stdio.h>
-#include <string>
-#include <iostream>
-#include <sstream>
-#include <config.h>
-#include <stdio.h>
-#include <src/utilities.h>
-#include <src/fileio.h>
-#include <src/qff.h>
-#include <src/coordinates.h>
-#include <src/keyword.h>
-#include <src/defines.h>
-#include <src/input.h>
-#include <src/symmetry.h>
-#include <src/exception.h>
-#include <src/displacement.h>
-#include <src/derivative.h>
-#include <src/deftypes.h>
-#include <src/gigmatrix.h>
+#ifndef gigide_runtime_h
+#define gigide_runtime_h
 
-#include <src/smartptr/src/set.h>
-#include <src/smartptr/src/xmlarchive.h>
-#include <src/smartptr/src/regexp.h>
-#include <src/smartptr/src/printstream.h>
+#include "gigide.hpp"
 
 namespace gigide {
 
@@ -82,3 +62,4 @@ class GigideRuntime {
 
 }
 
+#endif

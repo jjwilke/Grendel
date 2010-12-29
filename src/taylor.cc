@@ -1,11 +1,4 @@
-
-#include <src/taylor.h>
-#include <src/utilities.h>
-#include <src/qff.h>
-#include <src/displacement.h>
-#include <src/derivative.h>
-#include <src/exception.h>
-#include <src/units.h>
+#include "gigide.h"
 
 using namespace gigide;
 using namespace std;

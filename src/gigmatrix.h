@@ -1,8 +1,8 @@
 #ifndef gigide_matrix_h
 #define gigide_matrix_h
 
-#include <iostream>
 #include <src/smartptr/src/serialize.h>
+#include <iostream>
 #include <math.h>
 
 namespace gigide {

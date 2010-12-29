@@ -1,7 +1,4 @@
-#include <src/runtime.h>
-
-#include <src/smartptr/src/timer.h>
-
+#include "gigide.h"
 
 using namespace std;
 using namespace gigide;

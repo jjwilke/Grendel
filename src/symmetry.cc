@@ -1,8 +1,4 @@
-#include <src/symmetry.h>
-#include <src/utilities.h>
-#include <src/molecule.h>
-#include <src/geometry.h>
-#include <src/exception.h>
+#include "gigide.h"
 
 #define X 0
 #define Y 1

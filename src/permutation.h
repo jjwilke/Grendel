@@ -1,11 +1,8 @@
-
 #ifndef gigide_permutation_h
 #define gigide_permutation_h
 
 #include <vector>
 #include <algorithm>
-
-#include <src/deftypes.h>
 
 namespace gigide {
 

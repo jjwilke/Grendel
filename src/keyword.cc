@@ -1,9 +1,4 @@
-
-#include <src/keyword.h>
-#include <src/exception.h>
-#include <sstream>
-
-#include <src/smartptr/src/regexp.h>
+#include "gigide.h"
 
 using namespace std;
 using namespace gigide;

@@ -1,16 +1,8 @@
 #ifndef _intdif_molecule_h_
 #define _intdif_molecule_h_
 
-#include <vector>
-#include <string>
-#include <map>
-#include <src/defines.h>
-#include <src/keyword.h>
-#include <src/coordinates.h>
-#include <src/deftypes.h>
-#include <iostream>
 
-#include <src/smartptr/src/printstream.h>
+#include "gigide.hpp"
 
 namespace gigide {
 

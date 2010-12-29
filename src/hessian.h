@@ -1,7 +1,5 @@
 
-#include <src/molecule.h>
-#include <src/coordinates.h>
-#include <src/deftypes.h>
+#include "gigide.hpp"
 
 namespace gigide {
 

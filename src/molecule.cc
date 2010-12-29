@@ -1,12 +1,4 @@
-#include <src/utilities.h>
-#include <src/hessian.h>
-#include <src/qff.h>
-#include <src/molecule.h>
-#include <src/symmetry.h>
-#include <src/defines.h>
-#include <src/exception.h>
-#include <src/gigmatrix.h>
-#include <sstream>
+#include "gigide.h"
 
 #define X 0
 #define Y 1

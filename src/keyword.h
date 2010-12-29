@@ -1,15 +1,8 @@
-
 #ifndef intdif_keyword_h
 #define intdif_keyword_h
 
-#include <iostream>
-#include <sstream>
-#include <map>
-#include <src/defines.h>
-#include <src/deftypes.h>
+#include "gigide.hpp"
 
-#include <src/smartptr/src/regexp.h>
-#include <src/smartptr/src/printstream.h>
 
 namespace gigide {
 

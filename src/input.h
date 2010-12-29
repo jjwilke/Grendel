@@ -1,13 +1,7 @@
-
 #ifndef gigide_input_h
 #define gigide_input_h
-#include <src/qff.h>
-#include <vector>
-#include <src/coordinates.h>
-#include <src/keyword.h>
-#include <src/defines.h>
-#include <src/geometry.h>
-#include <src/gigmatrix.h>
+
+#include "gigide.hpp"
 
 namespace gigide {
 

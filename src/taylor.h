@@ -1,9 +1,7 @@
 #ifndef gigide_taylor_h
 #define gigide_taylor_h
 
-#include <vector>
-#include <iostream>
-#include <src/deftypes.h>
+#include "gigide.hpp"
 
 namespace gigide {
 

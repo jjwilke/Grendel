@@ -1,23 +1,4 @@
-#include <iostream>
-#include <stdio.h>
-#include <fstream>
-#include <sstream>
-#include <algorithm>
-#include <fcntl.h>
-#include <errno.h>
-#include <config.h>
-#include <src/fileio.h>
-#include <src/fit.h>
-#include <src/defines.h>
-//#include <src/pyregexp.h>
-#include <src/exception.h>
-#include <src/symmetry.h>
-#include <src/utilities.h>
-#include <src/qff.h>
-#include <src/derivative.h>
-#include <src/displacement.h>
-#include <src/permutation.h>
-#include <src/units.h>
+#include "gigide.h"
 
 #define USE_SVD 0
 

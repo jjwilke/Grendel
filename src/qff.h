@@ -1,25 +1,9 @@
-
 #ifndef gigide_qff_h
 #define gigide_qff_h
 
-#include <map>
-#include <vector>
-#include <string>
-#include <src/molecule.h>
-#include <src/coordinates.h>
-#include <src/keyword.h>
-#include <src/taylor.h>
-#include <src/fileio.h>
-#include <src/fit.h>
-#include <src/gigmatrix.h>
-#include <src/deftypes.h>
+#include "gigide.hpp"
 
 namespace gigide {
-
-class Derivative;
-class Displacement;
-class DerivativeIterator;
-class DisplacementIterator;
 
 /** Encapsulates a force field computation */
 class ForceField : public smartptr::Serializable

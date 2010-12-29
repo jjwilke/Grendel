@@ -1,5 +1,4 @@
-#include <src/hessian.h>
-#include <iostream>
+#include "gigide.h"
 
 using namespace gigide;
 using namespace std;

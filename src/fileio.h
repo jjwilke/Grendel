@@ -6,8 +6,8 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#include <src/coordinates.h>
-#include <src/molecule.h>
+
+#include "gigide.hpp"
 
 namespace gigide {
 

@@ -1,8 +1,7 @@
 #ifndef _gigide_optimize_h_
 #define _gigide_optimize_h_
 
-#include <src/displacement.h>
-#include <src/qff.h>
+#include "gigide.hpp"
 
 namespace gigide {
 

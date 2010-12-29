@@ -1,11 +1,8 @@
-
 #ifndef gigide_fit_h
 #define gigide_fit_h
 
-#include <vector>
-#include <src/deftypes.h>
 
-#include <src/smartptr/src/printstream.h>
+#include "gigide.hpp"
 
 namespace gigide {
 

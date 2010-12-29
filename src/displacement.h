@@ -2,11 +2,7 @@
 #ifndef gigide_displacement_h
 #define gigide_displacement_h
 
-#include <map>
-#include <vector>
-#include <src/coordinates.h>
-#include <src/deftypes.h>
-#include <src/iter.h>
+#include "gigide.hpp"
 
 namespace gigide {
 

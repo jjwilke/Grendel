@@ -1,13 +1,20 @@
-#ifndef yeti_class_h
-#define yeti_class_h
+#ifndef gigide_class_h
+#define gigide_class_h
 
 /** Macros for making class operations easier when using smart pointers */
 
+#include <stdio.h>
+#include <iostream>
+#include <fstream>
 #include <sstream>
 #include <vector>
 #include <cmath>
+#include <map>
 #include <src/smartptr/src/serialize.h>
 #include <src/smartptr/src/set.h>
+#include <src/smartptr/src/timer.h>
+#include <src/smartptr/src/regexp.h>
+#include <src/smartptr/src/printstream.h>
 
 #define make(name, cls, ...) cls##Ptr name (new cls(__VA_ARGS__))
 #define polymake(name, super, sub, ...) super##Ptr name (new sub(__VA_ARGS__))

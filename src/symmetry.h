@@ -1,14 +1,7 @@
-
 #ifndef gigide_symmetry_h
 #define gigide_symmetry_h
 
-#include <vector>
-#include <string>
-#include <map>
-#include <src/defines.h>
-#include <src/keyword.h>
-#include <src/coordinates.h>
-#include <src/gigmatrix.h>
+#include "gigide.hpp"
 
 namespace gigide {
 

@@ -1,8 +1,4 @@
-#include <src/input.h>
-#include <src/exception.h>
-#include <src/utilities.h>
-#include <src/symmetry.h>
-#include <config.h>
+#include "gigide.h"
 
 #define X 0
 #define Y 1

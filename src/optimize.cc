@@ -1,7 +1,4 @@
-#include <src/optimize.h>
-#include <src/utilities.h>
-#include <src/derivative.h>
-#include <src/exception.h>
+#include "gigide.h"
 
 using namespace gigide;
 using namespace smartptr;
