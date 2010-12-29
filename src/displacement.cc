@@ -330,7 +330,8 @@ DisplacementIterator::testEquivalence(
 	int debug = KeywordSet::getKeyword("symmetry debug")->getValueInteger();
 
     int exp = KeywordSet::getKeyword("symmetry tolerance")->getValueInteger();
-    double tol = pow(10, -exp);
+    double ten = 10;
+    double tol = pow(ten, -exp);
 
 #if 0
     vector<double> incs(refdisp->getIncrements()); 
@@ -598,7 +599,8 @@ void
 Displacement::validate() const
 {
     int debug = KeywordSet::getKeyword("geometry debug")->getValueInteger();
-    double tol = pow(10, -1 * KeywordSet::getKeyword("geometry tolerance")->getValueInteger());
+    double ten = 10;
+    double tol = pow(ten, -1 * KeywordSet::getKeyword("geometry tolerance")->getValueInteger());
 
     if (debug)
         cout << stream_printf("\t        %20s   %20s   %20s", "Reference", "Displacement","Step") << endl;  
@@ -1059,7 +1061,8 @@ Displacement::generateGeometry(
     int num_internals = coords.size();
 
     int tolerance_exp = KeywordSet::getKeyword("geometry tolerance")->getValueInteger();
-    double tolerance = pow(10, -tolerance_exp);
+    double ten = 10;
+    double tolerance = pow(ten, -tolerance_exp);
     int maxiter = KeywordSet::getKeyword("geometry maxit")->getValueInteger();
     int print_frequency = KeywordSet::getKeyword("geometry print frequency")->getValueInteger();
     int debug = KeywordSet::getKeyword("geometry debug")->getValueInteger();
@@ -1086,8 +1089,8 @@ Displacement::generateGeometry(
     int iteration = 0;
     while (error > tolerance)
     {
-    if (debug >= 2 && (iteration % print_frequency == 0) )
-        cout << dispmol->getXYZString() << endl;
+        if (debug >= 2 && (iteration % print_frequency == 0) )
+            cout << dispmol->getXYZString() << endl;
         //zero the disp array for the current step
         total_disp_matrix.zero();
         error = 0.0;

@@ -2,6 +2,8 @@
 #define gigide_gigide_hpp
 
 #include "class.h"
+#include "defines.h"
+#include "gigmatrix.h"
 
 #include "coordinates.hpp"
 #include "derivative.hpp"

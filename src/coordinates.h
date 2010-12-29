@@ -36,7 +36,7 @@ class InternalCoordinate : public smartptr::Serializable {
             where \f$s\f$ is the internal coordinate value and \f$x_{nj}\f$ is the the \f$j\f$th coordinate
             of the \f$n\f$th atom.
         */
-		RectMatrixPtr bmatrix_;
+        RectMatrixPtr bmatrix_;
 
 		/** 
             A descriptive std::string for the type of coordinate. See @link<type> type() @endlink
